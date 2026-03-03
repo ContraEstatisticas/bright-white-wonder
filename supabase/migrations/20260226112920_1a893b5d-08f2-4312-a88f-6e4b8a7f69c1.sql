@@ -1,0 +1,1 @@
+ALTER TABLE pending_thank_you_emails ALTER COLUMN send_after SET DEFAULT now();
