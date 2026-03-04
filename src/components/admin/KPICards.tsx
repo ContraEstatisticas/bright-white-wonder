@@ -250,7 +250,7 @@ export const KPICards = () => {
 
       // Average First Session Time (via RPC no banco)
       const { data: avgFirstSession } = await supabase
-        .rpc('get_avg_first_session_minutes');
+        .rpc('get_avg_first_session_minutes' as any);
 
       const avgSessionMinutes = avgFirstSession
         ? Number(avgFirstSession).toFixed(1)

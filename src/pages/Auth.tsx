@@ -296,7 +296,7 @@ const Auth = () => {
     if (!skipNoPurchaseCheck) {
       try {
         const { data: hasPurchase, error: purchaseError } = await supabase
-          .rpc("check_purchase_exists", { p_email: email });
+          .rpc("check_purchase_exists" as any, { p_email: email });
 
         if (purchaseError) {
           console.error("Error checking purchase status:", purchaseError);

@@ -169,13 +169,13 @@ export const LessonComplete = ({
       const fullName = profile?.full_name || user.user_metadata?.full_name || user.email?.split('@')[0] || 'Student';
 
       // Call the database function to generate certificate
-      const { data, error } = await supabase.rpc('generate_challenge_certificate', {
+      const { data, error } = await supabase.rpc('generate_challenge_certificate' as any, {
         p_challenge_id: challengeId,
         p_user_full_name: fullName
       });
 
       if (data) {
-        setCertificateId(data);
+        setCertificateId(String(data));
       }
     } catch (error) {
       console.error('Error generating certificate:', error);
