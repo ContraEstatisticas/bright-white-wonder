@@ -49,7 +49,7 @@ RESPONSE FORMAT:
 - Include practical examples
 - End with "🎯 Next step:" or "💡 Want me to go deeper on any point?"
 
-You are an AI specialist and should help the user understand any concept related to artificial intelligence tools.`
+You are an AI specialist and should help the user understand any concept related to artificial intelligence tools.`,
   },
 
   "prompt-creator": {
@@ -111,7 +111,7 @@ PROMPT STRUCTURE EXAMPLE:
 [CONSTRAINTS]: Limitations or rules
 \`\`\`
 
-Help the user create powerful prompts for any objective.`
+Help the user create powerful prompts for any objective.`,
   },
 
   planner: {
@@ -189,7 +189,7 @@ RESPONSE FORMAT:
 🚀 **Immediate Next Step**
 [Specific action to start now]
 
-Help the user create clear and executable strategic plans.`
+Help the user create clear and executable strategic plans.`,
   },
 
   creative: {
@@ -203,8 +203,8 @@ NÃO inclua instruções técnicas, parâmetros ou prompts extensos.Responda na 
 IMPORTANT: You will GENERATE images directly, not create prompts for other tools.
 Respond ONLY with a brief description of what you will create (1-2 sentences).
 Example: "I'll create an image of a golden dragon flying over a castle at sunset! 🎨"
-Do NOT include technical instructions, parameters, or extensive prompts.Respond in the user's language, preferring english when possible.`
-  }
+Do NOT include technical instructions, parameters, or extensive prompts.Respond in the user's language, preferring english when possible.`,
+  },
 };
 
 serve(async (req) => {
@@ -232,7 +232,10 @@ serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Verify user from token
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
     if (authError || !user) {
       console.error("Auth error:", authError?.message || "No user found");
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
@@ -256,13 +259,13 @@ serve(async (req) => {
 
     // Validate each message
     for (const msg of body.messages) {
-      if (!msg || typeof msg.content !== 'string' || msg.content.length === 0 || msg.content.length > 10000) {
+      if (!msg || typeof msg.content !== "string" || msg.content.length === 0 || msg.content.length > 10000) {
         return new Response(JSON.stringify({ error: "Invalid message content" }), {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
-      if (!['user', 'assistant'].includes(msg.role)) {
+      if (!["user", "assistant"].includes(msg.role)) {
         return new Response(JSON.stringify({ error: "Invalid message role" }), {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -271,7 +274,10 @@ serve(async (req) => {
     }
 
     // Validate language
-    if (body.language && (typeof body.language !== 'string' || !/^[a-z]{2}(-[a-zA-Z0-9]{2,4})?$/i.test(body.language))) {
+    if (
+      body.language &&
+      (typeof body.language !== "string" || !/^[a-z]{2}(-[a-zA-Z0-9]{2,4})?$/i.test(body.language))
+    ) {
       return new Response(JSON.stringify({ error: "Invalid language format" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -307,7 +313,7 @@ serve(async (req) => {
     // Handle CREATIVE AI type - Generate image
     if (aiType === "creative") {
       const lastUserMessage = messages[messages.length - 1]?.content || "";
-      
+
       // First, get a brief text response
       const textResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
         method: "POST",
@@ -316,11 +322,8 @@ serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-2.0-flash-lite",
-          messages: [
-            { role: "system", content: systemPrompt },
-            ...messages,
-          ],
+          model: "gemini-2.5-flash",
+          messages: [{ role: "system", content: systemPrompt }, ...messages],
         }),
       });
 
@@ -337,7 +340,7 @@ serve(async (req) => {
 
       // Now generate the image
       const imagePrompt = `${lastUserMessage}. Ultra high resolution, professional quality, highly detailed.`;
-      
+
       const imageResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
         method: "POST",
         headers: {
@@ -346,10 +349,8 @@ serve(async (req) => {
         },
         body: JSON.stringify({
           model: "google/gemini-2.5-flash-image-preview",
-          messages: [
-            { role: "user", content: imagePrompt }
-          ],
-          modalities: ["image", "text"]
+          messages: [{ role: "user", content: imagePrompt }],
+          modalities: ["image", "text"],
         }),
       });
 
@@ -357,13 +358,16 @@ serve(async (req) => {
         const errorText = await imageResponse.text();
         console.error("Image generation error:", errorText);
         // Return text response even if image fails
-        return new Response(JSON.stringify({ 
-          type: "creative",
-          text: briefResponse,
-          error: "Image generation failed"
-        }), {
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        });
+        return new Response(
+          JSON.stringify({
+            type: "creative",
+            text: briefResponse,
+            error: "Image generation failed",
+          }),
+          {
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          },
+        );
       }
 
       const imageData = await imageResponse.json();
@@ -371,23 +375,24 @@ serve(async (req) => {
 
       // Save to database
       if (user) {
-        const responseContent = imageUrl 
-          ? `${briefResponse}\n\n[IMAGE:${imageUrl}]`
-          : briefResponse;
-          
+        const responseContent = imageUrl ? `${briefResponse}\n\n[IMAGE:${imageUrl}]` : briefResponse;
+
         await supabase.from("chat_messages").insert([
           { user_id: user.id, role: "user", content: lastUserMessage, ai_assistant_type: aiType },
           { user_id: user.id, role: "assistant", content: responseContent, ai_assistant_type: aiType },
         ]);
       }
 
-      return new Response(JSON.stringify({ 
-        type: "creative",
-        text: briefResponse,
-        imageUrl: imageUrl || null
-      }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      return new Response(
+        JSON.stringify({
+          type: "creative",
+          text: briefResponse,
+          imageUrl: imageUrl || null,
+        }),
+        {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        },
+      );
     }
 
     // For other AI types - Stream text response
@@ -399,10 +404,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "google/gemini-2.0-flash-lite",
-        messages: [
-          { role: "system", content: systemPrompt },
-          ...messages,
-        ],
+        messages: [{ role: "system", content: systemPrompt }, ...messages],
         stream: true,
       }),
     });
@@ -432,7 +434,6 @@ serve(async (req) => {
     return new Response(response.body, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
-
   } catch (error) {
     console.error("assistentes-chat error:", error);
     return new Response(JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }), {
