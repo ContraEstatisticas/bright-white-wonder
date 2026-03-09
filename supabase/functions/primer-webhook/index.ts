@@ -6,17 +6,134 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, ff-webhook-signature, x-hotmart-hottok',
 };
 
+// === IN-MEMORY RATE LIMITER ===
+const ipRequests = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_PER_SECOND = 10;
+const RATE_WINDOW_MS = 1000;
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipRequests.get(ip);
+  
+  // Cleanup old entries every ~100 checks to prevent memory leak
+  if (ipRequests.size > 500) {
+    for (const [key, val] of ipRequests) {
+      if (now - val.timestamp > 10000) ipRequests.delete(key);
+    }
+  }
+  
+  if (entry && now - entry.timestamp < RATE_WINDOW_MS) {
+    entry.count++;
+    return entry.count <= RATE_LIMIT_PER_SECOND;
+  }
+  
+  ipRequests.set(ip, { count: 1, timestamp: now });
+  return true;
+}
+
+// Timing-safe comparison to prevent timing attacks
+function timingSafeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  const encoder = new TextEncoder();
+  const aBuf = encoder.encode(a);
+  const bBuf = encoder.encode(b);
+  let result = 0;
+  for (let i = 0; i < aBuf.length; i++) {
+    result |= aBuf[i] ^ bBuf[i];
+  }
+  return result === 0;
+}
+
+// HMAC-SHA256 signature validation for Funnelfox
+async function validateHmacSignature(body: string, signature: string, secret: string): Promise<boolean> {
+  try {
+    const encoder = new TextEncoder();
+    const key = await crypto.subtle.importKey(
+      'raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+    );
+    const sig = await crypto.subtle.sign('HMAC', key, encoder.encode(body));
+    const computed = Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+    return timingSafeEqual(computed, signature.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
+function normalizeEmail(raw: string | undefined | null): string {
+  return (raw || '').toLowerCase().trim().replace(/\.+$/, '');
+}
+
+async function findUserIdByEmail(supabase: any, normalizedEmail: string): Promise<string | null> {
+  const perPage = 200;
+
+  for (let page = 1; page <= 20; page++) {
+    const { data: listData, error: listError } = await supabase.auth.admin.listUsers({ page, perPage } as any);
+
+    if (listError || !listData?.users?.length) {
+      return null;
+    }
+
+    const match = listData.users.find((u: { id: string; email?: string }) => normalizeEmail(u.email) === normalizedEmail);
+    if (match) return match.id;
+
+    if (listData.users.length < perPage) break;
+  }
+
+  return null;
+}
+
 serve(async (req) => {
+  // Reject non-POST immediately (bots, scanners)
   if (req.method === 'OPTIONS') return new Response(null, { headers: corsHeaders });
+  if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
+
+  // === RATE LIMITING: Check IP before ANY processing ===
+  const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                   req.headers.get('x-real-ip') || 
+                   'unknown';
+  
+  if (!checkRateLimit(clientIp)) {
+    // Minimal response for bots — no CORS headers, no body
+    return new Response(null, { status: 429 });
+  }
+
+  // === STEP 1: Check auth headers BEFORE reading body ===
+  const hottok = req.headers.get('x-hotmart-hottok');
+  const ffSignature = req.headers.get('ff-webhook-signature');
+
+  // No recognized auth header — reject immediately WITHOUT reading body
+  if (!hottok && !ffSignature) {
+    return new Response('Unauthorized', { status: 401 });
+  }
+
+  // Validate Hotmart via hottok header (no body needed)
+  const HOTMART_HOTTOK = Deno.env.get('HOTMART_HOTTOK');
+  if (hottok) {
+    if (!HOTMART_HOTTOK || !timingSafeEqual(hottok, HOTMART_HOTTOK)) {
+      return new Response('Unauthorized', { status: 401 });
+    }
+  }
+
+  // Now read body (only for authenticated requests)
+  const rawBody = await req.text();
+
+  // Validate Funnelfox/Primer via HMAC signature (needs body)
+  if (!hottok && ffSignature) {
+    const FF_TOKEN = Deno.env.get('FUNNELFOX_WEBHOOK_TOKEN');
+    if (!FF_TOKEN || !(await validateHmacSignature(rawBody, ffSignature, FF_TOKEN))) {
+      return new Response('Unauthorized', { status: 401 });
+    }
+  }
+
+  // === STEP 2: Auth passed — now initialize heavy resources ===
   const supabase = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
 
   try {
-    // Correção 3: Proteger contra JSON inválido
+    // Parse JSON from the already-read body
     let payload: any;
     try {
-      payload = await req.json();
+      payload = JSON.parse(rawBody);
     } catch {
-      // JSON mal-formado — retornar 200 para evitar retries
       console.log('[primer-webhook] Invalid JSON payload, returning 200 to stop retries');
       return new Response(JSON.stringify({ error: 'Invalid JSON', ignored: true }), { status: 200, headers: corsHeaders });
     }
@@ -28,7 +145,6 @@ serve(async (req) => {
       payload.email
     )?.toLowerCase().trim().replace(/\.+$/, '');
 
-    // Correção 1: Retornar 200 (não 400) para payloads sem email — para retries do serviço externo
     if (!email) {
       console.log('[primer-webhook] No email found in payload, returning 200 to stop retries');
       return new Response(JSON.stringify({ error: 'No email found in payload', ignored: true }), { status: 200, headers: corsHeaders });
@@ -102,21 +218,7 @@ serve(async (req) => {
 
     if (GRANT_EVENT_TYPES.includes(eventType)) {
       try {
-        // Correção 2: Query direta filtrada em vez de loop paginado
-        const { data: listData, error: listError } = await supabase.auth.admin.listUsers({
-          page: 1,
-          perPage: 1,
-          filter: email,
-        } as any);
-
-        let foundUserId: string | null = null;
-
-        if (!listError && listData?.users?.length) {
-          const match = listData.users.find(
-            (u: { email?: string }) => u.email?.toLowerCase().trim().replace(/\.+$/, '') === email
-          );
-          if (match) foundUserId = match.id;
-        }
+        const foundUserId = await findUserIdByEmail(supabase, email);
 
         if (foundUserId) {
           console.log(`[primer-webhook] User found: ${foundUserId}, calling process_pending_billing_events`);

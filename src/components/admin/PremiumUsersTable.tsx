@@ -57,7 +57,7 @@ export const PremiumUsersTable = () => {
         products: productMap.get(p.user_id) || [],
       }));
     },
-    refetchInterval: 60000,
+    refetchInterval: 300000,
   });
 
   const getProductBadge = (productType: string) => {
@@ -68,9 +68,9 @@ export const PremiumUsersTable = () => {
     };
     const style = config[productType] || { bg: "bg-slate-100", text: "text-slate-700" };
     const label = productType === "ai_hub" ? "AI Hub" : productType.charAt(0).toUpperCase() + productType.slice(1);
-    
+
     return (
-      <Badge 
+      <Badge
         key={productType}
         className={`${style.bg} ${style.text} hover:${style.bg} border-0 font-medium`}
       >
@@ -128,8 +128,8 @@ export const PremiumUsersTable = () => {
                 <TableCell className="text-sm text-muted-foreground whitespace-nowrap pr-5">
                   {user.purchased_at
                     ? format(new Date(user.purchased_at), "dd/MM/yy", {
-                        locale: ptBR,
-                      })
+                      locale: ptBR,
+                    })
                     : "-"}
                 </TableCell>
               </TableRow>

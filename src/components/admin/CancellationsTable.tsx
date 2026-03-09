@@ -28,7 +28,7 @@ export const CancellationsTable = () => {
 
       return data || [];
     },
-    refetchInterval: 60000,
+    refetchInterval: 300000,
   });
 
   const getEventBadge = (eventType: string) => {
@@ -90,8 +90,8 @@ export const CancellationsTable = () => {
                 <TableCell className="text-sm py-3 pl-5">
                   {event.created_at
                     ? format(new Date(event.created_at), "dd/MM/yy HH:mm", {
-                        locale: ptBR,
-                      })
+                      locale: ptBR,
+                    })
                     : "-"}
                 </TableCell>
                 <TableCell className="text-sm font-medium truncate max-w-[180px]">

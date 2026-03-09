@@ -28,7 +28,7 @@ export const BillingLogsTable = () => {
 
       return data || [];
     },
-    refetchInterval: 30000,
+    refetchInterval: 300000,
   });
 
   // Health check: eventos pendentes
@@ -54,7 +54,7 @@ export const BillingLogsTable = () => {
         userNotFound: (pending || []).filter(p => p.status === "USER_NOT_FOUND").length
       };
     },
-    refetchInterval: 60000,
+    refetchInterval: 300000,
   });
 
   const getEventBadge = (eventType: string) => {
@@ -134,8 +134,8 @@ export const BillingLogsTable = () => {
       <div className="grid grid-cols-3 gap-3">
         <div className={cn(
           "rounded-xl border p-4 flex items-center gap-3 transition-colors",
-          healthStats?.oldPending && healthStats.oldPending > 0 
-            ? "border-red-200 bg-red-50" 
+          healthStats?.oldPending && healthStats.oldPending > 0
+            ? "border-red-200 bg-red-50"
             : "border-border/50 bg-card"
         )}>
           {healthStats?.oldPending && healthStats.oldPending > 0 ? (
@@ -152,7 +152,7 @@ export const BillingLogsTable = () => {
             <p className="text-lg font-bold">{healthStats?.oldPending || 0}</p>
           </div>
         </div>
-        
+
         <div className="rounded-xl border border-border/50 bg-card p-4 flex items-center gap-3">
           <div className="p-2 rounded-lg bg-amber-100">
             <Clock className="h-4 w-4 text-amber-600" />
@@ -162,7 +162,7 @@ export const BillingLogsTable = () => {
             <p className="text-lg font-bold">{healthStats?.userNotFound || 0}</p>
           </div>
         </div>
-        
+
         <div className="rounded-xl border border-border/50 bg-card p-4 flex items-center gap-3">
           <div className="p-2 rounded-lg bg-blue-100">
             <RefreshCw className="h-4 w-4 text-blue-600" />
@@ -198,8 +198,8 @@ export const BillingLogsTable = () => {
             </TableHeader>
             <TableBody>
               {billingLogs?.map((log) => (
-                <TableRow 
-                  key={log.id} 
+                <TableRow
+                  key={log.id}
                   className={cn(
                     "border-b border-border/30 hover:bg-muted/30",
                     !log.processed && log.status === "USER_NOT_FOUND" && "bg-amber-50/50"
@@ -208,8 +208,8 @@ export const BillingLogsTable = () => {
                   <TableCell className="text-sm whitespace-nowrap py-3 pl-5">
                     {log.created_at
                       ? format(new Date(log.created_at), "dd/MM HH:mm", {
-                          locale: ptBR,
-                        })
+                        locale: ptBR,
+                      })
                       : "-"}
                   </TableCell>
                   <TableCell className="text-sm font-medium truncate max-w-[140px]" title={log.email}>

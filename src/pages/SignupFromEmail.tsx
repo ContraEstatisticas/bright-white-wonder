@@ -135,14 +135,19 @@ const SignupFromEmail = () => {
 
       try {
         await supabase.from("profiles").update({ preferred_language: currentLanguage }).eq("id", data.user.id);
-      } catch {}
+      } catch { }
 
       // Reconcile billing events
       try {
         await supabase.rpc("process_pending_billing_events", { p_user_id: data.user.id, p_email: email });
-      } catch {}
+      } catch { }
 
       // NO welcome email sent here - already sent on purchase
+
+      // If no session was created (email confirmation required), sign in explicitly
+      if (!data.session) {
+        await supabase.auth.signInWithPassword({ email, password });
+      }
 
       setIsLoading(false);
       toast({ title: t("auth.signupSuccess"), description: t("common.loading") });

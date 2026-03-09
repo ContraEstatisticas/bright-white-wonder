@@ -40,7 +40,7 @@ export const TopStreaksTable = () => {
         full_name: profileMap.get(s.user_id) || "Usuário",
       }));
     },
-    refetchInterval: 60000,
+    refetchInterval: 300000,
   });
 
   const getMedal = (index: number) => {
@@ -103,8 +103,8 @@ export const TopStreaksTable = () => {
                 <TableCell className="text-sm text-muted-foreground pr-5">
                   {user.last_activity_date
                     ? format(new Date(user.last_activity_date), "dd/MM/yy", {
-                        locale: ptBR,
-                      })
+                      locale: ptBR,
+                    })
                     : "-"}
                 </TableCell>
               </TableRow>

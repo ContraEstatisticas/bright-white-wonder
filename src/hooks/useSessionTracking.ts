@@ -33,15 +33,15 @@ export const useSessionTracking = () => {
 
         sessionIdRef.current = data.id;
 
-        // Ping a cada 30 segundos para atualizar last_ping_at
+        // Ping a cada 5 minutos para atualizar last_ping_at
         intervalRef.current = setInterval(async () => {
-          if (sessionIdRef.current) {
+          if (sessionIdRef.current && document.visibilityState === 'visible') {
             await supabase
               .from("user_sessions")
               .update({ last_ping_at: new Date().toISOString() })
               .eq("id", sessionIdRef.current);
           }
-        }, 30000);
+        }, 300000);
       } catch (error) {
         console.error("Erro no rastreamento de sessão:", error);
       }

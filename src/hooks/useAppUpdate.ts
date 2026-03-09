@@ -15,12 +15,12 @@ export const useAppUpdate = (): UseAppUpdateReturn => {
   } = useRegisterSW({
     onRegisteredSW(swUrl, registration) {
       console.log('✅ Service Worker registered:', swUrl);
-      
-      // Check for updates every 30 seconds
+
+      // Check for updates every 10 minutes
       if (registration) {
         setInterval(() => {
           registration.update();
-        }, 30 * 1000);
+        }, 10 * 60 * 1000);
       }
     },
     onRegisterError(error) {
@@ -31,7 +31,7 @@ export const useAppUpdate = (): UseAppUpdateReturn => {
   const updateApp = useCallback(() => {
     // Clear content caches before updating
     clearContentCaches();
-    
+
     // Update service worker and reload
     updateServiceWorker(true).catch(() => {
       if (typeof window !== 'undefined') {

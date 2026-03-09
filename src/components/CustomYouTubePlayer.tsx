@@ -11,15 +11,15 @@ const extractVideoId = (url: string): string | null => {
   // Formato: https://www.youtube.com/watch?v=VIDEO_ID
   let match = url.match(/[?&]v=([^&]+)/);
   if (match) return match[1];
-  
+
   // Formato: https://youtu.be/VIDEO_ID
   match = url.match(/youtu\.be\/([^?]+)/);
   if (match) return match[1];
-  
+
   // Formato: https://www.youtube.com/embed/VIDEO_ID
   match = url.match(/\/embed\/([^?]+)/);
   if (match) return match[1];
-  
+
   return null;
 };
 
@@ -104,7 +104,7 @@ export const CustomYouTubePlayer = ({ videoUrl }: CustomYouTubePlayerProps) => {
           setProgress((current / duration) * 100);
         }
       }
-    }, 100);
+    }, 1000);
 
     return () => {
       clearInterval(interval);

@@ -47,32 +47,40 @@ export const useAllMedals = () => {
     queryFn: async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return [];
-      
+
       const { data, error } = await supabase
         .from("user_freelancer_medals")
         .select("medal_id, earned_at")
         .eq("user_id", user.id);
-        
+
       if (error) throw error;
       return data as UserMedal[];
     },
   });
 
-  // 3. LOGICA REALTIME: Escuta o banco e atualiza o cache na hora
+  // 3. LOGICA REALTIME: Escuta apenas inserções do próprio usuário
   useEffect(() => {
-    const channel = supabase
-      .channel('medals-updates')
-      .on('postgres_changes', { 
-        event: 'INSERT', 
-        schema: 'public', 
-        table: 'user_freelancer_medals' 
-      }, () => {
-        // Invalida o cache e força o React Query a buscar de novo
-        queryClient.invalidateQueries({ queryKey: ["user-all-medals"] });
-      })
-      .subscribe();
+    let channel: ReturnType<typeof supabase.channel> | null = null;
 
-    return () => { supabase.removeChannel(channel); };
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) return;
+
+      channel = supabase
+        .channel(`medals-updates-${user.id}`)
+        .on('postgres_changes', {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'user_freelancer_medals',
+          filter: `user_id=eq.${user.id}`,
+        }, () => {
+          queryClient.invalidateQueries({ queryKey: ["user-all-medals"] });
+        })
+        .subscribe();
+    });
+
+    return () => {
+      if (channel) supabase.removeChannel(channel);
+    };
   }, [queryClient]);
 
   // 4. FUNÇÃO QUE CRUZA OS DADOS
@@ -90,28 +98,28 @@ export const useAllMedals = () => {
   // 5. FUNÇÃO QUE SEPARA POR CATEGORIA (freelancer vs trail)
   const getMedalsByCategory = () => {
     const allMedalsWithStatus = getMedalsWithStatus();
-    
+
     // Medalhas da trilha freelancer (baseado no slug ou unlock_condition)
     const freelancerMedals = allMedalsWithStatus.filter((medal) => {
       const condition = medal.unlock_condition as Record<string, unknown>;
       // Se tem modules_completed ou é relacionado a freelancer
-      return condition?.modules_completed !== undefined || 
-             medal.slug?.includes('freelancer') ||
-             medal.slug?.includes('module') ||
-             medal.slug?.includes('primeiro') ||
-             medal.slug?.includes('explorer') ||
-             medal.slug?.includes('specialist') ||
-             medal.slug?.includes('master');
+      return condition?.modules_completed !== undefined ||
+        medal.slug?.includes('freelancer') ||
+        medal.slug?.includes('module') ||
+        medal.slug?.includes('primeiro') ||
+        medal.slug?.includes('explorer') ||
+        medal.slug?.includes('specialist') ||
+        medal.slug?.includes('master');
     });
-    
+
     // Medalhas da trilha de 28 dias (streak, days, etc)
     const trailMedals = allMedalsWithStatus.filter((medal) => {
       const condition = medal.unlock_condition as Record<string, unknown>;
-      return condition?.streak !== undefined || 
-             condition?.days_completed !== undefined ||
-             medal.slug?.includes('streak') ||
-             medal.slug?.includes('days') ||
-             medal.slug?.includes('week');
+      return condition?.streak !== undefined ||
+        condition?.days_completed !== undefined ||
+        medal.slug?.includes('streak') ||
+        medal.slug?.includes('days') ||
+        medal.slug?.includes('week');
     });
 
     // Se a medalha não se encaixa em nenhuma categoria específica, coloca em freelancer
@@ -119,9 +127,9 @@ export const useAllMedals = () => {
       ...freelancerMedals.map(m => m.id),
       ...trailMedals.map(m => m.id)
     ]);
-    
+
     const uncategorized = allMedalsWithStatus.filter(m => !categorizedIds.has(m.id));
-    
+
     return {
       freelancerMedals: [...freelancerMedals, ...uncategorized],
       trailMedals,

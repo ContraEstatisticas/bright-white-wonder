@@ -33,7 +33,8 @@ export const BillingEventsChart = () => {
     queryFn: async () => {
       const { data: events } = await supabase
         .from("billing_event_logs")
-        .select("event_type");
+        .select("event_type")
+        .limit(5000);
 
       const counts: Record<string, number> = {
         Pagamentos: 0,
@@ -59,33 +60,33 @@ export const BillingEventsChart = () => {
       });
 
       return [
-        { 
-          name: "Pagamentos", 
-          value: counts.Pagamentos, 
+        {
+          name: "Pagamentos",
+          value: counts.Pagamentos,
           color: COLORS.settled,
           description: "SETTLED + PURCHASE_APPROVED + PURCHASE_COMPLETE"
         },
-        { 
-          name: "Trials", 
-          value: counts.Trials, 
+        {
+          name: "Trials",
+          value: counts.Trials,
           color: COLORS.trial,
           description: "STARTING_TRIAL (via webhooks de pagamento)"
         },
-        { 
-          name: "Chargebacks", 
-          value: counts.Chargebacks, 
+        {
+          name: "Chargebacks",
+          value: counts.Chargebacks,
           color: COLORS.chargeback,
           description: "PURCHASE_CHARGEBACK"
         },
-        { 
-          name: "Reembolsos", 
-          value: counts.Reembolsos, 
+        {
+          name: "Reembolsos",
+          value: counts.Reembolsos,
           color: COLORS.refund,
           description: "PURCHASE_REFUNDED"
         },
-        { 
-          name: "Concessões", 
-          value: counts.Concessoes, 
+        {
+          name: "Concessões",
+          value: counts.Concessoes,
           color: COLORS.granted,
           description: "GRANTED (acesso concedido manualmente)"
         },
@@ -116,11 +117,11 @@ export const BillingEventsChart = () => {
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={chartData} layout="vertical">
             <CartesianGrid strokeDasharray="3 3" className="stroke-muted/50" horizontal={false} />
-            <XAxis 
-              type="number" 
-              tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }} 
-              tickLine={false} 
-              axisLine={false} 
+            <XAxis
+              type="number"
+              tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+              tickLine={false}
+              axisLine={false}
             />
             <YAxis
               type="category"

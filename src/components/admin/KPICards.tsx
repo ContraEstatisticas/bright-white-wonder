@@ -64,7 +64,7 @@ export const KPICards = () => {
 
       // Cabeçalho da planilha
       const headers = "Nome,Email,Data Primeiro Acesso,Fim da Primeira Sessao,Minutos Ativos na Estreia\n";
-      
+
       const csvContent = data.map(row => {
         const nome = (row.nome || 'Sem nome').replace(/,/g, '');
         const email = row.email || 'N/A';
@@ -134,7 +134,7 @@ export const KPICards = () => {
 
       // Active users (7 dias) - using filter on the streakData we already have
       const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-      const activeUsers = streakData?.filter(s => 
+      const activeUsers = streakData?.filter(s =>
         s.last_activity_date && s.last_activity_date >= sevenDaysAgo
       ).length || 0;
 
@@ -168,9 +168,9 @@ export const KPICards = () => {
       const purchasesTodayData = billingEvents?.filter((e) => {
         const eventDate = e.created_at?.split("T")[0];
         const eventType = e.event_type.toUpperCase();
-        const isPaymentEvent = eventType.includes("SETTLED") || 
-                               eventType.includes("APPROVED") || 
-                               eventType.includes("COMPLETE");
+        const isPaymentEvent = eventType.includes("SETTLED") ||
+          eventType.includes("APPROVED") ||
+          eventType.includes("COMPLETE");
         return eventDate === today && isPaymentEvent;
       }) || [];
 
@@ -178,24 +178,24 @@ export const KPICards = () => {
       const newPurchasesToday = purchasesTodayData.filter((e) => {
         const payload = e.payload as Record<string, unknown> | null;
         if (!payload) return true; // If no payload, count as new
-        
+
         // Funnelfox: subscription with iteration = 1 (initial trial)
         const subscription = payload.subscription as Record<string, unknown> | undefined;
         const ffIteration = subscription?.iteration;
         if (ffIteration === 1) return true;
-        
+
         // Funnelfox: oneoff (upsell/one-time purchase)
         if (payload.oneoff) return true;
-        
+
         // Hotmart: recurrence_number = 1
         const data = payload.data as Record<string, unknown> | undefined;
         const purchase = data?.purchase as Record<string, unknown> | undefined;
         const hotmartRecurrence = purchase?.recurrence_number;
         if (hotmartRecurrence === 1) return true;
-        
+
         // If no iteration/recurrence info, assume it's new
         if (!ffIteration && !hotmartRecurrence) return true;
-        
+
         return false;
       }).length;
 
@@ -203,18 +203,18 @@ export const KPICards = () => {
       const renewalsTodayCount = purchasesTodayData.filter((e) => {
         const payload = e.payload as Record<string, unknown> | null;
         if (!payload) return false;
-        
+
         // Funnelfox: iteration > 1 (renewal after trial)
         const subscription = payload.subscription as Record<string, unknown> | undefined;
         const ffIteration = subscription?.iteration as number | undefined;
         if (ffIteration && ffIteration > 1) return true;
-        
+
         // Hotmart: recurrence_number > 1
         const data = payload.data as Record<string, unknown> | undefined;
         const purchase = data?.purchase as Record<string, unknown> | undefined;
         const hotmartRecurrence = purchase?.recurrence_number as number | undefined;
         if (hotmartRecurrence && hotmartRecurrence > 1) return true;
-        
+
         return false;
       }).length;
 
@@ -279,7 +279,7 @@ export const KPICards = () => {
         premiumUsers: premiumUsers || 0,
         chargebacks,
         refunds,
-        
+
         settled,
         newPurchasesToday,
         renewalsTodayCount,
@@ -295,7 +295,7 @@ export const KPICards = () => {
         avgErrorsPerDay,
       };
     },
-    refetchInterval: 60000, // Refresh every minute
+    refetchInterval: 300000, // Refresh every 5 minutes
   });
 
   if (isLoading) {

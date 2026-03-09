@@ -147,15 +147,24 @@ const Auth = () => {
       }
 
       // Fail closed: se houver erro na validacao de acesso premium, bloqueia o login.
+      // Retry logic: 3 tentativas com 1s de intervalo (mesma lógica do PremiumGuard)
       try {
-        const { data: hasPremiumAccess, error: premiumError } = await supabase.rpc("check_premium_access", {
-          user_email: email
-        });
-
-        if (premiumError || hasPremiumAccess !== true) {
-          if (premiumError) {
-            console.error("Error checking premium access on login:", premiumError);
+        let isPremium = false;
+        for (let attempt = 0; attempt < 3; attempt++) {
+          const { data, error } = await supabase.rpc("check_premium_access", {
+            user_email: email
+          });
+          if (!error && data === true) {
+            isPremium = true;
+            break;
           }
+          if (error) {
+            console.error(`Premium check attempt ${attempt + 1} failed:`, error);
+          }
+          if (attempt < 2) await new Promise(r => setTimeout(r, 1000));
+        }
+
+        if (!isPremium) {
           await supabase.auth.signOut();
           setLoginErrorType("noService");
           setIsLoginErrorDialogOpen(true);
@@ -227,7 +236,10 @@ const Auth = () => {
         console.error("Exception in billing reconciliation:", rpcErr);
       }
 
-      // Email de boas-vindas removido do signup - agora enviado apenas na compra/liberação manual
+      // If no session was created (email confirmation required), sign in explicitly
+      if (!data.session) {
+        await supabase.auth.signInWithPassword({ email, password });
+      }
 
       setIsLoading(false);
 
@@ -329,441 +341,439 @@ const Auth = () => {
   const loginErrorDescription =
     loginErrorType === "noService"
       ? t(
-          "auth.noActiveServiceDescription",
-          "Nao ha servico ativo para este email. Verifique se a compra foi feita com o mesmo email cadastrado."
-        )
+        "auth.noActiveServiceDescription",
+        "Nao ha servico ativo para este email. Verifique se a compra foi feita com o mesmo email cadastrado."
+      )
       : t(
-          "auth.accountNotFoundDescription",
-          "Nao localizamos a sua conta"
-        );
+        "auth.accountNotFoundDescription",
+        "Nao localizamos a sua conta"
+      );
   const supportEmail = "contact@educly.app";
   const noPurchaseDescription = t(
     "auth.noPurchaseDescription",
     "Nao localizamos uma compra vinculada a este e-mail. Verifique se voce informou o mesmo e-mail usado na compra. Se ainda nao comprou, acesse o link abaixo."
   );
-  const loginErrorLines = 
+  const loginErrorLines =
     loginErrorType === "noService"
       ? loginErrorDescription
-          .split("\n")
-          .map((line) => line.trim())
-          .filter(Boolean)
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean)
       : [
-          t("auth.accountNotFoundStep1"),
-          t("auth.accountNotFoundStep2"),
-          t("auth.accountNotFoundStep3")
-        ];
+        t("auth.accountNotFoundStep1"),
+        t("auth.accountNotFoundStep2"),
+        t("auth.accountNotFoundStep3")
+      ];
   const noPurchaseLines = noPurchaseDescription
     .split("\n")
     .map((line) => line.trim())
     .filter(Boolean);
 
   return (
-      <div className="min-h-screen flex items-center justify-center p-4 bg-background safe-area-inset">
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 pt-safe">
-          <LanguageSelector />
+    <div className="min-h-screen flex items-center justify-center p-4 bg-background safe-area-inset">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 pt-safe">
+        <LanguageSelector />
+      </div>
+
+      <div className="w-full max-w-md space-y-4 sm:space-y-6 animate-fade-in-up">
+        <Button variant="ghost" onClick={() => navigate("/")} className="mb-4">
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          {t("common.back")}
+        </Button>
+
+        <div className="text-center space-y-2">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">{t("auth.title")}</span>
+          </div>
+          <h1 className="text-3xl font-bold text-foreground">
+            {t("thankYou.title")} <span className="text-primary">{t("landing.subtitle")}</span>
+          </h1>
+          <p className="text-muted-foreground">{t("auth.title")}</p>
         </div>
 
-        <div className="w-full max-w-md space-y-4 sm:space-y-6 animate-fade-in-up">
-          <Button variant="ghost" onClick={() => navigate("/")} className="mb-4">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t("common.back")}
-          </Button>
+        <Card className="p-6 shadow-card border border-border">
+          <Tabs defaultValue={defaultTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-2 bg-surface">
+              <TabsTrigger
+                value="login"
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                {t("auth.loginTab")}
+              </TabsTrigger>
+              <TabsTrigger
+                value="signup"
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                {t("auth.signupTab")}
+              </TabsTrigger>
+            </TabsList>
 
-          <div className="text-center space-y-2">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">{t("auth.title")}</span>
-            </div>
-            <h1 className="text-3xl font-bold text-foreground">
-              {t("thankYou.title")} <span className="text-primary">{t("landing.subtitle")}</span>
-            </h1>
-            <p className="text-muted-foreground">{t("auth.title")}</p>
-          </div>
+            <TabsContent value="login" className="space-y-4 mt-4">
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="login-email" className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-muted-foreground" />
+                    {t("auth.email")}
+                  </Label>
+                  <Input
+                    id="login-email"
+                    type="email"
+                    placeholder={t("auth.emailPlaceholder")}
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
 
-          <Card className="p-6 shadow-card border border-border">
-            <Tabs defaultValue={defaultTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 bg-surface">
-                <TabsTrigger
-                    value="login"
-                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                >
-                  {t("auth.loginTab")}
-                </TabsTrigger>
-                <TabsTrigger
-                    value="signup"
-                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                >
-                  {t("auth.signupTab")}
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="login" className="space-y-4 mt-4">
-                <form onSubmit={handleLogin} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="login-email" className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-muted-foreground" />
-                      {t("auth.email")}
-                    </Label>
-                    <Input
-                        id="login-email"
-                        type="email"
-                        placeholder={t("auth.emailPlaceholder")}
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="login-password" className="flex items-center gap-2">
-                        <Lock className="w-4 h-4 text-muted-foreground" />
-                        {t("auth.password")}
-                      </Label>
-                      <Button
-                          variant="link"
-                          size="sm"
-                          className="px-0 h-auto text-xs text-muted-foreground hover:text-primary"
-                          onClick={() => {
-                            setResetEmail(email);
-                            setIsResetDialogOpen(true);
-                          }}
-                          type="button"
-                      >
-                        {t("auth.forgotPassword", "Esqueceu a senha?")}
-                      </Button>
-                    </div>
-
-                    <div className="relative">
-                      <Input
-                          id="login-password"
-                          type={showLoginPassword ? "text" : "password"}
-                          placeholder={t("auth.passwordPlaceholder")}
-                          required
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          className="pr-10"
-                      />
-                      <Button
-                          type="button"
-                          variant="ghost"
-                          size="sm"
-                          className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                          onClick={() => setShowLoginPassword(!showLoginPassword)}
-                      >
-                        {showLoginPassword ? (
-                            <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                            <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                        id="remember-me"
-                        checked={rememberMe}
-                        onCheckedChange={(checked) => setRememberMe(checked === true)}
-                    />
-                    <Label htmlFor="remember-me" className="text-sm font-normal text-muted-foreground cursor-pointer">
-                      {t("auth.rememberMe", "Mantenha conectado")}
-                    </Label>
-                  </div>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
-                    {isLoading ? t("common.loading") : t("auth.loginButton")}
-                  </Button>
-                </form>
-              </TabsContent>
-
-              <TabsContent value="signup" className="space-y-4 mt-4">
-                <form onSubmit={handleSignup} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-name" className="flex items-center gap-2">
-                      <User className="w-4 h-4 text-muted-foreground" />
-                      {t("auth.fullName")}
-                    </Label>
-                    <Input
-                        id="signup-name"
-                        type="text"
-                        placeholder={t("auth.fullNamePlaceholder")}
-                        required
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
-                    />
-                  </div>
-
-                  {/* CAMPO DE EMAIL INTELIGENTE */}
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-email" className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-muted-foreground" />
-                      {t("auth.email")}
-                    </Label>
-                    <Input
-                        id="signup-email"
-                        type="email"
-                        placeholder={t("auth.emailPlaceholder")}
-                        required
-                        // SE FOR COMPRA: Trava o campo e deixa cinza
-                        readOnly={isPurchaseFlow}
-                        className={isPurchaseFlow ? "bg-muted cursor-not-allowed opacity-80" : ""}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
-
-                  {/* CAMPO DE CONFIRMAÇÃO: SÓ APARECE SE FOR COMPRA */}
-                  {isPurchaseFlow && (
-                      <div className="space-y-2 animate-fade-in-up">
-                        <Label htmlFor="signup-confirm-email" className="flex items-center gap-2">
-                          <Mail className="w-4 h-4 text-muted-foreground" />
-                          {t("auth.confirmEmail", "Confirme seu e-mail")}
-                        </Label>
-                        <Input
-                            id="signup-confirm-email"
-                            type="email"
-                            placeholder={t("auth.emailPlaceholder", "Digite seu e-mail novamente")}
-                            required
-                            value={confirmEmail}
-                            onChange={(e) => setConfirmEmail(e.target.value)}
-                        />
-                      </div>
-                  )}
-
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-password" className="flex items-center gap-2">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="login-password" className="flex items-center gap-2">
                       <Lock className="w-4 h-4 text-muted-foreground" />
                       {t("auth.password")}
                     </Label>
-                    <div className="relative">
-                      <Input
-                          id="signup-password"
-                          type={showSignupPassword ? "text" : "password"}
-                          placeholder={t("auth.passwordPlaceholder")}
-                          required
-                          minLength={6}
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          className="pr-10"
-                      />
-                      <Button
-                          type="button"
-                          variant="ghost"
-                          size="sm"
-                          className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                          onClick={() => setShowSignupPassword(!showSignupPassword)}
-                      >
-                        {showSignupPassword ? (
-                            <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                            <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
+                    <Button
+                      variant="link"
+                      size="sm"
+                      className="px-0 h-auto text-xs text-muted-foreground hover:text-primary"
+                      onClick={() => {
+                        setResetEmail(email);
+                        setIsResetDialogOpen(true);
+                      }}
+                      type="button"
+                    >
+                      {t("auth.forgotPassword", "Esqueceu a senha?")}
+                    </Button>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-confirm" className="flex items-center gap-2">
-                      <Lock className="w-4 h-4 text-muted-foreground" />
-                      {t("auth.confirmPassword")}
-                    </Label>
-                    <div className="relative">
-                      <Input
-                          id="signup-confirm"
-                          type={showConfirmPassword ? "text" : "password"}
-                          placeholder={t("auth.confirmPasswordPlaceholder")}
-                          required
-                          minLength={6}
-                          value={confirmPassword}
-                          onChange={(e) => setConfirmPassword(e.target.value)}
-                          className="pr-10"
-                      />
-                      <Button
-                          type="button"
-                          variant="ghost"
-                          size="sm"
-                          className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      >
-                        {showConfirmPassword ? (
-                            <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                            <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
+                  <div className="relative">
+                    <Input
+                      id="login-password"
+                      type={showLoginPassword ? "text" : "password"}
+                      placeholder={t("auth.passwordPlaceholder")}
+                      required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="pr-10"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                      onClick={() => setShowLoginPassword(!showLoginPassword)}
+                    >
+                      {showLoginPassword ? (
+                        <EyeOff className="h-4 w-4 text-muted-foreground" />
+                      ) : (
+                        <Eye className="h-4 w-4 text-muted-foreground" />
+                      )}
+                    </Button>
                   </div>
+                </div>
 
-                  <Button type="submit" className="w-full" disabled={isLoading}>
-                    {isLoading ? t("common.loading") : t("auth.signupButton")}
-                  </Button>
-                </form>
-              </TabsContent>
-            </Tabs>
-          </Card>
-        </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="remember-me"
+                    checked={rememberMe}
+                    onCheckedChange={(checked) => setRememberMe(checked === true)}
+                  />
+                  <Label htmlFor="remember-me" className="text-sm font-normal text-muted-foreground cursor-pointer">
+                    {t("auth.rememberMe", "Mantenha conectado")}
+                  </Label>
+                </div>
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? t("common.loading") : t("auth.loginButton")}
+                </Button>
+              </form>
+            </TabsContent>
 
-        <Dialog open={isResetDialogOpen} onOpenChange={setIsResetDialogOpen}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle>{t("auth.resetPasswordTitle", "Recuperar Senha")}</DialogTitle>
-              <DialogDescription>
-                {t("auth.resetPasswordDesc", "Digite seu e-mail para receber um link de redefinição de senha.")}
-              </DialogDescription>
-            </DialogHeader>
-            <form onSubmit={handleResetPassword} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="reset-email">{t("auth.email")}</Label>
-                <Input
-                    id="reset-email"
+            <TabsContent value="signup" className="space-y-4 mt-4">
+              <form onSubmit={handleSignup} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="signup-name" className="flex items-center gap-2">
+                    <User className="w-4 h-4 text-muted-foreground" />
+                    {t("auth.fullName")}
+                  </Label>
+                  <Input
+                    id="signup-name"
+                    type="text"
+                    placeholder={t("auth.fullNamePlaceholder")}
+                    required
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                  />
+                </div>
+
+                {/* CAMPO DE EMAIL INTELIGENTE */}
+                <div className="space-y-2">
+                  <Label htmlFor="signup-email" className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-muted-foreground" />
+                    {t("auth.email")}
+                  </Label>
+                  <Input
+                    id="signup-email"
                     type="email"
                     placeholder={t("auth.emailPlaceholder")}
-                    value={resetEmail}
-                    onChange={(e) => setResetEmail(e.target.value)}
                     required
-                />
-              </div>
-              <DialogFooter>
-                <Button type="button" variant="outline" onClick={() => setIsResetDialogOpen(false)}>
-                  {t("common.cancel", "Cancelar")}
+                    // SE FOR COMPRA: Trava o campo e deixa cinza
+                    readOnly={isPurchaseFlow}
+                    className={isPurchaseFlow ? "bg-muted cursor-not-allowed opacity-80" : ""}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+
+                {/* CAMPO DE CONFIRMAÇÃO: SÓ APARECE SE FOR COMPRA */}
+                {isPurchaseFlow && (
+                  <div className="space-y-2 animate-fade-in-up">
+                    <Label htmlFor="signup-confirm-email" className="flex items-center gap-2">
+                      <Mail className="w-4 h-4 text-muted-foreground" />
+                      {t("auth.confirmEmail", "Confirme seu e-mail")}
+                    </Label>
+                    <Input
+                      id="signup-confirm-email"
+                      type="email"
+                      placeholder={t("auth.emailPlaceholder", "Digite seu e-mail novamente")}
+                      required
+                      value={confirmEmail}
+                      onChange={(e) => setConfirmEmail(e.target.value)}
+                    />
+                  </div>
+                )}
+
+                <div className="space-y-2">
+                  <Label htmlFor="signup-password" className="flex items-center gap-2">
+                    <Lock className="w-4 h-4 text-muted-foreground" />
+                    {t("auth.password")}
+                  </Label>
+                  <div className="relative">
+                    <Input
+                      id="signup-password"
+                      type={showSignupPassword ? "text" : "password"}
+                      placeholder={t("auth.passwordPlaceholder")}
+                      required
+                      minLength={6}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="pr-10"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                      onClick={() => setShowSignupPassword(!showSignupPassword)}
+                    >
+                      {showSignupPassword ? (
+                        <EyeOff className="h-4 w-4 text-muted-foreground" />
+                      ) : (
+                        <Eye className="h-4 w-4 text-muted-foreground" />
+                      )}
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="signup-confirm" className="flex items-center gap-2">
+                    <Lock className="w-4 h-4 text-muted-foreground" />
+                    {t("auth.confirmPassword")}
+                  </Label>
+                  <div className="relative">
+                    <Input
+                      id="signup-confirm"
+                      type={showConfirmPassword ? "text" : "password"}
+                      placeholder={t("auth.confirmPasswordPlaceholder")}
+                      required
+                      minLength={6}
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="pr-10"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    >
+                      {showConfirmPassword ? (
+                        <EyeOff className="h-4 w-4 text-muted-foreground" />
+                      ) : (
+                        <Eye className="h-4 w-4 text-muted-foreground" />
+                      )}
+                    </Button>
+                  </div>
+                </div>
+
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? t("common.loading") : t("auth.signupButton")}
                 </Button>
-                <Button type="submit" disabled={isResetLoading}>
-                  {isResetLoading ? t("common.loading") : t("auth.sendResetLink", "Enviar Link")}
-                </Button>
-              </DialogFooter>
-            </form>
-          </DialogContent>
-        </Dialog>
-
-          <Dialog open={isLoginErrorDialogOpen} onOpenChange={setIsLoginErrorDialogOpen}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <div style={{ height: "15px", width: "100%" }}></div>
-              <DialogTitle className="text-base font-semibold leading-snug">
-                {loginErrorTitle}
-              </DialogTitle>
-              <DialogDescription className="text-sm leading-relaxed">
-                <ol className="mt-2 space-y-4">
-                  {loginErrorLines.map((line, index) => {
-                    const isLast = index === loginErrorLines.length - 1;
-                    const isBreak = index === loginErrorLines.length - 2;
-
-                    return (
-                      <li key={index} className="relative pl-8">
-                        <span className="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-medium text-primary">
-                          {index + 1}
-                        </span>
-                        {!isLast && (
-                          <span
-                            className={`absolute left-3 top-7 h-full w-px ${
-                              isBreak
-                                ? "border-l-2 border-dashed border-muted-foreground/40"
-                                : "border-l-2 border-solid border-muted-foreground/25"
-                            }`}
-                          />
-                        )}
-                        {isBreak && (
-                          <span className="absolute left-2.5 top-[2.25rem] h-2 w-2 rounded-full border border-muted-foreground/40 bg-background" />
-                        )}
-                        <p className="text-sm text-muted-foreground">
-                          {line.includes(supportEmail) ? (
-                            <>
-                              {line.split(supportEmail)[0]}
-                              <a
-                                href={`mailto:${supportEmail}`}
-                                className="text-primary underline underline-offset-4"
-                              >
-                                {supportEmail}
-                              </a>
-                              {line.split(supportEmail)[1] ?? ""}
-                            </>
-                          ) : (
-                            line
-                          )}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter>
-              <Button 
-                type="button" 
-                onClick={() => setIsLoginErrorDialogOpen(false)}
-                className="w-full"
-              >
-                {t("common.ok", "OK")}
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-
-        <Dialog open={isNoPurchaseDialogOpen} onOpenChange={setIsNoPurchaseDialogOpen}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <div style={{ height: "15px", width: "100%" }}></div>
-              <DialogTitle className="text-base font-semibold leading-snug">
-                {t("auth.noPurchaseTitle", "Compra nao identificada")}
-              </DialogTitle>
-              <DialogDescription className="text-sm leading-relaxed">
-                <ol className="mt-2 space-y-4">
-                  {noPurchaseLines.map((line, index) => {
-                    const isLast = index === noPurchaseLines.length - 1;
-                    const isBreak = index === noPurchaseLines.length - 2;
-
-                    return (
-                      <li key={index} className="relative pl-8">
-                        <span className="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-medium text-primary">
-                          {index + 1}
-                        </span>
-                        {!isLast && (
-                          <span
-                            className={`absolute left-3 top-7 h-full w-px ${
-                              isBreak
-                                ? "border-l-2 border-dashed border-muted-foreground/40"
-                                : "border-l-2 border-solid border-muted-foreground/25"
-                            }`}
-                          />
-                        )}
-                        {isBreak && (
-                          <span className="absolute left-2.5 top-[2.25rem] h-2 w-2 rounded-full border border-muted-foreground/40 bg-background" />
-                        )}
-                        <p className="text-sm text-muted-foreground">
-                          {line.includes(supportEmail) ? (
-                            <>
-                              {line.split(supportEmail)[0]}
-                              <a
-                                href={`mailto:${supportEmail}`}
-                                className="text-primary underline underline-offset-4"
-                              >
-                                {supportEmail}
-                              </a>
-                              {line.split(supportEmail)[1] ?? ""}
-                            </>
-                          ) : (
-                            line
-                          )}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter className="flex flex-col sm:flex-row gap-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={handleContinueSignup}
-                className="w-full"
-              >
-                {t("auth.noPurchaseContinue", "Continuar cadastro")}
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+              </form>
+            </TabsContent>
+          </Tabs>
+        </Card>
       </div>
+
+      <Dialog open={isResetDialogOpen} onOpenChange={setIsResetDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>{t("auth.resetPasswordTitle", "Recuperar Senha")}</DialogTitle>
+            <DialogDescription>
+              {t("auth.resetPasswordDesc", "Digite seu e-mail para receber um link de redefinição de senha.")}
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleResetPassword} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="reset-email">{t("auth.email")}</Label>
+              <Input
+                id="reset-email"
+                type="email"
+                placeholder={t("auth.emailPlaceholder")}
+                value={resetEmail}
+                onChange={(e) => setResetEmail(e.target.value)}
+                required
+              />
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setIsResetDialogOpen(false)}>
+                {t("common.cancel", "Cancelar")}
+              </Button>
+              <Button type="submit" disabled={isResetLoading}>
+                {isResetLoading ? t("common.loading") : t("auth.sendResetLink", "Enviar Link")}
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={isLoginErrorDialogOpen} onOpenChange={setIsLoginErrorDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div style={{ height: "15px", width: "100%" }}></div>
+            <DialogTitle className="text-base font-semibold leading-snug">
+              {loginErrorTitle}
+            </DialogTitle>
+            <DialogDescription className="text-sm leading-relaxed">
+              <ol className="mt-2 space-y-4">
+                {loginErrorLines.map((line, index) => {
+                  const isLast = index === loginErrorLines.length - 1;
+                  const isBreak = index === loginErrorLines.length - 2;
+
+                  return (
+                    <li key={index} className="relative pl-8">
+                      <span className="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-medium text-primary">
+                        {index + 1}
+                      </span>
+                      {!isLast && (
+                        <span
+                          className={`absolute left-3 top-7 h-full w-px ${isBreak
+                            ? "border-l-2 border-dashed border-muted-foreground/40"
+                            : "border-l-2 border-solid border-muted-foreground/25"
+                            }`}
+                        />
+                      )}
+                      {isBreak && (
+                        <span className="absolute left-2.5 top-[2.25rem] h-2 w-2 rounded-full border border-muted-foreground/40 bg-background" />
+                      )}
+                      <p className="text-sm text-muted-foreground">
+                        {line.includes(supportEmail) ? (
+                          <>
+                            {line.split(supportEmail)[0]}
+                            <a
+                              href={`mailto:${supportEmail}`}
+                              className="text-primary underline underline-offset-4"
+                            >
+                              {supportEmail}
+                            </a>
+                            {line.split(supportEmail)[1] ?? ""}
+                          </>
+                        ) : (
+                          line
+                        )}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ol>
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button
+              type="button"
+              onClick={() => setIsLoginErrorDialogOpen(false)}
+              className="w-full"
+            >
+              {t("common.ok", "OK")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={isNoPurchaseDialogOpen} onOpenChange={setIsNoPurchaseDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div style={{ height: "15px", width: "100%" }}></div>
+            <DialogTitle className="text-base font-semibold leading-snug">
+              {t("auth.noPurchaseTitle", "Compra nao identificada")}
+            </DialogTitle>
+            <DialogDescription className="text-sm leading-relaxed">
+              <ol className="mt-2 space-y-4">
+                {noPurchaseLines.map((line, index) => {
+                  const isLast = index === noPurchaseLines.length - 1;
+                  const isBreak = index === noPurchaseLines.length - 2;
+
+                  return (
+                    <li key={index} className="relative pl-8">
+                      <span className="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-medium text-primary">
+                        {index + 1}
+                      </span>
+                      {!isLast && (
+                        <span
+                          className={`absolute left-3 top-7 h-full w-px ${isBreak
+                            ? "border-l-2 border-dashed border-muted-foreground/40"
+                            : "border-l-2 border-solid border-muted-foreground/25"
+                            }`}
+                        />
+                      )}
+                      {isBreak && (
+                        <span className="absolute left-2.5 top-[2.25rem] h-2 w-2 rounded-full border border-muted-foreground/40 bg-background" />
+                      )}
+                      <p className="text-sm text-muted-foreground">
+                        {line.includes(supportEmail) ? (
+                          <>
+                            {line.split(supportEmail)[0]}
+                            <a
+                              href={`mailto:${supportEmail}`}
+                              className="text-primary underline underline-offset-4"
+                            >
+                              {supportEmail}
+                            </a>
+                            {line.split(supportEmail)[1] ?? ""}
+                          </>
+                        ) : (
+                          line
+                        )}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ol>
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex flex-col sm:flex-row gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={handleContinueSignup}
+              className="w-full"
+            >
+              {t("auth.noPurchaseContinue", "Continuar cadastro")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 };
 
