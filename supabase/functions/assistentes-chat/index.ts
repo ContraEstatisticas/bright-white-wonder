@@ -256,6 +256,7 @@ serve(async (req) => {
       }
 
       const imageData = await imageResponse.json();
+      console.log("Imagen response:", JSON.stringify(imageData).slice(0, 300));
       const prediction = imageData.predictions?.[0];
       let imageUrl: string | null = null;
 
@@ -275,8 +276,11 @@ serve(async (req) => {
             .from("generated-images")
             .getPublicUrl(fileName);
           imageUrl = publicData?.publicUrl || null;
-        } else {
-          console.error("Storage upload error:", uploadError);
+        }
+
+        // Fallback: use data URL so image always displays even without storage bucket
+        if (!imageUrl) {
+          imageUrl = `data:${mimeType};base64,${b64}`;
         }
       }
 
