@@ -2,32 +2,28 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 // Emails with free access for testing
-const WHITELIST_EMAILS = [
-  'ferramentasdigitais1000@gmail.com',
-  'felip@gmailcom',
-  'perfildivulgacao001@gmail.com'
-];
+const WHITELIST_EMAILS = ["ferramentasdigitais1000@gmail.com", "felip@gmailcom", "perfildivulgacao001@gmail.com"];
 
 // Language names for instruction
 const languageNames: Record<string, string> = {
-  pt: 'Português',
-  en: 'English',
-  es: 'Español',
-  fr: 'Français',
-  de: 'Deutsch',
-  it: 'Italiano',
-  ru: 'Русский'
+  pt: "Português",
+  en: "English",
+  es: "Español",
+  fr: "Français",
+  de: "Deutsch",
+  it: "Italiano",
+  ru: "Русский",
 };
 
 // System prompts by language
 const getSystemPrompt = (language: string, aiToolContext?: string): string => {
-  const langName = languageNames[language] || 'English';
-  
+  const langName = languageNames[language] || "English";
+
   const toolsTable = `
 | Tool | URL | Use case |
 |------|-----|----------|
@@ -164,7 +160,7 @@ ${toolsTable}
 
 ## КРИТИЧЕСКИЕ ПРАВИЛА
 ✅ КОРОТКИЕ ответы (макс 3 абзаца)
-✅ Будьте ПОЛЕЗНЫ и КОНКРЕТНЫ`
+✅ Будьте ПОЛЕЗНЫ и КОНКРЕТНЫ`,
   };
 
   // PROMPT ESPECIALIZADO PARA TREINO DE PROMPTS - MODO CONVERSACIONAL INTELIGENTE
@@ -334,20 +330,20 @@ Help students who got a quiz question wrong understand the concept.
 
 ## RULES:
 ❌ NEVER reveal the correct answer directly
-✅ ALWAYS be patient and encouraging`
+✅ ALWAYS be patient and encouraging`,
   };
 
   // Seleciona o prompt base correto
   let basePrompt = ediBasePrompt[language] || ediBasePrompt.en;
-  
+
   // Adiciona contexto específico se fornecido
   if (aiToolContext) {
     // Treino de Prompts
-    if (aiToolContext.includes('Treino') || aiToolContext.includes('Prompt') || aiToolContext.includes('Training')) {
+    if (aiToolContext.includes("Treino") || aiToolContext.includes("Prompt") || aiToolContext.includes("Training")) {
       basePrompt = promptTrainerSystem[language] || promptTrainerSystem.en;
     }
     // Ajuda em Quiz
-    else if (aiToolContext.includes('quiz') || aiToolContext.includes('Quiz')) {
+    else if (aiToolContext.includes("quiz") || aiToolContext.includes("Quiz")) {
       basePrompt = quizHelperSystem[language] || quizHelperSystem.en;
     }
     // Contexto de aula específico
@@ -359,7 +355,7 @@ Help students who got a quiz question wrong understand the concept.
         fr: `\n\n## CONTEXTE DE LA LEÇON\nL'étudiant étudie: **${aiToolContext}**\nConcentrez vos réponses sur ce sujet.`,
         de: `\n\n## UNTERRICHTSKONTEXT\nDer Schüler lernt: **${aiToolContext}**\nKonzentrieren Sie Ihre Antworten auf dieses Thema.`,
         it: `\n\n## CONTESTO DELLA LEZIONE\nLo studente sta studiando: **${aiToolContext}**\nConcentra le tue risposte su questo argomento.`,
-        ru: `\n\n## КОНТЕКСТ УРОКА\nСтудент изучает: **${aiToolContext}**\nСосредоточьте ответы на этой теме.`
+        ru: `\n\n## КОНТЕКСТ УРОКА\nСтудент изучает: **${aiToolContext}**\nСосредоточьте ответы на этой теме.`,
       };
       basePrompt += contextAdditions[language] || contextAdditions.en;
     }
@@ -372,13 +368,13 @@ Help students who got a quiz question wrong understand the concept.
 };
 
 serve(async (req) => {
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     // Get auth token from header
-    const authHeader = req.headers.get('Authorization');
+    const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
       console.error("No authorization header provided");
       return new Response(JSON.stringify({ error: "Não autorizado" }), {
@@ -387,16 +383,19 @@ serve(async (req) => {
       });
     }
 
-    const token = authHeader.replace('Bearer ', '');
-    
+    const token = authHeader.replace("Bearer ", "");
+
     // Initialize Supabase client with service role for checking premium
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Verify user from token
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
-    
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
+
     if (authError || !user) {
       console.error("Auth error:", authError?.message || "No user found");
       return new Response(JSON.stringify({ error: "Não autorizado" }), {
@@ -408,12 +407,12 @@ serve(async (req) => {
     console.log("Authenticated user:", user.email);
 
     // Check if user is whitelisted
-    const isWhitelisted = WHITELIST_EMAILS.includes(user.email || '');
-    
+    const isWhitelisted = WHITELIST_EMAILS.includes(user.email || "");
+
     if (!isWhitelisted) {
       // Use check_premium_access function to verify access (includes whitelist, premium, and product access)
-      const { data: hasAccess, error: accessError } = await supabase.rpc('check_premium_access', {
-        user_email: user.email
+      const { data: hasAccess, error: accessError } = await supabase.rpc("check_premium_access", {
+        user_email: user.email,
       });
 
       if (accessError) {
@@ -428,12 +427,12 @@ serve(async (req) => {
         });
       }
     }
-    
+
     console.log("User has valid access:", user.email);
 
     // Parse and validate request body
     const body = await req.json();
-    
+
     // Input validation
     if (!body.messages || !Array.isArray(body.messages) || body.messages.length === 0 || body.messages.length > 50) {
       return new Response(JSON.stringify({ error: "Invalid messages: must be array with 1-50 items" }), {
@@ -444,13 +443,13 @@ serve(async (req) => {
 
     // Validate each message
     for (const msg of body.messages) {
-      if (!msg || typeof msg.content !== 'string' || msg.content.length === 0 || msg.content.length > 10000) {
+      if (!msg || typeof msg.content !== "string" || msg.content.length === 0 || msg.content.length > 10000) {
         return new Response(JSON.stringify({ error: "Invalid message content" }), {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
-      if (!['user', 'assistant'].includes(msg.role)) {
+      if (!["user", "assistant"].includes(msg.role)) {
         return new Response(JSON.stringify({ error: "Invalid message role" }), {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -459,14 +458,17 @@ serve(async (req) => {
     }
 
     // Validate optional fields
-    if (body.aiToolContext && (typeof body.aiToolContext !== 'string' || body.aiToolContext.length > 200)) {
+    if (body.aiToolContext && (typeof body.aiToolContext !== "string" || body.aiToolContext.length > 200)) {
       return new Response(JSON.stringify({ error: "Invalid aiToolContext" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    if (body.language && (typeof body.language !== 'string' || !/^[a-z]{2}(-[a-zA-Z0-9]{2,4})?$/i.test(body.language))) {
+    if (
+      body.language &&
+      (typeof body.language !== "string" || !/^[a-z]{2}(-[a-zA-Z0-9]{2,4})?$/i.test(body.language))
+    ) {
       return new Response(JSON.stringify({ error: "Invalid language format" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -475,32 +477,36 @@ serve(async (req) => {
 
     const messages = body.messages;
     const aiToolContext = body.aiToolContext;
-    const language = body.language || 'pt';
-    
-    const GEMINI_API_KEY = Deno.env.get("GEMINI_API_KEY");
+    const language = body.language || "pt";
 
-    if (!GEMINI_API_KEY) {
-      console.error("GEMINI_API_KEY is not configured");
-      throw new Error("GEMINI_API_KEY is not configured");
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    const GEMINI_API_KEY = Deno.env.get("GEMINI_API_KEY");
+    const useGateway = !!LOVABLE_API_KEY;
+    const apiKey = LOVABLE_API_KEY || GEMINI_API_KEY;
+
+    if (!apiKey) {
+      console.error("No AI API key configured (LOVABLE_API_KEY or GEMINI_API_KEY)");
+      throw new Error("AI API key is not configured");
     }
+
+    const AI_BASE_URL = useGateway
+      ? "https://ai.gateway.lovable.dev/v1/chat/completions"
+      : "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
 
     console.log("Processing chat request with context:", aiToolContext, "language:", language);
     console.log("Number of messages:", messages.length);
 
     const systemPrompt = getSystemPrompt(language, aiToolContext);
 
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
+    const response = await fetch(AI_BASE_URL, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${GEMINI_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gemini-2.0-flash-lite",
-        messages: [
-          { role: "system", content: systemPrompt },
-          ...messages,
-        ],
+        model: useGateway ? "google/gemini-2.5-flash" : "gemini-2.5-flash",
+        messages: [{ role: "system", content: systemPrompt }, ...messages],
         stream: true,
         max_tokens: 800,
         temperature: 0.7,
@@ -510,7 +516,7 @@ serve(async (req) => {
     if (!response.ok) {
       const errorText = await response.text();
       console.error(`AI gateway error [${response.status}]:`, errorText);
-      
+
       const gatewayErrorMessages: Record<number, string> = {
         400: "Erro na requisição. Tente novamente.",
         402: "Créditos insuficientes. Entre em contato com o suporte.",
@@ -520,9 +526,9 @@ serve(async (req) => {
         503: "Serviço de IA em manutenção. Tente em alguns minutos.",
       };
 
-      const errorMessage = gatewayErrorMessages[response.status] 
-        || `Erro inesperado (código: ${response.status}). Tente novamente.`;
-      
+      const errorMessage =
+        gatewayErrorMessages[response.status] || `Erro inesperado (código: ${response.status}). Tente novamente.`;
+
       const returnStatus = [429, 402].includes(response.status) ? response.status : 500;
 
       return new Response(JSON.stringify({ error: errorMessage }), {
