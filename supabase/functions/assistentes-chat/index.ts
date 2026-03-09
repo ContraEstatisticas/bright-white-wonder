@@ -184,7 +184,8 @@ serve(async (req) => {
 
     const AI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
     const TEXT_MODEL = "gemini-2.5-flash";
-    const IMAGE_MODEL = "gemini-3.1-flash-image-preview";
+    const IMAGE_MODEL = "gemini-2.0-flash-preview-image-generation";
+    const GEMINI_IMAGE_URL = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGE_MODEL}:generateContent`;
 
     // --- Handle image generation (nanobanana) ---
     if (isImageType) {
@@ -217,16 +218,14 @@ serve(async (req) => {
       const briefResponse = textData.choices?.[0]?.message?.content || "";
 
       const imagePrompt = `${lastUserMessage}. Ultra high resolution, professional quality, highly detailed.`;
-      const imageResponse = await fetch(AI_BASE_URL, {
+      const imageResponse = await fetch(`${GEMINI_IMAGE_URL}?key=${GEMINI_API_KEY}`, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${GEMINI_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: IMAGE_MODEL,
-          messages: [{ role: "user", content: imagePrompt }],
-          modalities: ["image", "text"],
+          contents: [{ parts: [{ text: imagePrompt }] }],
+          generationConfig: { responseModalities: ["IMAGE", "TEXT"] },
         }),
       });
 
@@ -246,6 +245,8 @@ serve(async (req) => {
       }
 
       if (!imageResponse.ok) {
+        const errText = await imageResponse.text();
+        console.error("Image generation error:", errText);
         return new Response(JSON.stringify({
           type: "creative",
           text: briefResponse,
@@ -256,7 +257,30 @@ serve(async (req) => {
       }
 
       const imageData = await imageResponse.json();
-      const imageUrl = imageData.choices?.[0]?.message?.images?.[0]?.image_url?.url;
+      const inlinePart = imageData.candidates?.[0]?.content?.parts?.find(
+        (p: { inlineData?: { data: string; mimeType: string } }) => p.inlineData
+      );
+      let imageUrl: string | null = null;
+
+      if (inlinePart?.inlineData) {
+        const { data: b64, mimeType } = inlinePart.inlineData;
+        const ext = mimeType === "image/jpeg" ? "jpg" : "png";
+        const fileName = `nanobanana/${user.id}/${Date.now()}.${ext}`;
+        const imageBytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+
+        const { error: uploadError } = await supabase.storage
+          .from("generated-images")
+          .upload(fileName, imageBytes, { contentType: mimeType, upsert: false });
+
+        if (!uploadError) {
+          const { data: publicData } = supabase.storage
+            .from("generated-images")
+            .getPublicUrl(fileName);
+          imageUrl = publicData?.publicUrl || null;
+        } else {
+          console.error("Storage upload error:", uploadError);
+        }
+      }
 
       // Save to DB
       const responseContent = imageUrl ? `${briefResponse}\n\n[IMAGE:${imageUrl}]` : briefResponse;
