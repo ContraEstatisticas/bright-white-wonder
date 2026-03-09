@@ -216,9 +216,9 @@ serve(async (req) => {
     };
 
     const modelCandidates = [
-      "google/gemini-2.0-flash-lite",
-      "google/gemini-2.0-flash",
-      "google/gemini-1.5-flash",
+      "gemini-2.0-flash-lite",
+      "gemini-2.0-flash",
+      "gemini-1.5-flash",
     ];
     let selectedModel = modelCandidates[0];
     let response: Response | null = null;
