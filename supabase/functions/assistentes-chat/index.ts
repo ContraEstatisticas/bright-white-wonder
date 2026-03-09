@@ -184,8 +184,7 @@ serve(async (req) => {
 
     const AI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
     const TEXT_MODEL = "gemini-2.5-flash";
-    const IMAGE_MODEL = "gemini-2.0-flash-preview-image-generation";
-    const GEMINI_IMAGE_URL = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGE_MODEL}:generateContent`;
+    const IMAGEN_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict`;
 
     // --- Handle image generation (nanobanana) ---
     if (isImageType) {
@@ -218,14 +217,14 @@ serve(async (req) => {
       const briefResponse = textData.choices?.[0]?.message?.content || "";
 
       const imagePrompt = `${lastUserMessage}. Ultra high resolution, professional quality, highly detailed.`;
-      const imageResponse = await fetch(`${GEMINI_IMAGE_URL}?key=${GEMINI_API_KEY}`, {
+      const imageResponse = await fetch(`${IMAGEN_URL}?key=${GEMINI_API_KEY}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: imagePrompt }] }],
-          generationConfig: { responseModalities: ["IMAGE", "TEXT"] },
+          instances: [{ prompt: imagePrompt }],
+          parameters: { sampleCount: 1 },
         }),
       });
 
@@ -257,13 +256,12 @@ serve(async (req) => {
       }
 
       const imageData = await imageResponse.json();
-      const inlinePart = imageData.candidates?.[0]?.content?.parts?.find(
-        (p: { inlineData?: { data: string; mimeType: string } }) => p.inlineData
-      );
+      const prediction = imageData.predictions?.[0];
       let imageUrl: string | null = null;
 
-      if (inlinePart?.inlineData) {
-        const { data: b64, mimeType } = inlinePart.inlineData;
+      if (prediction?.bytesBase64Encoded) {
+        const b64 = prediction.bytesBase64Encoded;
+        const mimeType = prediction.mimeType || "image/png";
         const ext = mimeType === "image/jpeg" ? "jpg" : "png";
         const fileName = `nanobanana/${user.id}/${Date.now()}.${ext}`;
         const imageBytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
