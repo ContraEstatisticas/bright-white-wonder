@@ -569,6 +569,12 @@
         "description": "Crie assets visuais consistentes e em escala com modelos especializados e ferramentas de edição em batch."
       }
     },
+    "midjourney": {
+      "1": {
+        "title": "🎨 Domine o Midjourney",
+        "description": "Crie obras-primas visuais e conceituais de extrema qualidade através da comunidade no Discord."
+      }
+    },
     "captions": {
       "1": {
         "title": "Introdução ao Captions",

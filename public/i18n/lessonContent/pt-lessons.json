@@ -3378,132 +3378,127 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎭 Apresentadores Virtuais: Sua Equipe que Nunca Dorme",
-        "content": "Você já sabe editar vídeos, agora vai aprender a criar os **Apresentadores**. Avatares de IA são personagens digitais realistas que falam o seu roteiro com expressões humanas.\n\n\n\n**Por que isso muda o jogo?**\n- **Escala:** Crie 50 vídeos em uma tarde.\n- **Idiomas:** Seu avatar pode falar inglês, mandarim ou espanhol fluentemente.\n- **Sem Cansaço:** Ele não erra as falas, não precisa de maquiagem e está sempre pronto."
+        "title": "🎨 História do Midjourney",
+        "content": "Midjourney foi criada em 2021 por David Holz com foco em qualidade máxima de imagens IA. Diferente de DALL-E (acessibilidade) e Stable Diffusion (open-source), Midjourney apostou em melhor qualidade e comunidade vibrante. Escolheu Discord como plataforma (não website), criando comunidade onde usuários compartilham técnicas e prompts em tempo real.\n\nA empresa cresceu explosivamente. Cada versão (v1 → v6) trouxe melhoria drástica. Midjourney tornou-se ferramenta padrão entre designers, artistas e criativos. Centenas de milhares de usuários pagos provam confiança. Mantém lucratividade sem suporte de mega-corporações – pura qualidade.\n\n💡 **DICA PRÁTICA:** Midjourney funciona via Discord. Se nunca usou, aprenda Discord básico antes."
       },
       {
         "type": "text",
-        "title": "🤖 Do Desenho ao Humano: Níveis de Realismo",
-        "content": "Existem três tipos principais de avatares que você pode usar:\n\n1.  🎨 **Estilizados (Cartoon):** Ótimos para vídeos educativos, tutoriais rápidos ou conteúdo infantil.\n2.  🎭 **Semi-realistas:** Um equilíbrio entre arte e realidade. Muito usados em marketing digital.\n3.  🌟 **Hiper-realistas:** Quase impossíveis de distinguir de uma pessoa real. Ideais para cursos premium e anúncios de alto valor.\n\n[Image comparing cartoon vs. hyper-realistic AI avatars]"
+        "title": "⚙️ Como o Midjourney Funciona",
+        "content": "Você entra no Discord, digita /imagine [prompt] e descreve a imagem desejada. Segundos depois, Midjourney gera 4 variações. Valida as opções. Se gostou, pede upscale ou variações. Se não, regenera com prompt diferente.\n\nInternamente usa modelo proprietário treinado em bilhões de imagens. Entende contexto, estilo, composição, cores simultaneamente. Resultado é coerente e esteticamente superior.\n\nOferece parâmetros avançados: --ar 16:9 (proporção), --quality 2 (qualidade máxima), --chaos 50 (criatividade), --no pessoa (remove elemento), --style raw (estilo). Dão controle fino sobre resultado.\n\nQualidade consistentemente superior a DALL-E 3 e Stable Diffusion. Onde outros falham em mãos, composição, ou detalhes, Midjourney acerta.\n\n💡 **DICA PRÁTICA:** Prompts detalhados funcionam melhor. \"Mulher na praia\" é vago. \"Mulher 30 anos, cabelo castanho, praia tropical, luz dourada, por Annie Leibovitz\" gera excelência."
       },
       {
         "type": "text",
-        "title": "🎯 O Método A.V.A.T.A.R. para Criação",
-        "content": "Para criar um apresentador marcante, siga esta receita:\n\n* **A - Aspectos:** Defina idade, gênero e etnia.\n* **V - Visual:** Escolha as roupas (terno, casual, jaleco).\n* **A - Ambiente:** Onde ele está? (Escritório, fundo colorido, biblioteca).\n* **T - Tom:** Ele é animado? Sério? Professor paciente?\n* **A - Aplicação:** O vídeo é para o YouTube ou treinamento interno?\n* **R - Regras:** Defina a qualidade (4K) e o que ele não deve fazer."
+        "title": "📊 Impacto e Adoção no Mercado",
+        "content": "Midjourney virou ferramenta padrão em indústrias criativas. Designers geram conceitos. Artistas exploram estilos. Marketers criam assets. Educadores ilustram conceitos.\n\nProfissionais relatam 40% de redução no tempo de brainstorm visual inicial. Agências usam para mood boards em minutos. Alguns artistas combinam imagens Midjourney com edição em Photoshop.\n\nEntre DALL-E, Stable Diffusion e Midjourney, este último conquistou positioning premium: melhor qualidade, comunidade mais ativa, features mais poderosas. Centenas de milhares de usuários pagos confirmam.\n\n💡 **DICA PRÁTICA:** Plano Básico ($10/mês) com ~200 imagens é bom para começar. Standard ($30/mês) para uso regular. Pro ($120/mês) para ilimitado."
+      },
+      {
+        "type": "text",
+        "title": "💪 Onde o Midjourney é Muito Bom",
+        "content": "- **Concept art:** Gere para jogos, filmes, livros rapidamente.\n- **Mockups visuais:** Laptop, ambiente, objetos em minutos.\n- **Mood boards:** Crie inspiração visual em quantidade.\n- **Ilustrações:** Blogs, artigos, redes sociais ganham ilustrações relevantes.\n- **Prototipagem visual:** Teste ideias antes de investir em fotógrafo.\n- **Backgrounds e texturas:** Madeira, metal, tecido customizados.\n- **Personagens e retratos:** Avatares, personagens fictícios, representações visuais.\n- **Fotografia conceitual:** Futuros, ficções, impossibilidades que não existem.\n- **Designs gráficos:** Posters, capas, layouts gerados e refinados.\n- **Exploração de estilos:** Teste conceito em aquarela, óleo, pixel art, etc.\n\n💡 **DICA PRÁTICA:** Midjourney é excelente para exploração criativa e ideias visuais. Para fotografia realista extrema, fotógrafo real é melhor."
+      },
+      {
+        "type": "text",
+        "title": "❌ Onde o Midjourney é Muito Ruim",
+        "content": "- **Fotografia realista de pessoa específica:** Gera rosto genérico, não consegue reproduzir pessoa específica.\n- **Texto legível em imagens:** Placa com escrito fica ilegível.\n- **Mãos realistas:** Historicamente falha em mãos (melhorou em v6, mas ainda).\n- **Anatomia precisa:** Erros em dedos, proporções. Fotografia é melhor referência.\n- **Detalhes técnicos:** Engrenagens, circuitos complexos – gera aproximação, não precisão.\n- **Logos/marcas reais:** \"Tipo iPhone\" sim, exatamente Apple não.\n- **Múltiplas pessoas com expressões diferentes:** Distribuição de emoções pode errar.\n- **Composição muito específica:** Se desenhou exato, designer/fotógrafo é melhor.\n- **Narrativas complexas:** Gera imagem isolada, não sequência visual.\n- **Controle absoluto:** Não edita pixels. Para alterar cores específicas, Photoshop é melhor.\n\n💡 **DICA PRÁTICA:** Use Midjourney para ideias e exploração. Use fotógrafo para produto fotográfico. Use designer para composição precisa."
+      },
+      {
+        "type": "text",
+        "title": "🎯 Como Extrair Bons Resultados",
+        "content": "Diferença entre ok e excelência está no prompt. Prompts genéricos = imagens ok. Prompts detalhados = imagens excelentes.\n\nRuim: \"mulher na praia\"\nBom: \"mulher 30 anos, cabelo castanho ondulado, sorrindo, praia tropical, luz dourada, fotografia Annie Leibovitz\"\n\nQuanto mais descreve (quem, onde, quando, como, estilo, artista referência), melhor Midjourney entende.\n\nTécnicas:\n- Use referências estilísticas: \"Estilo Ghibli\", \"fotografia Hasselblad\", \"pintura Rembrandt\"\n- Itere inteligentemente: gere 4 → escolha uma → peça upscale ou variações\n- Use parâmetros: --ar 16:9, --quality 2, --chaos 70, --no mãos más, --style raw\n- Estude prompts da comunidade: procure inspiração em Discord\n\n💡 **DICA PRÁTICA:** 10 minutos aprendendo prompting em Midjourney vale anos de uso amador. Novato vs experiente = diferença abismal."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ Atenção - Características Importantes",
+        "content": "**Funciona Via Discord (Não é Website)**\nDiferentes de DALL-E tradicional, Midjourney usa Discord. Digita /imagine [prompt] em canal. Estranho a princípio, mas cria uma comunidade vibrante. Você vê criações alheias, aprende, compartilhar. 5 minutos de familiarização resolvem.\n\n**Modelo de Preço por Assinatura**\nCobra assinatura mensal, não por imagem. Básico ($10) = ~200 imagens. Standard ($30) = ~1000. Pro ($120) = ilimitado. Mais justo se usa regularmente que DALL-E (por token).\n\n**Qualidade Consistentemente Superior**\nMidjourney v6 supera DALL-E 3 e Stable Diffusion em composição, detalhes, cores, proporções. Validado por profissionais. Você paga prêmio porque resultado é prêmio.\n\n**Comunidade e Sharing**\nToda imagem fica pública em galeria comunitária (a menos que use modo privado em Pro+). Bom para aprender. Ruim para privacidade. Modo privado requer Pro.\n\n💡 **DICA PRÁTICA:** Comece com Básico ($10). Se usar regularmente, upgrade. Se virar crítico, vá Pro. Básico é suficiente no início."
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Questão 1 - Avaliação de Diferencial",
+        "question": "Qual é o principal diferencial do Midjourney?",
+        "options": [
+          {
+            "text": "Midjourney é grátis",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Midjourney opera em um modelo estrito de assinatura paga."
+          },
+          {
+            "text": "Qualidade consistentemente superior com comunidade vibrante via Discord",
+            "isCorrect": true,
+            "explanation": "Correto! O destaque do Midjourney é sua altíssima qualidade visual acoplada à plataforma Discord que cria um ambiente rico de colaboração e aprendizado."
+          },
+          {
+            "text": "Só gera arte abstrata",
+            "isCorrect": false,
+            "explanation": "Incorreto. Capaz de gerar fotorrealismo, anime, ilustrações, e muito mais estilos."
+          },
+          {
+            "text": "Funciona em website como outros",
+            "isCorrect": false,
+            "explanation": "Incorreto. Midjourney se destaca por usar especificamente o Discord."
+          }
+        ]
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 Escolha o seu Apresentador",
-          "description": "Ligue o tipo de avatar ao uso mais inteligente para o seu negócio.",
+          "title": "🎮 Questão 2 - Ligar Conceitos",
+          "description": "Conecte a limitação ao caso onde não use Midjourney:",
           "pairs": [
             {
-              "left": "Avatar Hiper-realista",
-              "right": "Curso de Investimentos Premium"
+              "left": "Falha em mãos realistas",
+              "right": "Referência anatômica de pose"
             },
             {
-              "left": "Avatar Estilizado",
-              "right": "Dicas de Higiene para Crianças"
+              "left": "Texto não fica legível",
+              "right": "Precisa de placa com texto legível"
             },
             {
-              "left": "Clone Digital",
-              "right": "Escalar sua própria imagem nas redes"
-            },
-            {
-              "left": "Avatar Multilíngue",
-              "right": "Vender seu produto na gringa"
+              "left": "Não captura pessoa específica real",
+              "right": "Foto de cliente específico"
             }
           ]
         }
       },
       {
-        "type": "text",
-        "title": "🎬 Clone Digital: Você em Todo Lugar",
-        "content": "A tecnologia mais avançada hoje permite que você crie um **Clone de Si Mesmo**. \n\n\n\n**Como funciona:**\n1. Você manda algumas fotos e um vídeo curto seu falando.\n2. A IA aprende seus gestos, seu tom de voz e como sua boca se mexe.\n3. Pronto! Agora você pode gerar novos vídeos apenas digitando o texto, e o seu 'eu digital' fará o trabalho por você."
-      },
-      {
-        "type": "text",
-        "title": "🌍 Falando para o Mundo: Tradução Mágica",
-        "content": "Com os avatares, a barreira da língua acaba. Você escreve o roteiro em português e pede para a IA traduzir e dublar.\n\n\n\nO sistema ajusta o movimento dos lábios para que pareça que o apresentador realmente sabe falar aquela língua. É a forma mais barata e rápida de transformar um curso brasileiro em um produto global."
-      },
-      {
-        "type": "text",
-        "title": "💼 Onde as Empresas Ganham Dinheiro com Isso?",
-        "content": "Grandes empresas já economizam milhões usando avatares:\n* **Treinamento:** Um único instrutor virtual treina 5.000 funcionários de forma padronizada.\n* **Suporte 24h:** Vídeos de ajuda personalizados que resolvem dúvidas na hora.\n* **Vendas:** Anúncios personalizados que chamam o cliente pelo nome.\n\n"
-      },
-      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Potencial de Lucro",
-          "sentence": "Usar avatares permite ___ a produção de vídeos e economizar até ___ do custo tradicional.",
+          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
+          "sentence": "Estruture prompts com: 1) quem/o que, 2) contexto, 3) estilo (como '___'), 4) parâmetros (como '___'). Prompts vagos = imagens ___. Prompts detalhados = imagens ___. Midjourney usa ___, criando ___ vibrante.",
           "answers": [
-            "escalar",
-            "90%"
+            "Fotografia Leibovitz",
+            "--quality 2",
+            "ok",
+            "excelentes",
+            "Discord",
+            "comunidade"
           ],
           "options": [
-            "escalar",
-            "90%",
-            "parar",
-            "10%",
-            "comprar",
-            "dobrar"
+            "Fotografia Leibovitz",
+            "--quality 2",
+            "ok",
+            "excelentes",
+            "Discord",
+            "comunidade",
+            "Pintura Rembrandt",
+            "--chaos 100",
+            "ruins",
+            "perfeitas",
+            "Gmail",
+            "galeria",
+            "Design Figma",
+            "--zoom 2",
+            "medíocres",
+            "medianas"
           ],
-          "explanation": "Isso mesmo! A escalabilidade e a economia de custos são as maiores vantagens dos apresentadores virtuais."
+          "explanation": "Gabarito: A - Fornecer referências de artistas, usar parâmetros, detalhar prompts e interagir no Discord."
         }
       },
       {
         "type": "text",
-        "title": "🎨 Emoções: Comunicando com o Corpo",
-        "content": "Um robô travado não convence ninguém. Por isso, configuramos a **Linguagem Não-Verbal**:\n- **Entusiasmo:** Olhos mais abertos e mãos se mexendo mais.\n- **Autoridade:** Postura firme e fala pausada.\n- **Empatia:** Cabeça levemente inclinada e tom de voz suave.\n\nAprender a dar essas 'instruções de atuação' é o que torna seu avatar humano."
-      },
-      {
-        "type": "text",
-        "title": "⚡ Robôs Trabalhando: Fluxos Automáticos",
-        "content": "Você pode criar uma 'esteira de produção':\n\n\n\n1. **ChatGPT** cria o roteiro da semana.\n2. **Captions** gera o vídeo com o avatar e legendas.\n3. O sistema publica automaticamente no seu canal.\nVocê gasta 30 minutos por semana para ter vídeos saindo todo dia."
-      },
-      {
-        "type": "text",
-        "title": "🔒 Ética: O Que Não Fazer",
-        "content": "Poder traz responsabilidade. Siga as regras de ouro:\n- **Transparência:** Sempre avise que é uma IA (use uma marca d'água ou aviso).\n- **Consentimento:** Nunca use a imagem de alguém sem autorização.\n- **Verdade:** Não use avatares para espalhar mentiras ou enganar pessoas. \nA IA deve ser usada para ajudar, não para confundir."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste de Atuação",
-        "question": "Qual configuração você usaria para um avatar que precisa dar suporte técnico de forma acolhedora?",
-        "options": [
-          {
-            "text": "Movimentos rápidos, voz alta e gritos de empolgação",
-            "isCorrect": false,
-            "explanation": "Isso assustaria o cliente que já está com um problema."
-          },
-          {
-            "text": "Fala pausada, sorriso sutil e inclinação de cabeça (empatia)",
-            "isCorrect": true,
-            "explanation": "Exato! Isso transmite paciência e confiança para resolver o problema."
-          },
-          {
-            "text": "Olhar fixo sem piscar e mãos escondidas",
-            "isCorrect": false,
-            "explanation": "Isso faria o avatar parecer um robô sem vida e desconfortável."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "📁 Monte sua Produtora Virtual",
-        "content": "Profissionais organizam sua 'biblioteca de talentos'. Tenha pastas para:\n- Seus Clones (para vídeos pessoais).\n- Avatares de Venda (para anúncios).\n- Avatares de Ensino (para tutoriais).\n\n\n\nSempre que um projeto novo surgir, você já tem o apresentador ideal pronto para entrar em cena."
-      },
-      {
-        "type": "text",
-        "title": "🚀 Projeto Prático: Agência de Avatares",
-        "content": "Para fechar o dia, vamos simular que você abriu uma agência. \n\n\n\n**O Cenário:** Uma escola de inglês te contratou para criar 4 professores virtuais (cada um com um estilo) e 100 vídeos de aulas. \n\n**O Resultado:** Você entrega em 2 semanas o que levaria um ano, lucra R$ 30.000 e a escola economiza R$ 200.000 em contratações. Esse é o poder de ser um **Produtor de IA**."
-      },
-      {
-        "type": "text",
         "title": "🎓 Resumo do Dia 23",
-        "content": "**HOJE VOCÊ DOMINOU:**\n\n1.  Como criar apresentadores virtuais de vários níveis de realismo.\n2.  O método A.V.A.T.A.R. para dar personalidade e estilo.\n3.  Como clonar sua própria imagem e voz para escalar seu trabalho.\n4.  O uso ético e lucrativo da IA em treinamentos e marketing.\n\n**MENTALIDADE:**\nVocê não precisa mais de uma equipe gigante. Você agora é o **Diretor de uma produtora infinita**. \n\n**AMANHÃ:** Vamos aprender a fazer esses vídeos viralizarem! Descubra os segredos dos vídeos curtos que dominam a internet."
+        "content": "**CHEGAMOS AO FIM DO DIA 23!**\n\nHoje mergulhamos no **Midjourney**, o atual padrão absoluto da indústria criativa para qualidade gerativa. Vimos que sua aposta no Discord valeu a pena para criar uma das comunidades visuais mais engajadas do mundo.\n\nAo dominar a estrutura rica de um prompt (quem, o que, onde, como e parâmetros como --ar e --chaos), você se destaca do usuário comum e entra no nível onde o resultado parece ter sido tirado de fotografia profissional ou artes conceituais premium.\n\nLembre-se das ressalvas: Midjourney tem dificuldades em texto, reproduções exatas e mãos, mas é incomparável em composição visual criativa."
       }
     ]
   },
