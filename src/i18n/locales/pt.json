@@ -587,10 +587,10 @@
         "description": "Transforme textos em narrações hiper-realistas e crie clones da sua própria voz com precisão absoluta."
       }
     },
-    "fal": {
+    "veo": {
       "1": {
-        "title": "🖼️ Domine o Fal AI",
-        "description": "Gere imagens e vídeos em tempo real com modelos de difusão de altíssima velocidade."
+        "title": "🎬 Domine o Veo",
+        "description": "Gere vídeos cinematográficos hiper-realistas com áudio nativo sincronizado usando o melhor modelo do Google."
       }
     },
     "luma": {

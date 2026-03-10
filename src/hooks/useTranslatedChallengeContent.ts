@@ -53,7 +53,7 @@ export const useTranslatedChallengeContent = () => {
       midjourney: { start: 23, end: 23 },
       captions: { start: 24, end: 24 },
       elevenlabs: { start: 25, end: 25 },
-      fal: { start: 26, end: 26 },
+      veo: { start: 26, end: 26 },
       luma: { start: 27, end: 27 },
       suno: { start: 28, end: 28 },
     };

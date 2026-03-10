@@ -3769,131 +3769,125 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎭 Crie seu Gêmeo Digital: A Arte da Clonagem de Voz",
-        "content": "Bem-vindo ao dia em que você ganha o dom da onipresença sonora! Hoje você vai aprender a **clonar sua própria voz** com IA. \n\nImagine poder narrar um livro inteiro, dublar um vídeo em japonês ou criar 50 episódios de podcast sem precisar gravar cada um deles. O **ElevenLabs** não apenas repete o que você diz; ele captura a sua essência: o seu timbre, o seu sotaque e as emoções do seu jeito de falar.\n\n\n\nHoje, essa é uma das habilidades mais valiosas do mercado, permitindo que você produza conteúdo em escala industrial por uma fração do custo tradicional."
+        "title": "🎬 História do Veo",
+        "content": "Veo foi desenvolvido por Google DeepMind como resposta à explosão de geração de vídeo com IA. Anunciado em maio 2024, começou como modelo experimental. Veo 2 chegou em dezembro 2024 com suporte a 4K e melhor compreensão de física. Veo 3 foi lançado em maio 2025 com grande inovação: geração nativa de áudio sincronizado com vídeo.\n\nMais recentemente, Veo 3.1 foi lançado em outubro 2025 com áudio ainda mais rico, realismo aprimorado, e suporte a vídeos verticais. O Google apostou em fazer o vídeo gerado por IA competitivo com a qualidade profissional. Veo 3.1 gera vídeos de até 60 segundos em 1080p/4K com áudio nativo incluindo diálogo, efeitos sonoros e ruído ambiente. A estratégia é posicionar Veo como ferramenta de produção real, não apenas experimento. Está disponível em Gemini app, Google Flow (editor de vídeo), API, e Vertex AI (enterprise).\n\n💡 **DICA PRÁTICA:** Veo vale especialmente se você já usa Google Workspace ou é desenvolvedor. Se você quer interface simples, Gemini app é mais acessível que API."
       },
       {
         "type": "text",
-        "title": "🎤 Como a IA 'Aprende' o seu Jeito de Falar",
-        "content": "A IA não grava e 'toca' o seu áudio. Ela faz algo muito mais inteligente: ela cria um **Mapa Vocal** da sua voz.\n\n1. **Análise do DNA:** Ela identifica as frequências únicas da sua voz (o seu timbre).\n2. **Ritmo e Respiração:** Ela entende onde você costuma fazer pausas e como você respira entre as frases.\n3. **Criação do Modelo:** Ela monta um 'instrumento virtual' que soa exatamente como você.\n\n\n\nSaber disso é importante porque, se você mandar um áudio de má qualidade, a IA vai aprender a 'imitar' os seus erros e ruídos também. Qualidade entra, qualidade sai!"
+        "title": "⚙️ Como o Veo Funciona",
+        "content": "Você escreve um prompt descrevendo o vídeo desejado (ou sobe imagens como referência). Veo 3.1 pode receber múltiplas imagens de referência para dirigir personagens, objetos, e estilo da cena. Escolhe resolução (720p, 1080p, 4K) e aspecto (paisagem 16:9 ou retrato 9:16) e clica em gerar. Veo processa (leva minutos dependendo da velocidade) e gera o vídeo com áudio sincronizado.\n\nVeo 3 entende linguagem cinematográfica: você pode descrever movimentos de câmera, estilos de iluminação, pacing, e mood, e o modelo responde com cenas coerentes. Diferente de geradores anteriores, áudio não é 'afterthought' – é parte integral. Passos se sincronizam com movimento, ruído ambiente reage ao cenário, diálogo sincroniza com lábios.\n\nVeo foi treinado em milhões de horas de vídeo. Google usou seus modelos Gemini para gerar captions textuais detalhadas dos vídeos, criando dataset superior a web scraping básico. Resultado é a compreensão de cinematografia profissional integrada no modelo.\n\n💡 **DICA PRÁTICA:** Veo responde melhor a terminologia cinematográfica profissional. Prompts de 100-200 palavras são ótimos – curtos demais faltam detalhe, muito longos ficam confusos."
       },
       {
         "type": "text",
-        "title": "⚡ O Método V.O.I.C.E. para o Clone Perfeito",
-        "content": "Para ter um resultado profissional que engane até a sua própria mãe, siga este guia:\n\n* **V - Voz (Preparo):** Beba água e grave em um lugar sem eco (use cobertores se precisar).\n* **O - Otimização:** Use um microfone bom e grave de 5 a 10 minutos de fala natural.\n* **I - Inteligência:** Suba trechos variados (animado, sério, calmo) para a IA aprender todas as suas versões.\n* **C - Configurações:** Ajuste os 'botões' de estabilidade e clareza dentro da plataforma.\n* **E - Excelência:** Faça testes com frases difíceis para garantir que a pronúncia está perfeita."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Plano de Gravação",
-        "question": "Monte o plano de gravação ideal seguindo a ordem do método V.O.I.C.E.:",
-        "initialWords": [
-          "Preparar quarto silencioso,",
-          "Usar microfone de qualidade,",
-          "Gravar 5 minutos variando emoção,",
-          "Subir as amostras na plataforma,",
-          "Testar com frases desafiadoras."
-        ],
-        "correctOrder": [
-          "Preparar quarto silencioso,",
-          "Usar microfone de qualidade,",
-          "Gravar 5 minutos variando emoção,",
-          "Subir as amostras na plataforma,",
-          "Testar com frases desafiadoras."
-        ],
-        "explanation": "Perfeito! Seguir essa ordem garante que a IA receba o melhor material possível para criar o seu gêmeo digital."
+        "title": "📊 Impacto e Adoção no Mercado",
+        "content": "Veo cresceu rapidamente porque Google colocou no Gemini app (bilhões de usuários). Você pode criar e compartilhar vídeos direto no Gemini mobile app. Cineastas experimentam, marketers testam, developers integram via Gemini API. Grandes perfis de varejo usam Veo para escalar a produção de vídeos de marketing, transformando imagens estáticas em vídeos dinâmicos.\n\nVeo 3.1 é descrito como o momento em que a geração de vídeo IA deixou a era do \"cinema silencioso\". Críticos reconhecem que áudio nativo é game-changer – vídeos parecem completos, não inacabados. Preço é competitivo: algo em torno de $0.15/segundo (Fast) a $0.40/segundo (Standard).\n\n💡 **DICA PRÁTICA:** Free tier em Gemini app é generoso para testar. Se usar via API, calcule custo (30s de vídeo fica por volta de ~$4.50-12 dependendo da qualidade)."
       },
       {
         "type": "text",
-        "title": "🎛️ Os Controles do Som: Estabilidade e Estilo",
-        "content": "Dentro do ElevenLabs, você tem 'alavancas' que mudam o comportamento do seu clone:\n\n* **Estabilidade (Stability):** Se estiver baixa (30%), a voz fica muito emocional e dramática. Se estiver alta (80%), fica séria e constante.\n* **Exagero de Estilo (Style):** Faz a IA forçar mais as características únicas da sua voz.\n* **Aumento de Clareza (Speaker Boost):** Deixa a voz mais nítida, ideal para remover aquele chiado de fundo da gravação original.\n\n"
+        "title": "💪 Onde o Veo é Muito Bom",
+        "content": "- **Vídeos com áudio nativo:** Áudio sincronizado com vídeo – som de passos com movimento, ruído ambiente reativo, diálogo com sincronização de lábios.\n- **Cinematografia profissional:** Compreende movimentos de câmera, iluminação, composição. Resultado soa cinematic, não amador.\n- **Vídeos longos:** Até 60 segundos (vs 8 segundos de competidores), permitindo storytelling completo.\n- **Referência múltipla:** \"Ingredients to Video\" – use múltiplas imagens para dirigir personagens, objetos, backgrounds de forma consistente.\n- **4K upscaling:** Upscale para 1080p ou 4K para produção broadcast-quality.\n- **Vídeos verticais:** Suporte nativo a 9:16 para YouTube Shorts, TikTok, Reels.\n- **Extensão de vídeo:** Estenda vídeos previamente gerados adicionando mais conteúdo.\n- **Integração Google:** Funciona em Gemini, Flow, YouTube, Google Vids, API, Vertex AI.\n\n💡 **DICA PRÁTICA:** Veo brilha quando você descreve shots cinematográficos específicos. \"Wide establishing shot de prédio ao amanhecer com câmera lentamente panning left, luz dourada suave\" gera muito melhor que \"prédio ao amanhecer\"."
       },
       {
         "type": "text",
-        "title": "🌍 Tradução com Voz Preservada: Alcance Global",
-        "content": "O maior 'superpoder' da clonagem é a tradução. Você pode pegar um vídeo seu em português e transformá-lo em **29 idiomas**.\n\n\n\nA mágica aqui é que a IA mantém o **seu timbre** em inglês, espanhol ou japonês. Isso permite que você venda seus cursos ou produtos para o mundo inteiro sem precisar contratar dubladores caros, mantendo a sua identidade de marca intacta."
+        "title": "❌ Onde o Veo é Muito Ruim",
+        "content": "- **Interpretação de prompt:** Usuários reportam que o Veo frequentemente mal interpreta prompts, gerando saídas completamente diferentes mesmo com descrições detalhadas.\n- **Fala e texto:** Fala embolada (garbled) ou nonsense, e textos (captions) dentro do vídeo podem sair errados.\n- **Restrições de segurança (Safety):** Não gera violência gráfica, conteúdo adulto ou atrelado a pessoas reais de forma idêntica e as restrições são muito estritas.\n- **Cenas complexas incompletas:** Vídeos muito complexos podem ficar incompletos dentro do limite de 60 segundos.\n- **Personagens idênticos a celebridades:** Não consegue clonar rosto específico de celebridade ou pessoa real.\n- **Inconsistência entre gerações:** O mesmo prompt pode gerar resultados muito diferentes a cada rodada.\n- **Anatomia em algumas situações:** Mãos e poses específicas ainda podem ter erros bizarros da IA.\n\n💡 **DICA PRÁTICA:** Se a interpretação falhar, reescreva o prompt com mais detalhe cinematográfico. Se o erro seguir ocorrendo, mude de abordagem (use apenas referência por imagem em vez de só texto)."
       },
       {
         "type": "text",
-        "title": "📱 Voz no Piloto Automático (Automação)",
-        "content": "Você pode conectar sua voz a outros sistemas para que ela trabalhe sozinha. \n\nExemplo de fluxo:\n1. O **ChatGPT** escreve as notícias do dia.\n2. A **API do ElevenLabs** narra o texto com a sua voz automaticamente.\n3. O sistema publica o áudio no seu Spotify e redes sociais.\n\nVocê cria uma presença constante na vida dos seus clientes sem precisar gastar um minuto gravando diariamente."
+        "title": "🎯 Como Extrair Bons Resultados",
+        "content": "Qualidade depende de prompts estruturados com terminologia cinematográfica. Não diga apenas \"mulher dançando\". Diga \"mulher 25 anos em vestido azul dançando graciosamente em estúdio minimalista, iluminação suave de lado, câmera fazendo slow dolly in, música clássica ao fundo\". A diferença é enorme.\n\nUse \"Ingredients to Video\" (múltiplas imagens referência) quando o personagem/objeto precisar ser consistente. Combine personagens, objetos, texturas e backgrounds em um clipe coeso usando reference images. Isso garante a identidade consistente entre múltiplos vídeos!\n\nEstude prompts de diretores e cinematógrafos. Lembre-se que o Veo foi treinado em vídeos profissionais, então ele entende essa linguagem. O tamanho ideal é de 100-200 palavras. Menos que isso falta contexto, e mais que isso confunde a IA. Teste tudo, veja o resultado e refine.\n\n💡 **DICA PRÁTICA:** Crie um moodboard visual antes de escrever o prompt. Reflita nos vídeos que inspiram estilo, composição e movimento. Depois, decreva o que você de fato visualiza ali para sua base de prompt do Veo."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ Atenção - Características Importantes",
+        "content": "**Áudio Nativo é Diferenciador Real**\nVeo 3.1 gera áudio que sincroniza com vídeo. Isso elimina necessidade de pós-produção de áudio em outra ferramenta separada. É um dos maiores saltos ao redor da superação da 'era do cinema silencioso'.\n\n**Watermarking com SynthID**\nVídeos Veo são marcados com SynthID (watermarking e detecção de conteúdo gerado por IA). É sempre possível verificar se o vídeo é genuíno ou se partiu de IA. Plataformas como YouTube costumam se aliar a isso facilmente.\n\n**Múltiplos Canais de Acesso**\nNão é só API. Está em Gemini app, Flow (filmmaking), YouTube Shorts, Vertex AI, etc. Funciona bem num formato abrangente transversal a todo o ecossistema do Google.\n\n**Limitações de Segurança Rígidas**\nAs checagens contra conteúdo arriscado reduzem muito os casos de copyright e bias, porém isso pode bloquear cenas inofensivas num formato exagerado.\n\n💡 **DICA PRÁTICA:** Veo 3.1 é cutting-edge, logo os bugs podem acontecer com uma facilitação nativa. Se encontrar problemas severos, utilize o relatório integrado. O modelo está em constante aprimoramento apoiado pela rede neural."
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Questão 1 - Avaliando o Diferencial",
+        "question": "Qual é o principal diferencial do Veo 3.1 em relação a geradores de vídeo anteriores?",
+        "options": [
+          {
+            "text": "Veo é grátis forever",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Veo possui planos que podem se basear em quotas de API pagas."
+          },
+          {
+            "text": "Gera áudio nativo sincronizado com vídeo – diálogo, efeitos, ruído ambiente sem post-production separada",
+            "isCorrect": true,
+            "explanation": "Correto! Por fim não assistiremos mais ao 'cinema mudo'. A sonoridade já sai de modo consistente da própria interface do Veo associada ao mesmo prompt que evocou o visual."
+          },
+          {
+            "text": "Veo suporta vídeos de 10 minutos",
+            "isCorrect": false,
+            "explanation": "Incorreto. O limite costuma estar atrelado em cerca de 60 segundos nas melhores planilhas."
+          },
+          {
+            "text": "Funciona offline",
+            "isCorrect": false,
+            "explanation": "Incorreto. Sendo do ecossistema Google dependente do Gemini, atua fortemente e só nos meios Cloud."
+          }
+        ]
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 Domine as Configurações",
-          "description": "Ligue o ajuste ao resultado que ele gera na voz do seu clone.",
+          "title": "🎮 Questão 2 - Ligar Conceitos",
+          "description": "Conecte a funcionalidade ao seu melhor caso de uso no modelo do projeto:",
           "pairs": [
             {
-              "left": "Estabilidade Baixa",
-              "right": "Mais emoção e variação natural"
+              "left": "Ingredients to Video",
+              "right": "Manter consistência de personagem entre múltiplos vídeos"
             },
             {
-              "left": "Similarity Boost",
-              "right": "Fica mais idêntico ao áudio original"
+              "left": "Prompt cinematográfico",
+              "right": "Gerar vídeo descritivo com shot cinematográfico específico"
             },
             {
-              "left": "Speaker Boost",
-              "right": "Aumenta a nitidez e limpa o som"
-            },
-            {
-              "left": "Estabilidade Alta",
-              "right": "Voz mais séria e sem variações"
+              "left": "Upscaling 4K",
+              "right": "Produção broadcast-quality para cinemas/TVs"
             }
           ]
         }
       },
       {
-        "type": "text",
-        "title": "⚖️ Ética e Lei: Com Grandes Poderes...",
-        "content": "Clonar uma voz é algo poderoso e exige responsabilidade. \n\n**O que é proibido:**\n- Clonar a voz de famosos ou políticos sem autorização.\n- Usar a voz de alguém para enganar ou cometer fraudes.\n- Violar a privacidade das pessoas.\n\n**O que é profissional:**\n- Sempre avisar que o áudio foi gerado por IA.\n- Ter permissão por escrito se for usar a voz de um funcionário ou parceiro.\n- Usar para educar, informar e criar valor real."
-      },
-      {
-        "type": "text",
-        "title": "📊 Como saber se o seu clone está bom?",
-        "content": "Faça o **'Teste da Mãe'**: toque um áudio gerado pelo clone para uma pessoa próxima a você. Se ela demorar mais de 3 segundos para perceber que não é você de verdade, o clone está aprovado.\n\nAlém disso, verifique a clareza. Peça para a IA falar palavras difíceis (como 'especificamente'). Se ela não gaguejar e soar natural, você atingiu o nível profissional."
-      },
-      {
-        "type": "text",
-        "title": "📁 Organizando sua 'Gravadora Digital'",
-        "content": "Profissionais não perdem arquivos. Organize seus projetos por categorias:\n- **Pessoal:** Seus clones oficiais.\n- **Personagens:** Vozes criativas para histórias.\n- **Clientes:** Vozes autorizadas para trabalhos externos.\n\nTenha sempre os arquivos de áudio originais guardados. Se a tecnologia evoluir (e ela evolui todo mês!), você pode subir os mesmos áudios para criar um clone ainda melhor no futuro."
-      },
-      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Teste de Conhecimento",
-          "sentence": "Para evitar que o clone soe ___ , eu devo diminuir a ___ e garantir um áudio original ___.",
+          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
+          "sentence": "Veo 3.1 gera vídeos até ___ segundos em ___ com áudio ___. Prompts cinematográficos funcionam melhor que vagos porque Veo foi treinado em vídeos ___. Comprimento ideal do prompt é ___ palavras. Pricing é ___ por segundo (Fast) a ___ por segundo (Standard). Vídeos são watermarkados com ___ para detecção de conteúdo IA.",
           "answers": [
-            "robótico",
-            "estabilidade",
-            "limpo"
+            "60",
+            "1080p-4K",
+            "nativo sincronizado",
+            "profissionais",
+            "100-200",
+            "$0.15",
+            "$0.40",
+            "SynthID"
           ],
           "options": [
-            "robótico",
-            "estabilidade",
-            "limpo",
-            "rápido",
-            "cor",
-            "música"
+            "60",
+            "1080p-4K",
+            "nativo sincronizado",
+            "profissionais",
+            "100-200",
+            "$0.15",
+            "$0.40",
+            "SynthID",
+            "30",
+            "720p",
+            "não sincronizado",
+            "caseiros"
           ],
-          "explanation": "Isso mesmo! Ajustar a estabilidade e ter uma fonte limpa são as chaves para a naturalidade."
+          "explanation": "Gabarito: 60, 1080p-4K, nativo sincronizado, profissionais, 100-200, $0.15, $0.40 e SynthID."
         }
       },
       {
         "type": "text",
-        "title": "⚡ Templates: Receitas de Sucesso",
-        "content": "Use estas configurações prontas para economizar tempo:\n\n* **Para Podcast:** Estabilidade 35%, Similarity ON. (Fica natural e humano).\n* **Para Aulas/Cursos:** Estabilidade 55%, Clareza 90%. (Fica didático e fácil de entender).\n* **Para Dublagem:** Estabilidade 45%, Style 40%. (Mantém o seu sotaque e emoção na outra língua)."
-      },
-      {
-        "type": "text",
-        "title": "🚀 Projeto Prático: O Estúdio de Voz",
-        "content": "Hoje você vai planejar o estúdio da **TechEduca**, uma startup fictícia. \n\nVocê precisa criar:\n1. O clone do fundador para narrar as aulas.\n2. Um sistema de dublagem para lançar o curso nos EUA.\n3. Uma voz amigável para o atendimento telefônico.\n\nEste projeto economizaria R$ 50.000 por mês em locutores e estúdios. Para você, custará apenas a sua assinatura e criatividade."
-      },
-      {
-        "type": "text",
         "title": "🎓 Resumo do Dia 26",
-        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. Como criar um clone de voz perfeito usando o método V.O.I.C.E.\n2. O segredo para traduzir conteúdo em 29 línguas mantendo a sua voz.\n3. Como automatizar a produção de áudio para economizar centenas de horas.\n4. As regras éticas para ser um profissional de voz respeitado.\n\n**MENTALIDADE:**\nSua voz agora é um **ativo digital**. Ela pode estar em mil lugares ao mesmo tempo, falando qualquer língua, enquanto você foca na estratégia do seu negócio."
+        "content": "**CHEGAMOS AO FIM DO DIA 26!**\n\nHoje vimos a incrível capacidade do **Veo**, modelo cinematográfico avançado da Google DeepMind em formato de ponta a ponta (imagem + som).\n\nCom a habilidade singular de gerar **áudio nativo sem manipulação externa** e permitir o direcionamento da câmera (pans, dollies, estabilidade, luz, pacing), ele está moldando o futuro dos clipes curtos a médios com viés totalmente profissional.\n\nA dica mestra de ouro para encerar é: pense e aja como um cineasta na sala de direção de criação ao formular os seus prompts."
       }
     ]
   },
