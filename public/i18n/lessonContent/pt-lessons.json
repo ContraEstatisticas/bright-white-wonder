@@ -2882,258 +2882,120 @@
     "steps": [
       {
         "type": "text",
-        "title": "⚙️ Lovable Avançado: Dando um Cérebro ao seu App",
-        "content": "Você já sabe criar telas bonitas. Agora, vamos aprender a criar o que chamamos de **Backend** — a parte 'invisível' que faz o trabalho pesado.\n\nImagine que o seu app é um restaurante: a Interface é o salão decorado, mas o Backend é a cozinha, onde a mágica realmente acontece.\n\n**O que o Lovable faz por você:**\n1. **Cria Gavetas (Banco de Dados):** Guarda nomes e senhas com segurança.\n2. **Chave de Acesso (Autenticação):** Cria telas de login profissionais.\n3. **Porteiro Inteligente (Segurança):** Garante que um usuário não mexa nos dados do outro."
+        "title": "🚀 Como o Fluxo Correto Funciona",
+        "content": "Existe um jeito de usar Lovable que economiza tempo e créditos, e um jeito que desperdiça. A diferença está em não improvisar.\n\nVocê começa planejando 2 minutos: o que o app faz, quem usa, quais 3 features principais. Escreve isso em 3-4 frases simples. Isso é seu brief. Depois, estrutura um prompt detalhado descrevendo o que quer, para quem é, como deve parecer visualmente. Quanto mais específico, melhor o resultado.\n\nAbre Lovable, cola o prompt, e gera. Primeiro resultado raramente é perfeito — é prototipagem. Você valida, vê o que funcionou, o que não funcionou. Se está 80% bom, itere em 2-3 coisas pequenas (cores, layout, textos). Se está 20% bom, replaneje — foi prompt errado, não adianta iterar infinitamente.\n\nDepois que está bom, conecta Supabase se precisa salvar dados (e provavelmente precisa). Publica. Compartilha URL com 5-10 pessoas e pede feedback real: 'Entendeu o que faz em 10 segundos?', 'Achou fácil usar?', 'Falta algo?'. Com feedback, volta à Lovable e refina baseado em dados reais, não em achismo. Isso é workflow profissional.\n\n💡 **DICA PRÁTICA:** Não improvise no planejamento inicial. 5 minutos de planejamento evitam 2 horas de iterações depois. Prompt vago = infinitas correções. Prompt claro = 3 iterações e pronto."
+      },
+      {
+        "type": "text",
+        "title": "💰 Gerenciando Créditos Adequadamente",
+        "content": "Lovable funciona com sistema de créditos. Gerar um app pequeno custa 5-10 créditos. Um app médio custa 20-30. Um app complexo pode chegar a 100+. Cada iteração custa créditos adicionais. A maioria dos usuários não pensa nisso e gasta 3-4x mais do que deveria.\n\nO segredo está em ser eficiente. Se você planeja bem, seu primeiro resultado já está 80% pronto. Precisa apenas ajustes finos. Mas se improvisa, pede tudo errado, precisa de 10-15 iterações — aí sim fica caro. Um prompt bem feito economiza mais créditos do que qualquer outra coisa.\n\nOutra economia: use o editor de código integrado para mudanças simples. Quer trocar cor de botão? Entra no editor e muda em 10 segundos, sem gastar créditos pedindo para Lovable regenerar tudo.\n\nComece com um app simples para aprender. Landing page ou lista de tarefas básica. Depois, com experiência, seus prompts ficam melhores, suas iterações são mais precisas, seus créditos duram mais. É como qualquer ferramenta — você fica melhor com prática.\n\n💡 **DICA PRÁTICA:** Máximo 3-5 iterações por app. Se estiver acima disso, foi planejamento errado. Comece novo com prompt melhor ao invés de iterar infinitamente."
+      },
+      {
+        "type": "text",
+        "title": "⚙️ Funcionalidades Essenciais que Você Precisa Usar",
+        "content": "Lovable tem várias funcionalidades que muitos iniciantes nunca tocam. As principais que realmente importam são:\n\n• **Editor de código integrado** — você pode editar manualmente qualquer coisa que foi gerada.\n• **GitHub Integration** — conecta seu repositório GitHub, versionamento automático, proteção contra quebras.\n• **Supabase Connection** — banco de dados real, autenticação, dados persistem.\n• **Think First Mode** — antes de codificar, pede para Lovable descrever a arquitetura, evita código desorganizado.\n• **Publicação automática com URL pública** — compartilha com clientes/feedback sem fazer deploy manual.\n\nDas cinco, as que realmente não podem faltar são **GitHub e Supabase**. GitHub protege você contra 'perdi tudo porque cliquei errado'. Supabase transforma seu app de visual bonito em aplicação funcional que salva dados.\n\n💡 **DICA PRÁTICA:** Conecte GitHub e Supabase no primeiro app. Não aprenda a dor de perder tudo depois."
+      },
+      {
+        "type": "text",
+        "title": "🎯 Como Estruturar o Prompt Perfeito",
+        "content": "A qualidade final do seu app depende 70% do prompt. Existe uma diferença abissal entre 'crie um app' e um prompt bem estruturado.\n\nUm prompt bom segue este padrão:\n1. Descreve exatamente o que o app faz (não vago, específico).\n2. Descreve para quem é — qual é o usuário final e qual é o problema dele.\n3. Lista as 3-5 features principais (não 50 features, as principais).\n4. Descreve como deve parecer visualmente (estilo, cores, inspirações).\n5. Especifica o fluxo principal — como um usuário novo usa em 30 segundos.\n\n**Exemplo ruim:** 'Crie um site de e-commerce'. Vago demais.\n\n**Exemplo bom:** 'Crie site de e-commerce para vender sapatos artesanais. Usuário: mulher que quer comprar sapatos únicos. Features: 1) galeria com 20 produtos com imagem e preço, 2) filtro por tamanho/cor, 3) carrinho. Visual: inspirado em Shopify (limpo, branco, preto, tipografia clara). Fluxo: home → clica em produto → vê detalhe → adiciona ao carrinho'.\n\nQuanto mais específico, menos iterações você precisa depois. Prompt vago leva a 10-15. Prompt bom leva a 2-3.\n\n💡 **DICA PRÁTICA:** Antes de abrir Lovable, escreva seu prompt em um documento. Releia. Melhore. Só depois cole no Lovable. Texto bem escrito = app bem gerado."
+      },
+      {
+        "type": "text",
+        "title": "🔌 Integrações que Transformam o App",
+        "content": "Lovable sozinho gera interface visual. Mas interfaces sozinhas não fazem nada. Para app funcional, precisa integrar com outras ferramentas.\n\n• **Supabase** é obrigatório se quer salvar dados. Conecta uma vez, e seu app pode fazer login de usuários, guardar dados em tabelas, tudo automaticamente.\n• **GitHub** versiona seu código e permite backup/rollback.\n• **Zapier ou Make** (automação) conecta seu app a outros serviços — um formulário preenchido pode disparar email, SMS, notificação no Slack.\n• **Stripe** adiciona pagamentos reais — se quer monetizar, conecta Stripe e seu app começa a aceitar cartão de crédito.\n\nDas quatro, Supabase é mandatória. As outras três são eletivas — depende do que seu app precisa fazer. Um app simples pode não precisar de nada além de Supabase. Um app que vira negócio real precisa de Stripe para pagamentos e Zapier para automações.\n\n💡 **DICA PRÁTICA:** Comece com Supabase + GitHub. São grátis e cobrem 90% do que um iniciante precisa. Aprenda Zapier e Stripe quando seu app crescer."
+      },
+      {
+        "type": "text",
+        "title": "📋 Erros Comuns e Como Evitar",
+        "content": "A maioria dos problemas vem não de limitações de Lovable, mas de como as pessoas usam.\n\n1. **Prompt muito vago.** Abre Lovable e diz 'crie um app' sem contexto. Resultado aleatório. Solução: escreva prompt detalhado antes.\n2. **Não conectar Supabase.** Gera app lindo que não salva nada. Solução: conecte Supabase desde o primeiro app.\n3. **Não usar GitHub.** Algo quebra, perde tudo. Solução: conecte GitHub sempre.\n4. **Pedir tudo de uma vez.** 'Crie app com 50 features'. Lovable fica confuso. Solução: comece com 3 features, depois adicione.\n5. **Gastar créditos com mudanças simples.** Quer mudar cor? Use o editor e mude em 10 segundos. Não peça para Lovable regenerar tudo.\n\n💡 **DICA PRÁTICA:** Se tiver problema, 80% das vezes é erro de processo (seu), não de ferramenta (Lovable). Revise seu fluxo antes de culpar a ferramenta."
+      },
+      {
+        "type": "text",
+        "title": "🎨 Como Extrair Bons Resultados do Lovable",
+        "content": "Para ir além do 'ok', existem técnicas que dramaticamente melhoram a qualidade.\n\n1. **Use Think First Mode** antes de gerar código. Peça 'descreva a arquitetura de componentes e fluxo de dados antes de codificar'.\n2. **Divida tarefas complexas em etapas.** Não peça 'crie e-commerce completo'. Peça 'crie página de produtos com filtro', depois 'adicione carrinho', depois 'adicione checkout'.\n3. **Use referências visuais.** 'Design como Notion (branco, minimalista, whitespace)' é muito melhor que 'design moderno'.\n4. **Valide antes de iterar.** Se está 80% bom, itere em 2-3 coisas. Se está 20% bom, recomece.\n5. **Edite manualmente pós-geração.** Entre no editor de código, ajuste CSS, reorganize componentes. Economiza créditos e melhora qualidade.\n6. **Colete feedback real.** Mostre para 5-10 pessoas reais e pergunte 'entendeu o que faz?', 'achou fácil?'. Itere baseado em dados reais, não em achismo.\n\n💡 **DICA PRÁTICA:** A mágica não está em Lovable, está em você. Quanto melhor você planeja e refina, melhor o resultado. Lovable é ferramenta — você é o maestro."
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Questão 1: Fluxo Correto",
+        "question": "Qual é o fluxo correto para usar Lovable e economizar iterações?",
+        "options": [
+          {
+            "text": "Abrir Lovable direto e descrever o que quer na hora",
+            "isCorrect": false,
+            "explanation": "Incorreto. Sem planejamento, o resultado será aleatório e custará muitas iterações."
+          },
+          {
+            "text": "Planejar 2 min → escrever prompt detalhado → gerar → validar → máximo 3-5 iterações → conectar Supabase → publicar",
+            "isCorrect": true,
+            "explanation": "Correto! Esse fluxo estruturado economiza créditos e garante resultado profissional."
+          },
+          {
+            "text": "Gerar app → iterar infinitamente até ficar perfeito → depois conectar integração",
+            "isCorrect": false,
+            "explanation": "Incorreto. Iteração infinita desperdiça créditos. Se não ficou bom em 3-5 iterações, o prompt estava errado."
+          },
+          {
+            "text": "Usar sem GitHub ou Supabase",
+            "isCorrect": false,
+            "explanation": "Incorreto. Sem GitHub você perde tudo, sem Supabase o app não funciona de verdade."
+          }
+        ]
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 O Lado Invisível do App",
-          "description": "Ligue o termo técnico à sua função no 'restaurante' do seu app.",
+          "title": "🔗 Questão 2: Ferramenta → Impacto",
+          "description": "Conecte a ferramenta ao seu impacto principal.",
           "pairs": [
             {
-              "left": "Interface",
-              "right": "O salão onde o cliente senta"
+              "left": "Supabase",
+              "right": "Transforma app bonito em app que realmente funciona"
             },
             {
-              "left": "Backend",
-              "right": "A cozinha onde o trabalho é feito"
+              "left": "GitHub",
+              "right": "Protege contra 'perdi tudo' e permite versionar código"
             },
             {
-              "left": "Banco de Dados",
-              "right": "A despensa onde os ingredientes ficam"
-            },
-            {
-              "left": "Autenticação",
-              "right": "O segurança que confere o convite"
+              "left": "Editor de código integrado",
+              "right": "Economiza créditos em mudanças simples"
             }
           ]
         }
-      },
-      {
-        "type": "text",
-        "title": "🗄️ O 'Armário' de Informações (Banco de Dados)",
-        "content": "Um banco de dados nada mais é do que um conjunto de gavetas organizadas. O Lovable desenha esse armário enquanto você descreve o seu projeto.\n\nSe você diz: 'Crie um app de tarefas', a IA automaticamente cria três gavetas:\n- **Usuários:** Para guardar quem entrou.\n- **Projetos:** Para organizar os grupos de trabalho.\n- **Tarefas:** Para listar o que deve ser feito.\n\nO segredo está em como essas gavetas se conectam, garantindo que o dado certo apareça na hora certa."
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Organizando as Gavetas",
-          "sentence": "O banco de dados guarda as informações em ___, e o Lovable faz a ___ entre elas automaticamente.",
+          "title": "✏️ Questão 3: Prompt Perfeito",
+          "sentence": "Um prompt bom descreve: 1) exatamente ___ o app faz; 2) para ___ é; 3) quais são as ___ principais; 4) como deve parecer ___. Isso evita ___ iterações desnecessárias. Prompt bom leva a ___.",
           "answers": [
-            "tabelas",
-            "conexão"
+            "o que",
+            "quem",
+            "3 features",
+            "visualmente",
+            "infinitas",
+            "2-3 iterações"
           ],
           "options": [
-            "tabelas",
-            "conexão",
-            "músicas",
-            "luzes",
-            "fotos",
-            "lenta"
+            "o que",
+            "quem",
+            "3 features",
+            "visualmente",
+            "infinitas",
+            "2-3 iterações",
+            "ninguém",
+            "rapidamente",
+            "50 features"
           ],
-          "explanation": "Isso mesmo! Informações são salvas em tabelas (gavetas) que se conversam para o app funcionar."
+          "explanation": "Exato! Um prompt bem estruturado com contexto, público, features, visual e fluxo evita retrabalho e economiza créditos."
         }
       },
       {
         "type": "text",
-        "title": "🔐 O Método D.A.T.A. para o seu Banco",
-        "content": "Para seu sistema ser profissional e não ter erros, use esta estrutura no seu pedido:\n\n* **D - Definição:** Quais tabelas você precisa? (Ex: Produtos, Clientes).\n* **A - Autenticação:** Como as pessoas vão logar? (Ex: E-mail ou Google).\n* **T - Tabelas e Relações:** Como os dados se ligam? (Ex: O pedido é de qual cliente?).\n* **A - API:** Como a informação vai do banco para a tela?"
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Monte seu Banco de Dados",
-        "question": "Ordene o pedido para criar um app de Blog completo:",
-        "initialWords": [
-          "Crie um app de blog,",
-          "Entidades: Usuários, Posts e Comentários,",
-          "Posts têm título e autor,",
-          "Comentários ligam ao post,",
-          "e usuários podem criar ambos."
-        ],
-        "correctOrder": [
-          "Crie um app de blog,",
-          "Entidades: Usuários, Posts e Comentários,",
-          "Posts têm título e autor,",
-          "Comentários ligam ao post,",
-          "e usuários podem criar ambos."
-        ],
-        "explanation": "Perfeito! Você definiu o que o app é, quais gavetas ele tem e como elas se conectam."
-      },
-      {
-        "type": "text",
-        "title": "🔧 Quem manda em quem? (Permissões)",
-        "content": "Em um app sério, cada pessoa tem um nível de poder. O Lovable configura esse 'porteiro' para você:\n\n* **Administrador:** O dono, que vê e apaga tudo.\n* **Gerente:** Cuida apenas da sua equipe.\n* **Usuário:** Vê apenas os seus próprios dados.\n\nIsso evita que um cliente veja os dados de outro, garantindo a privacidade e a segurança do seu negócio."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Hierarquia de Poder",
-          "description": "Ligue cada cargo ao que ele pode fazer no sistema.",
-          "pairs": [
-            {
-              "left": "Administrador",
-              "right": "Controle total sobre tudo"
-            },
-            {
-              "left": "Gerente",
-              "right": "Gerencia apenas seu grupo"
-            },
-            {
-              "left": "Usuário Comum",
-              "right": "Acessa só seus próprios dados"
-            },
-            {
-              "left": "Convidado",
-              "right": "Apenas visualiza informações públicas"
-            }
-          ]
-        }
-      },
-      {
-        "type": "text",
-        "title": "📊 O Ciclo C.R.U.D. (As 4 Ações)",
-        "content": "Não importa o tamanho do app, ele sempre faz apenas 4 coisas com a informação (CRUD):\n1. **C (Create):** Criar (ex: cadastrar um novo cliente).\n2. **R (Read):** Ler (ex: ver a lista de clientes).\n3. **U (Update):** Atualizar (ex: mudar o telefone do cliente).\n4. **D (Delete):** Deletar (ex: remover um cliente).\n\nO Lovable cria todos os botões e telas para essas ações num piscar de olhos."
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ Entendendo o C.R.U.D.",
-          "sentence": "Quando eu mudo o preço de um produto, estou fazendo um ___. Quando apago um registro, faço um ___.",
-          "answers": [
-            "Update",
-            "Delete"
-          ],
-          "options": [
-            "Update",
-            "Delete",
-            "Create",
-            "Read",
-            "Salto",
-            "Giro"
-          ],
-          "explanation": "Exato! Update é para atualizar e Delete é para remover."
-        }
-      },
-      {
-        "type": "text",
-        "title": "🔄 Webhooks: Apps que Conversam",
-        "content": "Webhooks são mensageiros entre aplicativos. Eles permitem que seu app faça coisas em outros lugares.\n\nExemplo prático: 'Sempre que houver uma venda nova no meu app, mande uma mensagem de parabéns no meu WhatsApp'. \n\nIsso torna o seu aplicativo parte de um ecossistema maior, conectando-se com pagamentos, e-mails e redes sociais automaticamente."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Planejando Avisos",
-        "question": "Monte o pedido para um sistema de avisos automáticos:",
-        "initialWords": [
-          "Crie um sistema de avisos,",
-          "mande e-mail e notificação no app,",
-          "sempre que uma tarefa estiver atrasada,",
-          "e permita que o usuário escolha o horário."
-        ],
-        "correctOrder": [
-          "Crie um sistema de avisos,",
-          "mande e-mail e notificação no app,",
-          "sempre que uma tarefa estiver atrasada,",
-          "e permita que o usuário escolha o horário."
-        ],
-        "explanation": "Isso mesmo! Você definiu o que é avisado, por onde e com que regra."
-      },
-      {
-        "type": "text",
-        "title": "📈 Dashboards: Seus Dados em Gráficos",
-        "content": "Com as informações salvas no banco, o Lovable pode desenhar painéis inteligentes.\n\nEm vez de olhar tabelas chatas, você pede: 'Crie um gráfico de barras que mostre o lucro de cada mês'. O sistema busca os dados nas gavetas e transforma em uma imagem fácil de entender, ajudando você a tomar decisões rápidas."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Dados vs. Visualização",
-          "description": "Qual gráfico combina melhor com cada informação?",
-          "pairs": [
-            {
-              "left": "Lucro ao longo do tempo",
-              "right": "Gráfico de Linha"
-            },
-            {
-              "left": "Produtos mais vendidos",
-              "right": "Gráfico de Barras"
-            },
-            {
-              "left": "Divisão de gastos",
-              "right": "Gráfico de Pizza"
-            },
-            {
-              "left": "Status do sistema",
-              "right": "Indicadores coloridos (KPIs)"
-            }
-          ]
-        }
-      },
-      {
-        "type": "text",
-        "title": "🚀 Colocando no Ar com Segurança",
-        "content": "Lançar o app é só o começo. O Lovable cuida da parte chata de manter o site funcionando:\n* **Backup:** Ele salva seus dados de hora em hora.\n* **Ambiente de Teste:** Você pode testar uma ideia nova sem estragar o que já está funcionando.\n* **Escalabilidade:** Se o seu app passar de 10 para 10.000 usuários, a IA ajusta o servidor automaticamente."
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ Segurança e Lançamento",
-          "sentence": "O ___ garante que eu não perca dados, e o ambiente de ___ permite testar antes de publicar.",
-          "answers": [
-            "backup",
-            "teste"
-          ],
-          "options": [
-            "backup",
-            "teste",
-            "desenho",
-            "e-mail",
-            "vídeo",
-            "clique"
-          ],
-          "explanation": "Isso mesmo! Segurança e testes são os pilares de um desenvolvedor profissional."
-        }
-      },
-      {
-        "type": "text",
-        "title": "📱 Funcionalidades de Celular (PWA)",
-        "content": "Seu aplicativo web pode parecer um app de baixar na loja (PWA). \n\nCom o Lovable, você pode adicionar funções de celular como: usar a câmera para tirar fotos de recibos, usar o GPS para entregas ou até funcionar sem internet e salvar tudo quando a rede voltar. É o poder do mobile sem a burocracia das lojas de apps."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Funções de Celular",
-          "description": "Ligue a tecnologia à utilidade prática no dia a dia.",
-          "pairs": [
-            {
-              "left": "Câmera",
-              "right": "Ler QR Codes ou tirar foto de perfil"
-            },
-            {
-              "left": "GPS",
-              "right": "Localizar o cliente ou traçar rotas"
-            },
-            {
-              "left": "Offline Mode",
-              "right": "Trabalhar em locais sem sinal"
-            },
-            {
-              "left": "Push Notification",
-              "right": "Mandar avisos na tela do celular"
-            }
-          ]
-        }
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 20",
-        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. Criou o backend (cérebro) e o banco de dados (memória) do seu app.\n2. Aprendeu o ciclo CRUD para gerenciar qualquer informação.\n3. Descobriu como conectar seu app ao mundo via Webhooks.\n4. Criou painéis visuais para acompanhar seus resultados em tempo real.\n\n**MENTALIDADE:**\nVocê agora é um **Desenvolvedor Full-Stack de IA**. Você tem o poder de criar soluções completas para qualquer empresa.\n\n**AMANHÃ:** O Gran Finale! Vamos construir um sistema por assinatura (SaaS) do zero absoluto!"
+        "title": "🏆 Conclusão do Dia 20: O Maestro do Lovable",
+        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. O fluxo correto: planejar → prompt detalhado → gerar → validar → iterar (máximo 3-5x).\n2. Como gerenciar créditos e não desperdiçar com prompts vagos.\n3. As 5 funcionalidades essenciais (GitHub e Supabase são obrigatórias).\n4. A estrutura do prompt perfeito que reduz iterações de 15 para 2-3.\n5. Como integrar Supabase, GitHub, Zapier e Stripe.\n6. Os 5 erros mais comuns e como evitá-los.\n\n**MENTALIDADE:**\nLovable é ferramenta — você é o maestro. Quanto melhor seu planejamento e seus prompts, mais poderoso o resultado. A mágica está no processo, não no botão."
       }
     ]
   },
