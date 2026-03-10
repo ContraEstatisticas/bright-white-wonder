@@ -593,10 +593,10 @@
         "description": "Gere vídeos cinematográficos hiper-realistas com áudio nativo sincronizado usando o melhor modelo do Google."
       }
     },
-    "luma": {
+    "revisao1": {
       "1": {
-        "title": "🎥 Domine o Luma AI",
-        "description": "Crie vídeos e modelos 3D hiper-realistas a partir de imagens ou textos com o Dream Machine."
+        "title": "📚 Domine as Bases",
+        "description": "Revisão prática e acelerada de todas as ferramentas de texto, imagem e automação do primeiro ciclo."
       }
     },
     "suno": {

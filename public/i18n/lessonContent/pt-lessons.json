@@ -3257,120 +3257,122 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎨 História do Leonardo AI",
-        "content": "Leonardo AI foi fundado como plataforma dedicada à criação de ativos visuais profissionais usando IA generativa. Diferente de Midjourney (Discord) ou DALL-E (interface minimalista), Leonardo AI apostou em ser uma suite criativa completa com web e mobile app próprios. O foco foi criar ferramenta acessível mas poderosa, especialmente para criadores, game developers, marketers e designers que precisam de visuals consistentes em escala.\n\nHoje Leonardo tem comunidade de mais de 60 milhões usuários criativos e já geraram 2 bilhões de imagens. Crescimento explosivo porque resolve problema real: gerar múltiplos visuals mantendo consistência de estilo. Oferece preço mais acessível que Midjourney e mais controle que DALL-E. Cada atualização traz modelos melhores – Nano Banana (Google), GPT Image (OpenAI), e seus próprios modelos proprietários.\n\n💡 **DICA PRÁTICA:** Leonardo vale especialmente se precisa gerar muitos visuals regularmente mantendo estilo consistente (campanhas, design systems, game assets)."
+        "title": "🎬 Bem-vindo ao Captions: Seu Estúdio de Cinema no Bolso",
+        "content": "Você já domina textos e imagens, agora vai dominar o formato mais poderoso das redes sociais. O **Captions** não é só um app de legendas; é um editor que 'pensa' por você.\n\n\n\n**O que mudou:**\n- **Antes:** Você levava 5 horas para editar um vídeo de 1 minuto.\n- **Agora:** A IA faz o trabalho pesado em 30 segundos. Ela corta os erros, melhora a sua voz e até 'conserta' o seu olhar se você não estiver olhando para a lente."
       },
       {
         "type": "text",
-        "title": "⚙️ Como o Leonardo AI Funciona",
-        "content": "Você escreve prompt em texto. Escolhe um modelo de 7+ opções especializadas em diferentes estilos (photorealism, anime, concept art, etc). Leonardo gera 4 imagens simultaneamente em segundos. Valida as opções. Se gostou, faz upscale (melhora resolução), edita via AI Canvas, ou cria variações. Exporta como JPG.\n\nLeonardo usa neural networks treinadas em vastos datasets multimodais cobrindo fine art, fotografia, texturas, design – aprendendo contexto, composição, relacionamentos de estilo além de formas e cores. Isso permite gerar imagens que parecem intencionais, não aleatórias.\n\nOferece recursos avançados: negative prompts (diz o que NÃO quer), Prompt Magic (ativa para IA entender melhor instruções), geração em batch (4+ imagens por vez), motion feature (transforma imagem estática em clip animado). AI Canvas permite editar e refinar sem começar do zero. Blueprint templates oferece estruturas pré-desenhadas para workflows comuns.\n\n💡 **DICA PRÁTICA:** Use templates (Blueprints) para começar rápido. Depois customize. Salve estilos favoritos (ex: \"flat purple illustration\") e reutilize em múltiplos projetos para consistência."
+        "title": "📊 Por que legendar é obrigatório?",
+        "content": "Você sabia que **85% das pessoas assistem a vídeos no celular SEM SOM?**\n\nSe o seu vídeo não tem legenda, ele é invisível para a maioria do público. Vídeos legendados com IA não apenas ajudam quem não pode ouvir, mas aumentam a retenção (o tempo que a pessoa fica assistindo) em mais de 40%. Hoje, ter legendas dinâmicas que pulam na tela é a diferença entre ser ignorado ou viralizar."
       },
       {
         "type": "text",
-        "title": "📊 Impacto e Adoção no Mercado",
-        "content": "Leonardo cresceu porque oferece melhor balanço: qualidade superior a ferramentas gratuitas, preço mais acessível que Midjourney, mais controle que DALL-E. Profissionais de game development usam para concept art. Marketers usam para gerar assets de campanha em escala. Designers usam para prototipagem rápida. Educadores usam para ilustração.\n\n1.2 milhões de artistas usaram Leonardo e combinados geraram 1 bilhão de artworks. Sistema baseado em tokens: cada imagem custa 5-8 tokens, free tier oferece 150 tokens/dia. Planos pagos começam ~$10/mês. Preço transparente, sem contratos.\n\nDiferenciador é biblioteca massiva de modelos especializados. Não são genéricos – cada um é fine-tuned para estilo específico (anime semi-realism, cinematic, photorealistic, etc). Essa variedade permite resultados muito mais consistentes para diferentes necessidades.\n\n💡 **DICA PRÁTICA:** Free tier (150 tokens/dia) é generoso. Gera ~20 imagens/dia. Vale testar antes de pagar. Se precisar mais, plans são progressivos (pague só o que usa)."
-      },
-      {
-        "type": "text",
-        "title": "💪 Onde o Leonardo AI é Muito Bom",
-        "content": "- **Concept art para games:** Game studios usam Leonardo para acelerar pipelines visuais, combinando velocidade generativa com precisão artesanal humana.\n- **Visuals consistentes em estilo:** Salve um preset, aplique em 100 imagens – todas mantêm mesmo aesthetic.\n- **Batch generation:** Gere 4-50 imagens simultaneamente. Perfeito para explorar múltiplas direções criativamente.\n- **Blueprints (templates):** Kick-start projetos com estruturas pré-desenhadas para casos comuns.\n- **AI Canvas edição:** Refine sem começar novo – altere background, objetos, cores mantendo composição base.\n- **Upscaler qualidade:** Universal Upscaler do Leonardo é market leader que pode adicionar definição crispa sem sacrificar detalhe.\n- **Video generation:** Converta imagem estática em clip animado com camera controls e VFX.\n- **Múltiplos modelos:** Escolha o melhor para cada tarefa – photorealism, anime, oil painting, etc.\n- **Múltiplos idiomas:** Comunidade global compartilha prompts. Acesso a 2 bilhões de gerações anteriores como referência.\n\n💡 **DICA PRÁTICA:** Estude galereria comunitária de imagens bem-avaliadas. Procure o modelo/estilo usado. Copie padrão de prompting que funcionou. Isso acelera aprendizado massivamente."
-      },
-      {
-        "type": "text",
-        "title": "❌ Onde o Leonardo AI é Muito Ruim",
-        "content": "- **Texto legível em imagens:** Como outros geradores, falha em gerar texto claro e legível.\n- **Mãos realistas:** Historicamente fraco em anatomia de mãos (melhorou, mas ainda falha ocasionalmente).\n- **Composição muito específica:** Se já sabe exatamente como quer, desenho manual é melhor. Leonardo é melhor para exploração.\n- **Emoções sutis extremas:** Consegue tom geral (feliz, triste), mas nuances emotivas complexas podem não passar.\n- **Objetos muito técnicos precisos:** Engrenagens, circuitos, detalhes técnicos podem ter imprecisões.\n- **Consistência de personagem:** Se precisa do MESMO personagem em múltiplas poses/cenários, múltiplas imagens podem variar. Custom models ajudam, mas é mais trabalho.\n- **Idiomas muito raros:** 50+ idiomas sim, mas idiomas ultra-específicos podem falhar.\n- **API limitations:** Enquanto tem API, é menos robusta que outras plataformas para automação em escala.\n\n💡 **DICA PRÁTICA:** Para anatomia crítica ou texto legível, gere no Leonardo e refine em Photoshop. Não dependa 100% de Leonardo para esses aspectos."
-      },
-      {
-        "type": "text",
-        "title": "🎯 Como Extrair Bons Resultados",
-        "content": "Prompts específicos geram resultados superiores. Inclua: subject (quem/o que), style (referência artística), mood (tom), technical details (iluminação, perspectiva). Exemplo ruim: \"mulher\". Exemplo bom: \"mulher 30 anos, cabelo louro ondulado, estilo pintura óleo, iluminação dourada de entardecer, perspectiva low angle\".\n\nUse modelos apropriados para tarefa. Photorealism model para photos. Anime model para anime. Cinematic model para concept art. Cada um foi fine-tuned para seu contexto específico. Escolher certo = melhor resultado primeiro try.\n\nTeste 3-5 variações do mesmo prompt. Leonardo oferece controle fino (negative prompts, Prompt Magic, aspect ratios). Iterate rapidamente. Upscale o melhor. Edite em AI Canvas se precisa refinar. Tip: teste 3 versões do mesmo prompt e escolha a que melhor combina com sua paleta de cores.\n\n💡 **DICA PRÁTICA:** Batch generate (4-50 imagens de uma vez) economiza tokens vs gerar uma por uma. Deixa gerar durante a noite se tem muitos tokens. Acorda e escolhe melhor."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Atenção - Características Importantes",
-        "content": "**Sistema de Tokens (Não Assinatura Fixa)**\nLeonardo segue pricing baseado em tokens. Free tier oferece 150 tokens diários (suficiente para ~20 imagens). Cada imagem custa 5-8 tokens. Planos pagos começam $10/mês se pago anualmente. Você paga apenas pelo que usa – sem overhead de assinatura mínima cara.\n\n**Huge Model Library Diferencia**\nEnquanto DALL-E é singular e Midjourney é único modelo evoluindo, Leonardo oferece 7+ modelos especializados. Cada um tem força em domínio específico. Essa variedade permite resultados muito mais precisos para diferentes estilos. É como ter várias ferramentas ao invés de uma martelo para tudo.\n\n**Blueprint Templates Aceleram**\nTemplates pré-desenhados para workflows comuns (social media, game art, product shots, etc) permitem kick-start rápido sem começar blank slate. Especialmente útil para não-designers que querem resultado profissional rapidamente.\n\n**Integração com No-Code**\nLeonardo integra com Make, n8n, Dify e outras plataformas no-code. Formulário recebe pedido → Leonardo gera imagem → envia por email/WhatsApp. Automação em escala é possível sem programação.\n\n💡 **DICA PRÁTICA:** Se quer automação, aprenda Make ou n8n depois de dominar Leonardo direto. Combinação (Leonardo + automação) = super poder."
-      },
-      {
-        "type": "quiz",
-        "title": "🎓 Questão 1 - Avaliação de Diferencial",
-        "question": "Qual é o diferencial principal do Leonardo AI em relação a Midjourney e DALL-E?",
-        "options": [
-          {
-            "text": "Leonardo é mais barato e oferece biblioteca de 7+ modelos especializados para diferentes estilos, permitindo consistência em batch generation.",
-            "isCorrect": true,
-            "explanation": "Correto! Ele oferece uma biblioteca rica de modelos focados em estilos específicos, geração otimizada e preço acessível via tokens."
-          },
-          {
-            "text": "Leonardo usa Discord como Midjourney.",
-            "isCorrect": false,
-            "explanation": "Incorreto. O Leonardo AI tem sua própria plataforma web."
-          },
-          {
-            "text": "Leonardo é o único que oferece upscaler.",
-            "isCorrect": false,
-            "explanation": "Incorreto. Upscalers estão disponíveis em outras IA, não sendo exclusividade do Leonardo."
-          },
-          {
-            "text": "Leonardo é gratuito forever sem limitações.",
-            "isCorrect": false,
-            "explanation": "Incorreto. O Leonardo oferece um excelente tier gratuito (150 tokens diários), mas possui limitações em comparação com os planos pagos."
-          }
-        ]
+        "title": "🎯 O Framework L.E.G.E.N.D.A.",
+        "content": "Para suas legendas serem profissionais, siga estas regras simples:\n\n* **L - Legibilidade:** Letras grandes e cores que contrastam com o fundo.\n* **E - Estrutura:** No máximo duas linhas por vez na tela.\n* **G - Ganchos:** Use emojis e cores diferentes nas palavras importantes.\n* **E - Emoção:** A legenda deve seguir o ritmo da sua fala (rápida ou lenta).\n* **A - Atenção:** Coloque as palavras no centro da tela, onde o olho já está."
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🎮 Questão 2 - Ligar Conceitos",
-          "description": "Conecte o recurso ao seu melhor caso de uso:",
+          "title": "🔗 Domine a Retenção",
+          "description": "Ligue o recurso da IA ao benefício que ele traz para o seu vídeo.",
           "pairs": [
             {
-              "left": "Blueprints (templates)",
-              "right": "Kick-start rápido sem design experience"
+              "left": "Legendas Coloridas",
+              "right": "Mantém o espectador focado no texto"
             },
             {
-              "left": "Batch generation",
-              "right": "Gerar 50 variações de mesma ideia e escolher melhor"
+              "left": "Corte de Silêncios",
+              "right": "Deixa o vídeo rápido e sem enrolação"
             },
             {
-              "left": "Modelo especializado (anime/photorealism)",
-              "right": "Resultado consistente no estilo específico desejado"
+              "left": "Correção de Olhar",
+              "right": "Passa mais confiança para quem assiste"
+            },
+            {
+              "left": "Zooms Automáticos",
+              "right": "Dá dinamismo e evita o tédio visual"
             }
           ]
         }
       },
       {
+        "type": "text",
+        "title": "✂️ Edição 'Mágica' com IA",
+        "content": "O Captions faz três coisas que parecem feitiçaria:\n\n\n\n1.  **Remove Silêncios:** Ele detecta aquelas pausas chatas onde você esqueceu o que ia falar e as corta automaticamente.\n2.  **Correção de Olhar:** Se você estava lendo um roteiro e olhou para o lado, a IA ajusta suas pupilas para parecer que você está encarando o espectador nos olhos.\n3.  **Zooms Dinâmicos:** Ele aproxima a imagem nos momentos mais importantes para dar ênfase, sem você precisar mexer na câmera."
+      },
+      {
+        "type": "text",
+        "title": "🎤 Teleprompter Inteligente",
+        "content": "Não precisa mais decorar textos! O Captions tem um teleprompter que rola na velocidade da sua voz. \n\n\n\n**Dica de Pro:** Escreva seu roteiro no ChatGPT antes, cole no Captions e grave. Se você gaguejar, não pare! A IA vai limpar esses erros na edição final. O importante é manter a energia alta."
+      },
+      {
+        "type": "text",
+        "title": "📱 Onde Postar: A Estratégia de Cada Rede",
+        "content": "Nem todo vídeo serve para todo lugar:\n* **TikTok/Reels:** Vídeos verticais, muito rápidos e com ganchos nos primeiros 2 segundos.\n* **LinkedIn:** Tom mais profissional, foco em ensinar algo útil ou dar uma opinião sobre o mercado.\n* **YouTube:** Vídeos mais longos, mas que precisam de uma capa (thumbnail) muito chamativa."
+      },
+      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
-          "sentence": "Leonardo AI oferece 7+ ___ especializados para diferentes estilos. Free tier oferece ___ tokens/dia. Cada imagem custa ___ tokens. Blueprints são ___ pré-desenhados. AI Canvas permite ___ sem começar novo. Para consistência visual, salve um preset como 'flat purple illustration' e reutilize em múltiplos projetos.",
+          "title": "✏️ Vídeos que Vendem",
+          "sentence": "Para um vídeo ser bom, ele precisa de um ___ nos primeiros 3 segundos e ___ que facilitem a leitura sem som.",
           "answers": [
-            "modelos",
-            "150",
-            "5-8",
-            "templates",
-            "refinar imagens"
+            "gancho",
+            "legendas"
           ],
           "options": [
-            "modelos",
-            "150",
-            "5-8",
-            "templates",
-            "refinar imagens",
-            "300",
-            "1-3",
-            "estruturas",
-            "regenerar",
-            "músicas"
+            "gancho",
+            "legendas",
+            "desenho",
+            "música",
+            "erro",
+            "lento"
           ],
-          "explanation": "Gabarito: 7+ modelos, 150 tokens/dia, 5-8 tokens/imagem, templates, refinar imagens."
+          "explanation": "Isso mesmo! O gancho prende a pessoa e a legenda mantém ela assistindo até o fim."
         }
       },
       {
         "type": "text",
-        "title": "🎓 Resumo do Dia 22",
-        "content": "**CHEGAMOS AO FIM DO DIA 22!**\n\nHoje descobrimos que o **Leonardo AI** é uma excelente alternativa ao Midjourney e DALL-E, unindo interface web intuitiva, múltiplos modelos especializados (7+) e um sistema justo de créditos/tokens.\n\nSua verdadeira força não é apenas fazer imagens isoladas, mas criar campanhas, concepts e fluxos de trabalho visuais gerando até dezenas de imagens por vez em estilos idênticos. Ferramentas como Blueprint Templates e AI Canvas tornam as refações muito mais amigáveis.\n\n**AMANHÃ:** Continuaremos a evolução visual e audiovisual com ainda mais ferramentas e técnicas!"
+        "title": "⚡ O Workflow de 30 Minutos",
+        "content": "Siga este sistema para não perder o dia inteiro editando:\n1.  **Planeje (5 min):** O que você quer ensinar hoje?\n2.  **Grave (10 min):** Use o teleprompter e faça 2 ou 3 tentativas.\n3.  **Edite (10 min):** Deixe a IA legendar e cortar os silêncios.\n4.  **Publique (5 min):** Escolha uma música de fundo e solte no mundo.\n\nRepetir isso 3x por semana é o segredo para construir uma audiência gigante."
+      },
+      {
+        "type": "text",
+        "title": "📈 As Métricas do Sucesso",
+        "content": "Como saber se o vídeo deu certo?\n\n\n\n* **Retenção de 3 segundos:** Se mais de 60% das pessoas continuam após o início, seu gancho foi ótimo.\n* **Taxa de Conclusão:** Se muita gente assiste até o final, o seu conteúdo é valioso. \nUse o feedback dos comentários para saber o que o seu público quer ouvir amanhã."
+      },
+      {
+        "type": "text",
+        "title": "💰 O Valor da sua Nova Habilidade",
+        "content": "Muitas empresas e influenciadores precisam de editores rápidos. \n- **Mercado:** Editores cobram R$ 500 por um vídeo curto.\n- **Você:** Faz o mesmo trabalho em 30 minutos usando o Captions.\n\nVocê pode criar uma renda extra de **R$ 3.000 a R$ 10.000 por mês** apenas prestando serviço de edição com IA para quem ainda está fazendo tudo do jeito antigo."
+      },
+      {
+        "type": "quiz",
+        "title": "🧠 Teste Final de Vídeo",
+        "question": "Qual é a regra mais importante para vídeos curtos hoje em dia?",
+        "options": [
+          {
+            "text": "Ter uma câmera de R$ 20.000 e iluminação de cinema",
+            "isCorrect": false,
+            "explanation": "O conteúdo e o ritmo são muito mais importantes que o preço do equipamento."
+          },
+          {
+            "text": "Prender a atenção nos primeiros 3 segundos e usar legendas dinâmicas",
+            "isCorrect": true,
+            "explanation": "Exato! A atenção é a moeda mais valiosa da internet hoje."
+          },
+          {
+            "text": "Falar bem devagar para a IA não se confundir",
+            "isCorrect": false,
+            "explanation": "A IA moderna entende falas rápidas e o público prefere vídeos dinâmicos."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "🏆 Conclusão do Dia 22",
+        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1.  Como criar vídeos profissionais em minutos usando o Captions.\n2.  O segredo das legendas que aumentam o engajamento em 40%.\n3.  Como usar a IA para corrigir seu olhar e remover erros de gravação.\n4.  O fluxo de trabalho para ser um criador de conteúdo constante e lucrativo.\n\n**MENTALIDADE:**\nVocê não é mais um amador tentando entender as redes sociais. Você agora é um **Produtor de Conteúdo de Elite**. Suas mensagens agora têm o impacto visual que merecem.\n\n**AMANHÃ:** Vamos aprender a criar Avatares! Descubra como criar vídeos onde você nem precisa aparecer na frente da câmera!"
       }
     ]
   },
@@ -3378,127 +3380,132 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎨 História do Midjourney",
-        "content": "Midjourney foi criada em 2021 por David Holz com foco em qualidade máxima de imagens IA. Diferente de DALL-E (acessibilidade) e Stable Diffusion (open-source), Midjourney apostou em melhor qualidade e comunidade vibrante. Escolheu Discord como plataforma (não website), criando comunidade onde usuários compartilham técnicas e prompts em tempo real.\n\nA empresa cresceu explosivamente. Cada versão (v1 → v6) trouxe melhoria drástica. Midjourney tornou-se ferramenta padrão entre designers, artistas e criativos. Centenas de milhares de usuários pagos provam confiança. Mantém lucratividade sem suporte de mega-corporações – pura qualidade.\n\n💡 **DICA PRÁTICA:** Midjourney funciona via Discord. Se nunca usou, aprenda Discord básico antes."
+        "title": "🎭 Apresentadores Virtuais: Sua Equipe que Nunca Dorme",
+        "content": "Você já sabe editar vídeos, agora vai aprender a criar os **Apresentadores**. Avatares de IA são personagens digitais realistas que falam o seu roteiro com expressões humanas.\n\n\n\n**Por que isso muda o jogo?**\n- **Escala:** Crie 50 vídeos em uma tarde.\n- **Idiomas:** Seu avatar pode falar inglês, mandarim ou espanhol fluentemente.\n- **Sem Cansaço:** Ele não erra as falas, não precisa de maquiagem e está sempre pronto."
       },
       {
         "type": "text",
-        "title": "⚙️ Como o Midjourney Funciona",
-        "content": "Você entra no Discord, digita /imagine [prompt] e descreve a imagem desejada. Segundos depois, Midjourney gera 4 variações. Valida as opções. Se gostou, pede upscale ou variações. Se não, regenera com prompt diferente.\n\nInternamente usa modelo proprietário treinado em bilhões de imagens. Entende contexto, estilo, composição, cores simultaneamente. Resultado é coerente e esteticamente superior.\n\nOferece parâmetros avançados: --ar 16:9 (proporção), --quality 2 (qualidade máxima), --chaos 50 (criatividade), --no pessoa (remove elemento), --style raw (estilo). Dão controle fino sobre resultado.\n\nQualidade consistentemente superior a DALL-E 3 e Stable Diffusion. Onde outros falham em mãos, composição, ou detalhes, Midjourney acerta.\n\n💡 **DICA PRÁTICA:** Prompts detalhados funcionam melhor. \"Mulher na praia\" é vago. \"Mulher 30 anos, cabelo castanho, praia tropical, luz dourada, por Annie Leibovitz\" gera excelência."
+        "title": "🤖 Do Desenho ao Humano: Níveis de Realismo",
+        "content": "Existem três tipos principais de avatares que você pode usar:\n\n1.  🎨 **Estilizados (Cartoon):** Ótimos para vídeos educativos, tutoriais rápidos ou conteúdo infantil.\n2.  🎭 **Semi-realistas:** Um equilíbrio entre arte e realidade. Muito usados em marketing digital.\n3.  🌟 **Hiper-realistas:** Quase impossíveis de distinguir de uma pessoa real. Ideais para cursos premium e anúncios de alto valor.\n\n[Image comparing cartoon vs. hyper-realistic AI avatars]"
       },
       {
         "type": "text",
-        "title": "📊 Impacto e Adoção no Mercado",
-        "content": "Midjourney virou ferramenta padrão em indústrias criativas. Designers geram conceitos. Artistas exploram estilos. Marketers criam assets. Educadores ilustram conceitos.\n\nProfissionais relatam 40% de redução no tempo de brainstorm visual inicial. Agências usam para mood boards em minutos. Alguns artistas combinam imagens Midjourney com edição em Photoshop.\n\nEntre DALL-E, Stable Diffusion e Midjourney, este último conquistou positioning premium: melhor qualidade, comunidade mais ativa, features mais poderosas. Centenas de milhares de usuários pagos confirmam.\n\n💡 **DICA PRÁTICA:** Plano Básico ($10/mês) com ~200 imagens é bom para começar. Standard ($30/mês) para uso regular. Pro ($120/mês) para ilimitado."
-      },
-      {
-        "type": "text",
-        "title": "💪 Onde o Midjourney é Muito Bom",
-        "content": "- **Concept art:** Gere para jogos, filmes, livros rapidamente.\n- **Mockups visuais:** Laptop, ambiente, objetos em minutos.\n- **Mood boards:** Crie inspiração visual em quantidade.\n- **Ilustrações:** Blogs, artigos, redes sociais ganham ilustrações relevantes.\n- **Prototipagem visual:** Teste ideias antes de investir em fotógrafo.\n- **Backgrounds e texturas:** Madeira, metal, tecido customizados.\n- **Personagens e retratos:** Avatares, personagens fictícios, representações visuais.\n- **Fotografia conceitual:** Futuros, ficções, impossibilidades que não existem.\n- **Designs gráficos:** Posters, capas, layouts gerados e refinados.\n- **Exploração de estilos:** Teste conceito em aquarela, óleo, pixel art, etc.\n\n💡 **DICA PRÁTICA:** Midjourney é excelente para exploração criativa e ideias visuais. Para fotografia realista extrema, fotógrafo real é melhor."
-      },
-      {
-        "type": "text",
-        "title": "❌ Onde o Midjourney é Muito Ruim",
-        "content": "- **Fotografia realista de pessoa específica:** Gera rosto genérico, não consegue reproduzir pessoa específica.\n- **Texto legível em imagens:** Placa com escrito fica ilegível.\n- **Mãos realistas:** Historicamente falha em mãos (melhorou em v6, mas ainda).\n- **Anatomia precisa:** Erros em dedos, proporções. Fotografia é melhor referência.\n- **Detalhes técnicos:** Engrenagens, circuitos complexos – gera aproximação, não precisão.\n- **Logos/marcas reais:** \"Tipo iPhone\" sim, exatamente Apple não.\n- **Múltiplas pessoas com expressões diferentes:** Distribuição de emoções pode errar.\n- **Composição muito específica:** Se desenhou exato, designer/fotógrafo é melhor.\n- **Narrativas complexas:** Gera imagem isolada, não sequência visual.\n- **Controle absoluto:** Não edita pixels. Para alterar cores específicas, Photoshop é melhor.\n\n💡 **DICA PRÁTICA:** Use Midjourney para ideias e exploração. Use fotógrafo para produto fotográfico. Use designer para composição precisa."
-      },
-      {
-        "type": "text",
-        "title": "🎯 Como Extrair Bons Resultados",
-        "content": "Diferença entre ok e excelência está no prompt. Prompts genéricos = imagens ok. Prompts detalhados = imagens excelentes.\n\nRuim: \"mulher na praia\"\nBom: \"mulher 30 anos, cabelo castanho ondulado, sorrindo, praia tropical, luz dourada, fotografia Annie Leibovitz\"\n\nQuanto mais descreve (quem, onde, quando, como, estilo, artista referência), melhor Midjourney entende.\n\nTécnicas:\n- Use referências estilísticas: \"Estilo Ghibli\", \"fotografia Hasselblad\", \"pintura Rembrandt\"\n- Itere inteligentemente: gere 4 → escolha uma → peça upscale ou variações\n- Use parâmetros: --ar 16:9, --quality 2, --chaos 70, --no mãos más, --style raw\n- Estude prompts da comunidade: procure inspiração em Discord\n\n💡 **DICA PRÁTICA:** 10 minutos aprendendo prompting em Midjourney vale anos de uso amador. Novato vs experiente = diferença abismal."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Atenção - Características Importantes",
-        "content": "**Funciona Via Discord (Não é Website)**\nDiferentes de DALL-E tradicional, Midjourney usa Discord. Digita /imagine [prompt] em canal. Estranho a princípio, mas cria uma comunidade vibrante. Você vê criações alheias, aprende, compartilhar. 5 minutos de familiarização resolvem.\n\n**Modelo de Preço por Assinatura**\nCobra assinatura mensal, não por imagem. Básico ($10) = ~200 imagens. Standard ($30) = ~1000. Pro ($120) = ilimitado. Mais justo se usa regularmente que DALL-E (por token).\n\n**Qualidade Consistentemente Superior**\nMidjourney v6 supera DALL-E 3 e Stable Diffusion em composição, detalhes, cores, proporções. Validado por profissionais. Você paga prêmio porque resultado é prêmio.\n\n**Comunidade e Sharing**\nToda imagem fica pública em galeria comunitária (a menos que use modo privado em Pro+). Bom para aprender. Ruim para privacidade. Modo privado requer Pro.\n\n💡 **DICA PRÁTICA:** Comece com Básico ($10). Se usar regularmente, upgrade. Se virar crítico, vá Pro. Básico é suficiente no início."
-      },
-      {
-        "type": "quiz",
-        "title": "🎓 Questão 1 - Avaliação de Diferencial",
-        "question": "Qual é o principal diferencial do Midjourney?",
-        "options": [
-          {
-            "text": "Midjourney é grátis",
-            "isCorrect": false,
-            "explanation": "Incorreto. O Midjourney opera em um modelo estrito de assinatura paga."
-          },
-          {
-            "text": "Qualidade consistentemente superior com comunidade vibrante via Discord",
-            "isCorrect": true,
-            "explanation": "Correto! O destaque do Midjourney é sua altíssima qualidade visual acoplada à plataforma Discord que cria um ambiente rico de colaboração e aprendizado."
-          },
-          {
-            "text": "Só gera arte abstrata",
-            "isCorrect": false,
-            "explanation": "Incorreto. Capaz de gerar fotorrealismo, anime, ilustrações, e muito mais estilos."
-          },
-          {
-            "text": "Funciona em website como outros",
-            "isCorrect": false,
-            "explanation": "Incorreto. Midjourney se destaca por usar especificamente o Discord."
-          }
-        ]
+        "title": "🎯 O Método A.V.A.T.A.R. para Criação",
+        "content": "Para criar um apresentador marcante, siga esta receita:\n\n* **A - Aspectos:** Defina idade, gênero e etnia.\n* **V - Visual:** Escolha as roupas (terno, casual, jaleco).\n* **A - Ambiente:** Onde ele está? (Escritório, fundo colorido, biblioteca).\n* **T - Tom:** Ele é animado? Sério? Professor paciente?\n* **A - Aplicação:** O vídeo é para o YouTube ou treinamento interno?\n* **R - Regras:** Defina a qualidade (4K) e o que ele não deve fazer."
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🎮 Questão 2 - Ligar Conceitos",
-          "description": "Conecte a limitação ao caso onde não use Midjourney:",
+          "title": "🔗 Escolha o seu Apresentador",
+          "description": "Ligue o tipo de avatar ao uso mais inteligente para o seu negócio.",
           "pairs": [
             {
-              "left": "Falha em mãos realistas",
-              "right": "Referência anatômica de pose"
+              "left": "Avatar Hiper-realista",
+              "right": "Curso de Investimentos Premium"
             },
             {
-              "left": "Texto não fica legível",
-              "right": "Precisa de placa com texto legível"
+              "left": "Avatar Estilizado",
+              "right": "Dicas de Higiene para Crianças"
             },
             {
-              "left": "Não captura pessoa específica real",
-              "right": "Foto de cliente específico"
+              "left": "Clone Digital",
+              "right": "Escalar sua própria imagem nas redes"
+            },
+            {
+              "left": "Avatar Multilíngue",
+              "right": "Vender seu produto na gringa"
             }
           ]
         }
       },
       {
+        "type": "text",
+        "title": "🎬 Clone Digital: Você em Todo Lugar",
+        "content": "A tecnologia mais avançada hoje permite que você crie um **Clone de Si Mesmo**. \n\n\n\n**Como funciona:**\n1. Você manda algumas fotos e um vídeo curto seu falando.\n2. A IA aprende seus gestos, seu tom de voz e como sua boca se mexe.\n3. Pronto! Agora você pode gerar novos vídeos apenas digitando o texto, e o seu 'eu digital' fará o trabalho por você."
+      },
+      {
+        "type": "text",
+        "title": "🌍 Falando para o Mundo: Tradução Mágica",
+        "content": "Com os avatares, a barreira da língua acaba. Você escreve o roteiro em português e pede para a IA traduzir e dublar.\n\n\n\nO sistema ajusta o movimento dos lábios para que pareça que o apresentador realmente sabe falar aquela língua. É a forma mais barata e rápida de transformar um curso brasileiro em um produto global."
+      },
+      {
+        "type": "text",
+        "title": "💼 Onde as Empresas Ganham Dinheiro com Isso?",
+        "content": "Grandes empresas já economizam milhões usando avatares:\n* **Treinamento:** Um único instrutor virtual treina 5.000 funcionários de forma padronizada.\n* **Suporte 24h:** Vídeos de ajuda personalizados que resolvem dúvidas na hora.\n* **Vendas:** Anúncios personalizados que chamam o cliente pelo nome.\n\n"
+      },
+      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
-          "sentence": "Estruture prompts com: 1) quem/o que, 2) contexto, 3) estilo (como '___'), 4) parâmetros (como '___'). Prompts vagos = imagens ___. Prompts detalhados = imagens ___. Midjourney usa ___, criando ___ vibrante.",
+          "title": "✏️ Potencial de Lucro",
+          "sentence": "Usar avatares permite ___ a produção de vídeos e economizar até ___ do custo tradicional.",
           "answers": [
-            "Fotografia Leibovitz",
-            "--quality 2",
-            "ok",
-            "excelentes",
-            "Discord",
-            "comunidade"
+            "escalar",
+            "90%"
           ],
           "options": [
-            "Fotografia Leibovitz",
-            "--quality 2",
-            "ok",
-            "excelentes",
-            "Discord",
-            "comunidade",
-            "Pintura Rembrandt",
-            "--chaos 100",
-            "ruins",
-            "perfeitas",
-            "Gmail",
-            "galeria",
-            "Design Figma",
-            "--zoom 2",
-            "medíocres",
-            "medianas"
+            "escalar",
+            "90%",
+            "parar",
+            "10%",
+            "comprar",
+            "dobrar"
           ],
-          "explanation": "Gabarito: A - Fornecer referências de artistas, usar parâmetros, detalhar prompts e interagir no Discord."
+          "explanation": "Isso mesmo! A escalabilidade e a economia de custos são as maiores vantagens dos apresentadores virtuais."
         }
       },
       {
         "type": "text",
+        "title": "🎨 Emoções: Comunicando com o Corpo",
+        "content": "Um robô travado não convence ninguém. Por isso, configuramos a **Linguagem Não-Verbal**:\n- **Entusiasmo:** Olhos mais abertos e mãos se mexendo mais.\n- **Autoridade:** Postura firme e fala pausada.\n- **Empatia:** Cabeça levemente inclinada e tom de voz suave.\n\nAprender a dar essas 'instruções de atuação' é o que torna seu avatar humano."
+      },
+      {
+        "type": "text",
+        "title": "⚡ Robôs Trabalhando: Fluxos Automáticos",
+        "content": "Você pode criar uma 'esteira de produção':\n\n\n\n1. **ChatGPT** cria o roteiro da semana.\n2. **Captions** gera o vídeo com o avatar e legendas.\n3. O sistema publica automaticamente no seu canal.\nVocê gasta 30 minutos por semana para ter vídeos saindo todo dia."
+      },
+      {
+        "type": "text",
+        "title": "🔒 Ética: O Que Não Fazer",
+        "content": "Poder traz responsabilidade. Siga as regras de ouro:\n- **Transparência:** Sempre avise que é uma IA (use uma marca d'água ou aviso).\n- **Consentimento:** Nunca use a imagem de alguém sem autorização.\n- **Verdade:** Não use avatares para espalhar mentiras ou enganar pessoas. \nA IA deve ser usada para ajudar, não para confundir."
+      },
+      {
+        "type": "quiz",
+        "title": "🧠 Teste de Atuação",
+        "question": "Qual configuração você usaria para um avatar que precisa dar suporte técnico de forma acolhedora?",
+        "options": [
+          {
+            "text": "Movimentos rápidos, voz alta e gritos de empolgação",
+            "isCorrect": false,
+            "explanation": "Isso assustaria o cliente que já está com um problema."
+          },
+          {
+            "text": "Fala pausada, sorriso sutil e inclinação de cabeça (empatia)",
+            "isCorrect": true,
+            "explanation": "Exato! Isso transmite paciência e confiança para resolver o problema."
+          },
+          {
+            "text": "Olhar fixo sem piscar e mãos escondidas",
+            "isCorrect": false,
+            "explanation": "Isso faria o avatar parecer um robô sem vida e desconfortável."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "📁 Monte sua Produtora Virtual",
+        "content": "Profissionais organizam sua 'biblioteca de talentos'. Tenha pastas para:\n- Seus Clones (para vídeos pessoais).\n- Avatares de Venda (para anúncios).\n- Avatares de Ensino (para tutoriais).\n\n\n\nSempre que um projeto novo surgir, você já tem o apresentador ideal pronto para entrar em cena."
+      },
+      {
+        "type": "text",
+        "title": "🚀 Projeto Prático: Agência de Avatares",
+        "content": "Para fechar o dia, vamos simular que você abriu uma agência. \n\n\n\n**O Cenário:** Uma escola de inglês te contratou para criar 4 professores virtuais (cada um com um estilo) e 100 vídeos de aulas. \n\n**O Resultado:** Você entrega em 2 semanas o que levaria um ano, lucra R$ 30.000 e a escola economiza R$ 200.000 em contratações. Esse é o poder de ser um **Produtor de IA**."
+      },
+      {
+        "type": "text",
         "title": "🎓 Resumo do Dia 23",
-        "content": "**CHEGAMOS AO FIM DO DIA 23!**\n\nHoje mergulhamos no **Midjourney**, o atual padrão absoluto da indústria criativa para qualidade gerativa. Vimos que sua aposta no Discord valeu a pena para criar uma das comunidades visuais mais engajadas do mundo.\n\nAo dominar a estrutura rica de um prompt (quem, o que, onde, como e parâmetros como --ar e --chaos), você se destaca do usuário comum e entra no nível onde o resultado parece ter sido tirado de fotografia profissional ou artes conceituais premium.\n\nLembre-se das ressalvas: Midjourney tem dificuldades em texto, reproduções exatas e mãos, mas é incomparável em composição visual criativa."
+        "content": "**HOJE VOCÊ DOMINOU:**\n\n1.  Como criar apresentadores virtuais de vários níveis de realismo.\n2.  O método A.V.A.T.A.R. para dar personalidade e estilo.\n3.  Como clonar sua própria imagem e voz para escalar seu trabalho.\n4.  O uso ético e lucrativo da IA em treinamentos e marketing.\n\n**MENTALIDADE:**\nVocê não precisa mais de uma equipe gigante. Você agora é o **Diretor de uma produtora infinita**. \n\n**AMANHÃ:** Vamos aprender a fazer esses vídeos viralizarem! Descubra os segredos dos vídeos curtos que dominam a internet."
       }
     ]
   },
@@ -3506,262 +3513,250 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎬 História do Captions",
-        "content": "Captions foi criado como solução para o problema real dos criadores de conteúdo: adicionar legendas em vídeos é chato, manual e consome horas. A ferramenta nasceu apostando em automação – usar IA para gerar legendas sincronizadas palavra por palavra, removendo trabalho repetitivo. Diferente de ferramentas genéricas de edição, Captions focou exclusivamente em legendagem e edição automática para redes sociais.\n\nA empresa cresceu rápido entre criadores de TikTok, Reels e YouTube Shorts. Para quem cria conteúdo curto, legendas são críticas – muitas pessoas assistem sem som. Captions transformou legendagem de tarefa de 30 minutos em automática de 30 segundos. Porém, recentemente sofreu críticas sobre performance, bugs de sincronização e suporte lento. Ainda assim, continua sendo uma ferramenta popular por resolver problemas reais.\n\n💡 **DICA PRÁTICA:** Captions vale a pena se cria múltiplos vídeos por semana. Para um vídeo ocasional, outras ferramentas gratuitas são suficientes."
+        "title": "🚀 Captions: Sua Fábrica de Virais",
+        "content": "O Captions não apenas legenda; ele otimiza cada segundo para manter as pessoas assistindo.\n\n### Por que ele é diferente?\n1. **Ganchos Automáticos:** Sugere o melhor início para o vídeo.\n2. **Ritmo Ágil:** Remove silêncios e pausas desnecessárias.\n3. **Design de Retenção:** Fontes que prendem o olhar.\n4. **IA de Sucesso:** Sugere melhorias baseadas no que está bombando."
       },
       {
         "type": "text",
-        "title": "⚙️ Como o Captions Funciona",
-        "content": "Você faz upload do vídeo em Captions. A ferramenta usa Whisper (OpenAI) para transcrever áudio automaticamente. Gera legendas sincronizadas palavra por palavra no vídeo, formatadas dinamicamente. Você valida, edita se necessário, personaliza cores/fontes/posição. Exportar vídeo com legendas queimadas (ou como arquivo SRT para plataformas).\n\nAlém de legendas, Captions oferece AI Edit (analisa script e adiciona automaticamente zooms, transições, B-roll, efeitos sonoros) e AI Shorts (encontra melhores trechos de vídeo longo e corta em clips prontos para viral). Parâmetro de precisão depende da qualidade do áudio – áudio limpo = legendas precisas.\n\nInternamente, combina Whisper para transcrição + modelos de edição próprios para automação visual. Resultado é vídeo pronto em minutos sem edição manual.\n\n💡 **DICA PRÁTICA:** Audio limpo = legendas precisas. Se está em café barulhento, qualidade cai. Fale claro e em ritmo constante para melhor transcrição."
+        "title": "🎣 A Ciência do Gancho (Hook)",
+        "content": "A maioria dos criadores perde **80% do público** nos primeiros 3 segundos.\n\nO Captions ajuda a criar ganchos de **curiosidade, choque ou promessa**. Se o começo for ruim, ninguém vê o resto."
       },
       {
         "type": "text",
-        "title": "📊 Impacto e Adoção no Mercado",
-        "content": "Captions virou padrão entre criadores de conteúdo curto (TikTok, Reels, YouTube Shorts). Reduz tempo de produção drasticamente. Creators que fazem 5+ vídeos por semana usam Captions rotineiramente.\n\nO mercado de legendagem automática explodiu. Alternativas surgiram: Submagic, OpusClip, Zeemo, HeyGen. Competição aumentou. Captions mantém relevância por ser early player e ter boa integração com plataformas sociais. Porém, perdeu parte de market share por problemas técnicos recentes.\n\n💡 **DICA PRÁTICA:** Plano começa grátis com limite. Pago começa ~$10-15/mês dependendo do volume de vídeos."
+        "title": "🎯 Framework V.I.R.A.L.",
+        "content": "### Os 5 Pilares:\n- **V - Validação:** A ideia tem potencial?\n- **I - Identificação:** O que funcionou nos vídeos anteriores?\n- **R - Roteiro:** Hook (3s) → Retenção (10s) → CTA.\n- **A - Automação:** Legendas dinâmicas e cores de marca.\n- **L - Lançamento:** SEO, hashtags e horários de pico."
       },
       {
-        "type": "text",
-        "title": "💪 Onde o Captions é Muito Bom",
-        "content": "- **Legendas automáticas precisas:** Para áudio claro, transcrição é 95%+ correta.\n- **Sincronização palavra por palavra:** Legendas ficam sincronizadas com fala em tempo real.\n- **Edição automática (AI Edit):** Adiciona zooms, transições, B-roll automaticamente.\n- **Extração de clips (AI Shorts):** Encontra melhores trechos de vídeo longo, corta automaticamente.\n- **Múltiplos idiomas:** Gera legendas em 50+ idiomas.\n- **Customização visual:** Fonts, cores, posição, animações personalizáveis.\n- **Integração redes sociais:** Exporta direto em formato otimizado para TikTok, Reels, Shorts.\n- **Teleprompter integrado:** Você lê script enquanto grava, sincroniza com legendas.\n\n💡 **DICA PRÁTICA:** Melhor para criadores que fazem muitos vídeos curtos regularmente. Para conteúdo ocasional, overhead pode não valer."
-      },
-      {
-        "type": "text",
-        "title": "❌ Onde o Captions é Muito Ruim",
-        "content": "- **Bugs de sincronização:** Algumas versões tiveram problemas onde legendas desincronizam do áudio após exportação.\n- **Áudio ruidoso:** Falha em ambientes barulhentos ou com múltiplas vozes simultâneas.\n- **Suporte lento:** Usuários reportam dificuldade em obter ajuda quando bugs ocorrem.\n- **Performance inconsistente:** Algumas edições funcionam perfeito, outras geram resultados erráticos.\n- **Texto em imagem:** Não consegue capturar texto visível em vídeo (lojas, placas).\n- **Edição muito automática:** AI Edit às vezes adiciona efeitos que não combinam com tom do vídeo.\n- **Dependência da plataforma:** Se fechar, você não tem garantia de recuperar vídeos editados.\n- **Custo crescente:** Múltiplos vídeos longos ficam caro.\n\n💡 **DICA PRÁTICA:** Sempre faça backup de vídeo original. Se Captions tiver bug, você consegue regenerar."
-      },
-      {
-        "type": "text",
-        "title": "🎯 Como Extrair Bons Resultados",
-        "content": "A qualidade final depende de áudio limpo. Quanto melhor o áudio, melhor a transcrição. Fale em ritmo constante (não muito rápido), articule bem, minimize ruído de fundo.\n\nUse AI Edit com moderação – pode adicionar efeitos demais. Revise o resultado antes de publicar. Customize fonts/cores para combinar com sua marca. Para vídeos muito longos, considere dividir em partes – Captions funciona melhor em clipes de 3-10 minutos.\n\nEstude o resultado de legendas geradas. Captions às vezes erra nomes próprios ou jargão específico – você edita manualmente em segundos no editor integrado.\n\n💡 **DICA PRÁTICA:** Para máxima eficiência, gere legendas via Captions, valide, edite jargão, customiza design, exporta. Tempo total: 5-10 minutos por vídeo curto."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Atenção - Características Importantes",
-        "content": "**Dependência de Qualidade de Áudio**\nCaptions usa Whisper (OpenAI) para transcrição. Whisper é excelente, mas áudio ruim → legendas ruins. Se seu estúdio tem eco ou muitos ruídos de fundo, qualidade cai. Invista em microfone bom antes de investir em Captions.\n\n**Bugs Conhecidos Recentes**\nVersões recentes tiveram problemas de sincronização. Sempre teste antes de publicar em produção. Exporte em local seguro, não confie 100% que resultado será perfeito.\n\n**Modelo de Preço**\nPlano free limitado. Plano pago começa ~$10 com quotas mensais. Se cria 50+ vídeos/mês, custo aumenta. Calcule ROI antes de assinar anualmente.\n\n💡 **DICA PRÁTICA:** Teste com plano free primeiro. Só pague quando confirmar que Captions resolve seu problema de verdade."
+        "type": "practical",
+        "title": "🎯 Exercício: Prompt de Produção",
+        "question": "Ordene o prompt para criar seu sistema viral:",
+        "initialWords": [
+          "Analise meus vídeos anteriores",
+          "identifique padrões de sucesso",
+          "sugira ideias virais",
+          "crie roteiro otimizado",
+          "planeje estratégia de lançamento"
+        ],
+        "correctOrder": [
+          "Analise meus vídeos anteriores",
+          "identifique padrões de sucesso",
+          "sugira ideias virais",
+          "crie roteiro otimizado",
+          "planeje estratégia de lançamento"
+        ],
+        "explanation": "Perfeito! Esse fluxo garante que você aprenda com o passado para dominar o futuro."
       },
       {
         "type": "quiz",
-        "title": "🎓 Questão 1 - Avaliação de Diferencial",
-        "question": "Qual é a principal vantagem do Captions para criadores de conteúdo?",
+        "title": "🧠 Teste: Viralidade Inteligente",
+        "question": "Qual o maior benefício do Captions na criação de conteúdo?",
         "options": [
           {
-            "text": "Cria vídeos originais do zero",
-            "isCorrect": false,
-            "explanation": "Incorreto. O Captions requer um vídeo pré-gravado para adicionar legendas e edições."
-          },
-          {
-            "text": "Gera legendas automáticas precisas usando Whisper + sincroniza palavra por palavra",
+            "text": "Ele otimiza todo o ritmo do vídeo para máxima retenção",
             "isCorrect": true,
-            "explanation": "Correto! O Captions usa IA (Whisper) para criar legendas automáticas muito precisas e sincronizadas dinamicamente palavra por palavra."
+            "explanation": "Correto! Retenção é o que faz o algoritmo entregar seu vídeo para mais pessoas."
           },
           {
-            "text": "Substitui completamente editor de vídeo profissional",
+            "text": "Ele apenas coloca legendas coloridas",
             "isCorrect": false,
-            "explanation": "Incorreto. Apesar de ter recursos úteis, edições mais avançadas e específicas ainda dependem de editores tradicionais."
-          },
-          {
-            "text": "É gratuito forever",
-            "isCorrect": false,
-            "explanation": "Incorreto. A versão gratuita é limitada e o app tem focos pagos atrelados a um modelo de assinatura."
+            "explanation": "Legendas são só o começo. O segredo está no ritmo e na estrutura do vídeo."
           }
         ]
       },
       {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🎮 Questão 2 - Ligar Conceitos",
-          "description": "Conecte a situação ao uso apropriado de Captions:",
-          "pairs": [
-            {
-              "left": "Crio 5 vídeos por semana para TikTok",
-              "right": "Sim, economiza horas"
-            },
-            {
-              "left": "Crio 1 vídeo ocasional por mês",
-              "right": "Não vale a pena"
-            },
-            {
-              "left": "Estou em ambiente barulhento",
-              "right": "Captions vai falhar"
-            }
-          ]
-        }
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
-          "sentence": "Captions usa ___ (OpenAI) para transcrever áudio. Gera legendas sincronizadas ___ no vídeo. Oferece também AI Edit (adiciona ___) e AI Shorts (corta ___). Funciona melhor com ___ limpo. Plano ___ é limitado; pago começa ~$10/mês.",
-          "answers": [
-            "Whisper",
-            "palavra por palavra",
-            "zooms e transições",
-            "clips virais",
-            "áudio",
-            "free"
-          ],
-          "options": [
-            "Whisper",
-            "palavra por palavra",
-            "zooms e transições",
-            "clips virais",
-            "áudio",
-            "free",
-            "GPT-4",
-            "por segundo",
-            "efeitos complexos",
-            "qualquer coisa",
-            "vídeo",
-            "premium",
-            "DALL-E",
-            "em tempo real",
-            "filtros"
-          ],
-          "explanation": "Gabarito: Whisper, palavra por palavra, zooms e transições, clips virais, áudio e free."
-        }
+        "type": "text",
+        "title": "🎬 Produção em Lote (Batch)",
+        "content": "Crie 30 vídeos em 3 horas. Use a IA para gerar 50 ideias, grave tudo de uma vez e use o Captions para editar todos com o mesmo padrão visual rapidamente."
       },
       {
         "type": "text",
-        "title": "🎓 Resumo do Dia 24",
-        "content": "**CHEGAMOS AO FIM DO DIA 24!**\n\nHoje descobrimos que o **Captions** foi desenvolvido para solucionar uma dor real de todo criador de vídeo curto: a rotina repetitiva da legendagem dinâmica. Ele usa tecnologias de ponta como Whisper para escutar e renderizar com sincronia.\n\nSua adoção se justifica se você escala a produção de conteúdo (5+ vídeos por semana). Caso contrário, as limitações como bugs recentes, suporte não responsivo ou performance instável em áudios barulhentos podem ser frustrantes.\n\nCom vídeo base bem gravado, ele se mostra absurdamente eficiente. Próxima parada: geração de voz e novas abordagens criativas multimídia!"
+        "title": "🎨 Branding nas Legendas",
+        "content": "Crie uma identidade visual única: cores HEX da sua marca, fontes específicas e efeitos de pulso nos momentos chave para destacar palavras importantes."
+      },
+      {
+        "type": "practical",
+        "title": "🎯 Exercício: Sistema de Legendas",
+        "question": "Monte o prompt para criar sua marca visual:",
+        "initialWords": [
+          "Crie sistema de legendas para minha marca",
+          "defina cores e fontes da identidade visual",
+          "crie estilos por tipo de conteúdo",
+          "inclua regras de acessibilidade",
+          "desenvolva templates prontos"
+        ],
+        "correctOrder": [
+          "Crie sistema de legendas para minha marca",
+          "defina cores e fontes da identidade visual",
+          "crie estilos por tipo de conteúdo",
+          "inclua regras de acessibilidade",
+          "desenvolva templates prontos"
+        ],
+        "explanation": "Excelente! Consistência visual gera autoridade e reconhecimento de marca."
+      },
+      {
+        "type": "text",
+        "title": "🚫 Erros que Matam o Alcance",
+        "content": "Evite ganchos lentos, vídeos sem cortes (monótonos) e a falta de uma Chamada para Ação (CTA). A IA ajuda, mas o seu toque humano é o que conecta."
+      },
+      {
+        "type": "practical",
+        "title": "🎯 Exercício Final: Seu Plano",
+        "question": "Ordene seu novo fluxo de trabalho:",
+        "initialWords": [
+          "Nicho: Produtividade com IA",
+          "Frequência: 5 vídeos/semana",
+          "Formatos: Tutoriais e listas",
+          "Duração: 45-60 segundos",
+          "Workflow: Gravar segunda, editar terça, postar o resto"
+        ],
+        "correctOrder": [
+          "Nicho: Produtividade com IA",
+          "Frequência: 5 vídeos/semana",
+          "Formatos: Tutoriais e listas",
+          "Duração: 45-60 segundos",
+          "Workflow: Gravar segunda, editar terça, postar o resto"
+        ],
+        "explanation": "Perfeito! Com organização, você cresce sem ter um burnout."
+      },
+      {
+        "type": "text",
+        "title": "🏆 Conclusão: Fábrica Ativada",
+        "content": "Hoje você construiu seu sistema de vídeos virais. \n\n**Lembre-se:** Viralidade não é sorte, é estrutura + consistência.\n\n**Amanhã:** ElevenLabs — A voz perfeita para seus vídeos! 🎙️"
       }
-    ]
+    ],
+    "summary": "Dia 24 finalizado! Aprendemos o framework V.I.R.A.L., produção em massa e como usar o Captions para dominar a retenção nas redes sociais."
   },
   "day25": {
     "steps": [
       {
         "type": "text",
-        "title": "🎤 História do ElevenLabs",
-        "content": "ElevenLabs foi fundada em 2022 por Piotr Dabkowski e Mati Staniszewski com uma missão clara: criar síntese de voz (text-to-speech) que soa natural, não robótica. Enquanto Google TTS e Amazon Polly soavam artificiais, ElevenLabs apostou em modelos neurais que capturam nuances de voz humana – inflexão, emoção, sotaque.\n\nA empresa lançou também clonagem de voz: você grava 1 minuto de áudio, e ElevenLabs cria modelo de voz que consegue ler qualquer texto com aquela voz.\n\nCrescimento foi explosivo. Criadores de conteúdo, podcasters, game developers, educadores adotaram rapidamente. ElevenLabs tornou-se padrão para audiobooks automáticos, narração em vídeos, criação de personagens de voz. Recebeu investimentos massivos e atingiu avaliação de unicórnio. Hoje processa milhões de caracteres por dia.\n\n💡 **DICA PRÁTICA:** ElevenLabs é essencial se você cria conteúdo que precisa de narração ou voz (vídeos, audiobooks, podcasts, games). Para texto puro, menos importante."
+        "title": "🎙️ ElevenLabs: A Voz Perfeita da IA",
+        "content": "Prepare-se para conhecer a tecnologia que acabou com as vozes de 'robô' do passado. O **ElevenLabs** é o líder mundial em transformar texto em fala natural.\n\n\n\n**O que torna ele especial:**\n- **Realismo:** Ele adiciona respirações, pausas e entonações de acordo com o sentimento do texto.\n- **Clonagem:** Você pode gravar 1 minuto da sua voz e a IA passará a falar qualquer texto com o seu timbre exato.\n- **Multilíngue:** Você pode falar japonês ou alemão sem saber uma palavra desses idiomas."
       },
       {
         "type": "text",
-        "title": "⚙️ Como o ElevenLabs Funciona",
-        "content": "Você escreve texto em ElevenLabs. Escolhe uma voz pré-treinada (50+ idiomas, múltiplas vozes por idioma) ou clona sua própria voz. Clica gerar. Segundos depois, áudio é sintetizado com qualidade próxima de humano real. Pode ajustar velocidade, tom, ênfase em palavras específicas. Exporta como MP3 ou integra via API em seu produto.\n\nClonagem de voz funciona gravando ~1 minuto de áudio seu. ElevenLabs analisa características de voz (pitch, timbre, sotaque) e cria modelo que consegue ler qualquer texto mantendo sua voz. Resultado é impressionante – parece você falando.\n\nInternamente, usa redes neurais treinadas em milhões de horas de áudio humano. Modelo entende contexto (sabe quando fazer pausa, quando dar ênfase). Resultado é natural, não robótico. Suporta SSML (markup para controlar inflexão com tags).\n\n💡 **DICA PRÁTICA:** Qualidade melhora drasticamente com texto bem estruturado. Adicione pontuação, quebras de linha – ElevenLabs usa isso para gerar prosódia melhor."
-      },
-      {
-        "type": "text",
-        "title": "📊 Impacto e Adoção no Mercado",
-        "content": "ElevenLabs virou ferramenta padrão para qualquer coisa que precisa de narração. Audiobooks convertidos automaticamente em questão de minutos. YouTubers com voz acelerada/desacelerada agora soam naturais. Game developers criam personagens com vozes únicas sem contratar atores. Educadores criam cursos com narração automática em múltiplos idiomas.\n\nCompetição existe (Google Cloud TTS, Amazon Polly, Microsoft Azure), mas ElevenLabs ganhou por qualidade e facilidade. Empresas relatam 70% de redução no tempo de produção de conteúdo com narração. API integrada em centenas de plataformas (Make, Zapier, etc). Preço é competitivo – começa grátis com quotas.\n\n💡 **DICA PRÁTICA:** Plano free oferece ~10k caracteres/mês. Pago começa ~$5 com 100k caracteres. Para criadores ocasionais, free é suficiente."
-      },
-      {
-        "type": "text",
-        "title": "💪 Onde o ElevenLabs é Muito Bom",
-        "content": "- **Audiobooks automáticos:** Converta livro em áudio em minutos, soa natural.\n- **Narração de vídeos:** YouTube, Reels, Shorts ganham narração profissional.\n- **Clonagem de voz pessoal:** Sua voz lendo qualquer script, para sempre.\n- **Múltiplos idiomas:** Mesmo texto em 50+ idiomas com sotaques naturais.\n- **Personagens de voz:** Games, chatbots, assistentes virtuais ganham vozes únicas.\n- **Podcasts gerados:** Texto de artigo → podcast narrado automaticamente.\n- **Acessibilidade:** Conteúdo visual ganha narração para deficientes visuais.\n- **Dublagem automática:** Vídeo em inglês → dublado automaticamente em português.\n- **Educação:** Cursos online com narração profissional em escala.\n\n💡 **DICA PRÁTICA:** ElevenLabs brilha quando você tem muito texto para virar áudio. Uma narração? Pode valer contratar ator. 100 narrações? ElevenLabs economiza massivamente."
-      },
-      {
-        "type": "text",
-        "title": "❌ Onde o ElevenLabs é Muito Ruim",
-        "content": "- **Emoção extrema:** Consegue tom básico (feliz, triste), mas nuances sutis podem falhar.\n- **Vozes muito específicas:** Sotaque raro, voz muito característica – pode não capturar 100%.\n- **Pausas naturais:** Às vezes lê tudo sem pausas naturais (mesmo com pontuação).\n- **Pronúncia de jargão:** Termos técnicos, nomes próprios podem ser lidos incorretamente.\n- **Contexto muito específico:** Sarcasmo, ironia podem ser lidos literalmente.\n- **Sync perfeito com vídeo:** Para vídeo onde cada palavra precisa sincronizar exatamente, manual é melhor.\n- **Vozes muito jovens/idosas:** Captura melhor vozes adultas normais.\n- **Custo em escala:** Milhões de caracteres por mês podem ficar caro.\n\n💡 **DICA PRÁTICA:** Use SSML (markup) para contolar inflexão onde ElevenLabs falha. `<emphasis level=\"strong\">palavra</emphasis>` força ênfase. Resolve 80% dos problemas."
-      },
-      {
-        "type": "text",
-        "title": "🎯 Como Extrair Bons Resultados",
-        "content": "Qualidade depende de texto bem estruturado. Adicione pontuação (vírgulas, pontos, reticências) – ElevenLabs usa para gerar pausas naturais. Quebras de linha indicam ênfase. Palavras em MAIÚSCULAS ganham ênfase automática.\n\nUse SSML para controle fino. `<break time=\"500ms\"/>` para pausa. `<pitch rate=\"1.5\">texto</pitch>` para mudar pitch. `<emotion name=\"sad\">texto</emotion>` para emoção (experimental). Estude documentação SSML para dominar.\n\nTeste com voz pré-treinada primeiro. Se resultado for bom, pronto – economiza gravação de clonagem. Se precisar de voz específica, grave 1 minuto bem enunciado, clone, teste.\n\n💡 **DICA PRÁTICA:** Para narração longa, divida em capítulos. Cada capítulo gera separado. Junta depois. Evita requests muito grandes que podem dar erro."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Atenção - Características Importantes",
-        "content": "**API Integrada em Muitas Plataformas**\nElevenLabs não é só website. API permite integração direta em apps, chatbots, games. Make, Zapier, OpenAI integrações. Seu assistente de IA pode falar usando ElevenLabs. Texto gerado por Claude pode virar áudio automaticamente.\n\n**Modelo de Preço Baseado em Caracteres**\nNão paga por minuto de áudio, paga por caracteres processados. 100k caracteres = ~1 hora de áudio. Pague apenas pelo que usa. Free tier é generoso para começar.\n\n**Qualidade Melhorou Drasticamente**\nCada atualização traz qualidade mais próxima de humano. Versão 2.0 foi salto enorme. Agora soa natural mesmo em prosa longa.\n\n💡 **DICA PRÁTICA:** Se já testou ElevenLabs há 1 ano, teste novamente. Qualidade melhorou exponencialmente. Pode não valer há 1 ano, vale agora."
-      },
-      {
-        "type": "quiz",
-        "title": "🎓 Questão 1 - Avaliação de Diferencial",
-        "question": "Qual é o principal diferencial do ElevenLabs em relação a Google TTS e Amazon Polly?",
-        "options": [
-          {
-            "text": "ElevenLabs é grátis forever",
-            "isCorrect": false,
-            "explanation": "Incorreto. A versão gratuita é limitada em caracteres mensais."
-          },
-          {
-            "text": "Oferece síntese de voz natural com clonagem de voz pessoal – você grava 1 min e cria sua voz",
-            "isCorrect": true,
-            "explanation": "Correto! O grande diferencial é a IA treinada em inflexões humanas e a facilidade extrema de clonar vozes com menos de um minuto de áudio."
-          },
-          {
-            "text": "Funciona offline sem internet",
-            "isCorrect": false,
-            "explanation": "Incorreto. A plataforma depende de poder de processamento na nuvem via web ou API."
-          },
-          {
-            "text": "Só para idioma inglês",
-            "isCorrect": false,
-            "explanation": "Incorreto. Suporta 50+ idiomas nativamente."
-          }
-        ]
+        "title": "🔊 Os 3 Botões do Mestre do Som",
+        "content": "Para a voz soar perfeita, você controla três 'alavancas' técnicas:\n\n1.  **Estabilidade (Stability):** Controla a emoção. Quanto menor, mais a voz 'interpreta' (chora, ri, se empolga). Quanto maior, mais monótona e séria ela fica.\n2.  **Clareza (Clarity):** Remove ruídos e deixa a pronúncia perfeita. Ótimo para tutoriais e treinamentos.\n3.  **Similaridade (Similarity):** No caso de clones, define o quanto a IA deve se esforçar para ser idêntica ao original.\n\n"
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🎮 Questão 2 - Ligar Conceitos",
-          "description": "Conecte o caso de uso ao benefício do ElevenLabs:",
+          "title": "🔗 Ajustando o Som",
+          "description": "Ligue o ajuste ao resultado que ele gera na voz.",
           "pairs": [
             {
-              "left": "Criar 100 audiobooks",
-              "right": "Reduz tempo de produção em 70%"
+              "left": "Estabilidade Baixa",
+              "right": "Voz com muita emoção e variação"
             },
             {
-              "left": "YouTuber quer narração consistente",
-              "right": "Clona sua voz, lê qualquer texto como você"
+              "left": "Clareza Alta",
+              "right": "Voz limpa, ideal para aulas"
             },
             {
-              "left": "Assistente de IA precisa falar",
-              "right": "API integrada em plataformas de automação"
+              "left": "Estabilidade Alta",
+              "right": "Voz séria, ideal para notícias"
+            },
+            {
+              "left": "Similaridade 100%",
+              "right": "Cópia exata da voz original"
             }
           ]
         }
       },
       {
+        "type": "text",
+        "title": "🎤 O Método V.O.I.C.E. para Narração",
+        "content": "Para ter um áudio profissional, não basta colar o texto. Use o guia:\n\n* **V - Voz:** Escolha o 'personagem' certo (ex: Narrador Sábio).\n* **O - Output (Saída):** Defina a qualidade (MP3 ou WAV de alta definição).\n* **I - Input (Texto):** Use pontuação extra! Use '...' para pausas e CAPS para palavras importantes.\n* **C - Customização:** Ajuste os botões de emoção.\n* **E - Emoção:** Diga para a IA qual o tom (ex: 'Sussurrando' ou 'Gritando')."
+      },
+      {
+        "type": "text",
+        "title": "👤 Clonagem de Voz: Seu Gêmeo Digital",
+        "content": "A clonagem é o recurso mais poderoso. Você pode criar um 'Gêmeo Digital' da sua voz.\n\n\n\n**Como fazer um clone perfeito:**\n1. Grave 5 minutos de você falando naturalmente (não leia, apenas fale).\n2. Use um microfone bom e um lugar sem eco.\n3. Suba o arquivo e deixe a IA aprender o seu ritmo.\nPronto! Agora você pode criar 10 podcasts por dia sem precisar ir ao estúdio."
+      },
+      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
-          "sentence": "ElevenLabs transforma ___ em áudio natural. Oferece clonagem de voz gravando ___. Suporta ___ idiomas. Cobra por ___ (não por minuto). Texto bem estruturado com ___ gera prosódia melhor. Plano ___ é generoso para começar.",
+          "title": "✏️ Criando seu Gêmeo",
+          "sentence": "Para clonar minha voz, eu preciso de um áudio ___ e sem ___, e depois ajusto a ___ para ficar igual ao original.",
           "answers": [
-            "Texto",
-            "1 minuto",
-            "50+",
-            "caracteres",
-            "pontuação",
-            "free"
+            "limpo",
+            "eco",
+            "similaridade"
           ],
           "options": [
-            "Texto",
-            "1 minuto",
-            "50+",
-            "caracteres",
-            "pontuação",
-            "free",
-            "Vídeo",
-            "10 minutos",
-            "20",
-            "segundos",
-            "vírgulas",
-            "premium",
-            "Imagem",
-            "1 hora",
-            "100+",
-            "horas",
-            "espaços",
-            "trial",
-            "Áudio",
-            "30 segundos",
-            "30",
-            "palavras",
-            "maiúsculas",
-            "starter"
+            "limpo",
+            "eco",
+            "similaridade",
+            "curto",
+            "música",
+            "cor"
           ],
-          "explanation": "Gabarito: Texto, 1 minuto, 50+, caracteres, pontuação e free."
+          "explanation": "Isso mesmo! Qualidade de gravação e ajuste de similaridade são os segredos do clone perfeito."
         }
       },
       {
         "type": "text",
+        "title": "🌐 Dublagem Mágica: Expansão Global",
+        "content": "Imagine transformar seu vídeo de 5 minutos em português em uma versão para o mercado americano ou espanhol em segundos. \n\nO ElevenLabs faz a 'Dublagem com Preservação de Voz'. Ele traduz o que você disse, mas mantém o **seu timbre** na outra língua. Isso economiza R$ 15.000 que você gastaria com estúdios de dublagem profissional."
+      },
+      {
+        "type": "text",
+        "title": "📚 Transformando Livros em Dinheiro (Audiobooks)",
+        "content": "O mercado de audiobooks cresce 300% ao ano. Com a IA, você pode narrar um livro de 300 páginas em 4 horas.\n\n**A Regra do Ouro:** Para audiobooks, use Estabilidade em 65%. Isso mantém a voz constante o suficiente para não cansar o ouvinte, mas com variações leves para não parecer um robô lendo a lista de compras."
+      },
+      {
+        "type": "quiz",
+        "title": "🧠 Teste: O Narrador de Sucesso",
+        "question": "Qual a melhor configuração para narrar um livro de suspense emocionante?",
+        "options": [
+          {
+            "text": "Estabilidade 100% e Clareza baixa",
+            "isCorrect": false,
+            "explanation": "Isso criaria uma voz monótona e difícil de entender."
+          },
+          {
+            "text": "Estabilidade 30% (para ter drama) e Clareza 90%",
+            "isCorrect": true,
+            "explanation": "Exato! Estabilidade baixa permite que a IA sinta o suspense do texto e mude o tom naturalmente."
+          },
+          {
+            "text": "Não precisa configurar nada, a IA decide sozinha",
+            "isCorrect": false,
+            "explanation": "A IA segue seus comandos. Sem configuração, o resultado pode ser aleatório."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "🎭 Vozes para Personagens",
+        "content": "Você pode criar vozes únicas para cada personagem de uma história:\n- **O Ancião:** Velocidade lenta (0.8x) e tom grave.\n- **O Entusiasta:** Velocidade rápida (1.1x) e estabilidade baixa para muita variação.\n- **O Robô:** Estabilidade 100% e similaridade zero.\n\nIsso permite que você crie rádio-novelas ou vídeos de animação inteiros sozinho."
+      },
+      {
+        "type": "text",
+        "title": "📱 Integração Total: Voz + Vídeo",
+        "content": "Os mestres da produtividade usam o ElevenLabs junto com o Captions e o ChatGPT.\n\n\n\n1.  **ChatGPT:** Escreve o roteiro.\n2.  **ElevenLabs:** Gera a narração profissional.\n3.  **Captions:** Junta o áudio com as legendas e imagens.\nO resultado é um vídeo de alta qualidade feito em 15 minutos."
+      },
+      {
+        "type": "text",
+        "title": "💰 Como Ganhar Dinheiro com Voz IA",
+        "content": "Existem serviços que as empresas precisam desesperadamente:\n* **Clonagem Vocal:** Cobrar R$ 1.000 para criar o clone de um influenciador.\n* **Dublagem de Cursos:** Cobrar R$ 3.000 para traduzir um curso inteiro.\n* **Newsletter em Áudio:** Cobrar R$ 500/mês para transformar os textos de um blog em episódios de podcast automáticos."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ Ética: O Poder traz Responsabilidade",
+        "content": "Nunca use a clonagem para enganar pessoas ou cometer fraudes. \n- **Transparência:** Sempre avise que o áudio foi gerado por IA.\n- **Permissão:** Nunca clone a voz de terceiros sem autorização por escrito.\n- **Legal:** Voz é considerada um dado pessoal sensível. Respeite a privacidade alheia."
+      },
+      {
+        "type": "text",
+        "title": "🚀 Projeto Final: Seu Podcast Automático",
+        "content": "Para fechar o dia, você vai planejar o seu próprio podcast. \nImagine um sistema onde você cola as notícias do dia e a IA gera um áudio de 5 minutos com a sua voz, coloca uma música de fundo e publica no Spotify. \n\nEste projeto custaria R$ 5.000/mês com uma produtora. Para você, custará **R$ 20,00** e **10 minutos** do seu tempo."
+      },
+      {
+        "type": "text",
         "title": "🎓 Resumo do Dia 25",
-        "content": "**CHEGAMOS AO FIM DO DIA 25!**\n\nHoje vimos que o **ElevenLabs** resolveu o grande problema da fala digital robótica. Ele domina o mercado com síntese de voz baseada em redes neurais de contexto.\n\nCom clonagem a partir de 1 minuto de áudio e cobrança justa por caractere, ele desbloqueia narração em escala para YouTube, cursos, podcasts e gamedevs.\n\nAs chaves de ouro: estruture muito bem seus textos (vírgulas, pulos de linha) e utilize a formatação SSML (como `<break time=\"500ms\"/>` ou `<emphasis>`) para sanar falhas específicas de dicção."
+        "content": "**HOJE VOCÊ DOMINOU:**\n\n1.  Como gerar vozes humanas perfeitas com o ElevenLabs.\n2.  O segredo dos botões de Estabilidade, Clareza e Similaridade.\n3.  Como clonar sua voz e dublar conteúdos para o mundo todo.\n4.  Como ganhar dinheiro criando audiobooks e podcasts automáticos.\n\n**MENTALIDADE:**\nVocê agora tem o dom da fala digital. Sua mensagem pode ser ouvida em qualquer lugar do planeta, com qualquer voz que você imaginar.\n\n**AMANHÃ:** Integrações Avançadas! Vamos aprender a conectar TODAS as IAs em um único sistema de trabalho superpoderoso."
       }
     ]
   },
@@ -3769,125 +3764,131 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎬 História do Veo",
-        "content": "Veo foi desenvolvido por Google DeepMind como resposta à explosão de geração de vídeo com IA. Anunciado em maio 2024, começou como modelo experimental. Veo 2 chegou em dezembro 2024 com suporte a 4K e melhor compreensão de física. Veo 3 foi lançado em maio 2025 com grande inovação: geração nativa de áudio sincronizado com vídeo.\n\nMais recentemente, Veo 3.1 foi lançado em outubro 2025 com áudio ainda mais rico, realismo aprimorado, e suporte a vídeos verticais. O Google apostou em fazer o vídeo gerado por IA competitivo com a qualidade profissional. Veo 3.1 gera vídeos de até 60 segundos em 1080p/4K com áudio nativo incluindo diálogo, efeitos sonoros e ruído ambiente. A estratégia é posicionar Veo como ferramenta de produção real, não apenas experimento. Está disponível em Gemini app, Google Flow (editor de vídeo), API, e Vertex AI (enterprise).\n\n💡 **DICA PRÁTICA:** Veo vale especialmente se você já usa Google Workspace ou é desenvolvedor. Se você quer interface simples, Gemini app é mais acessível que API."
+        "title": "🎭 Crie seu Gêmeo Digital: A Arte da Clonagem de Voz",
+        "content": "Bem-vindo ao dia em que você ganha o dom da onipresença sonora! Hoje você vai aprender a **clonar sua própria voz** com IA. \n\nImagine poder narrar um livro inteiro, dublar um vídeo em japonês ou criar 50 episódios de podcast sem precisar gravar cada um deles. O **ElevenLabs** não apenas repete o que você diz; ele captura a sua essência: o seu timbre, o seu sotaque e as emoções do seu jeito de falar.\n\n\n\nHoje, essa é uma das habilidades mais valiosas do mercado, permitindo que você produza conteúdo em escala industrial por uma fração do custo tradicional."
       },
       {
         "type": "text",
-        "title": "⚙️ Como o Veo Funciona",
-        "content": "Você escreve um prompt descrevendo o vídeo desejado (ou sobe imagens como referência). Veo 3.1 pode receber múltiplas imagens de referência para dirigir personagens, objetos, e estilo da cena. Escolhe resolução (720p, 1080p, 4K) e aspecto (paisagem 16:9 ou retrato 9:16) e clica em gerar. Veo processa (leva minutos dependendo da velocidade) e gera o vídeo com áudio sincronizado.\n\nVeo 3 entende linguagem cinematográfica: você pode descrever movimentos de câmera, estilos de iluminação, pacing, e mood, e o modelo responde com cenas coerentes. Diferente de geradores anteriores, áudio não é 'afterthought' – é parte integral. Passos se sincronizam com movimento, ruído ambiente reage ao cenário, diálogo sincroniza com lábios.\n\nVeo foi treinado em milhões de horas de vídeo. Google usou seus modelos Gemini para gerar captions textuais detalhadas dos vídeos, criando dataset superior a web scraping básico. Resultado é a compreensão de cinematografia profissional integrada no modelo.\n\n💡 **DICA PRÁTICA:** Veo responde melhor a terminologia cinematográfica profissional. Prompts de 100-200 palavras são ótimos – curtos demais faltam detalhe, muito longos ficam confusos."
+        "title": "🎤 Como a IA 'Aprende' o seu Jeito de Falar",
+        "content": "A IA não grava e 'toca' o seu áudio. Ela faz algo muito mais inteligente: ela cria um **Mapa Vocal** da sua voz.\n\n1. **Análise do DNA:** Ela identifica as frequências únicas da sua voz (o seu timbre).\n2. **Ritmo e Respiração:** Ela entende onde você costuma fazer pausas e como você respira entre as frases.\n3. **Criação do Modelo:** Ela monta um 'instrumento virtual' que soa exatamente como você.\n\n\n\nSaber disso é importante porque, se você mandar um áudio de má qualidade, a IA vai aprender a 'imitar' os seus erros e ruídos também. Qualidade entra, qualidade sai!"
       },
       {
         "type": "text",
-        "title": "📊 Impacto e Adoção no Mercado",
-        "content": "Veo cresceu rapidamente porque Google colocou no Gemini app (bilhões de usuários). Você pode criar e compartilhar vídeos direto no Gemini mobile app. Cineastas experimentam, marketers testam, developers integram via Gemini API. Grandes perfis de varejo usam Veo para escalar a produção de vídeos de marketing, transformando imagens estáticas em vídeos dinâmicos.\n\nVeo 3.1 é descrito como o momento em que a geração de vídeo IA deixou a era do \"cinema silencioso\". Críticos reconhecem que áudio nativo é game-changer – vídeos parecem completos, não inacabados. Preço é competitivo: algo em torno de $0.15/segundo (Fast) a $0.40/segundo (Standard).\n\n💡 **DICA PRÁTICA:** Free tier em Gemini app é generoso para testar. Se usar via API, calcule custo (30s de vídeo fica por volta de ~$4.50-12 dependendo da qualidade)."
+        "title": "⚡ O Método V.O.I.C.E. para o Clone Perfeito",
+        "content": "Para ter um resultado profissional que engane até a sua própria mãe, siga este guia:\n\n* **V - Voz (Preparo):** Beba água e grave em um lugar sem eco (use cobertores se precisar).\n* **O - Otimização:** Use um microfone bom e grave de 5 a 10 minutos de fala natural.\n* **I - Inteligência:** Suba trechos variados (animado, sério, calmo) para a IA aprender todas as suas versões.\n* **C - Configurações:** Ajuste os 'botões' de estabilidade e clareza dentro da plataforma.\n* **E - Excelência:** Faça testes com frases difíceis para garantir que a pronúncia está perfeita."
+      },
+      {
+        "type": "practical",
+        "title": "🎯 Atividade: Plano de Gravação",
+        "question": "Monte o plano de gravação ideal seguindo a ordem do método V.O.I.C.E.:",
+        "initialWords": [
+          "Preparar quarto silencioso,",
+          "Usar microfone de qualidade,",
+          "Gravar 5 minutos variando emoção,",
+          "Subir as amostras na plataforma,",
+          "Testar com frases desafiadoras."
+        ],
+        "correctOrder": [
+          "Preparar quarto silencioso,",
+          "Usar microfone de qualidade,",
+          "Gravar 5 minutos variando emoção,",
+          "Subir as amostras na plataforma,",
+          "Testar com frases desafiadoras."
+        ],
+        "explanation": "Perfeito! Seguir essa ordem garante que a IA receba o melhor material possível para criar o seu gêmeo digital."
       },
       {
         "type": "text",
-        "title": "💪 Onde o Veo é Muito Bom",
-        "content": "- **Vídeos com áudio nativo:** Áudio sincronizado com vídeo – som de passos com movimento, ruído ambiente reativo, diálogo com sincronização de lábios.\n- **Cinematografia profissional:** Compreende movimentos de câmera, iluminação, composição. Resultado soa cinematic, não amador.\n- **Vídeos longos:** Até 60 segundos (vs 8 segundos de competidores), permitindo storytelling completo.\n- **Referência múltipla:** \"Ingredients to Video\" – use múltiplas imagens para dirigir personagens, objetos, backgrounds de forma consistente.\n- **4K upscaling:** Upscale para 1080p ou 4K para produção broadcast-quality.\n- **Vídeos verticais:** Suporte nativo a 9:16 para YouTube Shorts, TikTok, Reels.\n- **Extensão de vídeo:** Estenda vídeos previamente gerados adicionando mais conteúdo.\n- **Integração Google:** Funciona em Gemini, Flow, YouTube, Google Vids, API, Vertex AI.\n\n💡 **DICA PRÁTICA:** Veo brilha quando você descreve shots cinematográficos específicos. \"Wide establishing shot de prédio ao amanhecer com câmera lentamente panning left, luz dourada suave\" gera muito melhor que \"prédio ao amanhecer\"."
+        "title": "🎛️ Os Controles do Som: Estabilidade e Estilo",
+        "content": "Dentro do ElevenLabs, você tem 'alavancas' que mudam o comportamento do seu clone:\n\n* **Estabilidade (Stability):** Se estiver baixa (30%), a voz fica muito emocional e dramática. Se estiver alta (80%), fica séria e constante.\n* **Exagero de Estilo (Style):** Faz a IA forçar mais as características únicas da sua voz.\n* **Aumento de Clareza (Speaker Boost):** Deixa a voz mais nítida, ideal para remover aquele chiado de fundo da gravação original.\n\n"
       },
       {
         "type": "text",
-        "title": "❌ Onde o Veo é Muito Ruim",
-        "content": "- **Interpretação de prompt:** Usuários reportam que o Veo frequentemente mal interpreta prompts, gerando saídas completamente diferentes mesmo com descrições detalhadas.\n- **Fala e texto:** Fala embolada (garbled) ou nonsense, e textos (captions) dentro do vídeo podem sair errados.\n- **Restrições de segurança (Safety):** Não gera violência gráfica, conteúdo adulto ou atrelado a pessoas reais de forma idêntica e as restrições são muito estritas.\n- **Cenas complexas incompletas:** Vídeos muito complexos podem ficar incompletos dentro do limite de 60 segundos.\n- **Personagens idênticos a celebridades:** Não consegue clonar rosto específico de celebridade ou pessoa real.\n- **Inconsistência entre gerações:** O mesmo prompt pode gerar resultados muito diferentes a cada rodada.\n- **Anatomia em algumas situações:** Mãos e poses específicas ainda podem ter erros bizarros da IA.\n\n💡 **DICA PRÁTICA:** Se a interpretação falhar, reescreva o prompt com mais detalhe cinematográfico. Se o erro seguir ocorrendo, mude de abordagem (use apenas referência por imagem em vez de só texto)."
+        "title": "🌍 Tradução com Voz Preservada: Alcance Global",
+        "content": "O maior 'superpoder' da clonagem é a tradução. Você pode pegar um vídeo seu em português e transformá-lo em **29 idiomas**.\n\n\n\nA mágica aqui é que a IA mantém o **seu timbre** em inglês, espanhol ou japonês. Isso permite que você venda seus cursos ou produtos para o mundo inteiro sem precisar contratar dubladores caros, mantendo a sua identidade de marca intacta."
       },
       {
         "type": "text",
-        "title": "🎯 Como Extrair Bons Resultados",
-        "content": "Qualidade depende de prompts estruturados com terminologia cinematográfica. Não diga apenas \"mulher dançando\". Diga \"mulher 25 anos em vestido azul dançando graciosamente em estúdio minimalista, iluminação suave de lado, câmera fazendo slow dolly in, música clássica ao fundo\". A diferença é enorme.\n\nUse \"Ingredients to Video\" (múltiplas imagens referência) quando o personagem/objeto precisar ser consistente. Combine personagens, objetos, texturas e backgrounds em um clipe coeso usando reference images. Isso garante a identidade consistente entre múltiplos vídeos!\n\nEstude prompts de diretores e cinematógrafos. Lembre-se que o Veo foi treinado em vídeos profissionais, então ele entende essa linguagem. O tamanho ideal é de 100-200 palavras. Menos que isso falta contexto, e mais que isso confunde a IA. Teste tudo, veja o resultado e refine.\n\n💡 **DICA PRÁTICA:** Crie um moodboard visual antes de escrever o prompt. Reflita nos vídeos que inspiram estilo, composição e movimento. Depois, decreva o que você de fato visualiza ali para sua base de prompt do Veo."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Atenção - Características Importantes",
-        "content": "**Áudio Nativo é Diferenciador Real**\nVeo 3.1 gera áudio que sincroniza com vídeo. Isso elimina necessidade de pós-produção de áudio em outra ferramenta separada. É um dos maiores saltos ao redor da superação da 'era do cinema silencioso'.\n\n**Watermarking com SynthID**\nVídeos Veo são marcados com SynthID (watermarking e detecção de conteúdo gerado por IA). É sempre possível verificar se o vídeo é genuíno ou se partiu de IA. Plataformas como YouTube costumam se aliar a isso facilmente.\n\n**Múltiplos Canais de Acesso**\nNão é só API. Está em Gemini app, Flow (filmmaking), YouTube Shorts, Vertex AI, etc. Funciona bem num formato abrangente transversal a todo o ecossistema do Google.\n\n**Limitações de Segurança Rígidas**\nAs checagens contra conteúdo arriscado reduzem muito os casos de copyright e bias, porém isso pode bloquear cenas inofensivas num formato exagerado.\n\n💡 **DICA PRÁTICA:** Veo 3.1 é cutting-edge, logo os bugs podem acontecer com uma facilitação nativa. Se encontrar problemas severos, utilize o relatório integrado. O modelo está em constante aprimoramento apoiado pela rede neural."
-      },
-      {
-        "type": "quiz",
-        "title": "🎓 Questão 1 - Avaliando o Diferencial",
-        "question": "Qual é o principal diferencial do Veo 3.1 em relação a geradores de vídeo anteriores?",
-        "options": [
-          {
-            "text": "Veo é grátis forever",
-            "isCorrect": false,
-            "explanation": "Incorreto. O Veo possui planos que podem se basear em quotas de API pagas."
-          },
-          {
-            "text": "Gera áudio nativo sincronizado com vídeo – diálogo, efeitos, ruído ambiente sem post-production separada",
-            "isCorrect": true,
-            "explanation": "Correto! Por fim não assistiremos mais ao 'cinema mudo'. A sonoridade já sai de modo consistente da própria interface do Veo associada ao mesmo prompt que evocou o visual."
-          },
-          {
-            "text": "Veo suporta vídeos de 10 minutos",
-            "isCorrect": false,
-            "explanation": "Incorreto. O limite costuma estar atrelado em cerca de 60 segundos nas melhores planilhas."
-          },
-          {
-            "text": "Funciona offline",
-            "isCorrect": false,
-            "explanation": "Incorreto. Sendo do ecossistema Google dependente do Gemini, atua fortemente e só nos meios Cloud."
-          }
-        ]
+        "title": "📱 Voz no Piloto Automático (Automação)",
+        "content": "Você pode conectar sua voz a outros sistemas para que ela trabalhe sozinha. \n\nExemplo de fluxo:\n1. O **ChatGPT** escreve as notícias do dia.\n2. A **API do ElevenLabs** narra o texto com a sua voz automaticamente.\n3. O sistema publica o áudio no seu Spotify e redes sociais.\n\nVocê cria uma presença constante na vida dos seus clientes sem precisar gastar um minuto gravando diariamente."
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🎮 Questão 2 - Ligar Conceitos",
-          "description": "Conecte a funcionalidade ao seu melhor caso de uso no modelo do projeto:",
+          "title": "🔗 Domine as Configurações",
+          "description": "Ligue o ajuste ao resultado que ele gera na voz do seu clone.",
           "pairs": [
             {
-              "left": "Ingredients to Video",
-              "right": "Manter consistência de personagem entre múltiplos vídeos"
+              "left": "Estabilidade Baixa",
+              "right": "Mais emoção e variação natural"
             },
             {
-              "left": "Prompt cinematográfico",
-              "right": "Gerar vídeo descritivo com shot cinematográfico específico"
+              "left": "Similarity Boost",
+              "right": "Fica mais idêntico ao áudio original"
             },
             {
-              "left": "Upscaling 4K",
-              "right": "Produção broadcast-quality para cinemas/TVs"
+              "left": "Speaker Boost",
+              "right": "Aumenta a nitidez e limpa o som"
+            },
+            {
+              "left": "Estabilidade Alta",
+              "right": "Voz mais séria e sem variações"
             }
           ]
         }
       },
       {
+        "type": "text",
+        "title": "⚖️ Ética e Lei: Com Grandes Poderes...",
+        "content": "Clonar uma voz é algo poderoso e exige responsabilidade. \n\n**O que é proibido:**\n- Clonar a voz de famosos ou políticos sem autorização.\n- Usar a voz de alguém para enganar ou cometer fraudes.\n- Violar a privacidade das pessoas.\n\n**O que é profissional:**\n- Sempre avisar que o áudio foi gerado por IA.\n- Ter permissão por escrito se for usar a voz de um funcionário ou parceiro.\n- Usar para educar, informar e criar valor real."
+      },
+      {
+        "type": "text",
+        "title": "📊 Como saber se o seu clone está bom?",
+        "content": "Faça o **'Teste da Mãe'**: toque um áudio gerado pelo clone para uma pessoa próxima a você. Se ela demorar mais de 3 segundos para perceber que não é você de verdade, o clone está aprovado.\n\nAlém disso, verifique a clareza. Peça para a IA falar palavras difíceis (como 'especificamente'). Se ela não gaguejar e soar natural, você atingiu o nível profissional."
+      },
+      {
+        "type": "text",
+        "title": "📁 Organizando sua 'Gravadora Digital'",
+        "content": "Profissionais não perdem arquivos. Organize seus projetos por categorias:\n- **Pessoal:** Seus clones oficiais.\n- **Personagens:** Vozes criativas para histórias.\n- **Clientes:** Vozes autorizadas para trabalhos externos.\n\nTenha sempre os arquivos de áudio originais guardados. Se a tecnologia evoluir (e ela evolui todo mês!), você pode subir os mesmos áudios para criar um clone ainda melhor no futuro."
+      },
+      {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "📝 Questão 3 - Fixando Modelos e Recursos",
-          "sentence": "Veo 3.1 gera vídeos até ___ segundos em ___ com áudio ___. Prompts cinematográficos funcionam melhor que vagos porque Veo foi treinado em vídeos ___. Comprimento ideal do prompt é ___ palavras. Pricing é ___ por segundo (Fast) a ___ por segundo (Standard). Vídeos são watermarkados com ___ para detecção de conteúdo IA.",
+          "title": "✏️ Teste de Conhecimento",
+          "sentence": "Para evitar que o clone soe ___ , eu devo diminuir a ___ e garantir um áudio original ___.",
           "answers": [
-            "60",
-            "1080p-4K",
-            "nativo sincronizado",
-            "profissionais",
-            "100-200",
-            "$0.15",
-            "$0.40",
-            "SynthID"
+            "robótico",
+            "estabilidade",
+            "limpo"
           ],
           "options": [
-            "60",
-            "1080p-4K",
-            "nativo sincronizado",
-            "profissionais",
-            "100-200",
-            "$0.15",
-            "$0.40",
-            "SynthID",
-            "30",
-            "720p",
-            "não sincronizado",
-            "caseiros"
+            "robótico",
+            "estabilidade",
+            "limpo",
+            "rápido",
+            "cor",
+            "música"
           ],
-          "explanation": "Gabarito: 60, 1080p-4K, nativo sincronizado, profissionais, 100-200, $0.15, $0.40 e SynthID."
+          "explanation": "Isso mesmo! Ajustar a estabilidade e ter uma fonte limpa são as chaves para a naturalidade."
         }
       },
       {
         "type": "text",
+        "title": "⚡ Templates: Receitas de Sucesso",
+        "content": "Use estas configurações prontas para economizar tempo:\n\n* **Para Podcast:** Estabilidade 35%, Similarity ON. (Fica natural e humano).\n* **Para Aulas/Cursos:** Estabilidade 55%, Clareza 90%. (Fica didático e fácil de entender).\n* **Para Dublagem:** Estabilidade 45%, Style 40%. (Mantém o seu sotaque e emoção na outra língua)."
+      },
+      {
+        "type": "text",
+        "title": "🚀 Projeto Prático: O Estúdio de Voz",
+        "content": "Hoje você vai planejar o estúdio da **TechEduca**, uma startup fictícia. \n\nVocê precisa criar:\n1. O clone do fundador para narrar as aulas.\n2. Um sistema de dublagem para lançar o curso nos EUA.\n3. Uma voz amigável para o atendimento telefônico.\n\nEste projeto economizaria R$ 50.000 por mês em locutores e estúdios. Para você, custará apenas a sua assinatura e criatividade."
+      },
+      {
+        "type": "text",
         "title": "🎓 Resumo do Dia 26",
-        "content": "**CHEGAMOS AO FIM DO DIA 26!**\n\nHoje vimos a incrível capacidade do **Veo**, modelo cinematográfico avançado da Google DeepMind em formato de ponta a ponta (imagem + som).\n\nCom a habilidade singular de gerar **áudio nativo sem manipulação externa** e permitir o direcionamento da câmera (pans, dollies, estabilidade, luz, pacing), ele está moldando o futuro dos clipes curtos a médios com viés totalmente profissional.\n\nA dica mestra de ouro para encerar é: pense e aja como um cineasta na sala de direção de criação ao formular os seus prompts."
+        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. Como criar um clone de voz perfeito usando o método V.O.I.C.E.\n2. O segredo para traduzir conteúdo em 29 línguas mantendo a sua voz.\n3. Como automatizar a produção de áudio para economizar centenas de horas.\n4. As regras éticas para ser um profissional de voz respeitado.\n\n**MENTALIDADE:**\nSua voz agora é um **ativo digital**. Ela pode estar em mil lugares ao mesmo tempo, falando qualquer língua, enquanto você foca na estratégia do seu negócio."
       }
     ]
   },
@@ -3895,230 +3896,293 @@
     "steps": [
       {
         "type": "text",
-        "title": "🚀 Integração Total: O Segredo dos Grandes Criadores",
-        "content": "Hoje é o dia de unir forças. Criar conteúdo de forma isolada é cansativo e lento. Mas, quando você conecta as IAs, elas trabalham como uma engrenagem perfeita.\n\n\n\n**O que você vai construir hoje:**\nUm sistema onde uma ideia vira um roteiro, que vira uma narração, que vira um vídeo editado e uma série de posts para redes sociais. Tudo isso enquanto você toma um café. Vamos transformar produtividade em **super-produtividade**."
+        "title": "📚 Dia 27 - Revisão de Fundamentos e Texto/Imagem",
+        "content": "Chegamos ao momento de consolidar seu conhecimento.\nHoje revisaremos as principais ferramentas de texto, raciocínio e imagem: Claude, ChatGPT, Copilot, GROK, Perplexity, Manus, Midjourney, Leonardo AI e Canva AI.\n\nFoco da revisão: Entender quando usar cada uma e suas limitações principais para não perder tempo com a ferramenta errada.\n\n💡 **DICA PRÁTICA:** A verdadeira maestria não é saber usar uma ferramenta, mas saber qual escolher para o problema específico."
       },
       {
         "type": "text",
-        "title": "📊 O Framework C.A.S.A. - Sua Fábrica de Conteúdo",
-        "content": "Para seu sistema não falhar, dividimos o trabalho em 4 cômodos:\n\n* **C - Conceito (Pesquisa):** Use o **Gemini** e o **ChatGPT** para achar as tendências de hoje e criar o calendário da semana.\n* **A - Arte (Design):** Use o **NanoBanana** para criar as capas e o visual que as pessoas amam.\n* **S - Script (Escrita):** Use o **Claude** para escrever roteiros e artigos que pareçam humanos e profissionais.\n* **A - Ação (Produção):** Use o **ElevenLabs** (voz) e o **Captions** (vídeo) para dar vida ao conteúdo final."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Sua Esteira de Produção",
-        "question": "Coloque as tarefas na ordem correta para criar um vídeo viral saindo do zero:",
-        "initialWords": [
-          "Pesquisar o assunto no Gemini",
-          "Pedir o roteiro para o Claude",
-          "Gerar a arte no NanoBanana",
-          "Criar o áudio no ElevenLabs",
-          "Finalizar o vídeo no Captions"
-        ],
-        "correctOrder": [
-          "Pesquisar o assunto no Gemini",
-          "Pedir o roteiro para o Claude",
-          "Gerar a arte no NanoBanana",
-          "Criar o áudio no ElevenLabs",
-          "Finalizar o vídeo no Captions"
-        ],
-        "explanation": "Excelente! Você seguiu o fluxo lógico do framework C.A.S.A.: Pensar -> Escrever -> Visualizar -> Produzir."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Domine o Framework",
-          "description": "Ligue a letra do framework C.A.S.A. à sua função principal.",
-          "pairs": [
-            {
-              "left": "C (Conceito)",
-              "right": "Achar as melhores ideias e dados"
-            },
-            {
-              "left": "A (Arte)",
-              "right": "Criar a beleza visual do projeto"
-            },
-            {
-              "left": "S (Script)",
-              "right": "Escrever textos e roteiros de mestre"
-            },
-            {
-              "left": "A (Ação)",
-              "right": "Gravar a voz e editar o vídeo final"
-            }
-          ]
-        }
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ Economia de Tempo Real",
-          "sentence": "Com o sistema integrado, você reduz o trabalho de ___ horas por semana para apenas ___ horas de supervisão.",
-          "answers": [
-            "50",
-            "3"
-          ],
-          "options": [
-            "50",
-            "3",
-            "100",
-            "20",
-            "1",
-            "10"
-          ],
-          "explanation": "Isso mesmo! A IA faz o trabalho braçal, e você foca apenas na revisão e na estratégia."
-        }
+        "title": "💡 Conceitos-Chave: Texto e Linguagem",
+        "content": "Cada LLM tem uma vocação principal:\n\n- **Claude:** Análise profunda, raciocínio complexo, arquivos grandes com nuance humanizada.\n- **ChatGPT:** Velocidade brutal, primeira iteração, brainstorm, código rápido.\n- **Copilot:** Análise nativa de arquivos Microsoft, integração empresarial (Teams, Word, Excel).\n- **GROK:** Dados em tempo real, notícias do exato momento pelo ecossistema X.\n- **Perplexity:** Pesquisa séria, relatórios com fontes citadas, evitar alucinações.\n- **Manus:** Automação completa multi-etapa, controle de browser simulando o clique humano."
       },
       {
         "type": "text",
-        "title": "🎬 Produção em Lote: A Esteira Automática",
-        "content": "Não faça um vídeo por vez. Faça sete! \n\n\n\nPeça para o **Gemini** analisar 20 notícias e te dar 7 ideias. Depois, mande o **Claude** escrever os 7 roteiros de uma vez. Quando você for para o **ElevenLabs**, gere os 7 áudios em sequência. Trabalhar 'em lote' é o que permite que pequenos perfis pareçam grandes emissoras de TV."
-      },
-      {
-        "type": "text",
-        "title": "📝 O Sistema de Artigos Infinitos",
-        "content": "Seu blog ou LinkedIn nunca mais ficará vazio. \n1. O **Gemini** monitora o que as pessoas estão perguntando no Google hoje.\n2. O **ChatGPT** cria o esqueleto do texto.\n3. O **Claude** escreve o artigo com profundidade.\n4. O **ChatGPT** transforma esse artigo em 5 posts curtos para o Twitter e LinkedIn.\nUm único esforço gera conteúdo para todas as suas redes."
+        "title": "💡 Conceitos-Chave: Imagens e Design",
+        "content": "Para assets visuais, o propósito muda tudo:\n\n- **Midjourney:** Qualidade fotográfica máxima, iluminação de estúdio, composições premiadas, ideal para capa ou outdoor.\n- **Leonardo AI:** Escala, batch generation, dezenas de assets com consistência de estilo de forma rápida e custo acessível.\n- **Canva AI:** O combo de design profissional integrado com inteligência, perfeito para gerar o frame, alinhar textos, logos e bater o ponto no social media."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste de Inteligência Integrada",
-        "question": "Qual é a maior vantagem de usar várias IAs juntas em vez de apenas uma?",
+        "title": "🎓 Bloco 1 - Texto: Questão 1",
+        "question": "Você precisa analisar criticamente um contrato jurídico de 50 páginas. Qual é a melhor IA para este caso?",
         "options": [
           {
-            "text": "Cada uma brilha na sua especialidade, garantindo qualidade máxima em tudo",
-            "isCorrect": true,
-            "explanation": "Correto! O Gemini pesquisa melhor, o Claude escreve melhor e o NanoBanana desenha melhor. Unir o melhor de cada uma gera o resultado perfeito."
+            "text": "ChatGPT (por ser mais rápido)",
+            "isCorrect": false,
+            "explanation": "Incorreto. A velocidade importa menos que a nuance do contexto aqui."
           },
           {
-            "text": "Apenas para dizer que entendo de tecnologia",
+            "text": "Claude",
+            "isCorrect": true,
+            "explanation": "Correto! Claude (especialmente Opus/Sonnet 3.5+) é superior em leitura densa, análise profunda de documentos longos e retenção fiel do contexto."
+          },
+          {
+            "text": "GROK",
             "isCorrect": false,
-            "explanation": "O foco é produtividade e lucro, não apenas status tecnológico."
+            "explanation": "Incorreto. GROK é mais forte em dados atualizados e internet instantânea."
+          },
+          {
+            "text": "Perplexity",
+            "isCorrect": false,
+            "explanation": "Incorreto. É focada em motores de busca na web, não análise isolada de longos documentos."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 1 - Texto: Questão 2",
+        "question": "Você precisa de um brainstorm rápido de 20 headlines de marketing em 5 minutos. Qual IA usar?",
+        "options": [
+          {
+            "text": "Claude",
+            "isCorrect": false,
+            "explanation": "Incorreto. Claude é bom, mas tende a ser ligeiramente mais lento para fluxos puramente de ideação frenética."
+          },
+          {
+            "text": "Perplexity",
+            "isCorrect": false,
+            "explanation": "Incorreto. Perplexity pesquisará a web, o que atrasa a criatividade livre."
+          },
+          {
+            "text": "ChatGPT",
+            "isCorrect": true,
+            "explanation": "Correto! O ChatGPT é imbatível na velocidade de ideação para primeiras versões (drafts) e chuva de ideias."
+          },
+          {
+            "text": "GROK",
+            "isCorrect": false,
+            "explanation": "Incorreto. GROK seria excelente se as headlines dependessem do breaking news de hoje."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 1 - Texto: Questão 3",
+        "question": "Você precisa pesquisar resultados precisos sobre a eleição que terminou HOJE de manhã. Qual IA consultar?",
+        "options": [
+          {
+            "text": "Claude",
+            "isCorrect": false,
+            "explanation": "Incorreto. Base de dados pode estar atrasada."
+          },
+          {
+            "text": "ChatGPT",
+            "isCorrect": false,
+            "explanation": "Incorreto. A latência do motor de busca costuma ser maior que o GROK."
+          },
+          {
+            "text": "GROK",
+            "isCorrect": true,
+            "explanation": "Correto! GROK acessa os dados e pulsações globais na rede em exato tempo real (via X)."
+          },
+          {
+            "text": "Copilot",
+            "isCorrect": false,
+            "explanation": "Incorreto. Copilot usa o Bing, bom mas sem a velocidade de breaking news do X."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 1 - Texto: Questão 4",
+        "question": "Para uma monografia da faculdade, você precisa que a IA traga a pesquisa e cite rigorosamente todas as fontes confiáveis. Qual escolher?",
+        "options": [
+          {
+            "text": "Claude",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Claude ainda pode alucinar URLs se você pedir links."
+          },
+          {
+            "text": "ChatGPT",
+            "isCorrect": false,
+            "explanation": "Incorreto. Apesar do SearchGPT, não nasce voltado exclusivamente para citações acadêmicas e documentadas."
+          },
+          {
+            "text": "Perplexity",
+            "isCorrect": true,
+            "explanation": "Correto! Perplexity é a essência do 'Search Generative Experience', sempre citando fontes clicáveis (1, 2, 3)."
+          },
+          {
+            "text": "GROK",
+            "isCorrect": false,
+            "explanation": "Incorreto. GROK vai puxar principalmente links casuais de tweets recentes."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 1 - Texto: Questão 5",
+        "question": "Você está dentro da sua planilha de Excel analisando dados da empresa e precisa de uma macro gerada automaticamente e aplicada. Qual IA integrada usar?",
+        "options": [
+          {
+            "text": "Claude",
+            "isCorrect": false,
+            "explanation": "Incorreto. Não tem acesso de contexto direto dentro dos apps Office nativamente."
+          },
+          {
+            "text": "ChatGPT",
+            "isCorrect": false,
+            "explanation": "Incorreto. O mesmo da opção A; você teria que copiar e colar as planilhas."
+          },
+          {
+            "text": "Copilot",
+            "isCorrect": true,
+            "explanation": "Correto! O Microsoft Copilot 365 vive e atua dentro das suas gavetas (OneDrive, Excel, Word), injetando análises direto."
+          },
+          {
+            "text": "Perplexity",
+            "isCorrect": false,
+            "explanation": "Incorreto. Foco na internet e pesquisas abertas."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 2 - Automação: Questão 6",
+        "question": "Se você precisa que a IA pesquise dados na web, analise os números baixados em planilhas e agrupe a lógica sozinha gerando uma lista... Qual IA faz tudo sozinha?",
+        "options": [
+          {
+            "text": "Claude (análise de texto)",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Claude pode escrever os scripts, mas precisará de você acionando os botões."
+          },
+          {
+            "text": "ChatGPT (Geração modular)",
+            "isCorrect": false,
+            "explanation": "Incorreto. Apesar do Advanced Data Analysis, o fluxo multitarefa web + app na máquina é limitado."
+          },
+          {
+            "text": "Manus (Executa tarefas completas agentic)",
+            "isCorrect": true,
+            "explanation": "Correto! O Manus e agentes similares (Computer Use) tomam conta do mouse e do browser completando missões inteiras passo a passo sozinhos."
+          },
+          {
+            "text": "Copilot",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Copilot é bom, mas o Manus brilha no controle autônomo multissistema."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 2 - Automação: Questão 7",
+        "question": "Qual é a principal diferença técnica tangível do Manus vs outras LLMs tradicionais na rotina diária?",
+        "options": [
+          {
+            "text": "Manus é mais barato",
+            "isCorrect": false,
+            "explanation": "Incorreto. A precificação costuma orbitar ao redor do complexo uso de recursos paralelos."
+          },
+          {
+            "text": "Manus executa autonomamente no navegador/SO, não apenas te responde em texto",
+            "isCorrect": true,
+            "explanation": "Correto! Modelos de agentes como o Manus abrem, clicam, rolam a página e compilam a missão final para você como um colega de trabalho real faria."
+          },
+          {
+            "text": "Manus funciona puramente offline no desktop",
+            "isCorrect": false,
+            "explanation": "Incorreto. Processamento de ponta exige cloud."
+          },
+          {
+            "text": "Manus não impõe limites morais aos prompts",
+            "isCorrect": false,
+            "explanation": "Incorreto. Todos os modelos comerciais possuem restrições ativas aplicadas."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 3 - Imagens: Questão 8",
+        "question": "O seu designer surtou e você precisa entregar hoje uma fotografia com qualidade super-alta, artística e luxuosa para capa de uma revista de arquitetura. Qual priorizar?",
+        "options": [
+          {
+            "text": "Leonardo AI",
+            "isCorrect": false,
+            "explanation": "Incorreto. O Leonardo é bom pra jogos e lotes massivos rápidos."
+          },
+          {
+            "text": "Midjourney",
+            "isCorrect": true,
+            "explanation": "Correto! O Midjourney continua sendo a coroa absoluta no quesito qualidade fotorrealista premium e direção de arte cinematográfica."
+          },
+          {
+            "text": "Canva AI",
+            "isCorrect": false,
+            "explanation": "Incorreto. Canva é para uso rápido e montagens úteis, não ultra luxo de ponta a ponta sem retoque."
+          },
+          {
+            "text": "Meta AI Imagine",
+            "isCorrect": false,
+            "explanation": "Incorreto. Bom para gerar em tempo real no chat causal."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 3 - Imagens: Questão 9",
+        "question": "Você cuida do marketing de um e-commerce e precisa gerar rapidamente 100 imagens de tênis diferentes compartilhando sempre um visual limpo consistente para popular o portfólio amanhã cedo. Qual IA?",
+        "options": [
+          {
+            "text": "Midjourney",
+            "isCorrect": false,
+            "explanation": "Incorreto. Difícil de manter a consistência em batches tão altos de produtos via Discord de um dia pro outro sem grande domínio de style-refs."
+          },
+          {
+            "text": "Leonardo AI",
+            "isCorrect": true,
+            "explanation": "Correto! O forte do Leonardo é a automação, a consistência de assets (muito amado no gamedev) e a capacidade rápida com controlnets claros e batch pipeline."
+          },
+          {
+            "text": "Canva AI",
+            "isCorrect": false,
+            "explanation": "Incorreto. A função do canva de bulk create com imagens gerativas ainda não tem uma esteira de retenção profunda num prompt gerando 100 itens puros novos mantendo o frame intocado sem perder a mão do design."
+          },
+          {
+            "text": "Meta AI Imagine",
+            "isCorrect": false,
+            "explanation": "Incorreto. Solto e randômico."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "title": "🎓 Bloco 3 - Imagens: Questão 10",
+        "question": "Você tem zero prática com softwares gráficos. Quer gerar uma imagem estilosa de confeitaria e imediatamente já colocar um título rosa chamativo pra o Instagram. Qual plataforma te atende num pulo?",
+        "options": [
+          {
+            "text": "Midjourney",
+            "isCorrect": false,
+            "explanation": "Incorreto. Só expele o PNG nativo sem arte textual pronta pra web social em si na plataforma (fora do alpha recém evoluído)."
+          },
+          {
+            "text": "Leonardo AI",
+            "isCorrect": false,
+            "explanation": "Incorreto. Você precisaria tirar do Leonardo e jogar no Photoshop."
+          },
+          {
+            "text": "Canva AI",
+            "isCorrect": true,
+            "explanation": "Correto! Magic Studio do Canva condensa geração (você evoca o bolo com IA) + o título tipográfico rosa perfeito pra logo depois clicar em 'Postar'..."
+          },
+          {
+            "text": "Meta AI",
+            "isCorrect": false,
+            "explanation": "Incorreto. Não tem uma suíte visual de layouters ao seu redor."
           }
         ]
       },
       {
         "type": "text",
-        "title": "🎙️ Podcasts no Piloto Automático",
-        "content": "Você pode ter um programa de rádio digital sem nem encostar no microfone. \n- O **Gemini** traz as notícias da manhã.\n- O **ElevenLabs** narra com o seu clone de voz.\n- O **Captions** cria uma versão em vídeo com legendas para o YouTube.\nVocê vira uma autoridade no seu nicho enquanto seu 'eu digital' fala por você."
-      },
-      {
-        "type": "text",
-        "title": "📊 Analisando o que Funciona",
-        "content": "A IA também te ajuda a melhorar. No final do mês, cole os números das suas redes sociais no **Gemini** e pergunte: 'Quais vídeos as pessoas assistiram até o fim? Quais temas geraram mais vendas?'. \n\nEle vai identificar os padrões de sucesso e te dar o plano para o mês seguinte, garantindo que você nunca pare de crescer."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Análise de Performance",
-        "question": "Ordene as etapas para melhorar seu conteúdo no próximo mês:",
-        "initialWords": [
-          "Analisar os dados do mês anterior,",
-          "Identificar o que os seguidores amaram,",
-          "Ajustar a estratégia de roteiros,",
-          "Testar novos formatos sugeridos pela IA,",
-          "Criar o novo calendário editorial."
-        ],
-        "correctOrder": [
-          "Analisar os dados do mês anterior,",
-          "Identificar o que os seguidores amaram,",
-          "Ajustar a estratégia de roteiros,",
-          "Testar novos formatos sugeridos pela IA,",
-          "Criar o novo calendário editorial."
-        ],
-        "explanation": "Perfeito! Melhoria contínua é o segredo dos grandes canais."
-      },
-      {
-        "type": "text",
-        "title": "🤖 Seus Próprios Robôs (Workflows)",
-        "content": "Crie o seu 'Modo de Trabalho'. \nExemplo: 'Toda vez que eu postar um vídeo novo (Gatilho), o ChatGPT deve criar um e-mail para a minha lista (Ação) e o Gemini deve programar o post no LinkedIn (Distribuição)'. \n\nConfigurar esses caminhos uma única vez é o que te dá a liberdade de focar apenas no que você ama fazer."
-      },
-      {
-        "type": "text",
-        "title": "💰 Como Transformar Likes em Dinheiro",
-        "content": "Conteúdo sem estratégia é apenas hobby. Vamos montar o seu funil:\n\n\n\n1. **Topo:** Vídeos rápidos (TikTok/Reels) para atrair gente nova.\n2. **Meio:** E-books e newsletters para educar e pegar o contato do cliente.\n3. **Fundo:** Seu curso, consultoria ou produto premium para vender.\nTodas essas etapas são criadas e gerenciadas pelas IAs que você agora domina."
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ O Segredo da Venda",
-          "sentence": "O valor real não está na IA que gera o conteúdo, mas no ___ humano que organiza e dá ___ para as informações.",
-          "answers": [
-            "toque",
-            "contexto"
-          ],
-          "options": [
-            "toque",
-            "contexto",
-            "robô",
-            "preço",
-            "medo",
-            "clique"
-          ],
-          "explanation": "Exato! A IA é o motor, mas você é o motorista que sabe para onde o negócio deve ir."
-        }
-      },
-      {
-        "type": "text",
-        "title": "📁 Organize sua Empresa de IA",
-        "content": "Profissionais não perdem arquivos. Tenha pastas organizadas:\n- **Pesquisas:** Onde o Gemini guarda os dados.\n- **Biblioteca de Prompts:** Seus comandos de ouro que sempre funcionam.\n- **Templates Visuais:** Suas cores e logos prontos para o NanoBanana.\n\nOrganização é o que permite que você escale o seu negócio para 10 ou 100 clientes sem enlouquecer."
-      },
-      {
-        "type": "text",
-        "title": "⚡ Templates que Aceleram Tudo",
-        "content": "Use receitas prontas:\n* **Template de Lançamento:** Um guia de 30 dias de posts criados por IA.\n* **Template de Crescimento:** Como postar 3x por dia sem cansar.\n* **Template de Autoridade:** Como ser visto como o maior especialista da sua área.\n\nDominar esses moldes é como ter um atalho para o sucesso."
-      },
-      {
-        "type": "text",
-        "title": "📱 Domine Todas as Telas",
-        "content": "Com um clique no **Captions**, você transforma um vídeo horizontal de YouTube em um vertical para o Reels. \n\nA IA adapta as legendas, corta a imagem e garante que você esteja presente em todas as redes sociais sem precisar gravar nada de novo. É o poder da **Distribuição Inteligente**."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste Final de Estratégia",
-        "question": "Qual o maior erro ao usar IA para criar conteúdo e tentar ganhar dinheiro?",
-        "options": [
-          {
-            "text": "Não revisar o que a IA faz e deixar tudo no automático sem sua opinião",
-            "isCorrect": true,
-            "explanation": "Exato! As pessoas compram de PESSOAS. Se o conteúdo não tiver o seu toque e sua curadoria, ele vira apenas 'barulho' na internet."
-          },
-          {
-            "text": "Usar ferramentas gratuitas em vez de pagas",
-            "isCorrect": false,
-            "explanation": "Ferramentas gratuitas funcionam muito bem se você souber o que está fazendo."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "🚫 O que evitar a todo custo",
-        "content": "* **Volume sem Valor:** Postar 10 vezes por dia algo que não ajuda ninguém.\n* **Plágio:** Usar a IA para copiar o trabalho de outros criadores. Use-a para criar o SEU caminho.\n* **Esquecer o Público:** Falar apenas o que a IA sugere, ignorando o que os seus seguidores realmente pedem nos comentários."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade Final: O Maestro do Conteúdo",
-        "question": "Descreva o seu sistema ideal para começar amanhã:",
-        "initialWords": [
-          "Meu nicho: Consultoria de RH,",
-          "Meu público: Donos de pequenas empresas,",
-          "Minha meta: 3 vídeos e 5 posts por semana,",
-          "Ferramentas: Gemini, Claude e Captions,",
-          "Primeiro passo: Pesquisar as dores dos patrões."
-        ],
-        "correctOrder": [
-          "Meu nicho: Consultoria de RH,",
-          "Meu público: Donos de pequenas empresas,",
-          "Minha meta: 3 vídeos e 5 posts por semana,",
-          "Ferramentas: Gemini, Claude e Captions,",
-          "Primeiro passo: Pesquisar as dores dos patrões."
-        ],
-        "explanation": "Sensacional! Com esse plano, você já é um profissional acima da média."
-      },
-      {
-        "type": "text",
-        "title": "🏆 Conclusão do Dia 27",
-        "content": "**HOJE VOCÊ CONSTRUIU UMA MÁQUINA DE CONTEÚDO!**\n\n1. Aprendeu o framework C.A.S.A. para integrar todas as IAs.\n2. Descobriu como produzir para uma semana em apenas uma hora.\n3. Entendeu como transformar seguidores em clientes através de funis inteligentes.\n4. Aprendeu a analisar e otimizar seu crescimento baseado em dados reais.\n\n**O SEU VALOR:** Você agora é um **Estrategista de Conteúdo com IA**. Você tem o poder de uma agência de marketing inteira nas suas mãos.\n\n**AMANHÃ:** O Grande Encerramento! Vamos consolidar seu certificado e traçar o plano para o seu sucesso nos próximos meses. Você está pronto?"
+        "title": "🎉 Resumo da Super Revisão",
+        "content": "Você terminou seu penúltimo dia e demonstrou total domínio sobre O QUÊ faz CADA COISA neste multiverso generativo. Esta é a vantagem suprema em campo de batalha.\n\nSaber o **quando**, o **onde** e o **porquê** de ligar os motores te salva tempo e energia.\n\nPreparado para o último dia? A grande certificação de arquiteturas compostas se aproxima. Te esperamos lá!"
       }
     ]
   },
