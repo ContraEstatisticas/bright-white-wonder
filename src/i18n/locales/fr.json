@@ -1,48 +1,11 @@
 {
   "chat": {
     "title": "Chat Educly",
-    "practicing": "En pratique",
-    "loading": "Chargement...",
-    "greeting": {
-      "default": "Bonjour! 👋 Je suis l'assistant Educly. Je suis là pour vous aider à pratiquer l'utilisation des outils d'IA. Comment puis-je vous aider aujourd'hui?",
-      "withTool": "Bonjour! 👋 Je suis l'assistant Educly. Je suis là pour vous aider à pratiquer {{tool}}. Qu'aimeriez-vous apprendre ou tester?",
-      "restart": "Bonjour! 👋 Recommençons! Je suis là pour vous aider à pratiquer {{tool}}. Qu'aimeriez-vous apprendre?",
-      "restartDefault": "Bonjour! 👋 Recommençons! Comment puis-je vous aider avec les outils d'IA aujourd'hui?"
-    },
-    "input": {
-      "placeholder": "Tapez votre question sur l'IA...",
-      "placeholderWithTool": "Posez une question sur {{tool}}..."
-    },
-    "error": {
-      "title": "Erreur de chat",
-      "notLoggedIn": "Vous devez être connecté pour utiliser le chat",
-      "sendError": "Erreur lors de l'envoi du message"
-    },
-    "premium": {
-      "title": "Chat Educly Premium",
-      "description": "Débloquez le chat IA pour pratiquer ce que vous avez appris dans les leçons",
-      "unlock": "Débloquer l'Accès Premium",
-      "backToDashboard": "Retour au Tableau de Bord",
-      "features": {
-        "unlimitedChat": {
-          "title": "Chat illimité",
-          "description": "Discutez avec l'IA sans limites"
-        },
-        "guidedPractice": {
-          "title": "Pratique guidée",
-          "description": "Pratiquez ce que vous avez appris dans les leçons"
-        },
-        "instantResponses": {
-          "title": "Réponses instantanées",
-          "description": "Obtenez des réponses en temps réel"
-        }
-      }
-    },
     "practiceWithAI": "Pratiquez avec l'IA",
+    "premium": "Premium",
+    "description": "Discutez avec notre IA pour pratiquer ce que vous avez appris dans les cours",
     "openChat": "Ouvrir le Chat",
-    "description": "Posez des questions et pratiquez ce que vous avez appris dans les leçons avec notre assistant IA",
-    "online": "En ligne maintenant",
-    "inputPlaceholder": "Tapez votre question..."
+    "unlock": "Débloquer"
   },
   "dailyMissions": {
     "title": "Missions Quotidiennes",
@@ -1233,14 +1196,6 @@
     "intermediario": "Intermédiaire",
     "avancado": "Avancé"
   },
-  "chat": {
-    "title": "Chat Educly",
-    "practiceWithAI": "Pratiquez avec l'IA",
-    "premium": "Premium",
-    "description": "Discutez avec notre IA pour pratiquer ce que vous avez appris dans les cours",
-    "openChat": "Ouvrir le Chat",
-    "unlock": "Débloquer"
-  },
   "certificate": {
     "obtained": "Certificat Obtenu!",
     "getCertificate": "Obtenez votre certificat",
@@ -1387,14 +1342,6 @@
     "continue": "CONTINUER",
     "verify": "VÉRIFIER",
     "tryAgain": "RÉESSAYER",
-    "locked": "Verrouillé",
-    "completed": "Terminé",
-    "startNow": "Commencer maintenant",
-    "noContent": "Contenu pas encore disponible pour cette phase.",
-    "checkAnswer": "Vérifier la Réponse",
-    "tryAgainFeedback": "Oups ! Réessayez.",
-    "correctAnswer": "Félicitations ! Bonne réponse !",
-    "phaseCompleted": "Phase terminée avec succès !",
     "stepTypes": {
       "learn": "📚 Apprendre",
       "quiz": "❓ Quiz",
@@ -1405,18 +1352,10 @@
       "correct": "Correct !",
       "incorrect": "Réessayez",
       "askEdi": "Demander de l'aide à EDI",
-      "hint": "💡 Indice",
-      "excellent": "Excellent !",
-      "almostThere": "Presque là !",
-      "masteredConcept": "Vous avez maîtrisé ce concept. Continuez comme ça !",
-      "hintReread": "Relisez les options. La bonne réponse est liée au concept principal.",
-      "hintOrder": "Pensez à l'ordre logique : action → objet → détails.",
-      "hintReview": "Revenez au contenu précédent et révisez les concepts.",
-      "hintAskEdi": "EDI peut vous aider ! Cliquez sur le bouton ci-dessous.",
-      "getCorrectToContinue": "Répondez correctement pour continuer"
+      "hint": "💡 Indice :"
     },
     "practical": {
-      "instructions": "Cliquez sur les mots pour construire le prompt correct :",
+      "instructions": "Cliquez sur les mots pour construire le bon prompt :",
       "yourAnswer": "Votre réponse :",
       "available": "Mots disponibles :"
     },
@@ -1425,42 +1364,24 @@
       "sendPlaceholder": "Tapez votre message...",
       "aiResponse": "Excellent exemple ! Avez-vous remarqué comment j'ai traité votre entrée ? Maintenant que nous l'avons testé en pratique, cliquez sur 'CONTINUER' pour avancer."
     },
-    "textParts": {
-      "part": "Partie",
-      "of": "sur",
-      "nextPart": "Partie suivante",
-      "previousPart": "Partie précédente",
-      "showPrevious": "Voir les parties précédentes",
-      "hidePrevious": "Masquer les parties précédentes",
-      "allRead": "Tout le contenu lu"
-    },
-    "matchWords": {
-      "instructions": "Connectez chaque élément de gauche avec sa correspondance à droite !",
-      "matched": "paires connectées",
-      "reset": "Recommencer"
-    },
-    "promptTrainer": {
-      "subtitle": "Entraînez votre prompt avec EDI",
-      "challenge": "🎯 Défi :",
-      "criteria": "Critères de réussite :",
-      "startMessage": "Écrivez votre prompt pour commencer !",
-      "completed": "Prompt approuvé ! Félicitations ! 🎉",
-      "placeholder": "Tapez votre prompt ici...",
-      "attempts": "Tentatives",
-      "showHint": "Voir l'indice",
-      "hideHint": "Masquer l'indice",
-      "showExample": "Voir un exemple de prompt",
-      "hideExample": "Masquer l'exemple",
-      "errors": {
-        "sessionExpired": "Séance expirée. Veuillez vous reconnecter.",
-        "tooManyRequests": "Trop de demandes ! Attendez quelques secondes et réessayez.",
-        "creditsExhausted": "Crédits IA épuisés. Veuillez contacter l'assistance.",
-        "unauthorized": "Accès non autorisé. Vérifiez votre abonnement.",
-        "emptyResponse": "L'IA n'a pas pu générer de réponse. Essayez de reformuler votre prompt.",
-        "timeout": "Délai dépassé. Réessayez.",
-        "serverError": "Erreur du serveur",
-        "unknown": "Erreur inconnue",
-        "errorHint": "Conseil : Si le problème persiste, essayez d'écrire un prompt plus court et plus objectif."
+    "day1": {
+      "step1": {
+        "title": "1. Qu'est-ce que ChatGPT (Sans Fantaisie)",
+        "content": "Avant d'utiliser ChatGPT, vous devez comprendre UNE chose :\n\n❌ Il ne pense pas\n❌ Il ne comprend pas le monde\n❌ Il n'a pas de conscience\n\nChatGPT est un **Grand Modèle de Langage (LLM)**.\n\nIl fonctionne ainsi :\nTexte entre → probabilités calculées → texte sort.\n\n👉 Il **prédit le mot suivant** basé sur des patterns appris de milliards de textes humains.\n\nSi vous comprenez cela, vous arrêtez de traiter l'IA comme un humain\net commencez à la traiter comme un **outil contrôlable**."
+      },
+      "step2": {
+        "title": "Le Perroquet Statistique",
+        "content": "ChatGPT n'a pas appris des faits.\nIl a appris **comment les humains écrivent sur les faits**.\n\nQuand vous tapez :\n\"Le marketing digital fonctionne mieux avec...\"\n\nLe modèle calcule les probabilités :\n- Stratégie\n- Contenu\n- Trafic\n- Données\n\nIl choisit la séquence la plus probable.\n\n⚠️ Important :\nIl ne sait pas ce qu'est le marketing.\nIl sait **comment les phrases sur le marketing continuent habituellement**."
+      },
+      "step3": {
+        "title": "Test de Réalité",
+        "question": "Quelle affirmation est vraie ?",
+        "options": {
+          "0": "ChatGPT comprend ce qu'il écrit",
+          "1": "ChatGPT prédit les mots basé sur des patterns",
+          "2": "ChatGPT pense comme un humain"
+        },
+        "explanation": "Correct. La compréhension est la vôtre. La prédiction est celle de l'IA."
       }
     },
     "ediMotivation": {
@@ -1491,249 +1412,16 @@
         ],
         "finalStretch": [
           "La fin est proche !",
-          "Vous avez parcouru un long chemin !",
+          "Vous êtes allé si loin !",
           "Dernier effort, donnez tout !",
-          "Finissez en beauté !",
-          "Presque à la ligne d'arrivée !"
+          "Terminez en beauté !",
+          "Presque sur la ligne d'arrivée !"
         ]
       }
     }
   },
   "landing": {
-    "badge": "L'App qui Enseigne l'IA en Pratique",
-    "title": "Apprenez l'IA avec",
-    "subtitle": "Parcours Interactifs",
-    "description": "Maîtrisez les principaux outils d'IA directement depuis votre téléphone avec des parcours gamifiés et des exercices pratiques",
-    "ctaPrimary": "Télécharger Gratuitement",
-    "ctaSecondary": "Voir Comment Ça Marche",
-    "feature1": "100% Pratique",
-    "feature2": "Certifié",
-    "feature3": "Gamifié",
-    "stat1": "Outils IA",
-    "stat2": "Téléchargements",
-    "stat3": "Note Store",
-    "nav": {
-      "home": "Accueil",
-      "about": "À Propos",
-      "programs": "Fonctionnalités",
-      "testimonials": "Témoignages",
-      "plan": "Plan",
-      "contact": "Contact",
-      "login": "Connexion",
-      "startNow": "Télécharger"
-    },
-    "hero": {
-      "badge": "L'app d'IA la plus complète du marché",
-      "title": "Maîtrisez",
-      "titleHighlight": "l'Intelligence Artificielle",
-      "titleEnd": "Directement depuis Votre Téléphone",
-      "subtitle": "Apprenez l'IA avec des parcours interactifs, des exercices pratiques et des certificats numériques — tout dans l'app. Accès à +20 outils IA, mode hors ligne et gamification.",
-      "cta": "Télécharger Gratuitement",
-      "demo": "Voir la Démo",
-      "students": "téléchargements",
-      "rating": "note",
-      "countries": "pays"
-    },
-    "features": {
-      "sectionLabel": "Fonctionnalités de l'App",
-      "title": "Tout ce Dont Vous Avez Besoin dans Votre Poche",
-      "subtitle": "Une app complète avec parcours interactifs, assistant IA, suivi en temps réel et certificats — apprenez à votre rythme, où que vous soyez.",
-      "curriculum": {
-        "title": "Parcours Interactifs",
-        "description": "Apprenez avec des parcours gamifiés et du contenu constamment mis à jour sur les meilleurs outils IA."
-      },
-      "mentoring": {
-        "title": "Assistant IA Intégré",
-        "description": "Obtenez des réponses en temps réel d'EDI, votre assistant IA personnel dans l'app."
-      },
-      "community": {
-        "title": "Progrès en Temps Réel",
-        "description": "Suivez votre avancement avec des tableaux de bord détaillés, des séries et des statistiques d'apprentissage."
-      },
-      "certification": {
-        "title": "Certificats Numériques",
-        "description": "Gagnez des certificats en complétant des parcours et défis pour prouver vos compétences en IA."
-      },
-      "practical": {
-        "title": "Mode Hors Ligne",
-        "description": "Téléchargez les leçons et étudiez sans internet — idéal pour apprendre partout."
-      },
-      "career": {
-        "title": "Gamification",
-        "description": "Gagnez des XP, montez de niveau, débloquez des badges et maintenez votre série d'études quotidienne."
-      }
-    },
-    "programs": {
-      "sectionLabel": "Fonctionnalités",
-      "title": "Explorez les fonctionnalités de l'app",
-      "subtitle": "Fonctionnalités conçues pour tous les niveaux, du débutant au spécialiste en IA.",
-      "popular": "Le Plus Populaire",
-      "startNow": "Télécharger",
-      "beginner": "Débutant",
-      "intermediate": "Intermédiaire",
-      "advanced": "Avancé",
-      "fundamentals": {
-        "title": "Parcours IA",
-        "description": "Commencez votre voyage en IA avec des parcours interactifs et gamifiés dans l'app.",
-        "duration": "4 semaines",
-        "highlights": [
-          "Parcours IA interactifs",
-          "Exercices pratiques avec ChatGPT",
-          "Automatisation via l'app",
-          "Certificat numérique"
-        ]
-      },
-      "machineLearning": {
-        "title": "Défis Avancés",
-        "description": "Plongez dans des défis de 28 jours avec exercices quotidiens et suivi de progrès.",
-        "duration": "28 jours",
-        "highlights": [
-          "Défis IA quotidiens",
-          "Exercices interactifs",
-          "Progrès gamifié",
-          "Certificats de complétion"
-        ]
-      },
-      "deepLearning": {
-        "title": "Assistant IA Personnel",
-        "description": "Utilisez EDI, votre assistant IA intégré, pour poser des questions et pratiquer des prompts.",
-        "duration": "Illimité",
-        "highlights": [
-          "Chat IA intégré",
-          "Entraîneur de prompts",
-          "Réponses en temps réel",
-          "Support personnalisé dans l'app"
-        ]
-      }
-    },
-    "stats": {
-      "students": "Téléchargements",
-      "countries": "Pays",
-      "satisfaction": "Note Store",
-      "partners": "Outils IA"
-    },
-    "testimonials": {
-      "sectionLabel": "Témoignages",
-      "title": "Ce que disent nos utilisateurs",
-      "subtitle": "Des milliers de personnes ont déjà appris l'IA avec l'app Educly.",
-      "items": [
-        {
-          "name": "Maria Silva",
-          "role": "Data Scientist",
-          "country": "Brésil",
-          "text": "L'app Educly a transformé ma façon d'apprendre l'IA. Je l'utilise tous les jours dans le bus et en 3 mois j'ai décroché mon premier poste."
-        },
-        {
-          "name": "João Santos",
-          "role": "Product Manager",
-          "country": "Portugal",
-          "text": "L'app est incroyable — les parcours sont pratiques et je peux étudier hors ligne. La gamification me garde motivé."
-        },
-        {
-          "name": "Ana García",
-          "role": "ML Engineer",
-          "country": "Mexique",
-          "text": "J'ai complété plusieurs défis via l'app et les certificats numériques ont fait toute la différence. J'ai reçu 3 offres d'emploi !"
-        },
-        {
-          "name": "Carlos Fernández",
-          "role": "Startup Founder",
-          "country": "Argentine",
-          "text": "J'utilise l'app quotidiennement pour me tenir à jour en IA. Les parcours sont super pratiques et le mode hors ligne est parfait."
-        }
-      ]
-    },
-    "globalReach": {
-      "sectionLabel": "Portée Mondiale",
-      "title": "Présent dans le monde entier",
-      "subtitle": "L'app Educly a été téléchargée dans plus de 150 pays, connectant une communauté mondiale d'apprentissage en IA.",
-      "regions": {
-        "latinAmerica": "Amérique Latine",
-        "europe": "Europe",
-        "northAmerica": "Amérique du Nord",
-        "asiaOceania": "Asie & Océanie"
-      },
-      "features": {
-        "languages": {
-          "title": "15 Langues",
-          "description": "App disponible en plusieurs langues avec traduction professionnelle"
-        },
-        "support": {
-          "title": "Support 24/7",
-          "description": "Assistant IA intégré et équipe de support disponible à toute heure"
-        },
-        "community": {
-          "title": "Communauté dans l'App",
-          "description": "Connectez-vous avec des utilisateurs du monde entier et partagez votre progression"
-        }
-      }
-    },
-    "cta": {
-      "title": "Prêt à apprendre l'IA directement depuis votre téléphone ?",
-      "subtitle": "Rejoignez plus de 50 000 utilisateurs qui maîtrisent déjà l'IA avec l'app Educly.",
-      "startFree": "Télécharger Gratuitement",
-      "talkConsultant": "Parler au Support",
-      "guarantee": "Garantie de 30 jours",
-      "installments": "Jusqu'à 12 mensualités",
-      "benefits": [
-        "Accès complet à tous les parcours",
-        "Mises à jour gratuites de l'app",
-        "Assistant IA intégré",
-        "Certificats numériques",
-        "Mode hors ligne disponible",
-        "Garantie de satisfaction de 30 jours"
-      ]
-    },
-    "footer": {
-      "description": "L'app d'Intelligence Artificielle la plus complète du marché. Apprenez l'IA en pratique, directement depuis votre téléphone.",
-      "contact": "Contact",
-      "programs": "Fonctionnalités",
-      "resources": "Ressources",
-      "company": "Entreprise",
-      "legal": "Légal",
-      "links": {
-        "aiFundamentals": "Parcours IA",
-        "machineLearning": "Défis 28 jours",
-        "deepLearning": "Assistant IA",
-        "aiForBusiness": "Certificats Numériques",
-        "blog": "Blog",
-        "webinars": "Tutoriels",
-        "ebooks": "Guides",
-        "community": "Communauté",
-        "aboutUs": "À Propos",
-        "careers": "Carrières",
-        "partnerships": "Partenariats",
-        "contact": "Contact",
-        "terms": "Conditions d'Utilisation",
-        "privacy": "Confidentialité",
-        "cookies": "Cookies",
-        "refund": "Annulation",
-        "subscriptionTerms": "Conditions d'Abonnement"
-      },
-      "copyright": "Tous droits réservés.",
-      "madeWith": "Fait avec ❤️ pour la communauté mondiale de l'IA"
-    },
-    "pricing": {
-      "title": "Débloquez tout le potentiel de l'app",
-      "subtitle": "Commencez votre apprentissage de l'IA dès aujourd'hui",
-      "offerBadge": "OFFRE DU JOUR",
-      "productName": "Accès Complet à l'App IA",
-      "pricePrefix": "POUR SEULEMENT",
-      "perDay": "PAR JOUR",
-      "ctaButton": "GARANTIR MON ACCÈS MAINTENANT",
-      "securePayment": "Paiement Sécurisé via Stripe",
-      "quizDiscountNotice": "🎁 VOUS VOULEZ UNE RÉDUCTION SUPPLÉMENTAIRE ? FAITES LE QUIZ !",
-      "quizBadge": "ACCÈS EXCLUSIF",
-      "quizTitle": "Accélérez votre apprentissage IA avec l'app",
-      "quizSubtitle": "Découvrez votre parcours personnalisé avec un tarif spécial.",
-      "quizButton": "ACCÉDER AU QUIZ ET PROFITER DE L'OFFRE"
-    },
-    "quiz": {
-      "link": {
-        "name": "Accéder au quiz"
-      },
-      "url": "https://start.educly.app/french"
-    }
+    "subtitle": "Parcours Interactifs"
   },
   "auth": {
     "title": "Accédez à votre compte",
@@ -1968,35 +1656,7 @@
     "unlockButton": "Aller à ChatGPT"
   },
   "thankYou": {
-    "registrationSuccess": "Inscription confirmée",
-    "createAccountTitle": "Créez votre compte",
-    "createAccountDesc": "Renseignez vos informations pour débloquer l'accès immédiatement.",
-    "createAccountButton": "Créer mon compte et accéder",
-    "noPurchaseTitle": "Achat introuvable",
-    "noPurchaseDesc": "Nous n'avons trouvé aucun achat associé à cet e-mail. Vérifiez l'adresse utilisée lors de l'achat.",
-    "heroStart": "Votre parcours en tant que",
-    "heroEnd": "Spécialiste en IA commence ici",
-    "subtitle": "Nous sommes incroyablement heureux de vous avoir ici. Nous avons préparé le meilleur environnement pour votre évolution : maîtrisez les bons outils et transformez votre carrière au cours des 28 prochains jours.",
-    "accessButton": "Accéder à mon parcours",
-    "structureTitle": "Votre structure de réussite",
-    "benefit1Title": "Parcours de 28 jours",
-    "benefit1Desc": "Un plan validé étape par étape. En 28 jours, vous passerez de zéro à la maîtrise complète de l'Intelligence Artificielle appliquée.",
-    "benefit2Title": "Maîtrise des IA",
-    "benefit2Desc": "Apprenez concrètement à exploiter pleinement ChatGPT, Google Gemini, DeepSeek et Claude pour automatiser n'importe quelle tâche.",
-    "benefit3Title": "Évolution professionnelle",
-    "benefit3Desc": "Découvrez comment valoriser vos nouvelles compétences et créer des opportunités à forte valeur sur le marché international.",
-    "stepsHeader": "Vos prochaines étapes",
-    "step1Title": "Configurez votre profil professionnel",
-    "step1Desc": "Ajoutez vos compétences actuelles afin que nous puissions personnaliser les meilleures opportunités pour vous.",
-    "step1Time": "2 minutes",
-    "step2Title": "Commencez le Jour 1 du parcours",
-    "step2Desc": "Regardez la première leçon, comprenez les différences clés entre ChatGPT et Gemini et faites votre premier pas concret.",
-    "step2Time": "15 minutes",
-    "step3Title": "Accédez au Laboratoire de Prompts",
-    "step3Desc": "Explorez notre bibliothèque initiale avec plus de 100 commandes prêtes à l'emploi pour DeepSeek et accélérez vos livraisons.",
-    "step3Time": "5 minutes",
-    "needHelp": "Besoin d'aide avec le planning ?",
-    "supportLink": "Contacter le support"
+    "title": "Maîtrisez les meilleures IA avec"
   },
   "notFound": {
     "title": "404",
@@ -2797,55 +2457,6 @@
       }
     }
   },
-  "lesson": {
-    "loading": "Chargement...",
-    "close": "Fermer",
-    "continue": "CONTINUER",
-    "verify": "VÉRIFIER",
-    "tryAgain": "RÉESSAYER",
-    "stepTypes": {
-      "learn": "📚 Apprendre",
-      "quiz": "❓ Quiz",
-      "practical": "⚡ Pratique",
-      "simulator": "🤖 Simulateur"
-    },
-    "quiz": {
-      "correct": "Correct !",
-      "incorrect": "Réessayez",
-      "askEdi": "Demander de l'aide à EDI",
-      "hint": "💡 Indice :"
-    },
-    "practical": {
-      "instructions": "Cliquez sur les mots pour construire le bon prompt :",
-      "yourAnswer": "Votre réponse :",
-      "available": "Mots disponibles :"
-    },
-    "chat": {
-      "aiReady": "Prêt à aider",
-      "sendPlaceholder": "Tapez votre message...",
-      "aiResponse": "Excellent exemple ! Avez-vous remarqué comment j'ai traité votre entrée ? Maintenant que nous l'avons testé en pratique, cliquez sur 'CONTINUER' pour avancer."
-    },
-    "day1": {
-      "step1": {
-        "title": "1. Qu'est-ce que ChatGPT (Sans Fantaisie)",
-        "content": "Avant d'utiliser ChatGPT, vous devez comprendre UNE chose :\n\n❌ Il ne pense pas\n❌ Il ne comprend pas le monde\n❌ Il n'a pas de conscience\n\nChatGPT est un **Grand Modèle de Langage (LLM)**.\n\nIl fonctionne ainsi :\nTexte entre → probabilités calculées → texte sort.\n\n👉 Il **prédit le mot suivant** basé sur des patterns appris de milliards de textes humains.\n\nSi vous comprenez cela, vous arrêtez de traiter l'IA comme un humain\net commencez à la traiter comme un **outil contrôlable**."
-      },
-      "step2": {
-        "title": "Le Perroquet Statistique",
-        "content": "ChatGPT n'a pas appris des faits.\nIl a appris **comment les humains écrivent sur les faits**.\n\nQuand vous tapez :\n\"Le marketing digital fonctionne mieux avec...\"\n\nLe modèle calcule les probabilités :\n- Stratégie\n- Contenu\n- Trafic\n- Données\n\nIl choisit la séquence la plus probable.\n\n⚠️ Important :\nIl ne sait pas ce qu'est le marketing.\nIl sait **comment les phrases sur le marketing continuent habituellement**."
-      },
-      "step3": {
-        "title": "Test de Réalité",
-        "question": "Quelle affirmation est vraie ?",
-        "options": {
-          "0": "ChatGPT comprend ce qu'il écrit",
-          "1": "ChatGPT prédit les mots basé sur des patterns",
-          "2": "ChatGPT pense comme un humain"
-        },
-        "explanation": "Correct. La compréhension est la vôtre. La prédiction est celle de l'IA."
-      }
-    }
-  },
   "legal": {
     "email": "E-mail",
     "website": "Site web",
@@ -3063,32 +2674,70 @@
     }
   },
   "profile": {
-    "photoUpdated": "Photo mise à jour !",
-    "student": "Étudiant",
-    "level": "Niveau",
-    "toNextLevel": "vers le Niveau",
+    "title": "Profil",
+    "defaultName": "Étudiant",
+    "levelLabel": "Niveau {{level}}",
+    "levelProgress": "Progression du Niveau",
+    "total": "total",
     "medals": "Médailles",
     "courses": "Cours",
-    "securityFinance": "Sécurité et Finance",
-    "changePassword": "Changer le mot de passe",
-    "resetPassword": "Réinitialiser le mot de passe",
+    "securitySection": "Sécurité & Facturation",
+    "changePassword": "Modifier le mot de passe",
+    "confirmResetDesc": "Nous allons envoyer un lien de confirmation à votre adresse e-mail.",
+    "linkSentTo": "Le lien sera envoyé à :",
+    "sendEmail": "Envoyer l'e-mail",
     "billingHistory": "Historique de facturation",
-    "billingStatement": "Relevé de compte",
-    "trackBilling": "Suivez votre historique financier.",
-    "paid": "PAYÉ",
-    "active": "Actif",
+    "tabAccount": "Compte",
+    "tabAchievements": "Succès",
+    "tabNotifications": "Notifications",
     "accountDetails": "Détails du compte",
-    "email": "E-mail",
-    "fullName": "Nom complet",
+    "emailLabel": "E-mail",
+    "emailNote": "L'e-mail ne peut pas être modifié. Contactez le support pour toute modification.",
+    "fullNameLabel": "Nom complet",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "memberSince": "Membre depuis",
     "saveChanges": "Enregistrer les modifications",
-    "updateSuccess": "Profil mis à jour !",
-    "achievements": "Succès",
-    "unlockedMedals": "sur {{total}} médailles débloquées",
+    "medalsEarned": "{{count}} médailles obtenues",
     "viewAll": "Voir tout",
-    "sendResetLink": "Nous enverrons un lien de réinitialisation à",
-    "sendRecoverEmail": "Envoyer l'e-mail de récupération",
+    "earned": "Obtenue",
+    "yourProgress": "Votre progression",
+    "progressMotto": "Continuez à apprendre pour débloquer plus de succès !",
+    "inProgress": "En cours",
+    "notificationSettings": "Paramètres de notification",
+    "notifEmail": "Notifications par e-mail",
+    "notifEmailDesc": "Recevez des mises à jour importantes par e-mail",
+    "notifPush": "Notifications Push",
+    "notifPushDesc": "Recevez des notifications dans votre navigateur",
+    "notifLessons": "Nouvelles leçons",
+    "notifLessonsDesc": "Notifications sur les nouvelles leçons disponibles",
+    "notifPromos": "Promotions et Offres",
+    "notifPromosDesc": "Recevez des offres spéciales et des nouveautés",
+    "savePreferences": "Enregistrer les préférences",
+    "paymentStatement": "Relevé de paiement",
+    "statusActive": "Actif",
     "noPayments": "Aucun paiement trouvé.",
-    "days": "Jours"
+    "noPaymentsDesc": "Vos paiements apparaîtront ici lorsque vous aurez un abonnement.",
+    "viewPlans": "Voir les plans",
+    "manageSubscription": "Gérer l'abonnement",
+    "success": "Succès !",
+    "imageSaved": "Image enregistrée avec succès.",
+    "error": "Erreur",
+    "errorLoadDesc": "Impossible de charger le profil",
+    "uploadError": "Erreur de téléchargement",
+    "saveError": "Erreur d'enregistrement",
+    "unexpectedError": "Une erreur inattendue est survenue",
+    "emailNotFound": "E-mail non trouvé",
+    "sendError": "Erreur d'envoi",
+    "emailSent": "E-mail envoyé !",
+    "emailSentDesc": "Un lien de réinitialisation a été envoyé à {{email}}.",
+    "linkCopied": "Lien copié !",
+    "linkCopiedDesc": "Le lien de votre profil a été copié dans le presse-papiers.",
+    "copyError": "Impossible de copier le lien.",
+    "updated": "Profil mis à jour !",
+    "updatedDesc": "Vos informations ont été enregistrées avec succès.",
+    "updateError": "Impossible de mettre à jour le profil.",
+    "settingsSaved": "Paramètres enregistrés !",
+    "notificationsUpdated": "Vos préférences de notification ont été mises à jour."
   },
   "company": {
     "title": "Informations sur l'Entreprise",
@@ -3187,72 +2836,6 @@
       "description": "Nous avons une offre spéciale pour vous"
     }
   },
-  "profile": {
-    "title": "Profil",
-    "defaultName": "Étudiant",
-    "levelLabel": "Niveau {{level}}",
-    "levelProgress": "Progression du Niveau",
-    "total": "total",
-    "medals": "Médailles",
-    "courses": "Cours",
-    "securitySection": "Sécurité & Facturation",
-    "changePassword": "Modifier le mot de passe",
-    "confirmResetDesc": "Nous allons envoyer un lien de confirmation à votre adresse e-mail.",
-    "linkSentTo": "Le lien sera envoyé à :",
-    "sendEmail": "Envoyer l'e-mail",
-    "billingHistory": "Historique de facturation",
-    "tabAccount": "Compte",
-    "tabAchievements": "Succès",
-    "tabNotifications": "Notifications",
-    "accountDetails": "Détails du compte",
-    "emailLabel": "E-mail",
-    "emailNote": "L'e-mail ne peut pas être modifié. Contactez le support pour toute modification.",
-    "fullNameLabel": "Nom complet",
-    "fullNamePlaceholder": "Entrez votre nom complet",
-    "memberSince": "Membre depuis",
-    "saveChanges": "Enregistrer les modifications",
-    "medalsEarned": "{{count}} médailles obtenues",
-    "viewAll": "Voir tout",
-    "earned": "Obtenue",
-    "yourProgress": "Votre progression",
-    "progressMotto": "Continuez à apprendre pour débloquer plus de succès !",
-    "inProgress": "En cours",
-    "notificationSettings": "Paramètres de notification",
-    "notifEmail": "Notifications par e-mail",
-    "notifEmailDesc": "Recevez des mises à jour importantes par e-mail",
-    "notifPush": "Notifications Push",
-    "notifPushDesc": "Recevez des notifications dans votre navigateur",
-    "notifLessons": "Nouvelles leçons",
-    "notifLessonsDesc": "Notifications sur les nouvelles leçons disponibles",
-    "notifPromos": "Promotions et Offres",
-    "notifPromosDesc": "Recevez des offres spéciales et des nouveautés",
-    "savePreferences": "Enregistrer les préférences",
-    "paymentStatement": "Relevé de paiement",
-    "statusActive": "Actif",
-    "noPayments": "Aucun paiement trouvé.",
-    "noPaymentsDesc": "Vos paiements apparaîtront ici lorsque vous aurez un abonnement.",
-    "viewPlans": "Voir les plans",
-    "manageSubscription": "Gérer l'abonnement",
-    "success": "Succès !",
-    "imageSaved": "Image enregistrée avec succès.",
-    "error": "Erreur",
-    "errorLoadDesc": "Impossible de charger le profil",
-    "uploadError": "Erreur de téléchargement",
-    "saveError": "Erreur d'enregistrement",
-    "unexpectedError": "Une erreur inattendue est survenue",
-    "emailNotFound": "E-mail non trouvé",
-    "sendError": "Erreur d'envoi",
-    "emailSent": "E-mail envoyé !",
-    "emailSentDesc": "Un lien de réinitialisation a été envoyé à {{email}}.",
-    "linkCopied": "Lien copié !",
-    "linkCopiedDesc": "Le lien de votre profil a été copié dans le presse-papiers.",
-    "copyError": "Impossible de copier le lien.",
-    "updated": "Profil mis à jour !",
-    "updatedDesc": "Vos informations ont été enregistrées avec succès.",
-    "updateError": "Impossible de mettre à jour le profil.",
-    "settingsSaved": "Paramètres enregistrés !",
-    "notificationsUpdated": "Vos préférences de notification ont été mises à jour."
-  },
   "subscriptionTerms": {
     "title": "Conditions d'Abonnement",
     "subtitle": "Veuillez lire attentivement ces conditions d'abonnement avant d'utiliser Educly.",
@@ -3319,11 +2902,5 @@
     "alreadyRegistered": "Déjà un compte ? Connectez-vous",
     "invalidLink": "Lien invalide",
     "useEmailLink": "Utilisez le lien envoyé à votre email d'achat."
-  },
-  "landing": {
-    "subtitle": "Parcours Interactifs"
-  },
-  "thankYou": {
-    "title": "Maîtrisez les meilleures IA avec"
   }
 }

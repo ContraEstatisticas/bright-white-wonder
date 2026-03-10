@@ -1,46 +1,11 @@
 {
   "chat": {
-    "title": "Chat Educly",
-    "practicing": "Praticando",
-    "loading": "Caricamento...",
-    "greeting": {
-      "default": "Ciao! 👋 Sono l'assistente di Educly. Sono qui per aiutarti a praticare l'uso degli strumenti di IA. Come posso aiutarti oggi?",
-      "withTool": "Ciao! 👋 Sono l'assistente di Educly. Sono qui per aiutarti a praticare {{tool}}. Cosa vorresti imparare o testare?",
-      "restart": "Ciao! 👋 Ricominciamo! Sono qui per aiutarti a praticare {{tool}}. Cosa vorresti imparare?",
-      "restartDefault": "Ciao! 👋 Ricominciamo! Come posso aiutarti con gli strumenti di IA oggi?"
-    },
-    "input": {
-      "placeholder": "Scrivi la tua domanda sull'IA...",
-      "placeholderWithTool": "Chiedi di {{tool}}..."
-    },
-    "error": {
-      "title": "Errore nella chat",
-      "notLoggedIn": "Devi effettuare il login per usare la chat",
-      "sendError": "Errore nell'invio del messaggio"
-    },
-    "premium": {
-      "title": "Chat Educly Premium",
-      "description": "Sblocca la chat IA per praticare ciò che hai imparato nelle lezioni",
-      "unlock": "Sblocca Accesso Premium",
-      "backToDashboard": "Torna alla Dashboard",
-      "features": {
-        "unlimitedChat": {
-          "title": "Chat illimitata",
-          "description": "Chatta con l'IA senza limiti"
-        },
-        "guidedPractice": {
-          "title": "Pratica guidata",
-          "description": "Pratica ciò che hai imparato nelle lezioni"
-        },
-        "instantResponses": {
-          "title": "Risposte istantanee",
-          "description": "Ottieni risposte in tempo reale"
-        }
-      }
-    },
+    "title": "Chat IAcademy",
     "practiceWithAI": "Pratica con l'IA",
+    "premium": "Premium",
+    "description": "Chatta con la nostra IA per praticare ciò che hai imparato nelle lezioni",
     "openChat": "Apri Chat",
-    "description": "Fai domande e pratica ciò che hai imparato nelle lezioni con il nostro assistente IA"
+    "unlock": "Sblocca"
   },
   "dailyMissions": {
     "title": "Missioni Giornaliere",
@@ -712,62 +677,6 @@
       },
       "2": {
         "1": {
-          "title": "Generare Codice",
-          "content": "DeepSeek può generare codice in più linguaggi:\n\n• Python\n• JavaScript\n• TypeScript\n• Java\n• C++\n• E molti altri..."
-        },
-        "2": {
-          "title": "Debugging con IA",
-          "content": "Usa DeepSeek per trovare errori:\n\n1. **Incolla il tuo codice** con l'errore\n2. **Descrivi il problema** previsto\n3. **Chiedi una spiegazione** e soluzione\n\n🐛 *Il debugging non è mai stato così facile.*"
-        },
-        "3": {
-          "title": "Quiz: Codice",
-          "question": "Cosa può fare DeepSeek con il tuo codice?",
-          "options": [
-            {
-              "text": "Generare, debuggare e ottimizzare",
-              "isCorrect": true
-            },
-            {
-              "text": "Solo leggere",
-              "isCorrect": false
-            },
-            {
-              "text": "Cancellare",
-              "isCorrect": false
-            }
-          ]
-        }
-      },
-      "3": {
-        "1": {
-          "title": "Ottimizzazione del Codice",
-          "content": "DeepSeek può migliorare il tuo codice:\n\n• **Performance**: Algoritmi più efficienti\n• **Leggibilità**: Codice più pulito\n• **Sicurezza**: Identificare vulnerabilità\n• **Best Practices**: Pattern di design"
-        },
-        "2": {
-          "title": "Documentazione Automatica",
-          "content": "Genera documentazione professionale:\n\n• Commenti al codice\n• File README\n• Documentazione API\n• Guide d'uso\n\n📝 *Documentare non è mai stato così semplice.*"
-        },
-        "3": {
-          "title": "Quiz: Ottimizzazione",
-          "question": "Quali aspetti DeepSeek può migliorare nel tuo codice?",
-          "options": [
-            {
-              "text": "Performance, leggibilità e sicurezza",
-              "isCorrect": true
-            },
-            {
-              "text": "Solo il colore",
-              "isCorrect": false
-            },
-            {
-              "text": "Il font",
-              "isCorrect": false
-            }
-          ]
-        }
-      },
-      "2": {
-        "1": {
           "title": "Claude per Analisi",
           "content": "Usa Claude per analisi approfondite:\n\n• Documenti estesi\n• Contratti e documenti legali\n• Ricerca accademica\n• Analisi di mercato"
         },
@@ -1315,14 +1224,6 @@
     "intermediario": "Intermedio",
     "avancado": "Avanzato"
   },
-  "chat": {
-    "title": "Chat IAcademy",
-    "practiceWithAI": "Pratica con l'IA",
-    "premium": "Premium",
-    "description": "Chatta con la nostra IA per praticare ciò che hai imparato nelle lezioni",
-    "openChat": "Apri Chat",
-    "unlock": "Sblocca"
-  },
   "certificate": {
     "obtained": "Certificato Ottenuto!",
     "getCertificate": "Ottieni il tuo certificato",
@@ -1456,15 +1357,6 @@
     "continue": "CONTINUA",
     "verify": "VERIFICA",
     "tryAgain": "RIPROVA",
-    "locked": "Bloccato",
-    "completed": "Completato",
-    "startNow": "Inizia ora",
-    "noContent": "Contenuto non ancora disponibile.",
-    "checkAnswer": "Verifica Risposta",
-    "tryAgainFeedback": "Ops! Riprova.",
-    "correctAnswer": "Complimenti! Risposta corretta!",
-    "phaseCompleted": "Fase completata con successo!",
-    "selectAllAnswers": "Seleziona tutte le risposte corrette",
     "stepTypes": {
       "learn": "📚 Impara",
       "quiz": "❓ Quiz",
@@ -1475,15 +1367,7 @@
       "correct": "Corretto!",
       "incorrect": "Riprova",
       "askEdi": "Chiedi aiuto a EDI",
-      "hint": "💡 Suggerimento",
-      "excellent": "Eccellente!",
-      "almostThere": "Quasi ci sei!",
-      "masteredConcept": "Hai padroneggiato questo concetto. Continua così!",
-      "hintReread": "Rileggi le opzioni. La risposta corretta è collegata al concetto principale.",
-      "hintOrder": "Pensa all'ordine logico: azione → oggetto → dettagli.",
-      "hintReview": "Torna al contenuto precedente e rivedi i concetti.",
-      "hintAskEdi": "EDI può aiutarti! Clicca sul pulsante qui sotto.",
-      "getCorrectToContinue": "Rispondi correttamente per continuare"
+      "hint": "💡 Suggerimento:"
     },
     "practical": {
       "instructions": "Clicca sulle parole per costruire il prompt corretto:",
@@ -1493,66 +1377,59 @@
     "chat": {
       "aiReady": "Pronto ad aiutare",
       "sendPlaceholder": "Scrivi il tuo messaggio...",
-      "aiResponse": "Ottimo esempio! Hai notato come ho elaborato il tuo input? Ora che l'abbiamo testato in pratica, clicca su 'CONTINUA' per andare avanti."
+      "aiResponse": "Ottimo esempio! Hai notato come ho elaborato il tuo input? Ora che l'abbiamo testato in pratica, clicca 'CONTINUA' per andare avanti."
     },
-    "textParts": {
-      "part": "Parte",
-      "of": "di",
-      "nextPart": "Parte successiva",
-      "previousPart": "Parte precedente",
-      "showPrevious": "Mostra parti precedenti",
-      "hidePrevious": "Nascondi parti precedenti",
-      "allRead": "Tutto il contenuto letto"
-    },
-    "matchWords": {
-      "instructions": "Collega ogni elemento a sinistra con il suo corrispondente a destra!",
-      "matched": "coppie collegate",
-      "reset": "Ricomincia"
-    },
-    "promptTrainer": {
-      "subtitle": "Allena il tuo prompt con EDI",
-      "challenge": "🎯 Sfida:",
-      "criteria": "Criteri di successo:",
-      "startMessage": "Scrivi il tuo prompt per iniziare!",
-      "completed": "Prompt approvato! Congratulazioni! 🎉",
-      "placeholder": "Scrivi il tuo prompt qui...",
-      "attempts": "Tentativi",
-      "showHint": "Mostra suggerimento",
-      "hideHint": "Nascondi suggerimento",
-      "showExample": "Mostra esempio di prompt",
-      "hideExample": "Nascondi esempio"
+    "day1": {
+      "step1": {
+        "title": "1. Cos'è ChatGPT (Senza Fantasia)",
+        "content": "Prima di usare ChatGPT, devi capire UNA cosa:\n\n❌ Non pensa\n❌ Non capisce il mondo\n❌ Non ha coscienza\n\nChatGPT è un **Grande Modello Linguistico (LLM)**.\n\nFunziona così:\nTesto entra → probabilità vengono calcolate → testo esce.\n\n👉 **Prevede la parola successiva** basandosi su pattern appresi da miliardi di testi umani.\n\nSe capisci questo, smetti di trattare l'IA come un umano\ne inizi a trattarla come uno **strumento controllabile**."
+      },
+      "step2": {
+        "title": "Il Pappagallo Statistico",
+        "content": "ChatGPT non ha imparato fatti.\nHa imparato **come gli umani scrivono sui fatti**.\n\nQuando digiti:\n\"Il marketing digitale funziona meglio con...\"\n\nIl modello calcola probabilità:\n- Strategia\n- Contenuto\n- Traffico\n- Dati\n\nSceglie la sequenza più probabile.\n\n⚠️ Importante:\nNon sa cos'è il marketing.\nSa **come le frasi sul marketing di solito continuano**."
+      },
+      "step3": {
+        "title": "Test di Realtà",
+        "question": "Quale affermazione è vera?",
+        "options": {
+          "0": "ChatGPT capisce cosa scrive",
+          "1": "ChatGPT prevede parole basandosi su pattern",
+          "2": "ChatGPT pensa come un umano"
+        },
+        "explanation": "Corretto. La comprensione è tua. La previsione è dell'IA."
+      }
     },
     "ediMotivation": {
       "almostDone": "Quasi finito! 🎯 Ci sei quasi!",
-      "halfway": "A metà strada! 💪 Continua così!",
+      "halfway": "A metà dell'opera! 💪 Continua così!",
       "greatJob": "Ottimo lavoro! ✨ Stai andando alla grande!",
       "keepGoing": "Non mollare adesso! 🔥 Ce la puoi fare!",
-      "finalStretch": "Ultimo tratto! ⚡ Ancora un po'!",
-      "encouragement": "Credo in te! 💖 Andiamo insieme!",
+      "finalStretch": "Ultimo sforzo! ⚡ Ancora un po'!",
+      "encouragement": "Credo in te! 💖 Andiamo avanti insieme!",
       "yourAssistant": "il tuo assistente",
       "almostDoneDay": "Il giorno {{day}} sta per finire! 🎯 {{phrase}}",
-      "halfwayDay": "A metà del giorno {{day}}! 💪 {{phrase}}",
-      "finalStretchDay": "Ultimo tratto del giorno {{day}}! ⚡ {{phrase}}",
+      "halfwayDay": "Siamo a metà del giorno {{day}}! 💪 {{phrase}}",
+      "finalStretchDay": "Ultimo sforzo del giorno {{day}}! ⚡ {{phrase}}",
       "phrases": {
         "almostDone": [
-          "Stai andando benissimo!",
-          "Continua così, sei fantastico!",
-          "Quasi là, ce la fai!",
+          "Stai andando alla grande!",
+          "Continua così, sei incredibile!",
+          "Ci sei quasi, ce l'hai fatta!",
           "Non mollare adesso!",
           "Stai spaccando!"
         ],
         "halfway": [
-          "Stai andando alla grande!",
-          "A metà strada, resta forte!",
-          "Ottimi progressi!",
+          "Stai facendo un lavoro fantastico!",
+          "A metà strada, tieni duro!",
+          "Progresso eccellente!",
           "Sei incredibile!",
           "Continua così!"
         ],
         "finalStretch": [
           "La fine è vicina!",
           "Sei arrivato così lontano!",
-          "Ultimo sforzo, dai tutto!",
-          "Finisci in bellezza!",
+          "Ultimo sforzo, dai il massimo!",
+          "Finisci in grande stile!",
           "Quasi al traguardo!"
         ]
       }
@@ -1761,8 +1638,8 @@
     "viewJobs": "Vedi Opportunità"
   },
   "weeklyStreak": {
-    "title": "Serie settimanale",
-    "subtitle": "Mantieni l'abitudine di apprendere",
+    "title": "Sequenza Settimanale",
+    "subtitle": "Mantieni l'abitudine di apprendimento",
     "streakDays": "giorni",
     "days": {
       "mon": "lun",
@@ -2050,20 +1927,6 @@
     "continue": "Continua",
     "complete": "Completa Giorno"
   },
-  "weeklyStreak": {
-    "title": "Sequenza Settimanale",
-    "subtitle": "Mantieni l'abitudine di apprendimento",
-    "streakDays": "giorni",
-    "days": {
-      "mon": "lun",
-      "tue": "mar",
-      "wed": "mer",
-      "thu": "gio",
-      "fri": "ven",
-      "sat": "sab",
-      "sun": "dom"
-    }
-  },
   "assistants": {
     "title": "Assistenti IA",
     "subtitle": "Scegli il tuo assistente specializzato",
@@ -2267,55 +2130,6 @@
         "combo": "✨ Pacchetto Completo",
         "aipack": "🤖 AI Pack",
         "freelancer": "💼 Premium Freelancer"
-      }
-    }
-  },
-  "lesson": {
-    "loading": "Caricamento...",
-    "close": "Chiudi",
-    "continue": "CONTINUA",
-    "verify": "VERIFICA",
-    "tryAgain": "RIPROVA",
-    "stepTypes": {
-      "learn": "📚 Impara",
-      "quiz": "❓ Quiz",
-      "practical": "⚡ Pratica",
-      "simulator": "🤖 Simulatore"
-    },
-    "quiz": {
-      "correct": "Corretto!",
-      "incorrect": "Riprova",
-      "askEdi": "Chiedi aiuto a EDI",
-      "hint": "💡 Suggerimento:"
-    },
-    "practical": {
-      "instructions": "Clicca sulle parole per costruire il prompt corretto:",
-      "yourAnswer": "La tua risposta:",
-      "available": "Parole disponibili:"
-    },
-    "chat": {
-      "aiReady": "Pronto ad aiutare",
-      "sendPlaceholder": "Scrivi il tuo messaggio...",
-      "aiResponse": "Ottimo esempio! Hai notato come ho elaborato il tuo input? Ora che l'abbiamo testato in pratica, clicca 'CONTINUA' per andare avanti."
-    },
-    "day1": {
-      "step1": {
-        "title": "1. Cos'è ChatGPT (Senza Fantasia)",
-        "content": "Prima di usare ChatGPT, devi capire UNA cosa:\n\n❌ Non pensa\n❌ Non capisce il mondo\n❌ Non ha coscienza\n\nChatGPT è un **Grande Modello Linguistico (LLM)**.\n\nFunziona così:\nTesto entra → probabilità vengono calcolate → testo esce.\n\n👉 **Prevede la parola successiva** basandosi su pattern appresi da miliardi di testi umani.\n\nSe capisci questo, smetti di trattare l'IA come un umano\ne inizi a trattarla come uno **strumento controllabile**."
-      },
-      "step2": {
-        "title": "Il Pappagallo Statistico",
-        "content": "ChatGPT non ha imparato fatti.\nHa imparato **come gli umani scrivono sui fatti**.\n\nQuando digiti:\n\"Il marketing digitale funziona meglio con...\"\n\nIl modello calcola probabilità:\n- Strategia\n- Contenuto\n- Traffico\n- Dati\n\nSceglie la sequenza più probabile.\n\n⚠️ Importante:\nNon sa cos'è il marketing.\nSa **come le frasi sul marketing di solito continuano**."
-      },
-      "step3": {
-        "title": "Test di Realtà",
-        "question": "Quale affermazione è vera?",
-        "options": {
-          "0": "ChatGPT capisce cosa scrive",
-          "1": "ChatGPT prevede parole basandosi su pattern",
-          "2": "ChatGPT pensa come un umano"
-        },
-        "explanation": "Corretto. La comprensione è tua. La previsione è dell'IA."
       }
     }
   },

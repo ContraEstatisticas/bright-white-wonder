@@ -1796,240 +1796,7 @@
     }
   },
   "landing": {
-    "badge": "O App que Ensina IA na Prática",
-    "title": "Aprenda IA com",
-    "subtitle": "Trilhas Interativas",
-    "description": "Domine as principais ferramentas de IA direto do seu celular com trilhas gamificadas e exercícios práticos",
-    "ctaPrimary": "Baixar Grátis",
-    "ctaSecondary": "Ver Como Funciona",
-    "feature1": "100% Prático",
-    "feature2": "Certificado",
-    "feature3": "Gamificado",
-    "stat1": "Ferramentas IA",
-    "stat2": "Downloads",
-    "stat3": "Avaliação na Store",
-    "nav": {
-      "home": "Início",
-      "about": "Sobre",
-      "programs": "Funcionalidades",
-      "testimonials": "Depoimentos",
-      "plan": "Plano",
-      "contact": "Contato",
-      "login": "Entrar",
-      "startNow": "Baixar App"
-    },
-    "hero": {
-      "badge": "O app de IA mais completo do mercado",
-      "title": "Domine a",
-      "titleHighlight": "Inteligência Artificial",
-      "titleEnd": "Direto do seu Celular",
-      "subtitle": "Aprenda IA com trilhas interativas, exercícios práticos e certificados digitais — tudo no app. Acesso a +20 ferramentas de IA, modo offline e gamificação.",
-      "cta": "Baixar Grátis",
-      "demo": "Ver Demonstração",
-      "students": "downloads",
-      "rating": "avaliação",
-      "countries": "países"
-    },
-    "features": {
-      "sectionLabel": "Funcionalidades do App",
-      "title": "Tudo que Você Precisa no Seu Bolso",
-      "subtitle": "Um app completo com trilhas interativas, assistente IA, progresso em tempo real e certificados — aprenda no seu ritmo, onde estiver.",
-      "curriculum": {
-        "title": "Trilhas Interativas",
-        "description": "Aprenda com trilhas gamificadas e conteúdo atualizado sobre as principais ferramentas de IA do mercado."
-      },
-      "mentoring": {
-        "title": "Assistente IA Integrado",
-        "description": "Tire dúvidas em tempo real com o EDI, seu assistente de IA pessoal dentro do app."
-      },
-      "community": {
-        "title": "Progresso em Tempo Real",
-        "description": "Acompanhe seu avanço com dashboards detalhados, streaks e estatísticas de aprendizado."
-      },
-      "certification": {
-        "title": "Certificados Digitais",
-        "description": "Ganhe certificados ao completar trilhas e desafios para comprovar suas habilidades em IA."
-      },
-      "practical": {
-        "title": "Modo Offline",
-        "description": "Baixe as lições e estude sem internet — ideal para aprender em qualquer lugar."
-      },
-      "career": {
-        "title": "Gamificação",
-        "description": "Ganhe XP, suba de nível, conquiste medalhas e mantenha sua sequência de estudos diária."
-      }
-    },
-    "programs": {
-      "sectionLabel": "Funcionalidades",
-      "title": "Explore os recursos do app",
-      "subtitle": "Funcionalidades pensadas para todos os níveis, do iniciante ao especialista em IA.",
-      "popular": "Mais Popular",
-      "startNow": "Baixar App",
-      "beginner": "Iniciante",
-      "intermediate": "Intermediário",
-      "advanced": "Avançado",
-      "fundamentals": {
-        "title": "Trilhas de IA",
-        "description": "Comece sua jornada em Inteligência Artificial com trilhas interativas e gamificadas diretamente no app.",
-        "duration": "4 semanas",
-        "highlights": [
-          "Trilhas interativas de IA",
-          "Exercícios práticos com ChatGPT",
-          "Automação de tarefas pelo app",
-          "Certificado digital"
-        ]
-      },
-      "machineLearning": {
-        "title": "Desafios Avançados",
-        "description": "Aprofunde-se em desafios de 28 dias com exercícios diários e acompanhamento de progresso.",
-        "duration": "28 dias",
-        "highlights": [
-          "Desafios diários com IA",
-          "Exercícios interativos",
-          "Progresso gamificado",
-          "Certificados de conclusão"
-        ]
-      },
-      "deepLearning": {
-        "title": "Assistente IA Pessoal",
-        "description": "Use o EDI, seu assistente de IA integrado, para tirar dúvidas e praticar prompts.",
-        "duration": "Ilimitado",
-        "highlights": [
-          "Chat com IA integrado",
-          "Treinador de prompts",
-          "Respostas em tempo real",
-          "Suporte personalizado pelo app"
-        ]
-      }
-    },
-    "stats": {
-      "students": "Downloads",
-      "countries": "Países",
-      "satisfaction": "Avaliação na Store",
-      "partners": "Ferramentas IA"
-    },
-    "testimonials": {
-      "sectionLabel": "Depoimentos",
-      "title": "O que dizem nossos usuários",
-      "subtitle": "Milhares de pessoas já aprenderam IA pelo app da Educly. Veja o que elas dizem.",
-      "items": [
-        {
-          "name": "Maria Silva",
-          "role": "Cientista de Dados",
-          "country": "Brasil",
-          "text": "O app da Educly transformou minha forma de aprender IA. Uso todos os dias no ônibus e em 3 meses consegui minha primeira vaga na área."
-        },
-        {
-          "name": "João Santos",
-          "role": "Gerente de Produto",
-          "country": "Portugal",
-          "text": "O app é incrível — as trilhas são práticas e posso estudar offline. A gamificação me mantém motivado e o assistente IA tira todas as dúvidas."
-        },
-        {
-          "name": "Ana García",
-          "role": "Engenheira de ML",
-          "country": "México",
-          "text": "Completei vários desafios pelo app e os certificados digitais fizeram toda a diferença no meu currículo. Recebi 3 ofertas de emprego!"
-        },
-        {
-          "name": "Carlos Fernández",
-          "role": "Fundador de Startup",
-          "country": "Argentina",
-          "text": "Uso o app diariamente para me atualizar em IA. As trilhas são super práticas e o modo offline é perfeito para quem viaja muito."
-        }
-      ]
-    },
-    "globalReach": {
-      "sectionLabel": "Alcance Global",
-      "title": "Presente em todo o mundo",
-      "subtitle": "O app da Educly já foi baixado em mais de 150 países, conectando uma comunidade global de aprendizado em IA.",
-      "regions": {
-        "latinAmerica": "América Latina",
-        "europe": "Europa",
-        "northAmerica": "América do Norte",
-        "asiaOceania": "Ásia e Oceania"
-      },
-      "features": {
-        "languages": {
-          "title": "15 Idiomas",
-          "description": "App disponível em múltiplos idiomas com tradução profissional"
-        },
-        "support": {
-          "title": "Suporte 24/7",
-          "description": "Assistente IA integrado e equipe de suporte disponível a qualquer hora"
-        },
-        "community": {
-          "title": "Comunidade no App",
-          "description": "Conecte-se com usuários do mundo todo e compartilhe sua evolução"
-        }
-      }
-    },
-    "cta": {
-      "title": "Pronto para aprender IA direto do seu celular?",
-      "subtitle": "Junte-se a mais de 50.000 usuários que já estão dominando IA com o app da Educly.",
-      "startFree": "Baixar Grátis",
-      "talkConsultant": "Falar com Suporte",
-      "guarantee": "Garantia de 30 dias",
-      "installments": "Até 12x",
-      "benefits": [
-        "Acesso completo a todas as trilhas",
-        "Atualizações gratuitas do app",
-        "Assistente IA integrado",
-        "Certificados digitais",
-        "Modo offline disponível",
-        "Garantia de satisfação de 30 dias"
-      ]
-    },
-    "footer": {
-      "description": "O app de Inteligência Artificial mais completo do mercado. Aprenda IA na prática, direto do seu celular.",
-      "contact": "Contato",
-      "programs": "Funcionalidades",
-      "resources": "Recursos",
-      "company": "Empresa",
-      "legal": "Legal",
-      "links": {
-        "aiFundamentals": "Trilhas de IA",
-        "machineLearning": "Desafios de 28 dias",
-        "deepLearning": "Assistente IA",
-        "aiForBusiness": "Certificados Digitais",
-        "blog": "Blog",
-        "webinars": "Tutoriais",
-        "ebooks": "Guias",
-        "community": "Comunidade",
-        "aboutUs": "Sobre Nós",
-        "careers": "Carreiras",
-        "partnerships": "Parcerias",
-        "contact": "Contato",
-        "terms": "Termos de Uso",
-        "privacy": "Privacidade",
-        "cookies": "Cookies",
-        "refund": "Cancelamento",
-        "subscriptionTerms": "Termos de Assinatura"
-      },
-      "copyright": "Todos os direitos reservados.",
-      "madeWith": "Feito com ❤️ para a comunidade global de IA"
-    },
-    "pricing": {
-      "title": "Desbloqueie todo o potencial do app",
-      "subtitle": "Comece sua jornada de aprendizado em IA hoje com um investimento único",
-      "offerBadge": "OFERTA DE HOJE",
-      "productName": "Acesso Completo ao App de IA",
-      "pricePrefix": "POR APENAS",
-      "perDay": "por dia",
-      "ctaButton": "GARANTIR MEU ACESSO AGORA",
-      "securePayment": "Pagamento Seguro via Stripe",
-      "quizDiscountNotice": "🎁 QUER UM DESCONTO MAIOR? COMPLETE O QUIZ ABAIXO!",
-      "quizBadge": "ACESSO EXCLUSIVO",
-      "quizTitle": "Acelere seu aprendizado em IA com o app",
-      "quizSubtitle": "Descubra sua trilha personalizada com um valor especial de lançamento.",
-      "quizButton": "Acessar quiz e liberar desconto"
-    },
-    "quiz": {
-      "link": {
-        "name": "Acessar quiz"
-      },
-      "url": "https://start.educly.app/portuguese"
-    }
+    "subtitle": "Trilhas Interativas"
   },
   "auth": {
     "title": "Acesse sua Conta",
@@ -3440,32 +3207,70 @@
     "offlineReady": "App pronto para uso offline"
   },
   "profile": {
-    "photoUpdated": "Foto atualizada!",
-    "student": "Estudante",
-    "level": "Nível",
-    "toNextLevel": "para o Nv. ",
+    "title": "Perfil",
+    "defaultName": "Estudante",
+    "levelLabel": "Nível {{level}}",
+    "levelProgress": "Progresso do Nível",
+    "total": "total",
     "medals": "Medalhas",
     "courses": "Cursos",
-    "securityFinance": "Segurança & Financeiro",
+    "securitySection": "Segurança & Financeiro",
     "changePassword": "Alterar Senha",
-    "resetPassword": "Redefinir Senha",
+    "confirmResetDesc": "Enviaremos um link de confirmação para seu e-mail.",
+    "linkSentTo": "O link será enviado para:",
+    "sendEmail": "Enviar E-mail",
     "billingHistory": "Histórico de Cobrança",
-    "billingStatement": "Extrato de Pagamento",
-    "trackBilling": "Acompanhe seu histórico financeiro.",
-    "paid": "PAGO",
-    "active": "Ativo",
+    "tabAccount": "Conta",
+    "tabAchievements": "Conquistas",
+    "tabNotifications": "Notificações",
     "accountDetails": "Detalhes da Conta",
-    "email": "E-mail",
-    "fullName": "Nome Completo",
+    "emailLabel": "E-mail",
+    "emailNote": "O e-mail não pode ser alterado. Entre em contato com o suporte para modificações.",
+    "fullNameLabel": "Nome Completo",
+    "fullNamePlaceholder": "Digite seu nome completo",
+    "memberSince": "Membro desde",
     "saveChanges": "Salvar Alterações",
-    "updateSuccess": "Perfil atualizado!",
-    "achievements": "Conquistas",
-    "unlockedMedals": "de {{total}} medalhas desbloqueadas",
+    "medalsEarned": "{{count}} medalhas conquistadas",
     "viewAll": "Ver todas",
-    "sendResetLink": "Enviaremos um link de redefinição para",
-    "sendRecoverEmail": "Enviar E-mail de Recuperação",
+    "earned": "Conquistada",
+    "yourProgress": "Seu Progresso",
+    "progressMotto": "Continue aprendendo para desbloquear mais conquistas!",
+    "inProgress": "Em progresso",
+    "notificationSettings": "Configurações de Notificação",
+    "notifEmail": "Notificações por E-mail",
+    "notifEmailDesc": "Receba atualizações importantes no seu e-mail",
+    "notifPush": "Notificações Push",
+    "notifPushDesc": "Receba notificações no navegador",
+    "notifLessons": "Novas Aulas",
+    "notifLessonsDesc": "Notificações sobre novas aulas disponíveis",
+    "notifPromos": "Promoções e Ofertas",
+    "notifPromosDesc": "Receba ofertas especiais e novidades",
+    "savePreferences": "Salvar Preferências",
+    "paymentStatement": "Extrato de Pagamento",
+    "statusActive": "Ativo",
     "noPayments": "Nenhum pagamento encontrado.",
-    "days": "Dias"
+    "noPaymentsDesc": "Seus pagamentos aparecerão aqui quando você fizer uma assinatura.",
+    "viewPlans": "Ver Planos",
+    "manageSubscription": "Gerenciar Assinatura",
+    "success": "Sucesso!",
+    "imageSaved": "Imagem salva com sucesso.",
+    "error": "Erro",
+    "errorLoadDesc": "Não foi possível carregar o perfil",
+    "uploadError": "Erro no upload",
+    "saveError": "Erro ao salvar",
+    "unexpectedError": "Ocorreu um erro inesperado",
+    "emailNotFound": "E-mail não encontrado",
+    "sendError": "Erro ao enviar",
+    "emailSent": "E-mail enviado!",
+    "emailSentDesc": "Um link de redefinição foi enviado para {{email}}.",
+    "linkCopied": "Link copiado!",
+    "linkCopiedDesc": "O link do seu perfil foi copiado para a área de transferência.",
+    "copyError": "Não foi possível copiar o link.",
+    "updated": "Perfil atualizado!",
+    "updatedDesc": "Suas informações foram salvas com sucesso.",
+    "updateError": "Não foi possível atualizar o perfil.",
+    "settingsSaved": "Configurações salvas!",
+    "notificationsUpdated": "Suas preferências de notificação foram atualizadas."
   },
   "company": {
     "title": "Informações da Empresa",
@@ -3544,75 +3349,6 @@
       "label": "Identificador na fatura",
       "value": "EDUCLY.APP"
     }
-  },
-  "profile": {
-    "title": "Perfil",
-    "defaultName": "Estudante",
-    "levelLabel": "Nível {{level}}",
-    "levelProgress": "Progresso do Nível",
-    "total": "total",
-    "medals": "Medalhas",
-    "courses": "Cursos",
-    "securitySection": "Segurança & Financeiro",
-    "changePassword": "Alterar Senha",
-    "confirmResetDesc": "Enviaremos um link de confirmação para seu e-mail.",
-    "linkSentTo": "O link será enviado para:",
-    "sendEmail": "Enviar E-mail",
-    "billingHistory": "Histórico de Cobrança",
-    "tabAccount": "Conta",
-    "tabAchievements": "Conquistas",
-    "tabNotifications": "Notificações",
-    "accountDetails": "Detalhes da Conta",
-    "emailLabel": "E-mail",
-    "emailNote": "O e-mail não pode ser alterado. Entre em contato com o suporte para modificações.",
-    "fullNameLabel": "Nome Completo",
-    "fullNamePlaceholder": "Digite seu nome completo",
-    "memberSince": "Membro desde",
-    "saveChanges": "Salvar Alterações",
-    "medalsEarned": "{{count}} medalhas conquistadas",
-    "viewAll": "Ver todas",
-    "earned": "Conquistada",
-    "yourProgress": "Seu Progresso",
-    "progressMotto": "Continue aprendendo para desbloquear mais conquistas!",
-    "inProgress": "Em progresso",
-    "notificationSettings": "Configurações de Notificação",
-    "notifEmail": "Notificações por E-mail",
-    "notifEmailDesc": "Receba atualizações importantes no seu e-mail",
-    "notifPush": "Notificações Push",
-    "notifPushDesc": "Receba notificações no navegador",
-    "notifLessons": "Novas Aulas",
-    "notifLessonsDesc": "Notificações sobre novas aulas disponíveis",
-    "notifPromos": "Promoções e Ofertas",
-    "notifPromosDesc": "Receba ofertas especiais e novidades",
-    "savePreferences": "Salvar Preferências",
-    "paymentStatement": "Extrato de Pagamento",
-    "statusActive": "Ativo",
-    "noPayments": "Nenhum pagamento encontrado.",
-    "noPaymentsDesc": "Seus pagamentos aparecerão aqui quando você fizer uma assinatura.",
-    "viewPlans": "Ver Planos",
-    "manageSubscription": "Gerenciar Assinatura",
-    "success": "Sucesso!",
-    "imageSaved": "Imagem salva com sucesso.",
-    "error": "Erro",
-    "errorLoadDesc": "Não foi possível carregar o perfil",
-    "uploadError": "Erro no upload",
-    "saveError": "Erro ao salvar",
-    "unexpectedError": "Ocorreu um erro inesperado",
-    "emailNotFound": "E-mail não encontrado",
-    "sendError": "Erro ao enviar",
-    "emailSent": "E-mail enviado!",
-    "emailSentDesc": "Um link de redefinição foi enviado para {{email}}.",
-    "linkCopied": "Link copiado!",
-    "linkCopiedDesc": "O link do seu perfil foi copiado para a área de transferência.",
-    "copyError": "Não foi possível copiar o link.",
-    "updated": "Perfil atualizado!",
-    "updatedDesc": "Suas informações foram salvas com sucesso.",
-    "updateError": "Não foi possível atualizar o perfil.",
-    "settingsSaved": "Configurações salvas!",
-    "notificationsUpdated": "Suas preferências de notificação foram atualizadas."
-  },
-  "landing": {
-    "subtitle": "Trilhas Interativas"
   },
   "thankYou": {
     "title": "Domine as melhores IAs com",

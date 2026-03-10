@@ -34,12 +34,11 @@ export const FloatingEdiChat = () => {
 
   useEffect(() => {
     if (isOpen && !hasGreeted) {
-      const greeting =
-        "Olá! 👋 Eu sou o assistente da Educy. Estou aqui para te ajudar a praticar o uso de ferramentas de IA. Como posso te ajudar hoje?";
+      const greeting = t("supportChat.greeting", "Olá! 👋 Eu sou o assistente da Educy. Estou aqui para te ajudar a praticar o uso de ferramentas de IA. Como posso te ajudar hoje?");
       setMessages([{ role: "assistant", content: greeting }]);
       setHasGreeted(true);
     }
-  }, [isOpen, hasGreeted]);
+  }, [isOpen, hasGreeted, t]);
 
   const handleSend = async (message: string) => {
     const userMessage: Message = { role: "user", content: message };
@@ -218,26 +217,26 @@ export const FloatingEdiChat = () => {
                   </div>
                   <div className="bg-muted text-foreground rounded-2xl rounded-bl-md px-4 py-3">
                     <div className="flex items-center gap-1.5">
-                      <span 
+                      <span
                         className="w-2.5 h-2.5 bg-muted-foreground/60 rounded-full"
-                        style={{ 
+                        style={{
                           animation: "typing-dot 1.4s infinite ease-in-out both",
                           animationDelay: "0ms"
-                        }} 
+                        }}
                       />
-                      <span 
+                      <span
                         className="w-2.5 h-2.5 bg-muted-foreground/60 rounded-full"
-                        style={{ 
+                        style={{
                           animation: "typing-dot 1.4s infinite ease-in-out both",
                           animationDelay: "200ms"
-                        }} 
+                        }}
                       />
-                      <span 
+                      <span
                         className="w-2.5 h-2.5 bg-muted-foreground/60 rounded-full"
-                        style={{ 
+                        style={{
                           animation: "typing-dot 1.4s infinite ease-in-out both",
                           animationDelay: "400ms"
-                        }} 
+                        }}
                       />
                     </div>
                   </div>

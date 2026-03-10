@@ -184,7 +184,7 @@ export const EdiMotivation = ({
  * @param dayNumber - Current day number for personalized messages
  */
 export const useEdiMotivation = (
-  currentStep: number, 
+  currentStep: number,
   totalSteps: number,
   dayNumber: number = 1
 ) => {
@@ -201,12 +201,12 @@ export const useEdiMotivation = (
   // Get random phrase from translated array
   const getRandomPhrase = useCallback((type: "almostDone" | "halfway" | "finalStretch"): string => {
     const phrases = t(`lesson.ediMotivation.phrases.${type}`, { returnObjects: true });
-    
+
     if (Array.isArray(phrases) && phrases.length > 0) {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       return phrases[randomIndex];
     }
-    
+
     // Fallback phrases if translation not available
     const fallbackPhrases: Record<string, string[]> = {
       almostDone: [
@@ -231,7 +231,7 @@ export const useEdiMotivation = (
         "Quase na linha de chegada!"
       ]
     };
-    
+
     const fallback = fallbackPhrases[type] || [];
     const randomIndex = Math.floor(Math.random() * fallback.length);
     return fallback[randomIndex] || "";
@@ -239,22 +239,22 @@ export const useEdiMotivation = (
 
   // Generate personalized message with day number and random phrase
   const generateCustomMessage = useCallback((type: EdiMotivationProps["type"]): string => {
-    const phraseType = type === "almost_done" ? "almostDone" 
-      : type === "final_stretch" ? "finalStretch" 
-      : "halfway";
-    
+    const phraseType = type === "almost_done" ? "almostDone"
+      : type === "final_stretch" ? "finalStretch"
+        : "halfway";
+
     const phrase = getRandomPhrase(phraseType);
-    
+
     const templateKey = type === "almost_done" ? "almostDoneDay"
       : type === "final_stretch" ? "finalStretchDay"
-      : "halfwayDay";
-    
-    const template = t(`lesson.ediMotivation.${templateKey}`, { 
+        : "halfwayDay";
+
+    const template = t(`lesson.ediMotivation.${templateKey}`, {
       day: dayNumber,
       phrase: phrase,
       defaultValue: `Dia ${dayNumber}! ${phrase}`
     });
-    
+
     return template;
   }, [t, dayNumber, getRandomPhrase]);
 

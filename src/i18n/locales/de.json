@@ -1,46 +1,11 @@
 {
   "chat": {
-    "title": "Educly Chat",
-    "practicing": "Üben",
-    "loading": "Laden...",
-    "greeting": {
-      "default": "Hallo! 👋 Ich bin der Educly-Assistent. Ich bin hier, um Ihnen beim Üben der Nutzung von KI-Tools zu helfen. Wie kann ich Ihnen heute helfen?",
-      "withTool": "Hallo! 👋 Ich bin der Educly-Assistent. Ich bin hier, um Ihnen beim Üben von {{tool}} zu helfen. Was möchten Sie lernen oder testen?",
-      "restart": "Hallo! 👋 Fangen wir von vorne an! Ich bin hier, um Ihnen beim Üben von {{tool}} zu helfen. Was möchten Sie lernen?",
-      "restartDefault": "Hallo! 👋 Fangen wir von vorne an! Wie kann ich Ihnen heute mit KI-Tools helfen?"
-    },
-    "input": {
-      "placeholder": "Geben Sie Ihre Frage zu KI ein...",
-      "placeholderWithTool": "Fragen Sie über {{tool}}..."
-    },
-    "error": {
-      "title": "Chat-Fehler",
-      "notLoggedIn": "Sie müssen angemeldet sein, um den Chat zu nutzen",
-      "sendError": "Fehler beim Senden der Nachricht"
-    },
-    "premium": {
-      "title": "Educly Chat Premium",
-      "description": "Schalten Sie den KI-Chat frei, um das Gelernte zu üben",
-      "unlock": "Premium-Zugang Freischalten",
-      "backToDashboard": "Zurück zum Dashboard",
-      "features": {
-        "unlimitedChat": {
-          "title": "Unbegrenzter Chat",
-          "description": "Chatten Sie unbegrenzt mit der KI"
-        },
-        "guidedPractice": {
-          "title": "Geführte Praxis",
-          "description": "Üben Sie, was Sie in den Lektionen gelernt haben"
-        },
-        "instantResponses": {
-          "title": "Sofortige Antworten",
-          "description": "Erhalten Sie Antworten in Echtzeit"
-        }
-      }
-    },
-    "practiceWithAI": "Üben Sie mit der KI",
+    "title": "Chat IAcademy",
+    "practiceWithAI": "Mit KI üben",
+    "premium": "Premium",
+    "description": "Chatten Sie mit unserer KI, um das Gelernte aus den Lektionen zu üben",
     "openChat": "Chat Öffnen",
-    "description": "Stellen Sie Fragen und üben Sie, was Sie in den Lektionen gelernt haben, mit unserem KI-Assistenten"
+    "unlock": "Freischalten"
   },
   "dailyMissions": {
     "title": "Tägliche Missionen",
@@ -1231,14 +1196,6 @@
     "intermediario": "Fortgeschritten",
     "avancado": "Experte"
   },
-  "chat": {
-    "title": "Chat IAcademy",
-    "practiceWithAI": "Mit KI üben",
-    "premium": "Premium",
-    "description": "Chatten Sie mit unserer KI, um das Gelernte aus den Lektionen zu üben",
-    "openChat": "Chat Öffnen",
-    "unlock": "Freischalten"
-  },
   "certificate": {
     "obtained": "Zertifikat Erhalten!",
     "getCertificate": "Holen Sie sich Ihr Zertifikat",
@@ -1367,19 +1324,11 @@
     "dailyApplication": "Wie man es im Alltag anwendet"
   },
   "lesson": {
-    "loading": "Wird geladen...",
+    "loading": "Laden...",
     "close": "Schließen",
-    "continue": "FORTFAHREN",
+    "continue": "WEITER",
     "verify": "ÜBERPRÜFEN",
-    "tryAgain": "ERNEUT VERSUCHEN",
-    "locked": "Gesperrt",
-    "completed": "Abgeschlossen",
-    "startNow": "Jetzt starten",
-    "noContent": "Inhalt für diese Phase noch nicht verfügbar.",
-    "checkAnswer": "Antwort Prüfen",
-    "tryAgainFeedback": "Ups! Versuchen Sie es erneut.",
-    "correctAnswer": "Herzlichen Glückwunsch! Richtige Antwort!",
-    "phaseCompleted": "Phase erfolgreich abgeschlossen!",
+    "tryAgain": "NOCHMAL VERSUCHEN",
     "stepTypes": {
       "learn": "📚 Lernen",
       "quiz": "❓ Quiz",
@@ -1388,86 +1337,71 @@
     },
     "quiz": {
       "correct": "Richtig!",
-      "incorrect": "Erneut versuchen",
+      "incorrect": "Versuche es erneut",
       "askEdi": "EDI um Hilfe bitten",
-      "hint": "💡 Hinweis",
-      "excellent": "Ausgezeichnet!",
-      "almostThere": "Fast geschafft!",
-      "masteredConcept": "Sie haben dieses Konzept gemeistert. Weiter so!",
-      "hintReread": "Lesen Sie die Optionen erneut. Die richtige Antwort ist mit dem Hauptkonzept verbunden.",
-      "hintOrder": "Denken Sie an die logische Reihenfolge: Aktion → Objekt → Details.",
-      "hintReview": "Gehen Sie zurück zum vorherigen Inhalt und überprüfen Sie die Konzepte.",
-      "hintAskEdi": "EDI kann Ihnen helfen! Klicken Sie auf die Schaltfläche unten.",
-      "getCorrectToContinue": "Richtig antworten um fortzufahren"
+      "hint": "💡 Hinweis:"
     },
     "practical": {
-      "instructions": "Klicken Sie auf die Wörter, um den korrekten Prompt zu erstellen:",
-      "yourAnswer": "Ihre Antwort:",
+      "instructions": "Klicke auf die Wörter, um den richtigen Prompt zu erstellen:",
+      "yourAnswer": "Deine Antwort:",
       "available": "Verfügbare Wörter:"
     },
     "chat": {
       "aiReady": "Bereit zu helfen",
-      "sendPlaceholder": "Geben Sie Ihre Nachricht ein...",
-      "aiResponse": "Ausgezeichnetes Beispiel! Haben Sie bemerkt, wie ich Ihre Eingabe verarbeitet habe? Nachdem wir es in der Praxis getestet haben, klicken Sie auf 'FORTFAHREN', um weiterzumachen."
+      "sendPlaceholder": "Schreibe deine Nachricht...",
+      "aiResponse": "Ausgezeichnetes Beispiel! Hast du bemerkt, wie ich deine Eingabe verarbeitet habe? Jetzt, wo wir es in der Praxis getestet haben, klicke auf 'WEITER', um fortzufahren."
     },
-    "textParts": {
-      "part": "Teil",
-      "of": "von",
-      "nextPart": "Nächster Teil",
-      "previousPart": "Vorheriger Teil",
-      "showPrevious": "Vorherige Teile anzeigen",
-      "hidePrevious": "Vorherige Teile ausblenden",
-      "allRead": "Alle Inhalte gelesen"
-    },
-    "matchWords": {
-      "instructions": "Verbinden Sie jeden Begriff links mit dem passenden Begriff rechts!",
-      "matched": "Paare verbunden",
-      "reset": "Neu starten"
-    },
-    "promptTrainer": {
-      "subtitle": "Trainiere deinen Prompt mit EDI",
-      "challenge": "🎯 Herausforderung:",
-      "criteria": "Erfolgskriterien:",
-      "startMessage": "Schreibe deinen Prompt, um zu beginnen!",
-      "completed": "Prompt genehmigt! Herzlichen Glückwunsch! 🎉",
-      "placeholder": "Gib deinen Prompt hier ein...",
-      "attempts": "Versuche",
-      "showHint": "Tipp anzeigen",
-      "hideHint": "Tipp ausblenden",
-      "showExample": "Prompt-Beispiel anzeigen",
-      "hideExample": "Beispiel ausblenden"
+    "day1": {
+      "step1": {
+        "title": "1. Was ist ChatGPT (Ohne Fantasie)",
+        "content": "Bevor du ChatGPT benutzt, musst du EINE Sache verstehen:\n\n❌ Es denkt nicht\n❌ Es versteht die Welt nicht\n❌ Es hat kein Bewusstsein\n\nChatGPT ist ein **Großes Sprachmodell (LLM)**.\n\nEs funktioniert so:\nText geht rein → Wahrscheinlichkeiten werden berechnet → Text kommt raus.\n\n👉 Es **sagt das nächste Wort vorher** basierend auf Mustern aus Milliarden menschlicher Texte.\n\nWenn du das verstehst, hörst du auf, KI wie einen Menschen zu behandeln\nund beginnst, sie als **kontrollierbares Werkzeug** zu behandeln."
+      },
+      "step2": {
+        "title": "Der Statistische Papagei",
+        "content": "ChatGPT hat keine Fakten gelernt.\nEs hat gelernt, **wie Menschen über Fakten schreiben**.\n\nWenn du tippst:\n\"Digitales Marketing funktioniert am besten mit...\"\n\nDas Modell berechnet Wahrscheinlichkeiten:\n- Strategie\n- Inhalt\n- Traffic\n- Daten\n\nEs wählt die wahrscheinlichste Sequenz.\n\n⚠️ Wichtig:\nEs weiß nicht, was Marketing ist.\nEs weiß, **wie Sätze über Marketing normalerweise weitergehen**."
+      },
+      "step3": {
+        "title": "Realitätscheck",
+        "question": "Welche Aussage ist wahr?",
+        "options": {
+          "0": "ChatGPT versteht, was es schreibt",
+          "1": "ChatGPT sagt Wörter basierend auf Mustern vorher",
+          "2": "ChatGPT denkt wie ein Mensch"
+        },
+        "explanation": "Richtig. Das Verstehen ist deins. Die Vorhersage ist die der KI."
+      }
     },
     "ediMotivation": {
       "almostDone": "Fast geschafft! 🎯 Du bist fast da!",
-      "halfway": "Halbzeit! 💪 Weiter so!",
-      "greatJob": "Großartige Arbeit! ✨ Du machst das fantastisch!",
+      "halfway": "Hälfte geschafft! 💪 Weiter so!",
+      "greatJob": "Gute Arbeit! ✨ Du machst das toll!",
       "keepGoing": "Gib jetzt nicht auf! 🔥 Du schaffst das!",
       "finalStretch": "Endspurt! ⚡ Nur noch ein bisschen!",
-      "encouragement": "Ich glaube an dich! 💖 Wir schaffen das zusammen!",
+      "encouragement": "Ich glaube an dich! 💖 Lass uns das zusammen machen!",
       "yourAssistant": "dein Assistent",
       "almostDoneDay": "Tag {{day}} ist fast vorbei! 🎯 {{phrase}}",
-      "halfwayDay": "Halbzeit bei Tag {{day}}! 💪 {{phrase}}",
-      "finalStretchDay": "Endspurt bei Tag {{day}}! ⚡ {{phrase}}",
+      "halfwayDay": "Die Hälfte von Tag {{day}} ist geschafft! 💪 {{phrase}}",
+      "finalStretchDay": "Endspurt von Tag {{day}}! ⚡ {{phrase}}",
       "phrases": {
         "almostDone": [
           "Du machst das großartig!",
           "Weiter so, du bist unglaublich!",
           "Fast da, du schaffst das!",
           "Gib jetzt nicht auf!",
-          "Du rockst das!"
+          "Du bist fantastisch!"
         ],
         "halfway": [
-          "Du bist fantastisch!",
+          "Du machst das toll!",
           "Halbzeit, bleib stark!",
-          "Ausgezeichneter Fortschritt!",
+          "Hervorragender Fortschritt!",
           "Du bist unglaublich!",
           "Weiter so!"
         ],
         "finalStretch": [
           "Das Ende ist nah!",
-          "Du bist so weit gekommen!",
+          "Du bist schon so weit gekommen!",
           "Letzter Schub, gib alles!",
-          "Beende mit Stil!",
+          "Beende es mit Stil!",
           "Fast am Ziel!"
         ]
       }
@@ -1673,21 +1607,7 @@
     "unlockButton": "Zu ChatGPT"
   },
   "thankYou": {
-    "badge": "Willkommen bei der KI-Akademie",
-    "title": "Danke!",
-    "subtitle": "Willkommen in der Zukunft der künstlichen Intelligenz",
-    "description": "Ihre digitale Transformationsreise beginnt jetzt",
-    "ctaButton": "Meinen Pfad Starten",
-    "benefit1Title": "Lernen Sie in Ihrem Tempo",
-    "benefit1Desc": "Zugang wann und wo Sie wollen",
-    "benefit2Title": "Zertifikate",
-    "benefit2Desc": "Vom Markt anerkannt",
-    "benefit3Title": "Community",
-    "benefit3Desc": "Lernen Sie mit anderen Studenten",
-    "stat1": "KI-Pfade",
-    "stat2": "Praktische Phasen",
-    "stat3": "Kostenlos",
-    "whatYouGet": "Was Sie bekommen werden"
+    "title": "Meistern Sie die besten KIs mit"
   },
   "notFound": {
     "title": "404",
@@ -1970,219 +1890,7 @@
     }
   },
   "landing": {
-    "nav": {
-      "home": "Startseite",
-      "about": "Über uns",
-      "programs": "Funktionen",
-      "testimonials": "Bewertungen",
-      "plan": "Plan",
-      "contact": "Kontakt",
-      "login": "Anmelden",
-      "startNow": "App herunterladen"
-    },
-    "hero": {
-      "badge": "Die umfassendste KI-App auf dem Markt",
-      "title": "Meistern Sie",
-      "titleHighlight": "Künstliche Intelligenz",
-      "titleEnd": "Direkt von Ihrem Handy",
-      "subtitle": "Lernen Sie KI mit interaktiven Lernpfaden, praktischen Übungen und digitalen Zertifikaten — alles in der App. Zugang zu über 20 KI-Tools, Offline-Modus und Gamification.",
-      "cta": "Kostenlos herunterladen",
-      "demo": "Demo ansehen",
-      "students": "Downloads",
-      "rating": "Bewertung",
-      "countries": "Länder"
-    },
-    "features": {
-      "sectionLabel": "App-Funktionen",
-      "title": "Alles was Sie brauchen in Ihrer Tasche",
-      "subtitle": "Eine komplette App mit interaktiven Lernpfaden, KI-Assistent, Echtzeit-Fortschritt und Zertifikaten.",
-      "curriculum": {
-        "title": "Interaktive Lernpfade",
-        "description": "Lernen Sie mit gamifizierten Pfaden und ständig aktualisierten Inhalten über die besten KI-Tools."
-      },
-      "mentoring": {
-        "title": "Integrierter KI-Assistent",
-        "description": "Erhalten Sie Echtzeit-Antworten von EDI, Ihrem persönlichen KI-Assistenten in der App."
-      },
-      "community": {
-        "title": "Echtzeit-Fortschritt",
-        "description": "Verfolgen Sie Ihren Fortschritt mit detaillierten Dashboards, Streaks und Lernstatistiken."
-      },
-      "certification": {
-        "title": "Digitale Zertifikate",
-        "description": "Verdienen Sie Zertifikate durch Abschluss von Pfaden und Herausforderungen."
-      },
-      "practical": {
-        "title": "Offline-Modus",
-        "description": "Laden Sie Lektionen herunter und lernen Sie ohne Internet — perfekt für unterwegs."
-      },
-      "career": {
-        "title": "Gamification",
-        "description": "Verdienen Sie XP, steigen Sie im Level auf, schalten Sie Abzeichen frei und halten Sie Ihre tägliche Lernserie."
-      }
-    },
-    "programs": {
-      "sectionLabel": "Funktionen",
-      "title": "Entdecken Sie die App-Funktionen",
-      "subtitle": "Funktionen für alle Niveaus, vom Anfänger bis zum KI-Spezialisten.",
-      "popular": "Beliebteste",
-      "startNow": "App herunterladen",
-      "beginner": "Anfänger",
-      "intermediate": "Fortgeschritten",
-      "advanced": "Experte",
-      "fundamentals": {
-        "title": "KI-Lernpfade",
-        "description": "Starten Sie Ihre KI-Reise mit interaktiven und gamifizierten Pfaden in der App.",
-        "duration": "4 Wochen",
-        "highlights": [
-          "Interaktive KI-Pfade",
-          "Praktische ChatGPT-Übungen",
-          "Aufgabenautomatisierung via App",
-          "Digitales Zertifikat"
-        ]
-      },
-      "machineLearning": {
-        "title": "Erweiterte Herausforderungen",
-        "description": "Tauchen Sie ein in 28-Tage-Herausforderungen mit täglichen Übungen.",
-        "duration": "28 Tage",
-        "highlights": [
-          "Tägliche KI-Herausforderungen",
-          "Interaktive Übungen",
-          "Gamifizierter Fortschritt",
-          "Abschlusszertifikate"
-        ]
-      },
-      "deepLearning": {
-        "title": "Persönlicher KI-Assistent",
-        "description": "Nutzen Sie EDI, Ihren integrierten KI-Assistenten, für Fragen und Prompt-Training.",
-        "duration": "Unbegrenzt",
-        "highlights": [
-          "Integrierter KI-Chat",
-          "Prompt-Trainer",
-          "Echtzeit-Antworten",
-          "Personalisierter Support in der App"
-        ]
-      }
-    },
-    "pricing": {
-      "badge": "Preise",
-      "title": "Schalten Sie das volle Potenzial der App frei",
-      "subtitle": "Starten Sie noch heute Ihre KI-Lernreise",
-      "week1": "1-WOCHEN-PLAN",
-      "week4": "4-WOCHEN-PLAN",
-      "week12": "12-WOCHEN-PLAN",
-      "mostPopular": "BELIEBTESTE",
-      "from": "VON",
-      "for": "FÜR",
-      "perDay": "pro Tag",
-      "getMyPlan": "MEINEN PLAN HOLEN",
-      "note": "Menschen, die den 12-Wochen-Plan nutzen, erzielen doppelt so gute Ergebnisse."
-    },
-    "testimonials": {
-      "sectionLabel": "Bewertungen",
-      "title": "Was unsere Nutzer sagen",
-      "subtitle": "Tausende Menschen haben bereits KI mit der Educly-App gelernt.",
-      "items": [
-        {
-          "name": "Maria Silva",
-          "role": "Data Scientist",
-          "country": "Brasilien",
-          "text": "Die Educly-App hat meine Art, KI zu lernen, verändert. Ich nutze sie jeden Tag im Bus und habe in 3 Monaten meinen ersten Job bekommen."
-        },
-        {
-          "name": "João Santos",
-          "role": "Product Manager",
-          "country": "Portugal",
-          "text": "Die App ist fantastisch — die Pfade sind praktisch und ich kann offline lernen. Die Gamification hält mich motiviert."
-        },
-        {
-          "name": "Ana García",
-          "role": "ML Engineer",
-          "country": "Mexiko",
-          "text": "Ich habe mehrere Herausforderungen über die App abgeschlossen und die digitalen Zertifikate haben den Unterschied gemacht."
-        },
-        {
-          "name": "Carlos Fernández",
-          "role": "Startup Founder",
-          "country": "Argentinien",
-          "text": "Ich nutze die App täglich, um mich in KI auf dem Laufenden zu halten. Der Offline-Modus ist perfekt für Vielreisende."
-        }
-      ]
-    },
-    "globalReach": {
-      "sectionLabel": "Globale Reichweite",
-      "title": "Weltweit präsent",
-      "subtitle": "Die Educly-App wurde in über 150 Ländern heruntergeladen und verbindet eine globale KI-Lerngemeinschaft.",
-      "regions": {
-        "latinAmerica": "Lateinamerika",
-        "europe": "Europa",
-        "northAmerica": "Nordamerika",
-        "asiaOceania": "Asien & Ozeanien"
-      },
-      "features": {
-        "languages": {
-          "title": "15 Sprachen",
-          "description": "App in mehreren Sprachen mit professioneller Übersetzung"
-        },
-        "support": {
-          "title": "24/7 Support",
-          "description": "Integrierter KI-Assistent und Support-Team jederzeit verfügbar"
-        },
-        "community": {
-          "title": "Community in der App",
-          "description": "Vernetzen Sie sich mit Nutzern weltweit und teilen Sie Ihren Fortschritt"
-        }
-      }
-    },
-    "stats": {
-      "students": "Downloads",
-      "countries": "Länder",
-      "satisfaction": "Store-Bewertung",
-      "partners": "KI-Tools"
-    },
-    "cta": {
-      "title": "Bereit, KI direkt von Ihrem Handy zu lernen?",
-      "subtitle": "Schließen Sie sich über 50.000 Nutzern an, die bereits KI mit der Educly-App meistern.",
-      "startFree": "Kostenlos herunterladen",
-      "talkConsultant": "Mit Support sprechen",
-      "guarantee": "30-Tage-Garantie",
-      "installments": "Bis zu 12 Raten",
-      "benefits": [
-        "Vollständiger Zugang zu allen Pfaden",
-        "Kostenlose App-Updates",
-        "Integrierter KI-Assistent",
-        "Digitale Zertifikate",
-        "Offline-Modus verfügbar",
-        "30-Tage-Zufriedenheitsgarantie"
-      ]
-    },
-    "footer": {
-      "description": "Die umfassendste KI-App auf dem Markt. Lernen Sie KI praktisch, direkt von Ihrem Handy.",
-      "contact": "Kontakt",
-      "programs": "Funktionen",
-      "resources": "Ressourcen",
-      "company": "Unternehmen",
-      "legal": "Rechtliches",
-      "links": {
-        "aiFundamentals": "KI-Lernpfade",
-        "machineLearning": "28-Tage-Herausforderungen",
-        "deepLearning": "KI-Assistent",
-        "aiForBusiness": "Digitale Zertifikate",
-        "blog": "Blog",
-        "webinars": "Tutorials",
-        "ebooks": "Leitfäden",
-        "community": "Community",
-        "aboutUs": "Über uns",
-        "careers": "Karriere",
-        "partnerships": "Partnerschaften",
-        "contact": "Kontakt",
-        "terms": "Nutzungsbedingungen",
-        "privacy": "Datenschutz",
-        "cookies": "Cookies"
-      },
-      "copyright": "Alle Rechte vorbehalten.",
-      "madeWith": "Mit ❤️ für die globale KI-Community erstellt"
-    }
+    "subtitle": "Interaktive Lernpfade"
   },
   "weeklyStreak": {
     "title": "Wöchentliche Serie",
@@ -2461,55 +2169,6 @@
         "combo": "✨ Komplettpaket",
         "aipack": "🤖 AI Pack",
         "freelancer": "💼 Premium Freelancer"
-      }
-    }
-  },
-  "lesson": {
-    "loading": "Laden...",
-    "close": "Schließen",
-    "continue": "WEITER",
-    "verify": "ÜBERPRÜFEN",
-    "tryAgain": "NOCHMAL VERSUCHEN",
-    "stepTypes": {
-      "learn": "📚 Lernen",
-      "quiz": "❓ Quiz",
-      "practical": "⚡ Praxis",
-      "simulator": "🤖 Simulator"
-    },
-    "quiz": {
-      "correct": "Richtig!",
-      "incorrect": "Versuche es erneut",
-      "askEdi": "EDI um Hilfe bitten",
-      "hint": "💡 Hinweis:"
-    },
-    "practical": {
-      "instructions": "Klicke auf die Wörter, um den richtigen Prompt zu erstellen:",
-      "yourAnswer": "Deine Antwort:",
-      "available": "Verfügbare Wörter:"
-    },
-    "chat": {
-      "aiReady": "Bereit zu helfen",
-      "sendPlaceholder": "Schreibe deine Nachricht...",
-      "aiResponse": "Ausgezeichnetes Beispiel! Hast du bemerkt, wie ich deine Eingabe verarbeitet habe? Jetzt, wo wir es in der Praxis getestet haben, klicke auf 'WEITER', um fortzufahren."
-    },
-    "day1": {
-      "step1": {
-        "title": "1. Was ist ChatGPT (Ohne Fantasie)",
-        "content": "Bevor du ChatGPT benutzt, musst du EINE Sache verstehen:\n\n❌ Es denkt nicht\n❌ Es versteht die Welt nicht\n❌ Es hat kein Bewusstsein\n\nChatGPT ist ein **Großes Sprachmodell (LLM)**.\n\nEs funktioniert so:\nText geht rein → Wahrscheinlichkeiten werden berechnet → Text kommt raus.\n\n👉 Es **sagt das nächste Wort vorher** basierend auf Mustern aus Milliarden menschlicher Texte.\n\nWenn du das verstehst, hörst du auf, KI wie einen Menschen zu behandeln\nund beginnst, sie als **kontrollierbares Werkzeug** zu behandeln."
-      },
-      "step2": {
-        "title": "Der Statistische Papagei",
-        "content": "ChatGPT hat keine Fakten gelernt.\nEs hat gelernt, **wie Menschen über Fakten schreiben**.\n\nWenn du tippst:\n\"Digitales Marketing funktioniert am besten mit...\"\n\nDas Modell berechnet Wahrscheinlichkeiten:\n- Strategie\n- Inhalt\n- Traffic\n- Daten\n\nEs wählt die wahrscheinlichste Sequenz.\n\n⚠️ Wichtig:\nEs weiß nicht, was Marketing ist.\nEs weiß, **wie Sätze über Marketing normalerweise weitergehen**."
-      },
-      "step3": {
-        "title": "Realitätscheck",
-        "question": "Welche Aussage ist wahr?",
-        "options": {
-          "0": "ChatGPT versteht, was es schreibt",
-          "1": "ChatGPT sagt Wörter basierend auf Mustern vorher",
-          "2": "ChatGPT denkt wie ein Mensch"
-        },
-        "explanation": "Richtig. Das Verstehen ist deins. Die Vorhersage ist die der KI."
       }
     }
   },
@@ -2828,11 +2487,5 @@
     "updateError": "Profil konnte nicht aktualisiert werden.",
     "settingsSaved": "Einstellungen gespeichert!",
     "notificationsUpdated": "Deine Benachrichtigungseinstellungen wurden aktualisiert."
-  },
-  "landing": {
-    "subtitle": "Interaktive Lernpfade"
-  },
-  "thankYou": {
-    "title": "Meistern Sie die besten KIs mit"
   }
 }
