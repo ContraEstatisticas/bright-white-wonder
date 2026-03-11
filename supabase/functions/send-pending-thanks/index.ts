@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -284,26 +283,17 @@ serve(async (req) => {
         const subject = isMulti ? t(lang, 'subject_multi') : t(lang, 'subject_single');
         const html = getUnifiedEmailHtml(buyerName, email, lang, products);
 
-        // Send via SMTP
-        const client = new SMTPClient({
-          connection: {
-            hostname: Deno.env.get('SMTP_HOST')!,
-            port: parseInt(Deno.env.get('SMTP_PORT')!),
-            tls: true,
-            auth: { username: Deno.env.get('SMTP_EMAIL')!, password: Deno.env.get('SMTP_PASSWORD')! },
-          },
+        // Send via Resend
+        const apiKey = Deno.env.get("RESEND_API_KEY");
+        if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+        const res = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ from: "Educly <noreply@educly.app>", to: [email], subject, html }),
         });
-
-        try {
-          await client.send({
-            from: `Educly <${Deno.env.get('SMTP_EMAIL')}>`,
-            to: email,
-            subject,
-            content: "auto",
-            html,
-          });
-        } finally {
-          await client.close();
+        if (!res.ok) {
+          const err = await res.text();
+          throw new Error(`Resend error: ${res.status} - ${err}`);
         }
 
         // Log in email_logs

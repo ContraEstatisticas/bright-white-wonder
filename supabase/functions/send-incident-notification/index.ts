@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -43,22 +42,7 @@ serve(async (req) => {
     const errors: any[] = [];
     let sentCount = 0;
 
-    const smtpHost = Deno.env.get('SMTP_HOST')!;
-    const smtpPort = parseInt(Deno.env.get('SMTP_PORT') || '465');
-    const smtpEmail = Deno.env.get('SMTP_EMAIL')!;
-    const smtpPassword = Deno.env.get('SMTP_PASSWORD')!;
-
-    const client = new SMTPClient({
-      connection: {
-        hostname: smtpHost,
-        port: smtpPort,
-        tls: true,
-        auth: {
-          username: smtpEmail,
-          password: smtpPassword,
-        },
-      },
-    });
+    const resendApiKey = Deno.env.get('RESEND_API_KEY')!;
 
     // Get all auth users to match emails
     const { data: authData, error: authError } = await supabase.auth.admin.listUsers({ perPage: 1000 });
@@ -150,13 +134,15 @@ serve(async (req) => {
       const textContent = `¡Hola ${userName}!\n\nTe escribimos para informarte que experimentamos un problema técnico temporal que afectó la liberación de acceso de algunos usuarios durante este fin de semana.\n\n¡La buena noticia es que ya está todo solucionado!\n\nTu acceso premium está completamente liberado y puedes disfrutar de todo el contenido disponible en la plataforma.\n\nAccede a tu cuenta: https://educly.lovable.app/auth\n\nCon cariño,\nEl equipo de Educly`;
 
       try {
-        await client.send({
-          from: smtpEmail,
-          to: user.email!,
-          subject,
-          content: textContent,
-          html: htmlContent,
+        const res = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { "Authorization": `Bearer ${resendApiKey}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ from: "Educly <noreply@educly.app>", to: [user.email!], subject, html: htmlContent }),
         });
+        if (!res.ok) {
+          const err = await res.text();
+          throw new Error(`Resend error: ${res.status} - ${err}`);
+        }
 
         // Log the email
         await supabase.from('email_logs').insert({
@@ -172,8 +158,8 @@ serve(async (req) => {
         results.push({ email: user.email, status: 'sent' });
         console.log(`[incident-notification] Sent to ${user.email} (${sentCount}/${eligibleUsers.length})`);
 
-        // Rate limit: 5 second delay between sends
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        // Small delay between sends
+        await new Promise(resolve => setTimeout(resolve, 500));
       } catch (sendErr: any) {
         console.error(`[incident-notification] Error sending to ${user.email}:`, sendErr);
         errors.push({ email: user.email, error: sendErr.message });
@@ -188,8 +174,6 @@ serve(async (req) => {
         });
       }
     }
-
-    await client.close();
 
     return new Response(JSON.stringify({
       success: true,

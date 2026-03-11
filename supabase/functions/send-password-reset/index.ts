@@ -272,40 +272,18 @@
   }
 
   async function sendEmailViaSMTP(to: string, subject: string, html: string): Promise<void> {
-    const { SMTPClient } = await import("https://deno.land/x/denomailer@1.6.0/mod.ts");
-
-    const smtpHost = Deno.env.get("SMTP_HOST");
-    const smtpPort = parseInt(Deno.env.get("SMTP_PORT") || "465");
-    const smtpEmail = Deno.env.get("SMTP_EMAIL");
-    const smtpPassword = Deno.env.get("SMTP_PASSWORD");
-
-    if (!smtpHost || !smtpEmail || !smtpPassword) {
-      throw new Error("SMTP credentials not configured");
-    }
-
-    const client = new SMTPClient({
-      connection: {
-        hostname: smtpHost,
-        port: smtpPort,
-        tls: true,
-        auth: {
-          username: smtpEmail,
-          password: smtpPassword,
-        },
-      },
+    const apiKey = Deno.env.get("RESEND_API_KEY");
+    if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: "Educly <noreply@educly.app>", to: [to], subject, html }),
     });
-
-    try {
-      await client.send({
-        from: `Educly <${smtpEmail}>`,
-        to: to,
-        subject: subject,
-        html: html,
-      });
-      console.log(`Password reset email sent to ${to}`);
-    } finally {
-      await client.close();
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`Resend error: ${res.status} - ${err}`);
     }
+    console.log(`Password reset email sent to ${to}`);
   }
 
   const handler = async (req: Request): Promise<Response> => {

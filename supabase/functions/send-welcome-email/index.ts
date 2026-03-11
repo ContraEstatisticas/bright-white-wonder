@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -184,20 +183,18 @@ function getEmailHtml(userName: string, language: string, userEmail: string): st
 }
 
 async function sendEmailViaSMTP(to: string, subject: string, html: string): Promise<void> {
-  const client = new SMTPClient({
-    connection: {
-      hostname: Deno.env.get("SMTP_HOST")!,
-      port: parseInt(Deno.env.get("SMTP_PORT") || "465"),
-      tls: true,
-      auth: { username: Deno.env.get("SMTP_EMAIL")!, password: Deno.env.get("SMTP_PASSWORD")! },
-    },
+  const apiKey = Deno.env.get("RESEND_API_KEY");
+  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from: "Educly <noreply@educly.app>", to: [to], subject, html }),
   });
-  try {
-    await client.send({ from: `Educly <${Deno.env.get("SMTP_EMAIL")}>`, to, subject, content: "html", html });
-    console.log(`[SMTP] Email sent successfully to ${to}`);
-  } finally {
-    await client.close();
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Resend error: ${res.status} - ${err}`);
   }
+  console.log(`[Resend] Email sent successfully to ${to}`);
 }
 
 serve(async (req) => {

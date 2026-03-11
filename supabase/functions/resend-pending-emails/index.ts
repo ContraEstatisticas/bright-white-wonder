@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -217,43 +216,25 @@ function detectLanguageFromPayload(payload: any): string {
   return 'es';
 }
 
-async function sendEmailViaSMTP(to: string, userName: string, language: string): Promise<void> {
-  const smtpHost = Deno.env.get("SMTP_HOST");
-  const smtpPort = parseInt(Deno.env.get("SMTP_PORT") || "465");
-  const smtpEmail = Deno.env.get("SMTP_EMAIL");
-  const smtpPassword = Deno.env.get("SMTP_PASSWORD");
-
-  if (!smtpHost || !smtpEmail || !smtpPassword) {
-    throw new Error("SMTP credentials not configured");
+async function sendEmailViaResend(to: string, subject: string, html: string): Promise<void> {
+  const apiKey = Deno.env.get("RESEND_API_KEY");
+  if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from: "Educly <noreply@educly.app>", to: [to], subject, html }),
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Resend error: ${res.status} - ${err}`);
   }
+}
 
+async function sendEmailViaSMTP(to: string, userName: string, language: string): Promise<void> {
   const subject = getTranslation(language, 'welcome', 'subject');
   const html = getEmailHtml(userName, language);
-
-  const client = new SMTPClient({
-    connection: {
-      hostname: smtpHost,
-      port: smtpPort,
-      tls: true,
-      auth: {
-        username: smtpEmail,
-        password: smtpPassword,
-      },
-    },
-  });
-
-  try {
-    await client.send({
-      from: `Educly <${smtpEmail}>`,
-      to: to,
-      subject: subject,
-      content: "auto",
-      html: html,
-    });
-    console.log(`✅ Email sent to ${to} in language: ${language}`);
-  } finally {
-    await client.close();
-  }
+  await sendEmailViaResend(to, subject, html);
+  console.log(`✅ Email sent to ${to} in language: ${language}`);
 }
 
 function delay(ms: number): Promise<void> {
