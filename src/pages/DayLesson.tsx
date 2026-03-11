@@ -514,16 +514,16 @@ const DayLesson = () => {
                       ref={isCurrent ? gradualTextRef : undefined}
                       content={step.content || ""}
                       isActive={isCurrent}
+                      afterContent={step.image ? (
+                        <div className="mt-4 rounded-xl overflow-hidden">
+                          <img
+                            src={step.image}
+                            alt={step.title || ""}
+                            className="w-full h-auto object-cover rounded-xl"
+                          />
+                        </div>
+                      ) : undefined}
                     />
-                    {step.image && (
-                      <div className="mt-4 rounded-xl overflow-hidden">
-                        <img
-                          src={step.image}
-                          alt={step.title || ""}
-                          className="w-full h-auto object-cover rounded-xl"
-                        />
-                      </div>
-                    )}
                   </div>
                 )}
 

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect, useRef, forwardRef, useImperativeHandle, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
@@ -16,6 +16,8 @@ export interface GradualTextDisplayRef {
 interface GradualTextDisplayProps {
   content: string;
   isActive?: boolean;
+  /** Content rendered below text, only shown on the last part */
+  afterContent?: ReactNode;
 }
 
 /**
@@ -25,7 +27,7 @@ interface GradualTextDisplayProps {
  * Use the ref to control navigation from parent component.
  */
 export const GradualTextDisplay = forwardRef<GradualTextDisplayRef, GradualTextDisplayProps>(
-  ({ content, isActive = true }, ref) => {
+  ({ content, isActive = true, afterContent }, ref) => {
     const { t } = useTranslation();
     const [currentPartIndex, setCurrentPartIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -115,6 +117,7 @@ export const GradualTextDisplay = forwardRef<GradualTextDisplayRef, GradualTextD
       return (
         <div className="prose prose-lg max-w-none animate-fade-in">
           {renderFormattedText(content)}
+          {afterContent}
         </div>
       );
     }
@@ -158,6 +161,8 @@ export const GradualTextDisplay = forwardRef<GradualTextDisplayRef, GradualTextD
             {renderFormattedText(parts[displayedPart])}
           </div>
         </div>
+        {/* Show afterContent only on the last part */}
+        {currentPartIndex === totalParts - 1 && afterContent}
       </div>
     );
   }
