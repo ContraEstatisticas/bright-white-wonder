@@ -5,7 +5,7 @@
         "type": "text",
         "title": "🤖 Come funziona ChatGPT?",
         "content": "ChatGPT è un programma di intelligenza artificiale addestrato per comprendere e generare testo.\n\nÈ stato alimentato con miliardi di esempi tratti da libri, siti web, articoli e conversazioni. Grazie a ciò, ha appreso i modelli del linguaggio umano.\n\nQuando scrivi una domanda, analizza il contesto e prevede, parola per parola, quale sia la migliore risposta possibile in base a questi modelli.\n\nNon \"sa\" le cose come un essere umano. Riconosce schemi e risponde in base alle probabilità.\n\nMigliore è il tuo comando, migliore sarà il risultato.\n\nÈ una delle intelligenze artificiali più utilizzate al mondo. Ha superato i 100 milioni di utenti in soli 2 mesi dal lancio.\n\nOggi è utilizzato da studenti, aziende, programmatori, creatori di contenuti e grandi corporazioni.\n\nÈ integrato in strumenti come browser, applicazioni, sistemi aziendali e piattaforme di produttività.\n\nLe aziende utilizzano l'IA per ridurre il tempo delle attività fino al 40% nelle attività amministrative e nella produzione di testi.",
-        "image": "/images/ChatGpt 1.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -131,13 +131,13 @@
         "type": "text",
         "title": "🎯 Ingegneria del Prompt",
         "content": "Significa imparare a dare comandi chiari all'IA. Migliore è l'istruzione, migliore è la risposta.\n\nUn prompt indirizza la risposta del modello fornendo contesto e istruzioni specifiche. Un prompt è il comando che dai all'intelligenza artificiale.\n\nPuoi chiederle di comportarsi come un esperto su un argomento prima di chiedere ciò che desideri. Tutto ciò a cui ChatGPT risponde inizia dal prompt.\n\nEsempio:\n“Scrivi una storia su un gatto.",
-        "image": "/images/Chat gpt 4.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 4.png"
       },
       {
         "type": "text",
         "title": "",
         "content": "”\nQuesto è già un prompt. L'IA usa questa istruzione come base per generare la risposta — in questo caso, una storia su un gatto.\n\nPiù semplice è il prompt, più semplice tende a essere la risposta. Più è chiaro e mirato, più utile e personalizzato diventa. Puoi anche inviare immagini per integrare il prompt.",
-        "image": "/images/Chat gpt 5.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -257,7 +257,7 @@
         "type": "text",
         "title": "💡 Esempi di prompt per immagini",
         "content": "Crea l'immagine di un giovane che usa un laptop in un ambiente moderno, con luce naturale, stile realistico, atmosfera professionale e colori neutri. (Più è chiaro, migliore sarà il risultato).\n\n**Esempio Avanzato:**\nUna banana antropomorfa in stile cartone animato, con braccia e gambe, che si rilassa su una sedia a sdraio. La banana sorride, indossa occhiali da sole neri, con un'espressione rilassata e divertita.\n\n– **Scenario:** spiaggia tropicale soleggiata, sabbia chiara, mare turchese, cielo limpido con poche nuvole e un'isola sullo sfondo.\n– **Stile visivo:** illustrazione digitale di alta qualità, colori vivaci, illuminazione morbida, atmosfera allegra e rilassata.\n– **Composizione:** la banana è il focus principale dell'immagine, in primo piano, senza cellulare o altri oggetti tecnologici.\n– **Estetica:** pulita, divertente e moderna, ideale per contenuti creativi ed educativi.\n– **Stile:** cartoon / illustrazione 3D / in stile Pixar\n– **Qualità:** high detail, ultra quality\n– **Formato:** verticale (9:16) se da utilizzare per storie o Reels",
-        "image": "/images/banana gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/banana gpt.png"
       },
       {
         "type": "component",
@@ -289,7 +289,7 @@
         "type": "text",
         "title": "🎙️ Chat Vocale di ChatGPT",
         "content": "La chat vocale ti consente di parlare con ChatGPT invece di digitare. Poni la domanda parlando normalmente e ricevi la risposta tramite audio.\n\nÈ utile per:\n– dubbi rapidi\n– organizzare idee\n– pensare ad alta voce\n– usare quando non si può digitare\n\nNon hai bisogno di parlare in modo tecnico. Puoi conversare in modo naturale e adattare la risposta durante il dialogo. Come nel testo, la risposta può essere sbagliata. Usa la chat vocale per chiarezza e agilità, non come fonte finale di verità.",
-        "image": "/images/voz gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/voz gpt.png"
       },
       {
         "type": "text",
@@ -500,7 +500,7 @@
             "explanation": "È un prompt divertente, ma l'opzione C è strutturata meglio tecnicamente."
           }
         ],
-        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Coruja pergunta 6 chat gpt dia 4.png"
       }
     ]
   },

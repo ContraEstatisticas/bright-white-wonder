@@ -5,7 +5,7 @@
         "type": "text",
         "title": "🤖 How does ChatGPT work? ",
         "content": "ChatGPT is an artificial intelligence program trained to understand and generate text.\n\nIt was fed with billions of examples from books, websites, articles, and conversations. Through this, it learned patterns of human language.\n\nWhen you ask a question, it analyzes the context and predicts, word by word, the best possible answer based on these patterns.\n\nIt doesn't \"know\" things like a human does. It recognizes patterns and responds based on probability.\n\nThe better your prompt, the better the result will be.\n\nIt is one of the most used artificial intelligences in the world. It surpassed 100 million users in just 2 months after its launch.\n\nToday it is used by students, businesses, programmers, content creators, and large corporations.\n\nIt is integrated into tools such as browsers, applications, enterprise systems, and productivity platforms.\n\nCompanies use AI to reduce task time by up to 40% in administrative and text production activities.",
-        "image": "/images/ChatGpt 1.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -111,7 +111,7 @@
         "type": "text",
         "title": "⚙️ Personalization: making ChatGPT respond your way",
         "content": "ChatGPT doesn't have just one way of responding. It adapts to the context you provide.\n\nGo to:\nSettings → Personalization\n\nThere is no ideal text. The best text is the one that matches your goal and your way of learning or working.\n\nYou can adjust:\n– the tone (simple, direct, technical)\n– the type of explanation (short or detailed)\n– the main use (study, work, content creation)\n\nStart simple. Over time, adjust as you feel the need.",
-        "image": "/images/Chat gpt 3 (ingles ).png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 3 (ingles ).png"
       },
       {
         "type": "text",
@@ -132,13 +132,13 @@
         "type": "text",
         "title": "🎯 Prompt Engineering",
         "content": "It's learning to give clear commands to the AI. The better the instruction, the better the answer.\n\nA prompt directs the model's response by providing specific context and instructions. A prompt is the command you give to the artificial intelligence.\n\nYou can ask it to act like an expert on a subject before asking what you want. Everything ChatGPT answers starts from the prompt.\n\nExample:\n“Write a story about a cat.”\nThis is already a prompt. The AI uses this instruction as a baseline to generate the response — in this case, a story about a cat.",
-        "image": "/images/Chat gpt 4.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 4.png"
       },
       {
         "type": "text",
         "title": "",
         "content": "The simpler the prompt, the simpler the response tends to be. The clearer and more targeted, the more useful and personalized it becomes. You can also send images to complement the prompt.",
-        "image": "/images/Chat gpt 5.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -258,7 +258,7 @@
         "type": "text",
         "title": "💡 Image prompt examples",
         "content": "Create an image of a young man using a laptop in a modern environment, with natural light, realistic style, professional mood, and neutral colors. (The clearer, the better the result).\n\n**Advanced Example:**\nAn anthropomorphic banana in cartoon style, with arms and legs, relaxing on a beach chair. The banana is smiling, wearing black sunglasses, with a relaxed and fun expression.\n\n– **Setting:** sunny tropical beach, light sand, turquoise blue sea, clear sky with few clouds, and an island in the background.\n– **Visual style:** high-quality digital illustration, vibrant colors, soft lighting, cheerful and relaxed mood.\n– **Composition:** the banana is the main focus of the image, in the foreground, without a cellphone or other technological objects.\n– **Aesthetics:** clean, fun, and modern, ideal for creative and educational content.\n– **Style:** cartoon / 3D illustration / Pixar-like\n– **Quality:** high detail, ultra quality\n– **Format:** vertical (9:16) if using for stories or Reels",
-        "image": "/images/banana gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/banana gpt.png"
       },
       {
         "type": "component",
@@ -290,13 +290,13 @@
         "type": "text",
         "title": "🎙️ ChatGPT Voice Chat",
         "content": "Voice chat allows you to speak to ChatGPT instead of typing. You ask the question speaking normally and receive the answer via audio.\n\nIt is useful for:\n– quick questions\n– organizing ideas\n– thinking out loud\n– using when you can't type\n\nYou don't need to speak technically. You can converse naturally and adjust the answer during the dialogue. Just like with text, the answer can be wrong. Use voice chat for clarity and agility, not as the final source of truth.",
-        "image": "/images/voz gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/voz gpt.png"
       },
       {
         "type": "text",
         "title": "🔎 ChatGPT as an investigation tool",
         "content": "ChatGPT isn't just for generating texts. It can be used as a strategic investigation tool.\n\nWhen properly directed, it helps organize complex problems, raise hypotheses, compare scenarios, and identify hidden risks. Instead of just delivering an answer, it structures reasoning.\n\nThe secret lies in how you ask.",
-        "image": "/images/Investigação ingles.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/investigacaoIngles.png"
       },
       {
         "type": "text",
@@ -480,7 +480,7 @@
         "type": "quiz",
         "title": "🖼️ Exercise 6: Exact Prompt for Image",
         "question": "Evaluating the richness of detail and the 'Golden Rule', which of the commands below is the most exact and complete to create an image?",
-        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png",
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Coruja pergunta 6 chat gpt dia 4.png",
         "options": [
           {
             "text": "A realistic owl wearing aviator glasses and a red Hawaiian shirt, driving a classic convertible car on a coastal road at sunset, palm trees in the background, cinematic golden lighting, ultra-detailed photographic style.",

@@ -5,7 +5,7 @@
         "type": "text",
         "title": "🤖 Wie funktioniert ChatGPT? ",
         "content": "ChatGPT ist ein Programm für künstliche Intelligenz, das darauf trainiert ist, Text zu verstehen und zu generieren. \n\nEs wurde mit Milliarden von Beispielen aus Büchern, Websites, Artikeln und Konversationen gefüttert. Dadurch hat es die Muster der menschlichen Sprache erlernt.\n\nWenn Sie eine Frage schreiben, analysiert es den Kontext und sagt Wort für Wort voraus, was die bestmögliche Antwort basierend auf diesen Mustern ist.\n\nEs „weiß“ die Dinge nicht wie ein Mensch. Es erkennt Muster und antwortet auf der Grundlage von Wahrscheinlichkeiten.\n\nJe besser Ihr Befehl, desto besser wird das Ergebnis sein.\n\nEs ist eine der am häufigsten genutzten künstlichen Intelligenzen der Welt. Nur 2 Monate nach der Veröffentlichung überschritt es die Marke von 100 Millionen Nutzern.\n\nHeute wird es von Studenten, Unternehmen, Programmierern, Content-Erstellern und Großkonzernen genutzt.\n\nEs ist in Tools wie Browser, Apps, Unternehmenssysteme und Produktivitätsplattformen integriert.\n\nUnternehmen nutzen KI, um den Zeitaufwand für Aufgaben bei administrativen und textproduzierenden Tätigkeiten um bis zu 40 % zu reduzieren.",
-        "image": "/images/ChatGpt 1.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -131,13 +131,13 @@
         "type": "text",
         "title": "🎯 Prompt-Engineering",
         "content": "Das ist das Erlernen der Fähigkeit, der KI klare Befehle zu erteilen. Je besser die Anweisung, desto besser die Antwort.\n\nEin Prompt lenkt die Antwort des Modells, indem er Kontext und spezifische Anweisungen liefert. Ein Prompt ist der Befehl, den Sie der künstlichen Intelligenz geben.\n\nSie können sie bitten, sich wie ein Experte zu einem bestimmten Thema zu verhalten, bevor Sie fragen, was Sie wollen. Alles, was ChatGPT antwortet, geht vom Prompt aus.\n\nBeispiel:\n„Schreibe eine Geschichte über eine Katze.“\nDas ist bereits ein Prompt. Die KI nutzt diese Anweisung als Grundlage, um die Antwort zu generieren — in diesem Fall eine Geschichte über eine Katze.\n\nJe einfacher der Prompt, desto einfacher wird in der Regel auch die Antwort sein. Je klarer und gezielter er ist, desto nützlicher und personalisierter wird sie. Sie können auch Bilder senden, um den Prompt zu ergänzen.",
-        "image": "/images/Chat gpt 4.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 4.png"
       },
       {
         "type": "text",
         "title": "",
         "content": "",
-        "image": "/images/Chat gpt 5.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -257,7 +257,7 @@
         "type": "text",
         "title": "💡 Beispiele für Bild-Prompts",
         "content": "Erstelle ein Bild eines jungen Mannes, der einen Laptop in einer modernen Umgebung nutzt, mit natürlichem Licht, realistischem Stil, professioneller Stimmung und neutralen Farben. (Je klarer, desto besser das Ergebnis).\n\n**Fortgeschrittenes Beispiel:**\nEine anthropomorphe Banane im Cartoon-Stil, mit Armen und Beinen, entspannt sich auf einem Liegestuhl am Strand. Die Banane lächelt, trägt eine schwarze Sonnenbrille, mit einem entspannten und lustigen Gesichtsausdruck.\n\n– **Szenerie:** sonniger tropischer Strand, heller Sand, türkisblaues Meer, klarer Himmel mit wenigen Wolken und eine Insel im Hintergrund.\n– **Visueller Stil:** hochwertige digitale Illustration, leuchtende Farben, weiche Beleuchtung, fröhliche und entspannte Stimmung.\n– **Komposition:** Die Banane ist das Hauptaugenmerk des Bildes, im Vordergrund, ohne Smartphone oder andere technologische Objekte.\n– **Ästhetik:** sauber, lustig und modern, ideal für kreative und lehrreiche Inhalte.\n– **Stil:** Cartoon / 3D-Illustration / Pixar-ähnlich\n– **Qualität:** hohe Details, Ultra-Qualität\n– **Format:** vertikal (9:16), wenn es für Stories oder Reels verwendet wird",
-        "image": "/images/banana gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/banana gpt.png"
       },
       {
         "type": "component",
@@ -289,7 +289,7 @@
         "type": "text",
         "title": "🎙️ ChatGPT Voice-Chat",
         "content": "Der Voice-Chat ermöglicht es Ihnen, mit ChatGPT zu sprechen, anstatt zu tippen. Sie stellen Ihre Frage ganz normal sprechend und erhalten die Antwort per Audio.\n\nEs ist nützlich für:\n– schnelle Fragen\n– das Ordnen von Ideen\n– lautes Nachdenken\n– die Nutzung, wenn Tippen nicht möglich ist\n\nSie müssen nicht technisch sprechen. Sie können sich natürlich unterhalten und die Antwort während des Dialogs anpassen. Genau wie beim Text kann die Antwort fehlerhaft sein. Nutzen Sie den Voice-Chat für Klarheit und Schnelligkeit, nicht als endgültige Quelle der Wahrheit.",
-        "image": "/images/voz gpt.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/voz gpt.png"
       },
       {
         "type": "text",
@@ -500,7 +500,7 @@
             "explanation": "Es ist ein lustiger Prompt, aber Option C ist technisch besser strukturiert."
           }
         ],
-        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png"
+        "image": "https://dqlcxpbfemhzzetwaxsa.supabase.co/storage/v1/object/public/lesson-images/Coruja pergunta 6 chat gpt dia 4.png"
       }
     ]
   },
