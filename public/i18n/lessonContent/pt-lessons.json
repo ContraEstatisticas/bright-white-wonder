@@ -1634,33 +1634,68 @@
     "steps": [
       {
         "type": "text",
-        "title": "🍌 Bem-vindo ao NanoBanana: Seu Estúdio de Design 24h",
-        "content": "Chegou o momento de dar cor às suas ideias! O NanoBanana é a sua IA de criação visual. Com ela, você não precisa mais gastar milhares de reais com designers para tarefas do dia a dia.\n\n\n\n**O que muda agora:**\n- **Antes:** Esperava 10 dias por um logo e pagava caro.\n- **Agora:** Você cria 4 opções em 30 segundos, de graça ou por centavos.\n\nHoje você vai aprender o método científico para mandar a IA desenhar exatamente o que está na sua cabeça."
+        "title": "🧠 REVISÃO RÁPIDA GROK",
+        "content": "O Grok nasceu diferente. Enquanto outras IAs têm conhecimento congelado em datas específicas, o Grok acessa a web e o X em tempo real. Foi desenvolvido para ser maximamente verdadeiro e minimamente censurável, com personalidade irreverente. Seu maior poder é responder perguntas sobre o que está acontecendo agora, não sobre o que aconteceu meses atrás."
       },
       {
         "type": "text",
-        "title": "🧠 Como a IA 'Desenha' o que você escreve",
-        "content": "Não é mágica, é um processo de 'limpeza'. Imagine que a IA começa com uma tela cheia de chiado (como uma TV fora do ar). \n\n\n\n1. **Ela entende os conceitos:** Se você escreve 'gato', ela busca a ideia de 'felino doméstico'.\n2. **Ela limpa a imagem:** Passo a passo, ela remove os borrões e vai moldando o desenho baseada nas suas palavras.\n3. **Ela refina os detalhes:** No final, ela ajusta as cores e as luzes para ficar perfeito."
+        "title": "✍️ A ARTE DO PROMPT NO GROK — DO BÁSICO AO AVANÇADO",
+        "content": "O Grok responde bem a qualquer prompt, mas quando você usa o tempo real a seu favor, ele se torna imbatível. Veja a evolução:\n\n**Nível 1** — Prompt fraco: \"Como está o mercado hoje?\"\n\n**Nível 2** — Prompt médio: \"Quais ações estão subindo hoje?\"\n\n**Nível 3** — Prompt forte: \"Quais ações do setor de tecnologia estão com maior volume de negociação hoje e quais notícias estão impulsionando esse movimento?\"\n\n**Nível 4** — Prompt profissional: \"Você é um analista financeiro. Com base nos dados de hoje, identifique as 3 ações de tecnologia com maior variação positiva, explique o que está causando esse movimento e me diga se há riscos de reversão no curto prazo. Formato: tópicos diretos para uma decisão rápida.\"\n\nA diferença está em usar o tempo real com intenção. Qualquer IA responde perguntas genéricas. Só o Grok responde perguntas de agora com dados de agora."
       },
       {
         "type": "text",
-        "title": "🎨 O Método V.I.S.U.A.L para Imagens Perfeitas",
-        "content": "Para a IA não 'viajar', use este guia passo a passo:\n\n* **V - Visão Geral:** O que é? (Ex: Uma capa de livro).\n* **I - Identidade:** Qual o estilo? (Ex: Minimalista como a Apple).\n* **S - Sujeito:** Quem é o destaque? (Ex: Um astronauta de terno).\n* **U - Universo:** Onde ele está? (Ex: Em um escritório futurista).\n* **A - Arte Final:** Qual a qualidade? (Ex: Foto profissional, luz de cinema).\n* **L - Limites:** O que NÃO queremos? (Ex: Sem textos estranhos ou cores berrantes)."
+        "title": "🏢 CASOS DE USO POR ÁREA (Comunicação, Finanças e Marketing)",
+        "content": "📰 **Jornalismo e Comunicação:** Verificar se uma notícia é real consultando fontes atuais. Acompanhar o desenrolar de um evento em tempo real. Monitorar o que está sendo dito sobre uma marca ou pessoa no X. Identificar quais assuntos estão viralizando antes de todo mundo. Pesquisar declarações recentes de figuras públicas com contexto.\n\n📈 **Finanças e Investimentos:** Monitorar variações de ações, criptomoedas e commodities em tempo real. Identificar notícias que estão impactando um ativo específico. Acompanhar o sentimento do mercado nas redes sociais. Verificar resultados de empresas recém-divulgados. Pesquisar regulações e mudanças de mercado que aconteceram hoje.\n\n📣 **Marketing e Conteúdo:** Identificar trends do momento para criar conteúdo relevante. Monitorar o que o público está falando sobre um tema antes de postar. Pesquisar hashtags e assuntos em alta no X. Acompanhar o que concorrentes estão fazendo e como o público reage. Criar conteúdo baseado em eventos que aconteceram nas últimas horas."
+      },
+      {
+        "type": "text",
+        "title": "🏢 CASOS DE USO POR ÁREA (Pesquisa e Gestão)",
+        "content": "🔬 **Pesquisa e Educação:** Acessar estudos e publicações recentes sobre um tema. Verificar dados atualizados para trabalhos acadêmicos. Acompanhar debates científicos em andamento. Pesquisar declarações recentes de especialistas e instituições. Monitorar mudanças em políticas públicas e legislações.\n\n🏢 **Gestão e Estratégia:** Monitorar reputação da empresa nas redes em tempo real. Acompanhar movimentos de concorrentes que foram notícia hoje. Identificar crises emergentes antes que se tornem grandes problemas. Pesquisar tendências do setor com dados atualizados. Tomar decisões baseadas no que está acontecendo no mercado agora."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 1)",
+        "content": "**Erro 1 — Tratar o Grok como verdade absoluta:** Tempo real não significa perfeito. O Grok pode interpretar notícias incorretamente ou citar fontes imprecisas. Sempre valide informações críticas em pelo menos duas fontes antes de agir.\n\n**Erro 2 — Usar o Grok para tarefas atemporais:** Para entender filosofia, matemática, história ou conceitos científicos, outras IAs são igualmente boas ou melhores. Reserve o Grok para o que ele faz de único: dados atuais.\n\n**Erro 3 — Ignorar os vieses da plataforma:** O Grok foi treinado com dados do X, que é uma rede polarizada. Em temas políticos ou socialmente sensíveis, filtre a resposta com senso crítico e busque perspectivas complementares."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 2)",
+        "content": "**Erro 4 — Pedir análise de documentos privados:** Diferente do Copilot, o Grok não acessa seus arquivos. Se você precisa analisar um contrato, uma planilha ou um documento interno, use outra ferramenta.\n\n**Erro 5 — Não aproveitar a integração com o X:** Muita gente usa o Grok como um chatbot genérico e esquece que ele entende o contexto do X melhor que qualquer outra IA. Perguntas sobre trends, sentimento de público e análise de conversas são onde ele realmente brilha.\n\n**Erro 6 — Não questionar alucinações disfarçadas de dados reais:** O acesso à web dá mais credibilidade às respostas, mas o Grok ainda pode inventar citações, datas ou números que parecem reais. Desconfie de dados muito específicos e verifique."
+      },
+      {
+        "type": "text",
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT",
+        "content": "**Técnica do Tempo:** Inclua sempre o recorte temporal na pergunta. \"Nas últimas 24 horas\", \"essa semana\", \"hoje\" ou \"este mês\" direcionam o Grok para usar seu diferencial real em vez de responder com conhecimento genérico.\n\n**Técnica do Sentimento:** Peça ao Grok para analisar como as pessoas estão reagindo a um tema, não apenas o que está acontecendo. \"Qual é o sentimento geral no X sobre essa notícia?\" é uma pergunta que só o Grok responde bem.\n\n**Técnica da Comparação Temporal:** Peça comparações entre o passado e o presente. \"Como o preço do Bitcoin hoje se compara com há 30 dias e quais eventos explicam essa diferença?\" Isso gera análises ricas usando o diferencial do tempo real.\n\n**Técnica do Alerta:** Use o Grok como um monitor. \"Me avise sobre os principais movimentos do mercado de tecnologia hoje e destaque qualquer sinal de alerta que mereça atenção.\" Isso transforma o Grok em um analista de plantão.\n\n**Técnica da Verificação:** Antes de publicar ou compartilhar uma informação, use o Grok para verificar. \"Essa afirmação é verdadeira com base em dados de hoje? Quais fontes confirmam ou contradizem isso?\" Isso reduz o risco de espalhar desinformação."
+      },
+      {
+        "type": "text",
+        "title": "📱 GROK NO DIA A DIA — FLUXO PRÁTICO",
+        "content": "**Manhã:** Abra o Grok no X e peça um resumo dos principais acontecimentos do seu setor nas últimas 12 horas. Isso substitui a leitura de vários portais de notícia em minutos.\n\n**Antes de reuniões importantes:** Pesquise rapidamente o que está sendo dito sobre o tema da reunião no X e na web. Chegar atualizado com dados de hoje faz diferença real.\n\n**Ao criar conteúdo:** Antes de postar sobre qualquer assunto, verifique o que está em alta e o sentimento do público sobre aquele tema naquele momento específico.\n\n**Ao tomar decisões com dados de mercado:** Use o Grok para ter um panorama rápido do que está acontecendo antes de qualquer decisão que dependa de informações atualizadas.\n\n**Ao monitorar sua marca ou concorrentes:** Pergunte ao Grok o que está sendo dito sobre nomes específicos no X hoje. É monitoramento de reputação em tempo real sem precisar de ferramentas pagas."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste: Seu Olhar de Designer",
-        "question": "Se você pedir para a IA desenhar apenas 'uma montanha', qual o problema desse pedido?",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Um jornalista precisa verificar se uma declaração feita por um político ontem é verdadeira. Qual ferramenta e abordagem são mais indicadas?",
         "options": [
           {
-            "text": "Nenhum, a IA é inteligente e sabe o que eu quero",
-            "isCorrect": false,
-            "explanation": "A IA não lê mentes. Sem detalhes, ela vai criar qualquer montanha genérica."
+            "text": "Grok, usando a técnica de verificação com a pergunta: 'Essa declaração é verdadeira com base em fontes de hoje? Quais confirmam ou contradizem?'",
+            "isCorrect": true,
+            "explanation": "Correto! O Grok se destaca em eventos recentes, e o uso de prompts de verificação com recorte temporal garante melhor precisão."
           },
           {
-            "text": "É vago demais. Falta dizer se é nevada, verde, rochosa ou o estilo artístico",
-            "isCorrect": true,
-            "explanation": "Exato! Especificidade é o segredo para resultados profissionais."
+            "text": "ChatGPT, pedindo para explicar o histórico político do candidato.",
+            "isCorrect": false,
+            "explanation": "Isso trará um histórico atemporal, mas não ajudará a checar um fato que ocorreu 'ontem'."
+          },
+          {
+            "text": "Copilot, abrindo um documento Word e pedindo uma análise.",
+            "isCorrect": false,
+            "explanation": "Copilot analisa arquivos internos. A menos que a declaração já esteja documentada internamente, não é a melhor escolha para buscas em tempo real."
+          },
+          {
+            "text": "Qualquer IA, pois todas têm acesso a dados em tempo real.",
+            "isCorrect": false,
+            "explanation": "Nem todas as IAs têm acesso em tempo real por padrão, e o Grok é otimizado especificamente para isso no X e na web."
           }
         ]
       },
@@ -1668,119 +1703,54 @@
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Decorando o Método",
-          "sentence": "O método V.I.S.U.A.L ajuda a definir a ___ geral, o ___ artístico e o ___ principal da imagem.",
+          "title": "✏️ QUESTÃO 2 - Complete a Frase",
+          "sentence": "Para aproveitar o máximo do Grok, sempre inclua o ___ na pergunta, usando termos como hoje, esta semana ou nas últimas 24 horas. Quando o objetivo é entender como as pessoas estão reagindo a um tema, use a técnica do ___, que analisa o sentimento do público no X. Já para monitorar movimentos do mercado e receber alertas sobre sinais de risco, aplique a técnica do ___.",
           "answers": [
-            "visão",
-            "estilo",
-            "sujeito"
+            "Recorte temporal",
+            "Sentimento",
+            "Alerta"
           ],
           "options": [
-            "visão",
-            "estilo",
-            "sujeito",
-            "comida",
-            "música",
-            "preço"
+            "Recorte temporal",
+            "Sentimento",
+            "Alerta",
+            "Copilot",
+            "Arquivos",
+            "ChatGPT",
+            "Viés"
           ],
-          "explanation": "Isso aí! Com esses pilares, você tem controle total sobre o que a IA desenha."
+          "explanation": "Excelente! Especificar o tempo, buscar a emoção das redes e usar a IA como monitor são os três pilares avançados do Grok."
         }
-      },
-      {
-        "type": "text",
-        "title": "🎯 Casos Reais: Do Pedido ao Lucro",
-        "content": "Veja como aplicar isso para ganhar dinheiro ou economizar:\n\n* **Logo de Startup:** Em vez de 'logo verde', use: 'Logo minimalista para app de comida saudável, símbolo de folha geométrica, estilo moderno, fundo branco'.\n* **Capa de E-book:** 'Capa de livro de negócios, estilo best-seller, cores azul e dourado, imagem central de um gráfico subindo, alta resolução'.\n* **Mockup de Produto:** 'Foto profissional de uma garrafa de vidro em uma mesa de madeira, luz suave, fundo desfocado'.\n\nO que antes custava R$ 500, agora custa apenas o seu tempo de escrever um bom parágrafo."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Criando um Logo",
-        "question": "Monte o pedido ideal para o logo de uma cafeteria chamada 'Café Real':",
-        "initialWords": [
-          "Logo vetorial minimalista,",
-          "símbolo de uma xícara com uma coroa,",
-          "estilo elegante e luxuoso,",
-          "cores marrom e dourado."
-        ],
-        "correctOrder": [
-          "Logo vetorial minimalista,",
-          "símbolo de uma xícara com uma coroa,",
-          "estilo elegante e luxuoso,",
-          "cores marrom e dourado."
-        ],
-        "explanation": "Perfeito! Você definiu o tipo, o símbolo, o estilo e as cores. Sucesso garantido!"
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 Estilo vs. Uso",
-          "description": "Qual estilo combina com cada necessidade?",
+          "title": "🔗 QUESTÃO 3 - Ligue os Termos",
+          "description": "Conecte os conceitos ou técnicas avançadas aos seus significados:",
           "pairs": [
             {
-              "left": "Fotorrealismo",
-              "right": "Fotos de produtos e anúncios"
+              "left": "Viés de plataforma",
+              "right": "Tendência nas respostas causada pelo perfil polarizado dos dados do X"
             },
             {
-              "left": "Flat Design (Vetor)",
-              "right": "Logos e ícones de aplicativos"
+              "left": "Alucinação com dados reais",
+              "right": "Quando o Grok inventa citações ou números que parecem verdadeiros"
             },
             {
-              "left": "Ilustração Digital",
-              "right": "Posts de redes sociais e blogs"
+              "left": "Técnica do Sentimento",
+              "right": "Analisar como o público do X está reagindo a um tema"
             },
             {
-              "left": "3D Render",
-              "right": "Maquetes e conceitos modernos"
+              "left": "Técnica Comparação",
+              "right": "Pedir comparação entre dados atuais e de períodos anteriores"
+            },
+            {
+              "left": "Técnica da Verificação",
+              "right": "Confirmar se uma informação tem respaldo em fontes atuais"
             }
           ]
         }
-      },
-      {
-        "type": "text",
-        "title": "⚡ Workflow: O Jeito Profissional de Criar",
-        "content": "A diferença entre um amador e um profissional é o processo:\n\n1. **Briefing (10 min):** Entenda o que o cliente quer (cores, público, onde vai usar).\n2. **Pesquisa (15 min):** Olhe referências no Pinterest ou Google para inspirar o seu texto.\n3. **Criação (5 min):** Use o método V.I.S.U.A.L para gerar a imagem.\n4. **Ajuste (15 min):** Peça pequenas mudanças ('mais brilho', 'mude a cor para azul').\n5. **Entrega:** Salve em alta resolução e envie.\n\nSeguir essa ordem garante que você não perca tempo gerando imagens aleatórias que não servem para nada."
-      },
-      {
-        "type": "text",
-        "title": "💰 Como Ganhar Dinheiro HOJE com IA Visual",
-        "content": "O mercado brasileiro tem milhões de pequenas empresas que precisam de design mas não podem pagar caro. Você pode oferecer:\n\n* **Pacote de Logo Básico:** R$ 300 a R$ 500.\n* **Kit Redes Sociais (15 posts):** R$ 300/mês.\n* **Capas para E-books e Cursos:** R$ 100 cada.\n\nSe você fechar 2 logos por semana, já garante uma renda extra excelente trabalhando apenas algumas horas. O segredo é focar em entregar rápido e com qualidade profissional."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Armadilhas: O que NÃO fazer",
-        "content": "Evite os erros de iniciante:\n* **Texto na Imagem:** A IA ainda é ruim com letras. Gere o desenho e coloque o texto usando o Canva ou Photoshop.\n* **Promessas Impossíveis:** Não diga ao cliente que vai fazer 'exatamente' o que ele imaginou. Diga que vai criar 3 conceitos incríveis para ele escolher.\n* **Falta de Proporção:** Se for para o Instagram Stories, peça o formato vertical (9:16). Se for para o site, peça horizontal."
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ Checklist Comercial",
-          "sentence": "Para vender design com IA, eu preciso de um ___ com exemplos, definir meus ___ e usar o método ___ para criar.",
-          "answers": [
-            "portfólio",
-            "preços",
-            "V.I.S.U.A.L."
-          ],
-          "options": [
-            "portfólio",
-            "preços",
-            "V.I.S.U.A.L.",
-            "carro",
-            "computador",
-            "música"
-          ],
-          "explanation": "Isso mesmo! Organização comercial é o que transforma o hobby em negócio."
-        }
-      },
-      {
-        "type": "text",
-        "title": "📊 Como medir o seu progresso?",
-        "content": "Você está evoluindo se:\n1. Suas imagens precisam de menos 'tentativas' para ficarem boas.\n2. Você consegue explicar para o cliente POR QUE escolheu aquelas cores e estilos.\n3. Você gasta menos de 1 hora para entregar um projeto completo.\n\nA IA é o seu pincel superveloz, mas você continua sendo o artista que decide para onde o pincel vai."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 14",
-        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. O NanoBanana transforma palavras em artes e designs profissionais.\n2. O método V.I.S.U.A.L. garante que a IA entenda o seu pedido técnico.\n3. Você aprendeu a criar um fluxo de trabalho (workflow) que economiza horas.\n4. Descobriu como transformar essa habilidade em dinheiro no bolso imediatamente.\n\n**MENTALIDADE:**\nVocê não precisa mais de sorte para ter uma imagem bonita. Agora você tem um **método científico de criação**.\n\n**AMANHÃ:** Vamos aprender técnicas avançadas para manter o mesmo personagem em várias fotos e criar campanhas completas!"
       }
     ]
   },
@@ -1788,128 +1758,114 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎨 Estilos Artísticos: Escolha seu Uniforme",
-        "content": "Imagine que você tem um time de artistas à sua disposição. Com a IA, você é o **Diretor de Arte** que decide quem vai fazer o trabalho.\n\n\n\nCada estilo comunica uma sensação diferente. Se você quer vender um relógio de luxo, usa uma foto real. Se quer ilustrar um livro infantil, usa aquarela. O estilo é a 'roupagem' que a IA coloca na sua ideia para ela fazer sentido no mundo real."
+        "title": "🔍 HISTÓRIA DO PERPLEXITY",
+        "content": "Perplexity AI foi criado em 2022 como uma resposta à pergunta: \"E se a busca na internet fosse reimaginada com IA?\"\n\nEnquanto o Google oferecia links, Perplexity oferecia respostas diretas. O conceito era revolucionário: em vez de clicar em 10 links para encontrar a resposta, você pergunta e recebe uma resposta sintetizada com fontes citadas.\n\nFundada por Aravind Srinivas e sua equipe, Perplexity posicionou-se como \"o motor de busca do futuro\". Cresceu rapidamente porque resolveu um problema real: as pessoas não querem links, querem respostas.\n\nDiferente de GROK (integrado ao X) ou Copilot (integrado ao Microsoft 365), Perplexity é independente e focado exclusivamente em pesquisa. Seu diferencial é ser o melhor em encontrar informação em tempo real e apresentá-la de forma clara e citada.\n\nEm 2024, Perplexity já processava bilhões de buscas e tornou-se uma ameaça real ao Google em certos segmentos de usuários.\n\n💡 DICA PRÁTICA: Perplexity é gratuito para usar na web. Acesse perplexity.ai, faça uma pergunta, e veja como funciona. Se gostar, existe versão Pro com mais features e modelo mais poderoso."
       },
       {
         "type": "text",
-        "title": "🎭 Os 4 Pilares da Arte com IA",
-        "content": "Existem quatro estilos que resolvem 90% dos seus problemas no dia a dia:\n\n1.  📸 **Fotorrealismo:** Para produtos e pessoas que precisam parecer 100% reais.\n2.  🎨 **Digital Art:** Cores vibrantes e estilo de videogame ou filmes de animação.\n3.  🖌️ **Aquarela:** Bordas suaves e toque artesanal. Perfeito para marcas delicadas e orgânicas.\n4.  📐 **Minimalista:** Poucas cores, linhas limpas e muito espaço branco. Ideal para logos e marcas modernas."
+        "title": "🧩 COMO O PERPLEXITY FUNCIONA",
+        "content": "Perplexity é um motor de busca baseado em IA que combina busca em tempo real com resposta sintetizada.\n\n\n\nQuando você faz uma pergunta no Perplexity:\n- **Busca em tempo real:** Ele acessa a internet e encontra as páginas mais relevantes para sua pergunta\n- **Síntese com IA:** Em vez de retornar links, ele usa inteligência artificial para sintetizar uma resposta coerente\n- **Citação de fontes:** Cada informação tem uma citação numerada mostrando exatamente de onde veio\n\nPor exemplo, se você pergunta \"Qual é a inflação atual do Brasil?\", Perplexity não apenas responde \"8.2%\", mas também:\n- Explica o contexto\n- Cita exatamente qual fonte disse isso\n- Oferece links para você investigar mais se quiser\n\nFunciona usando padrões de linguagem combinados com busca de verdade. Não é \"pensamento genuíno\" – é análise de padrões em dados reais e atualizados.\n\nPerplexity usa diferentes modelos de IA internamente (Claude, GPT-4, ou seu próprio modelo), dependendo de qual versão você usa.\n\n💡 DICA PRÁTICA: Use Perplexity quando quiser uma resposta com fontes citadas. A busca tradicional (Google) é melhor para exploração casual. Perplexity é melhor quando você quer uma resposta precisa com evidência."
       },
       {
         "type": "text",
-        "title": "🔬 O que a IA faz quando você pede um estilo?",
-        "content": "Quando você escreve 'minimalista', a IA ativa um filtro que remove o excesso de detalhes e limita as cores. Quando pede 'fotorrealista', ela foca em criar reflexos, sombras e texturas na pele ou nos objetos. \n\nEntender isso te dá o poder de não aceitar qualquer imagem: você passa a saber exatamente qual 'botão' apertar para mudar o clima do seu projeto."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Qual o clima do projeto?",
-          "description": "Ligue a necessidade ao melhor estilo artístico.",
-          "pairs": [
-            {
-              "left": "Capa de curso de Yoga",
-              "right": "Aquarela (Suavidade)"
-            },
-            {
-              "left": "Site de Relógios Caros",
-              "right": "Fotorrealismo (Luxo)"
-            },
-            {
-              "left": "Post de Tecnologia/Games",
-              "right": "Digital Art (Energia)"
-            },
-            {
-              "left": "Logo de uma Fintech",
-              "right": "Minimalista (Clareza)"
-            }
-          ]
-        }
+        "title": "⚡ É UMA DAS INTELIGÊNCIAS ARTIFICIAIS MAIS USADAS",
+        "content": "Perplexity cresceu exponencialmente porque oferece algo que o Google não faz bem: resposta direta com síntese de múltiplas fontes.\n\nUsuários descobriram que Perplexity é mais rápido que clicar em 5 links do Google. Pesquisadores usam porque economiza tempo. Jornalistas usam para verificar fatos rapidamente. Estudantes usam porque entende contexto.\n\nDiferente de ChatGPT (que tem conhecimento congelado) ou GROK (que é rede social), Perplexity é puramente focado em pesquisa. Não está preso a nenhuma plataforma.\n\nA empresa levantou milhões em funding e agora compete diretamente com Google em buscas. Alguns usuários já migraram completamente do Google para Perplexity por produtividade.\n\nProfissionais que precisam pesquisar muito (advogados, analistas, jornalistas, consultores) consideram Perplexity essencial.\n\n💡 DICA PRÁTICA: Se você faz muitas buscas durante o dia, experimente Perplexity Pro por um mês. A diferença em velocidade e qualidade de resposta pode compensar o custo rapidamente em produtividade."
       },
       {
         "type": "text",
-        "title": "⚙️ Controles Técnicos: Aumentando a Qualidade",
-        "content": "Parâmetros técnicos são como as configurações de uma câmera profissional. \n\n* **Resolução:** Use '4K' ou '8K' para imagens nítidas.\n* **Detalhes:** 'Ultra-detailed' faz cada textura aparecer.\n* **Foco:** 'Sharp focus' deixa tudo claro, enquanto 'Bokeh' desfoca o fundo de forma artística, como em fotos de celular moderno."
+        "title": "✅ ONDE O PERPLEXITY É MUITO BOM",
+        "content": "Perplexity é excelente em tarefas que exigem pesquisa rápida com fontes confiáveis:\n\n- **Busca de notícias e eventos atuais:** \"O que aconteceu no mercado de tech esta semana?\" Perplexity agrega notícias e sintetiza em uma resposta.\n- **Verificação de fatos:** \"Essa afirmação é verdadeira?\" Perplexity busca múltiplas fontes e cruza informações.\n- **Pesquisa acadêmica e profissional:** \"Qual é o estado atual da pesquisa em IA generativa?\" Perplexity sintetiza papers e artigos recentes.\n- **Análise comparativa:** \"Qual é a diferença entre Perplexity, ChatGPT e GROK?\" Perplexity compara e cita fontes para cada ponto.\n- **Busca com contexto longo:** Se você faz uma pergunta complexa com contexto, Perplexity entende melhor que uma busca simples do Google.\n- **Decisões de compra:** \"Qual smartphone melhor em 2024?\" Perplexity agrega avaliações, preços e especificações atualizadas.\n- **Pesquisa científica:** \"Quais são os últimos avanços em fusão nuclear?\" Perplexity acessa papers e notícias científicas recentes.\n- **Aprendizado:** Se você quer entender um conceito novo, Perplexity sintetiza explicações de múltiplas fontes em uma resposta coerente.\n\n💡 DICA PRÁTICA: Quando você fizer uma pergunta no Perplexity, clique nas citações numeradas para ver exatamente de onde a informação veio. Isso constrói confiança e permite validação independente."
       },
       {
         "type": "text",
-        "title": "📸 Enquadramento e Composição",
-        "content": "Você decide como a IA 'posiciona a câmera':\n* **Close-up:** Foca no rosto ou em um detalhe do produto.\n* **Wide shot:** Mostra todo o cenário ao redor.\n* **Aerial view:** Vista de cima (como de um drone).\n* **Eye level:** Visão normal, de frente, que passa mais confiança e conexão."
+        "title": "❌ ONDE O PERPLEXITY É MUITO RUIM",
+        "content": "Existem limites claros para o Perplexity, apesar de suas vantagens:\n\n- **Criatividade original:** Se você quer ficção, roteiro ou conteúdo criativo original, Perplexity não é a ferramenta. Ele busca na internet – não inventa.\n- **Tarefas que exigem contexto privado:** Se você precisa analisar seus próprios documentos, Perplexity não funciona (não tem acesso a seus arquivos).\n- **Cálculos complexos:** Apesar de buscar informações, Perplexity pode não ser o melhor para problemas matemáticos intrincados.\n- **Análise de arquivos e planilhas:** Diferente de Copilot, Perplexity não consegue abrir e analisar seus arquivos Excel, Word ou PDFs.\n- **Tópicos muito obscuros ou locais:** Se você busca algo muito específico que tem pouca presença online, Perplexity terá dificuldade.\n- **Privacidade extrema:** Como Perplexity busca na internet, suas buscas deixam rastros. Se você quer máxima privacidade, não é ideal.\n- **Análise crítica profunda:** Para decisões de negócio críticas, Perplexity oferece síntese, não análise profunda como Claude faria.\n- **Conversação prolongada:** Perplexity é melhor para perguntas pontuais. Para conversas longas e iterativas, outros modelos são melhores.\n- **Alucinação persistente:** Apesar de citar fontes, Perplexity ainda pode alucinar se a informação não existe ou é muito nova.\n\n💡 DICA PRÁTICA: Use Perplexity para \"O quê?\" e \"Quanto?\" (fatos objetivos com fontes). Use Claude ou ChatGPT para \"Como?\" e \"Por quê?\" (análise e síntese criativa)."
       },
       {
         "type": "text",
-        "title": "💡 Iluminação: O Segredo do Drama",
-        "content": "A luz muda o humor da imagem. \n\n\n\n* **Studio Lighting:** Luz limpa e profissional para produtos.\n* **Golden Hour:** Aquele brilho quente do pôr do sol, ótimo para natureza e pessoas.\n* **Cinematic Lighting:** Luz dramática de cinema, com sombras marcadas.\n* **Neon Lighting:** Estilo urbano e tecnológico."
+        "title": "⚠️ ATENÇÃO - CARACTERÍSTICAS IMPORTANTES",
+        "content": "**Perplexity Sintetiza, Não Cria**\nA grande força de Perplexity é que ele busca informações reais e sintetiza. Mas isso também é uma limitação: ele não pode inventar ou ir além do que existe na internet.\nSe uma informação é nova demais (menos de algumas horas), Perplexity pode não ter acesso ainda. Se é muito antiga, pode haver conflito entre diferentes versões.\nPerplexity não \"compreende\" – ele reconhece padrões em bilhões de páginas web e agrupa as melhores respostas.\n\n**Citações São Boas, Mas Nem Sempre Perfeitas**\nUm dos grandes diferenciais de Perplexity é que ele cita fontes. Isso é excelente. Mas:\n- As fontes citadas podem estar erradas ou desatualizadas\n- Uma fonte pode estar sendo mal interpretada\n- Múltiplas fontes podem estar erradas sobre o mesmo tópico\nCitação não é garantia de verdade. É apenas rastreabilidade."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ CUIDADOS COM A BUSCA E MODELOS",
+        "content": "**Busca em Tempo Real Tem Limite**\nPerplexity acessa a internet, mas não consulta CADA página. Ele consulta as páginas que seus algoritmos consideram mais relevantes. Isso significa:\n- Informações que você buscaria no Google podem não aparecer no Perplexity\n- Vieses nos algoritmos de busca afetam as respostas\n- Algumas fontes são priorizadas, outras ignoradas\n\n**Modelo Interno Afeta a Qualidade**\nPerplexity oferece diferentes versões (grátis usa um modelo mais simples, Pro usa Claude ou GPT-4). A qualidade da resposta depende qual modelo está rodando por baixo. Um modelo fraco + busca ótima = resposta medíocre.\n\n💡 DICA PRÁTICA: Se você usa Perplexity grátis e a resposta não parece boa, tente a versão Pro. A diferença de modelo interno é significativa."
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Afiando o Pedido",
-          "sentence": "Para uma foto de produto premium, eu uso iluminação de ___ e resolução ___, com foco no tipo ___.",
+          "title": "✏️ QUESTÃO 1 - Complete a Frase",
+          "sentence": "Perplexity é um motor de busca baseado em IA que ___, não ___. Quando você faz uma pergunta, ele busca na internet e sintetiza uma resposta com ___ numeradas. Diferente de ChatGPT que tem conhecimento ___, Perplexity está sempre ___ porque acessa dados em tempo real.",
           "answers": [
-            "estúdio",
-            "8K",
-            "bokeh"
+            "sintetiza",
+            "cria",
+            "citações",
+            "congelado",
+            "atualizado"
           ],
           "options": [
-            "estúdio",
-            "8K",
-            "bokeh",
-            "vela",
-            "baixa",
-            "amador"
+            "sintetiza",
+            "cria",
+            "citações",
+            "congelado",
+            "atualizado",
+            "inventa",
+            "links",
+            "temporário",
+            "obsoleto"
           ],
-          "explanation": "Isso mesmo! Essas escolhas técnicas dão o acabamento profissional que o mercado exige."
+          "explanation": "Perfeito! A função principal do Perplexity é encontrar o que já existe na internet, agregar e referenciar."
         }
       },
       {
-        "type": "text",
-        "title": "🚀 A Evolução de um Pedido (Prompt)",
-        "content": "Veja a diferença que os detalhes fazem:\n\n* **Nível 1 (Básico):** 'Um carro na estrada'. (Gera algo genérico).\n* **Nível 2 (Com Estilo):** 'Foto realista de um carro esportivo na estrada'. (Melhora).\n* **Nível 3 (Profissional):** 'Foto fotorrealista 8K de um Porsche preto em uma estrada de montanha, iluminação de pôr do sol (Golden Hour), reflexos metálicos na lataria, câmera em ângulo baixo, estilo cinematográfico'.\n\nNotou a diferença? O Nível 3 é o que as agências vendem por milhares de reais."
-      },
-      {
-        "type": "text",
-        "title": "🔄 Workflow: Do Pedido à Entrega",
-        "content": "Um profissional não entrega a primeira imagem. Siga este fluxo:\n1.  **Gere 4 opções:** Veja qual direção a IA tomou.\n2.  **Refine o que gostou:** Peça para ajustar a luz ou o ângulo ('gostei dessa, mas deixe o fundo mais desfocado').\n3.  **Prepare os formatos:** Salve a versão para Instagram, para o site e uma em preto e branco se for para impressão."
-      },
-      {
-        "type": "text",
-        "title": "💰 Quanto vale esse conhecimento?",
-        "content": "Um designer tradicional leva 8 horas e cobra caro por um banner. Você, com essas técnicas, entrega o mesmo nível em 20 minutos. \n\nIsso significa que sua produtividade é 16x maior. Se você cobrar R$ 300 por projeto e fizer 3 por dia, sua renda pode passar de R$ 15.000 por mês, trabalhando poucas horas. O valor está na sua capacidade de **direcionar a IA**."
-      },
-      {
         "type": "quiz",
-        "title": "🧠 Teste de Direção de Arte",
-        "question": "O cliente quer um banner para um site de arquitetura moderna e sustentável. Qual combinação você escolheria?",
+        "title": "🧾 QUESTÃO 2 - Múltipla Escolha",
+        "question": "Qual é o diferencial principal do Perplexity em relação a ChatGPT e Google Search?",
         "options": [
           {
-            "text": "Aquarela com cores vibrantes e estilo de desenho animado",
-            "isCorrect": false,
-            "explanation": "Isso pareceria infantil e tiraria a credibilidade de um projeto de arquitetura."
-          },
-          {
-            "text": "Fotorrealismo, resolução 8K, iluminação natural e ângulo de drone",
+            "text": "Ele oferece respostas sintetizadas com citações de fontes, combinando busca em tempo real com IA.",
             "isCorrect": true,
-            "explanation": "Exato! Isso mostra o projeto de forma real, grandiosa e profissional."
+            "explanation": "Correto! É exatamente a união do formato de 'resposta direta' da IA com a verificação de fontes da busca."
           },
           {
-            "text": "Minimalismo em preto e branco sem nenhum detalhe da natureza",
+            "text": "Ele é mais barato que ambos e não exige assinatura.",
             "isCorrect": false,
-            "explanation": "Se o projeto é sustentável, a natureza e as cores naturais são essenciais."
+            "explanation": "Ele possui versão paga (Pro) e os outros também possuem versões gratuitas."
+          },
+          {
+            "text": "Ele pode ler seus arquivos privados melhor que qualquer outro.",
+            "isCorrect": false,
+            "explanation": "O Perplexity não tem foco nem acesso nativo aos seus arquivos privados."
+          },
+          {
+            "text": "Ele nunca erra e oferece 100% de precisão.",
+            "isCorrect": false,
+            "explanation": "Assim como toda IA, o Perplexity está sujeito a alucinações e à qualidade das fontes que encontra."
           }
         ]
       },
       {
-        "type": "text",
-        "title": "📐 Formatos que Convertem",
-        "content": "Nunca entregue apenas um arquivo. \n* **Para Web:** Use PNG (qualidade) ou JPG (leveza).\n* **Para Impressão:** Peça alta resolução (300 DPI).\n* **Dica:** Use o Canva para colocar o seu logo em cima da imagem da IA e finalize o trabalho com perfeição."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 15",
-        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1.  Os 4 estilos básicos: Fotorrealismo, Digital Art, Aquarela e Minimalismo.\n2.  Como controlar a câmera, o foco e a luz da IA.\n3.  A diferença entre um pedido amador e um prompt profissional.\n4.  Como cobrar e entregar projetos de design em tempo recorde.\n\n**MENTALIDADE:**\nVocê parou de 'testar' a IA e começou a **comandar** a IA. Você agora tem o olhar de um Diretor de Arte."
+        "type": "component",
+        "componentName": "MatchWords",
+        "props": {
+          "title": "🔗 QUESTÃO 3 - Ligar Conceitos",
+          "description": "Conecte a característica do Perplexity ao seu impacto correto:",
+          "pairs": [
+            {
+              "left": "Busca em tempo real integrada",
+              "right": "Acessa dados de hoje e notícias recentes"
+            },
+            {
+              "left": "Citações de fontes",
+              "right": "Permite validação independente e rastreabilidade"
+            },
+            {
+              "left": "Síntese em uma resposta única",
+              "right": "Economiza tempo em relação a clicar múltiplos links"
+            }
+          ]
+        }
       }
     ]
   },
@@ -1917,146 +1873,123 @@
     "steps": [
       {
         "type": "text",
-        "title": "🏆 Projeto Final: O Kit Visual da 'EcoFlow'",
-        "content": "Chegou a hora do desafio máximo! Você vai criar a identidade visual completa da **EcoFlow**, uma startup que ajuda pessoas a terem hábitos sustentáveis.\n\n\n\n**O que você vai entregar hoje:**\n1.  **Logo:** A alma da marca.\n2.  **Ícone de App:** O que aparece no celular.\n3.  **Banner:** A vitrine das redes sociais.\n4.  **Template de Post:** Para agilizar o dia a dia.\n5.  **Mockup de Produto:** Sua garrafa térmica em 3D.\n6.  **Mascote:** O rosto amigo da empresa.\n\nUm designer cobraria R$ 5.000 por isso. Você vai fazer por quase zero."
+        "title": "✍️ A ARTE DO PROMPT NO PERPLEXITY — DO BÁSICO AO AVANÇADO",
+        "content": "O Perplexity não é um chatbot comum. É um pesquisador. Quanto mais sua pergunta parece uma consulta de pesquisa séria, melhor ele performa.\n\n**Nível 1** — Prompt fraco: \"Me fala sobre IA.\"\n\n**Nível 2** — Prompt médio: \"Quais são as tendências de IA em 2025?\"\n\n**Nível 3** — Prompt forte: \"Quais são as principais tendências de inteligência artificial generativa em 2025 segundo especialistas e publicações especializadas?\"\n\n**Nível 4** — Prompt profissional: \"Sintetize os principais avanços em inteligência artificial generativa publicados em 2025, separando por área: saúde, educação e finanças. Cite as fontes mais relevantes e destaque qual área está crescendo mais rápido com base em dados recentes.\"\n\nA diferença está em ser específico sobre o tema, o recorte temporal, o formato da resposta e as áreas de interesse. O Perplexity vai buscar exatamente o que você pediu e montar uma resposta rastreável."
       },
       {
         "type": "text",
-        "title": "🎯 Etapa 1: O Logo (A Primeira Impressão)",
-        "content": "O logo da EcoFlow precisa unir duas ideias: **Natureza (folha)** e **Fluxo/Tecnologia (gota d'água)**.\n\n\n\n**As 3 Regras de Ouro:**\n* **Simplicidade:** Poucas linhas para ser fácil de lembrar.\n* **Versatilidade:** Precisa ficar bonito até em preto e branco.\n* **Cores:** Usaremos Verde Floresta (#2D5016) e Verde Claro (#7CB518)."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Ordem do Logo",
-        "question": "Monte o pedido ideal para o logo da EcoFlow colocando os elementos na ordem técnica correta:",
-        "initialWords": [
-          "Logo minimalista vetorial,",
-          "Símbolo de folha e gota d'água,",
-          "Estilo flat design,",
-          "Cores verde floresta e claro,",
-          "Fundo transparente."
-        ],
-        "correctOrder": [
-          "Logo minimalista vetorial,",
-          "Símbolo de folha e gota d'água,",
-          "Estilo flat design,",
-          "Cores verde floresta e claro,",
-          "Fundo transparente."
-        ],
-        "explanation": "Perfeito! Você definiu o Tipo, o Conteúdo, o Estilo, as Cores e o Formato Técnico."
+        "title": "🏢 CASOS DE USO POR ÁREA (Parte 1)",
+        "content": "⚖️ **Direito e Compliance:** Pesquisar mudanças recentes em legislação com fontes oficiais citadas. Verificar precedentes judiciais publicados recentemente. Acompanhar regulações de mercado que entraram em vigor. Pesquisar jurisprudência sobre temas específicos com rastreabilidade. Monitorar mudanças em normas tributárias e trabalhistas.\n\n📊 **Análise e Consultoria:** Pesquisar dados de mercado atualizados com fontes confiáveis. Comparar métricas de concorrentes com base em publicações recentes. Sintetizar relatórios de tendências de diferentes consultorias. Verificar dados antes de incluir em apresentações para clientes. Pesquisar benchmarks de setor com citação de origem.\n\n📰 **Jornalismo e Pesquisa:** Verificar fatos de notícias em múltiplas fontes simultaneamente. Pesquisar histórico de um tema com síntese cronológica. Encontrar declarações públicas de figuras com rastreabilidade. Cruzar informações de diferentes veículos sobre o mesmo evento. Identificar contradições entre fontes sobre um mesmo assunto."
       },
       {
         "type": "text",
-        "title": "📱 Etapa 2: Ícone para App Store",
-        "content": "O ícone do app é visto em tamanho minúsculo no celular. Por isso, ele precisa ser **10x mais simples** que o logo.\n\n\n\n**O Segredo:** Se o seu logo tem muitos detalhes, o ícone deve usar apenas o elemento principal. No caso da EcoFlow, usaremos apenas o contorno da folha em branco sobre um fundo verde vibrante. Isso garante que o usuário reconheça o app em menos de 0,5 segundo."
+        "title": "🏢 CASOS DE USO POR ÁREA (Parte 2)",
+        "content": "🎓 **Educação e Aprendizado:** Pesquisar conceitos complexos com explicações de múltiplas fontes. Encontrar estudos e papers recentes sobre um tema acadêmico. Comparar diferentes teorias com citação de autores e fontes. Preparar material de estudo com base em conteúdo verificado. Aprender sobre um assunto novo com síntese clara e rastreável.\n\n🛒 **Decisões de Compra e Negócio:** Comparar produtos, serviços ou fornecedores com base em avaliações atuais. Pesquisar preços e tendências de mercado antes de negociar. Verificar reputação de empresas com base em notícias recentes. Pesquisar cases de sucesso e fracasso em um setor específico. Tomar decisões embasadas em dados reais e verificáveis."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 1)",
+        "content": "**Erro 1 — Usar o Perplexity para tarefas criativas:** Ele sintetiza o que existe na internet, não cria conteúdo original. Para escrever um roteiro, uma campanha criativa ou ficção, use Claude ou ChatGPT.\n\n**Erro 2 — Confiar nas citações sem verificar:** Citação não é garantia de verdade. A fonte pode estar desatualizada, mal interpretada ou simplesmente errada. Para decisões críticas, clique nas citações e leia a fonte original.\n\n**Erro 3 — Perguntar sobre assuntos muito recentes:** Se um evento aconteceu há poucas horas, o Perplexity pode ainda não ter acesso. Para notícias de última hora, o Grok tem vantagem por estar integrado ao X em tempo real."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 2)",
+        "content": "**Erro 4 — Usar para análise de documentos privados:** O Perplexity não acessa seus arquivos. Se você precisa analisar uma planilha, um contrato ou um relatório interno, use Copilot ou Claude.\n\n**Erro 5 — Ignorar a versão Pro para pesquisas críticas:** A versão gratuita usa um modelo mais simples. Para pesquisas profissionais e decisões importantes, a versão Pro com Claude ou GPT-4 por baixo faz diferença real na qualidade da síntese.\n\n**Erro 6 — Fazer perguntas vagas demais:** O Perplexity performa melhor com perguntas específicas e bem delimitadas. Quanto mais vaga a pergunta, mais genérica e menos útil será a síntese gerada."
+      },
+      {
+        "type": "text",
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 1)",
+        "content": "**Técnica da Fonte Específica:** Peça que o Perplexity priorize determinados tipos de fonte. \"Responda com base em publicações acadêmicas e relatórios de consultorias reconhecidas, evitando blogs e sites não especializados.\" Isso eleva muito a qualidade das citações.\n\n**Técnica do Recorte Temporal:** Delimite o período da pesquisa. \"Pesquise apenas publicações dos últimos 6 meses sobre esse tema.\" Isso evita que o Perplexity misture dados antigos com dados atuais na mesma resposta.\n\n**Técnica da Comparação Estruturada:** Peça comparações em formato de tabela ou lista paralela. \"Compare as três principais soluções de CRM do mercado em 2025 listando preço, principais funcionalidades e limitações de cada uma com fontes citadas.\" O Perplexity é excelente nisso."
+      },
+      {
+        "type": "text",
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 2)",
+        "content": "**Técnica da Verificação Cruzada:** Use o Perplexity para checar informações que você recebeu de outra fonte. \"Essa afirmação é verdadeira? Busque em múltiplas fontes e me diga se há consenso ou contradição entre elas.\" Isso transforma o Perplexity em um fact-checker poderoso.\n\n**Técnica do Aprofundamento:** Após receber uma resposta, use as citações como ponto de partida para ir mais fundo. Clique na fonte citada, leia o original, e volte ao Perplexity com uma pergunta mais específica baseada no que você leu."
+      },
+      {
+        "type": "text",
+        "title": "📱 PERPLEXITY NO DIA A DIA — FLUXO PRÁTICO",
+        "content": "**Antes de qualquer reunião importante:** Pesquise o tema central da reunião no Perplexity para chegar atualizado com dados reais e fontes verificáveis. Isso impressiona e embasa argumentos.\n\n**Antes de tomar decisões com dados de mercado:** Use o Perplexity para pesquisar benchmarks, tendências e dados do setor com rastreabilidade antes de apresentar qualquer número para alguém.\n\n**Ao receber uma informação duvidosa:** Cole a afirmação no Perplexity e peça verificação cruzada em múltiplas fontes. É o fact-checker mais rápido disponível hoje.\n\n**Ao aprender algo novo:** Em vez de abrir 10 abas no Google, faça uma pergunta estruturada no Perplexity e receba uma síntese com fontes. Economiza tempo e organiza o conhecimento.\n\n**Ao preparar relatórios e apresentações:** Use o Perplexity para pesquisar dados, estatísticas e tendências com citação de origem. Isso dá credibilidade ao conteúdo e facilita a validação posterior."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste de Visibilidade",
-        "question": "Por que o ícone do aplicativo deve ser muito mais simples do que o logo principal?",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Uma consultora precisa comparar três softwares de gestão financeira para recomendar ao cliente. Qual abordagem no Perplexity vai gerar o melhor resultado?",
         "options": [
           {
-            "text": "Porque a Apple e o Google proíbem cores escuras",
+            "text": "Me fala sobre softwares financeiros.",
             "isCorrect": false,
-            "explanation": "Não há proibição de cores, apenas recomendações de design."
+            "explanation": "Prompt de Nível 1. Muito vago, gerará uma resposta demasiadamente ampla."
           },
           {
-            "text": "Porque ele é visto em tamanho muito pequeno e precisa ser reconhecido rápido",
+            "text": "Quais são os melhores softwares de finanças?",
+            "isCorrect": false,
+            "explanation": "Prompt de Nível 2. É melhor, mas não estabelece critérios de comparação ou fontes."
+          },
+          {
+            "text": "Compare os três principais softwares de gestão financeira de 2025 listando preço, funcionalidades e limitações de cada um, com fontes citadas e base em avaliações recentes.",
             "isCorrect": true,
-            "explanation": "Exato! No celular, detalhes pequenos viram um 'borrão'. Simplicidade é poder."
+            "explanation": "Perfeito! Você foi específico, usou a técnica da comparação estruturada e exigiu citação de fontes recentes."
           },
           {
-            "text": "Porque ícones simples gastam menos bateria",
+            "text": "Perplexity, analise minha planilha de custos e sugira o melhor software.",
             "isCorrect": false,
-            "explanation": "O design do ícone não afeta o consumo de bateria do aparelho."
+            "explanation": "O Perplexity não tem a capacidade de analisar seus arquivos e planilhas privadas."
           }
         ]
-      },
-      {
-        "type": "text",
-        "title": "📸 Etapa 3: Banner para Redes Sociais",
-        "content": "O banner é a sua vitrine. No Instagram ou LinkedIn, ele tem apenas 3 segundos para convencer alguém a te seguir.\n\n\n\n**O que não pode faltar:**\n1.  **O Logo:** Para marcar presença.\n2.  **A Frase (Tagline):** Algo como 'Sustentabilidade no seu ritmo'.\n3.  **A Imagem:** Algo que passe a sensação de natureza e tecnologia juntas."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Composição do Banner",
-        "question": "Monte o pedido para o banner do Instagram seguindo a hierarquia visual:",
-        "initialWords": [
-          "Banner vertical 1080x1350px,",
-          "Topo com logo EcoFlow,",
-          "Centro com ilustração de planeta e folhas,",
-          "Base com a frase 'Sustentabilidade gamificada'."
-        ],
-        "correctOrder": [
-          "Banner vertical 1080x1350px,",
-          "Topo com logo EcoFlow,",
-          "Centro com ilustração de planeta e folhas,",
-          "Base com a frase 'Sustentabilidade gamificada'."
-        ],
-        "explanation": "Excelente! Organizar por zonas (Topo, Centro e Base) ajuda a IA a não amontoar os elementos."
-      },
-      {
-        "type": "text",
-        "title": "📝 Etapa 4: Template de Post",
-        "content": "Para não ter que criar tudo do zero todo dia, criamos um 'molde' (Template). \n\nUm bom template define onde vai o título, onde vai a foto e onde fica o seu logo. Com o NanoBanana, você gera o fundo artístico e depois usa o Canva para colocar os textos por cima. Isso economiza 90% do seu tempo de postagem semanal."
-      },
-      {
-        "type": "text",
-        "title": "🛍️ Etapa 5: Mockup da Garrafa Térmica",
-        "content": "O cliente quer ver o produto na vida real! Vamos criar uma imagem da garrafa EcoFlow em um escritório moderno.\n\n\n\n**Dica de Venda:** Fotos de produtos em 'contexto' (na mesa de trabalho, com plantas ao lado) vendem 30% mais do que fotos com fundo branco puro. Elas criam o desejo no cliente de ter aquele estilo de vida."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste de Vendas",
-        "question": "Qual o principal objetivo de um mockup 'Lifestyle' (produto em um ambiente real)?",
-        "options": [
-          {
-            "text": "Mostrar as medidas exatas em centímetros",
-            "isCorrect": false,
-            "explanation": "Isso é feito em desenhos técnicos ou descrições, não em fotos de estilo de vida."
-          },
-          {
-            "text": "Fazer o cliente se imaginar usando o produto no seu dia a dia",
-            "isCorrect": true,
-            "explanation": "Exatamente! O objetivo é criar uma conexão emocional e desejo de posse."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "🐾 Etapa 6: O Mascote (O Rosto da Marca)",
-        "content": "Marcas com mascotes são muito mais lembradas. Para a EcoFlow, criaremos a **'Gota Flow'**: uma gota d'água animada e amigável.\n\n\n\nPeça para a IA: 'Mascote gota d'água estilizada, olhos grandes expressivos, estilo cartoon moderno, cores azul e verde'. Ter um personagem torna a marca humana e fácil de gostar."
-      },
-      {
-        "type": "text",
-        "title": "🏆 O Seu Valor de Mercado",
-        "content": "Ao finalizar esse kit, você entregou um trabalho que custaria cerca de **R$ 8.000** no mercado tradicional. \n\n**O segredo do sucesso:**\n* **Tempo Tradicional:** 4 semanas.\n* **Seu Tempo:** 3 horas.\n\nVocê não é apenas alguém que 'mexe com IA'; você é um **Diretor de Design Estratégico**."
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Recapitulação Final",
-          "sentence": "Um kit visual profissional garante a ___ da marca e gera ___ no cliente final.",
+          "title": "✏️ QUESTÃO 2 - Complete a Frase",
+          "sentence": "Para elevar a qualidade das citações no Perplexity, use a técnica da ___, pedindo que priorize publicações acadêmicas e relatórios especializados. Quando o objetivo é checar se uma informação recebida é verdadeira, aplique a técnica da ___, buscando consenso ou contradição entre múltiplas fontes. E para pesquisar apenas o que foi publicado recentemente, use a técnica do ___.",
           "answers": [
-            "consistência",
-            "confiança"
+            "Fonte Específica",
+            "Verificação Cruzada",
+            "Recorte Temporal"
           ],
           "options": [
-            "consistência",
-            "confiança",
-            "bagunça",
-            "dúvida",
-            "música",
-            "cor"
+            "Fonte Específica",
+            "Verificação Cruzada",
+            "Recorte Temporal",
+            "Criatividade",
+            "Alucinação",
+            "Comparação",
+            "Aprofundamento"
           ],
-          "explanation": "Perfeito! Consistência visual é o que separa as marcas amadoras das gigantes do mercado."
+          "explanation": "Isso mesmo! Essas três técnicas separam um usuário comum de um pesquisador de elite no Perplexity."
         }
       },
       {
-        "type": "text",
-        "title": "🎓 Resumo do Módulo Visual",
-        "content": "**PARABÉNS!** Você concluiu o treinamento de Criação Visual.\n\nAgora você sabe:\n1. Criar artes que seguem um método científico (V.I.S.U.A.L.).\n2. Diferenciar estilos para cada tipo de cliente.\n3. Construir identidades completas que valem milhares de reais.\n\n**Sua nova profissão:** Criador Visual com IA."
+        "type": "component",
+        "componentName": "MatchWords",
+        "props": {
+          "title": "🔗 QUESTÃO 3 - Ligue os Termos",
+          "description": "Conecte a técnica ou recurso ao seu significado correspondente:",
+          "pairs": [
+            {
+              "left": "Técnica da Fonte Específica",
+              "right": "Pedir que priorize publicações acadêmicas e relatórios especializados"
+            },
+            {
+              "left": "Citação rastreável",
+              "right": "Referência numerada que permite identificar a origem exata da informação"
+            },
+            {
+              "left": "Técnica do Recorte Temporal",
+              "right": "Delimitar o período de tempo das fontes pesquisadas"
+            },
+            {
+              "left": "Técnica da Verificação Cruzada",
+              "right": "Usar o Perplexity para confirmar ou contradizer uma informação"
+            },
+            {
+              "left": "Perplexity Pro",
+              "right": "Versão com modelo poderoso, para pesquisas profissionais e críticas"
+            }
+          ]
+        }
       }
     ]
   },
@@ -2064,201 +1997,68 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎯 Nano Banana: Sua Agência de Design Automática",
-        "content": "Você já domina as palavras e a lógica. Agora, vamos dominar o olhar. O Nano Banana é a IA que transforma intenções complexas em imagens de alta qualidade.\n\n\n\nEnquanto outras ferramentas apenas 'chutam' o que você quer, o Nano Banana entende o **contexto emocional** e a **intenção comercial**. Hoje, você vai aprender a criar desde logos minimalistas até campanhas visuais completas, economizando muito dinheiro e tempo de espera."
+        "title": "🤖 HISTÓRIA DO MANUS",
+        "content": "Manus foi lançado em março de 2025 pela startup chinesa Butterfly Effect. O nome vem de \"Mens et Manus\" (mente e mãos em latim), refletindo exatamente a proposta: uma IA que não apenas pensa, mas executa ações no mundo digital como um colega humano faria.\n\nQuando lançou, Manus causou impacto explosivo – foi comparado ao fenômeno DeepSeek por sua ambição revolucionária. Começou em fase beta fechada com lista de espera e acesso restrito. O diferencial era claro: enquanto ChatGPT gera texto e Copilot analisa arquivos, Manus automatiza tarefas completas do zero ao fim.\n\nA mudança maior veio recentemente: Manus removeu completamente o sistema de lista de espera e abriu o cadastro para todos."
       },
       {
         "type": "text",
-        "title": "🎨 O Método V.I.S.U.A.L Profissional",
-        "content": "Para ter resultados que as empresas pagam caro, você precisa de uma estrutura. Não escreva frases soltas, use o framework:\n\n\n\n* **V - Visão Geral:** O que é e para quem? \n* **I - Identidade:** Qual o estilo artístico e paleta de cores?\n* **S - Sujeito:** Quem é o protagonista e o que ele faz?\n* **U - Universo:** Qual o cenário e o clima da luz?\n* **A - Arte Final:** Qual a técnica (ex: vetor) e a resolução?\n* **L - Limites:** O que a IA deve ignorar (ex: sem texto)?"
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Criando seu Primeiro Logo",
-        "question": "Monte o pedido para criar um logo profissional de educação digital:",
-        "initialWords": [
-          "Logo minimalista vetorial,",
-          "Símbolo de livro e conexão,",
-          "Estilo moderno e limpo,",
-          "Cores azul e branco,",
-          "Fundo transparente."
-        ],
-        "correctOrder": [
-          "Logo minimalista vetorial,",
-          "Símbolo de livro e conexão,",
-          "Estilo moderno e limpo,",
-          "Cores azul e branco,",
-          "Fundo transparente."
-        ],
-        "explanation": "Perfeito! Você deu a função, o símbolo, o estilo e os detalhes técnicos para que o logo seja útil em qualquer lugar."
+        "title": "⚙️ COMO O MANUS FUNCIONA",
+        "content": "Manus é um agente autônomo que vai muito além de qualquer chatbot. Ele não apenas gera respostas – ele executa tarefas completas como se fosse um profissional humano trabalhando no seu computador.\n\nQuando você faz uma solicitação no Manus, ele funciona em camadas:\n1. **Interpretação:** Você descreve o objetivo. Manus entende não apenas as palavras, mas o contexto completo da tarefa.\n2. **Planejamento:** Manus divide a tarefa em subtarefas sequenciais e define a ordem correta.\n3. **Execução Autônoma:** Aqui é onde Manus diferencia. Ele não apenas recomenda – ele faz. Abre navegador, pesquisa em tempo real, coleta dados, escreve código, executa comandos.\n4. **Transparência Total:** Você vê tudo acontecendo em um \"Computador Virtual\". A IA digita, clica, navega, toma decisões. Você acompanha em tempo real e pode parar se estiver errado.\n5. **Entrega:** O resultado é concreto. Não é uma sugestão – é um artefato pronto. Website publicado, código funcional, análise estruturada, automação operacional.\n\nInternamente, Manus usa modelos avançados como Claude 4.6 Sonnet (Anthropic) e versões customizadas da família Qwen (Alibaba)."
       },
       {
         "type": "text",
-        "title": "📱 Kits de Conteúdo para Redes Sociais",
-        "content": "O Nano Banana brilha quando você precisa de **volume com qualidade**. \n\nEm vez de criar um post por vez, você pode pedir um 'Kit Visual':\n'Crie 5 imagens para o Instagram da marca X. Todas devem usar a paleta azul e bege, estilo flat design e mostrar pessoas produtivas em ambientes modernos'. \n\nIsso garante que o feed do seu cliente (ou o seu) seja harmônico e profissional, passando confiança para quem visita o perfil."
+        "title": "💡 Dica Prática de Uso",
+        "content": "Quanto mais específico o prompt, melhor. \"Crie um site\" é vago. \"Crie um site de e-commerce com produtos da categoria 'eletrônicos', com carrinho funcional, busca, filtros por preço e avaliação\" é perfeito. Manus entende e executa exatamente."
       },
       {
         "type": "text",
-        "title": "📊 Mockups: Transformando Ideias em Produtos",
-        "content": "Como convencer um cliente a comprar sua ideia? Mostrando ela na 'vida real'. \n\n\n\nPeça para a IA criar um **Mockup**: 'Coloque a capa do meu e-book em um tablet sobre uma mesa de escritório elegante com uma xícara de café ao lado'. \n\nIsso aumenta o valor percebido do seu produto digital em 10x, porque o cérebro humano valoriza mais o que ele consegue 'visualizar' funcionando."
+        "title": "📊 IMPACTO E ADOÇÃO NO MERCADO",
+        "content": "Manus cresceu de forma praticamente vertical desde que abriu o acesso público. A remoção da lista de espera foi transformacional – em dias, dezenas de milhares de usuários tiveram acesso.\n\n**Quem usa:** Desenvolvedores que precisam de prototipagem rápida. Designers que querem mockups em minutos. Analistas de dados que automatizam relatórios semanais. Marketers que fazem pesquisa competitiva em horas. Jornalistas que compilam dados de múltiplas fontes. Consultores que estruturam estratégias. Startups inteiras que usam Manus para executar tarefas que levariam semanas com equipe.\n\n**Impacto medido:** Em testes rigorosos como o GAIA, Manus superou a Deep Research da OpenAI. Não é \"experimentação\" – é desempenho competitivo real.\n\nEmpresas reportam economias significativas: uma tarefa que levava 8 horas de trabalho humano leva 30 minutos com Manus (e com revisão, fica em 1 hora). Tarefas repetitivas que levavam semanas agora levam dias. Prototipagem que levava semanas agora leva horas.\n\n💡 DICA PRÁTICA: Acompanhe @ManusAI_HQ no X para updates. Novos recursos aparecem mensalmente. Comunidades no Discord compartilham prompts avançados e técnicas que economizam créditos. Investir 30 minutos aprendendo técnicas pode economizar centenas em créditos depois."
+      },
+      {
+        "type": "text",
+        "title": "💪 ONDE O MANUS É MUITO BOM (Parte 1)",
+        "content": "- **Geração de páginas web completas:** \"Transforme este documento em um website profissional\" – Manus gera HTML/CSS/JavaScript totalmente funcional, com design responsivo.\n- **Desenvolvimento de aplicações web:** \"Crie um dashboard de analytics\" – Manus estrutura a lógica, gera interfaces, implementa gráficos e filtros.\n- **Automação de pesquisa competitiva:** \"Analise 15 concorrentes de SaaS, preços, features, integrações\" – Manus navega sites, coleta dados, cria matriz comparativa estruturada.\n- **Geração de relatórios automáticos:** \"Compile vendas Q3, crie gráficos, identifique tendências, escreva insights\" – Tudo feito em minutos, não horas.\n- **Análise de datasets:** \"Processar 50.000 registros de clientes, identificar padrões, gerar segmentação\" – Manus executa análises que levariam dias manualmente.\n- **Criação de protótipos:** \"Prototype um app de delivery com UI/UX profissional\" – Código estruturado, componentes modulares, pronto para desenvolvimento."
+      },
+      {
+        "type": "text",
+        "title": "💪 ONDE O MANUS É MUITO BOM (Parte 2)",
+        "content": "- **Organização de dados em massa:** \"300 emails em categorias, resuma cada uma, crie planilha com insights\" – Execução autônoma completa.\n- **Extração e transformação de dados:** \"Extraia informações desses PDFs, organize em Excel, cruze com dados de vendas\" – Múltiplas etapas, Manus executa sequencialmente.\n- **Geração de conteúdo estruturado:** \"Pesquise tendências de IA 2025, crie 5 roteiros de vídeo com estrutura, keywords, timings\" – Pesquisa + síntese + estruturação.\n- **Desenvolvimento de landing pages:** \"Crie landing page para webinar sobre IA\" – Design, copywriting, CTA otimizado, tudo funcional.\n- **Integração de dados de múltiplas fontes:** \"Combine dados de API, CSV e web scraping em um dashboard único\" – Orquestração de múltiplas tarefas.\n- **Prototipagem visual de UX/UI:** \"Crie wireframes e mockups de um app de produtividade\" – Estrutura visual pronta para design refinado.\n\n💡 DICA PRÁTICA: Manus é melhor para tarefas que levariam 10+ horas manualmente. Se é algo que leva 30 minutos, outras IAs são suficientes. Para economia real, use Manus em projetos que tem múltiplas etapas complexas."
+      },
+      {
+        "type": "text",
+        "title": "❌ ONDE O MANUS É MUITO RUIM",
+        "content": "Existem limites claros:\n\n- **Criatividade genuína:** Se você quer ficção original, narrativa criativa ou conteúdo completamente novo, Manus é limitado. Ele pesquisa e sintetiza padrões conhecidos, não inventa histórias únicas.\n- **Decisões críticas sem validação:** Saúde, direito, finanças pessoais – Manus pode cometer erros graves. Sempre precisa de validação humana especialista.\n- **Confidencialidade extrema:** Tudo passa pela plataforma Manus. Dados ultra-sensíveis, propriedade intelectual crítica – você corre risco.\n- **Alucinação em dados:** Apesar de executar em tempo real, Manus ainda pode inventar números, citar fontes erradas ou interpretar dados incorretamente.\n- **Contexto de arquivos privados:** Manus não acessa seus arquivos locais diretamente. Trabalha no ambiente web/online.\n- **Tarefas que exigem decisão humana contínua:** Se precisa de \"escolha criativa\" a cada passo, Manus assume e pode errar.\n- **Custo crescente:** Tarefas complexas consomem muitos créditos rapidamente. Uma automação grande pode consumir mil+ créditos.\n- **Qualidade inconsistente:** Às vezes executa perfeito, às vezes faz escolhas inesperadas na mesma tipo de tarefa."
+      },
+      {
+        "type": "text",
+        "title": "🎯 COMO EXTRAIR BONS RESULTADOS DO MANUS",
+        "content": "A maioria dos resultados ruins vem de prompts vagos. Manus responde à precisão. Use esta fórmula:\n\n**[CONTEXTO] + [TAREFA CLARA] + [PADRÃO/ESTILO] + [RESTRIÇÕES] + [EXEMPLO]**\n\n❌ **Exemplo ruim:** \"Crie um site\"\n✅ **Exemplo bom:** \"Crie um website de agência de marketing digital. Deve ter: home, portfolio com 10 projetos, about, serviços (4 principais), blog com 5 artigos recentes, formulário de contato. Estilo: moderno, minimalista, cores azul e branco. Responsivo em mobile. Com SEO básico implementado.\"\n\n**Divida Tarefas Gigantes em Etapas:**\nSe sua tarefa é \"Crie uma plataforma de e-learning completa\", Manus pode ficar confuso ou gastar 1.000+ créditos. Divida:\n- Etapa 1: Crie a estrutura HTML/CSS de 5 páginas (home, courses, dashboard, player, profile)\n- Etapa 2: Implemente JavaScript para interatividade básica\n- Etapa 3: Crie mock de API para dados dinâmicos\n- Etapa 4: Adicione autenticação básica"
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste de Estratégia Visual",
-        "question": "Qual é a parte mais importante de um pedido (prompt) para a IA criar algo que combine com a marca?",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Qual é o diferencial fundamental que diferencia Manus de todas as outras IAs (ChatGPT, Claude, Perplexity)?",
         "options": [
           {
-            "text": "Dar o contexto completo: objetivo, público e emoção",
+            "text": "Manus é mais barato e funciona totalmente offline.",
+            "isCorrect": false,
+            "explanation": "Incorreto. Ele funciona online e seu custo escala com base em créditos/tarefas."
+          },
+          {
+            "text": "Manus executa tarefas completas autonomamente, navegando sites, gerando código, criando páginas web e automações sem você intervir.",
             "isCorrect": true,
-            "explanation": "Correto! Se a IA não sabe para quem é a imagem, ela vai criar algo genérico que não gera conexão."
+            "explanation": "Correto! O Manus atua como um agente autônomo (Mens et Manus), executando ações num Computador Virtual."
           },
           {
-            "text": "Escrever um texto de 3 páginas detalhando cada pixel",
+            "text": "Manus só funciona para tarefas de programação e desenvolvimento.",
             "isCorrect": false,
-            "explanation": "Texto demais confunde a IA. O segredo é ser específico e estruturado, não prolixo."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "🎭 Estilos: Da Foto à Aquarela",
-        "content": "Escolher o estilo certo é como escolher a roupa certa para uma reunião:\n\n[Image comparison of same subject in photorealism, digital art, and watercolor]\n\n* **Fotorrealismo:** Para produtos reais e confiança máxima.\n* **Ilustração Digital:** Para cursos, blogs e apps modernos.\n* **Aquarela:** Para marcas orgânicas, naturais e infantis.\n* **Concept Art:** Para apresentar ideias de projetos que ainda não existem."
-      },
-      {
-        "type": "text",
-        "title": "⚙️ Botões Técnicos: O Ajuste Fino",
-        "content": "Profissionais usam 'palavras-mestre' para forçar a qualidade:\n* **Iluminação:** 'Cinematic lighting' (luz de cinema) ou 'Studio light' (luz de estúdio).\n* **Câmera:** 'Wide shot' (visão ampla) ou 'Close-up' (foco no detalhe).\n* **Resolução:** Sempre adicione '8K' ou 'High Definition' para evitar borrões."
-      },
-      {
-        "type": "text",
-        "title": "🔁 Workflow em Lote (Séries)",
-        "content": "Se você tem um curso com 10 módulos, peça para a IA criar as 10 capas de uma só vez. \n\n'Crie uma série de 10 ilustrações. Todas devem ter o mesmo personagem, usar as cores laranja e cinza e manter o fundo minimalista'. \n\nA consistência é o que diferencia um amador de um mestre de branding."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Planejando uma Série",
-        "question": "Ordene o pedido para criar 5 posts consistentes sobre 'Gestão de Tempo':",
-        "initialWords": [
-          "Crie uma série de 5 posts,",
-          "estilo minimalista com ícones,",
-          "paleta azul e branco consistente,",
-          "formato quadrado 1080x1080,",
-          "espaço para frases motivacionais."
-        ],
-        "correctOrder": [
-          "Crie uma série de 5 posts,",
-          "estilo minimalista com ícones,",
-          "paleta azul e branco consistente,",
-          "formato quadrado 1080x1080,",
-          "espaço para frases motivacionais."
-        ],
-        "explanation": "Excelente! Definir que é uma série e pedir consistência de cores e formato é o segredo para um feed harmônico."
-      },
-      {
-        "type": "text",
-        "title": "📈 Otimização de Imagens para Venda",
-        "content": "Não basta criar, é preciso converter. Peça para a IA analisar sua própria criação:\n'Analise este banner. Onde está o ponto de maior atenção? As cores do botão de compra estão destacadas o suficiente?'. \n\nA IA pode te dar um feedback técnico sobre **hierarquia visual**, ajudando você a ajustar a imagem para que ela guie o olho do cliente exatamente para onde você quer."
-      },
-      {
-        "type": "text",
-        "title": "🎭 Personas e Avatares para Marcas",
-        "content": "Crie o 'rosto' da sua empresa. \n'Crie um avatar para minha marca de tecnologia. Ele deve ser um robô amigável, estilo Pixar, com cores verde e preto'. \n\nTer um personagem recorrente em todos os seus materiais educativos e redes sociais cria um vínculo emocional muito mais forte com o seu público."
-      },
-      {
-        "type": "text",
-        "title": "🏢 Branding Corporativo e Manuais",
-        "content": "Profissionais sérios criam um **Manual da Marca**. \n\n\n\nPeça para a IA definir as regras: 'Crie um guia visual para a empresa NexusTech. Defina a cor primária (Azul #0056A4), a fonte principal e como o logo deve ser aplicado em cartões de visita e no site'. Isso evita que sua marca vire uma bagunça visual."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste: Manual de Marca",
-        "question": "Para que serve um manual de identidade visual?",
-        "options": [
-          {
-            "text": "Para garantir que a marca pareça a mesma em qualquer lugar",
-            "isCorrect": true,
-            "explanation": "Exato! A consistência gera profissionalismo e confiança no cliente."
+            "explanation": "Ele também faz pesquisas de mercado, análise de dados, organização de e-mails, entre outros."
           },
           {
-            "text": "Apenas para escolher uma cor bonita",
+            "text": "Manus acessa seus arquivos locais privados sem permissão.",
             "isCorrect": false,
-            "explanation": "Escolher a cor é só o começo. O manual dita como usar todos os elementos visuais."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "📊 Sistemas de Design Reutilizáveis",
-        "content": "Crie 'peças de Lego' visuais. Defina como são seus botões, seus cards de depoimento e suas bordas uma única vez. \n\nCom esses padrões salvos, você consegue criar novas páginas e posts em minutos, mantendo a qualidade de uma agência de luxo."
-      },
-      {
-        "type": "text",
-        "title": "🎯 Projeto Final: Sua Primeira Campanha Visual",
-        "content": "Hoje você vai criar uma campanha completa para a **EcoTech**. \n\n\n\n**O que entregar:**\n1.  **O Teaser:** Imagem com mistério para gerar curiosidade.\n2.  **O Lançamento:** Imagem do produto em destaque com cores vibrantes.\n3.  **O Educativo:** Um infográfico simples explicando o benefício.\n4.  **A Urgência:** Uma imagem focada em 'Últimas Vagas' ou 'Desconto encerrando'. \n\nEsse pacote completo prova que você dominou a direção de arte com IA."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade Final: O Briefing Mestre",
-        "question": "Preencha o seu planejamento para o projeto final:",
-        "initialWords": [
-          "Projeto: Lançamento App Fitness,",
-          "Objetivo: 1000 downloads em 30 dias,",
-          "Público: Jovens adultos 20-35 anos,",
-          "Entregáveis: Logo, banners e posts,",
-          "Prazo: 1 semana para produção."
-        ],
-        "correctOrder": [
-          "Projeto: Lançamento App Fitness,",
-          "Objetivo: 1000 downloads em 30 dias,",
-          "Público: Jovens adultos 20-35 anos,",
-          "Entregáveis: Logo, banners e posts,",
-          "Prazo: 1 semana para produção."
-        ],
-        "explanation": "Perfeito! Com esse planejamento, você está pronto para comandar a IA e entregar resultados reais."
-      },
-      {
-        "type": "text",
-        "title": "🏆 Conclusão do Dia 17: O Diretor Criativo",
-        "content": "**O QUE VOCÊ CONSTRUIU HOJE:**\n\n1. Um sistema de criação visual profissional usando o método V.I.S.U.A.L.\n2. Logos, redes sociais e mockups que valem milhares de reais.\n3. Um manual de marca para garantir consistência e confiança.\n4. Uma campanha completa criada do zero em minutos.\n\n**MENTALIDADE:**\nVocê parou de 'pedir desenhos' e começou a **gerenciar identidades visuais**. O Nano Banana é o seu braço direito; o talento estratégico é seu.\n\n**AMANHÃ:** Vamos entrar no mundo do desenvolvimento! Descubra o **Lovable** e aprenda a criar sites e apps completos sem saber uma linha de código!"
-      }
-    ]
-  },
-  "day18": {
-    "steps": [
-      {
-        "type": "text",
-        "title": "🚀 Bem-vindo ao Lovable: De Ideia para App em Minutos",
-        "content": "### A REVOLUÇÃO DO DESENVOLVIMENTO COM IA\n\n**Você acabou de cruzar a fronteira.** Agora não é mais apenas usuário de IA — você é um **construtor de aplicações**.\n\n### O QUE É LOVABLE?\n\nLovable transforma linguagem natural em **aplicações web completas**.\n\n**COMPARE:**\n\n**Desenvolvimento Tradicional:**\n- Tempo: 2-6 meses\n- Custo: R$ 30.000 - R$ 150.000+\n- Habilidades: Programação + Design + DevOps\n- Complexidade: Alta\n\n**Lovable (com IA):**\n- Tempo: 2-48 horas\n- Custo: R$ 0 - R$ 500/mês\n- Habilidades: Saber descrever o que quer\n- Complexidade: Baixa\n\n### O QUE VOCÊ VAI CONSTRUIR HOJE:\n\n✅ **Landing page profissional** em 10 minutos\n✅ **Dashboard interativo** em 20 minutos\n✅ **SaaS mínimo viável** em 1 hora\n✅ **App com banco de dados** em 2 horas\n\n### POR QUE ISSO MUDA TUDO:\n\n1. **Democratização:** Qualquer pessoa pode criar software\n2. **Velocidade:** Ideia → Produto em horas, não meses\n3. **Custo:** 99% mais barato que desenvolvimento tradicional\n4. **Iteração:** Teste ideias em tempo real\n\n### MERCADO QUE VOCÊ ESTÁ ENTRANDO:\n\n**Dados 2024:**\n- **Mercado no-code/low-code:** US$ 31 bilhões\n- **Crescimento anual:** 40%\n- **Demanda por desenvolvedores low-code:** +5x oferta\n- **Salário médio especialista:** R$ 12.000 - R$ 25.000/mês\n\n**Oportunidade REAL:**\nVocê pode criar apps para clientes por **R$ 2.000 - R$ 10.000** em 1-2 semanas, quando antes custavam **R$ 50.000 - R$ 200.000**.\n\n### SUA META DO DIA:\n**Em 4 horas, você vai:**\n1. Criar uma landing page completa\n2. Construir um dashboard com gráficos\n3. Implementar um CRUD (Create, Read, Update, Delete)\n4. Publicar seu primeiro app online\n\n**Vamos construir!** 🚀"
-      },
-      {
-        "type": "text",
-        "title": "🏗️ Arquitetura do Lovable: Como a IA Constrói Apps",
-        "content": "### ENTENDENDO A MÁGICA POR TRÁS\n\nPara construir como um profissional, você precisa entender O QUE a IA está criando.\n\n### O STACK TECNOLÓGICO GERADO:\n\n**Frontend (o que o usuário vê):**\n- **React** - Framework moderno mais popular\n- **TypeScript** - JavaScript com tipos para menos bugs\n- **Tailwind CSS** - Framework CSS utilitário\n- **Componentes reutilizáveis** - Blocos de construção\n\n**Backend (a lógica por trás):**\n- **Supabase** - Backend-as-a-Service completo\n- **PostgreSQL** - Banco de dados profissional\n- **APIs REST automáticas** - Para comunicação\n- **Autenticação integrada** - Login pronto\n\n**Infraestrutura (onde roda):**\n- **Deploy automático** - Um clique para publicar\n- **SSL gratuito** - Site seguro\n- **CDN global** - Rápido em todo mundo\n- **Escalável** - Cresce com seu sucesso\n\n### COMO O LOVABLE ENTENDE SEU PROMPT:\n\n```\nQuando você escreve:\n\"Crie uma landing page para um SaaS de email marketing\"\n\nA IA ENTENDE:\n1. TIPO: Landing page (não app interno, não dashboard)\n2. NICHO: SaaS (Software as a Service)\n3. SETOR: Email marketing\n4. ELEMENTOS PADRÃO: Hero, features, pricing, CTA\n5. TONALIDADE: Profissional, tech, confiança\n6. COMPONENTES: Formulário de email, cards, botões\n\nE CRIA:\n- Componente HeroSection com headline e subheadline\n- Componente FeaturesGrid com 4-6 cards\n- Componente PricingTable com 3 planos\n- Componente ContactForm para lead capture\n- Layout responsivo para mobile/desktop\n```\n\n### A ARQUITETURA DO PROMPT:\n\n**Prompt Leigo:**\n\"Uma página bonita para meu negócio\"\n\n**Prompt Profissional (que entende arquitetura):**\n\"Crie uma landing page para SaaS de email marketing com:\n1. Hero section: Headline impactante + subheadline + CTA principal\n2. Seção Features: Grid de 6 cards com ícones\n3. Seção Pricing: 3 planos com toggle mensal/anual\n4. Seção Testimonials: 3 depoimentos com fotos\n5. Footer: Links + newsletter signup\n\nTecnicalidades:\n- Design moderno com tailwind\n- Responsivo mobile-first\n- Formulário conectado ao backend\n- Cores: azul (#2563EB) e branco\"\n\n### EXERCÍCIO MENTAL:\nPare 30 segundos e pense:\n\"Como o Lovable 'pensa' quando eu escrevo 'app de tarefas com calendário'?\"\n\nEle provavelmente pensa:\n- Tipo: App de produtividade\n- Features básicas: CRUD de tarefas\n- Feature adicional: Visualização calendário\n- Banco de dados: Tabela 'tasks' com campos\n- UI: Lista + formulário + calendário\n- Autenticação: Opcional mas recomendada\n\n**Entender = Controlar melhor os resultados.**"
-      },
-      {
-        "type": "text",
-        "title": "🎯 Framework B.U.I.L.D.: Método para Prompts Perfeitos",
-        "content": "### APRESENTANDO O FRAMEWORK QUE VAI TRANSFORMAR SEUS RESULTADOS\n\nBaseado em análise de 5.000+ apps bem-sucedidos, desenvolvi o framework **B.U.I.L.D.** — metodologia passo a passo que garante apps profissionais.\n\n### B - BUSINESS CONTEXT (10% do prompt)\n```\n[O QUE] + [PARA QUEM] + [PROBLEMA QUE RESOLVE]\n\nExemplo ruim: \"um app de tarefas\"\nExemplo B.U.I.L.D.:\n\"App de gerenciamento de projetos para equipes remotas\nQUE resolve o problema de comunicação fragmentada\nPERMITINDO que equipes vejam status em tempo real\"\n```\n\n### U - USER FLOW (25% do prompt)\n```\n[FLUXO DO USUÁRIO] + [PÁGINAS NECESSÁRIAS]\n\nComponentes:\n1. Fluxo: \"Usuário faz login → vê dashboard → cria projeto\"\n2. Páginas: Login, Dashboard, Projetos, Tarefas, Perfil\n3. Navegação: Sidebar, header, breadcrumbs\n\nExemplo:\n\"Fluxo principal: usuário se registra, cria equipe, adiciona membros, cria projetos\nPáginas: Landing (pública), Login/Registro, Dashboard, Equipes, Projetos\"\n```\n\n### I - INTERFACE SPECS (30% do prompt)\n```\n[LAYOUT] + [COMPONENTES] + [INTERAÇÕES]\n\nRegra dos 3 níveis:\nNível 1: Layout geral (sidebar + content)\nNível 2: Componentes principais (tabela, formulário, cards)\nNível 3: Interações (drag and drop, modais, filtros)\n\nExemplo completo:\n\"Layout: Dashboard com sidebar esquerda + conteúdo principal\nComponentes: Tabela de projetos com ações, modal de criação, cards de estatísticas\nInterações: Drag and drop de tarefas, filtros por status, busca em tempo real\"\n```\n\n### L - LOGIC & DATA (20% do prompt)\n```\n[DADOS] + [REGRAS] + [INTEGRAÇÕES]\n\n1. Dados: O que precisa ser salvo no banco\n2. Regras: Como os dados se relacionam\n3. Integrações: APIs externas necessárias\n\nExemplo:\n\"Dados: Projetos (nome, descrição, prazo), Tarefas (título, status, responsável)\nRegras: Apenas dono do projeto pode deletar\nIntegrações: Nenhuma no MVP\"\n```\n\n### D - DESIGN SYSTEM (10% do prompt)\n```\n[CORES] + [FONTES] + [ESTILO]\n\n1. Cores: Paleta principal com códigos HEX\n2. Fontes: Font-family preferida\n3. Estilo: Moderno, minimalista, corporativo, etc\n\nExemplo:\n\"Cores: Azul (#2563EB) como primária, cinza (#F3F4F6) como fundo\nFontes: Inter ou system sans-serif\nEstilo: Moderno e clean, similar ao Notion\"\n```\n\n### TEMPLATE COMPLETO B.U.I.L.D.:\n```\n[B] BUSINESS: [App] para [público] que resolve [problema]\n\n[U] USER FLOW: [Fluxo principal] com páginas [lista de páginas]\n\n[I] INTERFACE: Layout [layout] com componentes [componentes] e interações [interações]\n\n[L] LOGIC: Dados [dados], regras [regras], integrações [integrações]\n\n[D] DESIGN: Cores [cores], fontes [fontes], estilo [estilo]\n```\n\n### EXEMPLO PRÁTICO REAL:\n```\n[B] BUSINESS: App de OKRs (Objectives and Key Results) para startups\n\n[U] USER FLOW: Usuário cria empresa → define objetivos trimestrais → adiciona KRs → atualiza progresso semanalmente\nPáginas: Dashboard, OKRs, Relatórios, Equipe\n\n[I] INTERFACE: Layout com sidebar de navegação + conteúdo\nComponentes: Tabela de OKRs com progresso, gráficos de evolução, modal de atualização\nInterações: Atualizar progresso com slider, comentários em cada KR\n\n[L] LOGIC: Dados: Empresas, Objetivos, KRs, Atualizações\nRegras: Apenas admin cria objetivos, todos podem atualizar KRs\nIntegrações: Nenhuma inicialmente\n\n[D] DESIGN: Cores: verde (#10B981) para sucesso, azul (#3B82F6) primário\nFontes: System sans-serif\nEstilo: Clean e data-driven como Google Analytics\n```\n\n### POR QUE ESSE FRAMEWORK FUNCIONA?\nEle estrutura seu pensamento na mesma ordem que a IA processa:\n1. Primeiro ENTENDE o negócio\n2. Depois MAPEIA o fluxo de usuário\n3. Então DESENHA a interface\n4. Em seguida PLANEJA a lógica\n5. Finalmente ESTILIZA\n\n**Exercício Imediato:**\nPegue uma ideia de app que você tem. Agora, estruture usando B.U.I.L.D. Mesmo sem criar ainda, você já está 50% mais próximo do resultado perfeito."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste: Análise de Prompt Lovable",
-        "question": "Analise este prompt usando o framework B.U.I.L.D.:\n\n\"Um app para controlar finanças pessoais\"\n\nQual elemento B.U.I.L.D. está MAIS fraco?",
-        "options": [
-          {
-            "text": "Business Context - não define público específico nem problema claro",
-            "isCorrect": true,
-            "explanation": "✅ CORRETO! 'Finanças pessoais' é genérico. Um prompt profissional especificaria: 'Para jovens profissionais 25-35 que nunca aprenderam educação financeira' ou 'Para freelancers que têm renda variável'. Especificidade no business context é o que separa apps genéricos de apps que realmente resolvem problemas."
-          },
-          {
-            "text": "Interface Specs - não menciona componentes",
-            "isCorrect": false,
-            "explanation": "⚠️ É importante, mas primeiro precisamos saber PARA QUEM e PARA QUE antes de pensar na interface."
-          },
-          {
-            "text": "Design System - não define cores",
-            "isCorrect": false,
-            "explanation": "❌ Design vem depois. Sem contexto de negócio e fluxo, cores são secundárias."
+            "explanation": "Ele não acessa seus arquivos locais; trabalha no ambiente web/online."
           }
         ]
       },
@@ -2266,80 +2066,177 @@
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Framework B.U.I.L.D. Completo",
-          "sentence": "B.U.I.L.D. significa: ___ context, ___ flow, ___ specs, ___ data, e ___ system.",
+          "title": "✏️ QUESTÃO 2 - Completar a Frase",
+          "sentence": "Para extrair bons resultados do Manus, você deve: 1) Estruturar prompts com ___ (não ambiguidade); 2) Dividir tarefas ___ em etapas menores; 3) Acompanhar a execução deixando visível o ___; 4) Usar ___ em vez de esperar perfeição na primeira tentativa; 5) Validar dados críticos em pelo menos ___ fontes independentes.",
           "answers": [
-            "Business",
-            "User",
-            "Interface",
-            "Logic",
-            "Design"
+            "Especificidade",
+            "gigantes",
+            "Computador Virtual",
+            "feedback iterativo",
+            "2"
           ],
           "options": [
-            "Business",
-            "User",
-            "Interface",
-            "Logic",
-            "Design",
-            "Backend",
-            "Usability",
-            "Interaction"
+            "Especificidade",
+            "gigantes",
+            "Computador Virtual",
+            "feedback iterativo",
+            "2",
+            "Clareza",
+            "simples",
+            "Dashboard",
+            "revisão final",
+            "3"
           ],
-          "explanation": "B.U.I.L.D. é o framework para criação de apps: Business, User, Interface, Logic, Design."
+          "explanation": "Perfeito! Esses são os princípios essenciais para não desperdiçar créditos e garantir que o agente execute o que você realmente quer."
         }
       },
       {
-        "type": "text",
-        "title": "🌐 Casos de Uso Reais: Do Briefing ao App",
-        "content": "### TRANSFORMANDO NECESSIDADES DE NEGÓCIO EM APPS FUNCIONAIS\n\nVamos analisar 4 casos reais que você encontrará no mercado:\n\n**CASO 1: MVP para Startup (Briefing Real)**\n```\nCLIENTE: \"Preciso de um MVP para meu SaaS de agendamento para psicólogos.\nFuncionalidades básicas: calendário do terapeuta, agendamento por pacientes, lembretes por email.\nCores: azul e branco. Orçamento: R$ 5.000. Prazo: 2 semanas.\"\n\nANÁLISE DO BRIEFING:\n- Setor: Healthtech\n- Usuários: Psicólogos (admin) e Pacientes (usuários)\n- Core: Agendamento + Notificações\n- Monetização: SaaS mensal\n\nPROMPT B.U.I.L.D.:\n[B] SaaS de agendamento para psicólogos, permitindo que pacientes marquem sessões online\n\n[U] Psicólogo se cadastra → configura disponibilidade → compartilha link → Paciente agenda → Ambos recebem confirmação\nPáginas: Landing pública, Login, Dashboard psicólogo, Calendário, Pacientes, Configurações\n\n[I] Layout: Dashboard com sidebar + calendário interativo\nComponentes: Calendário semanal/mensal, modal de agendamento, lista de pacientes\nInterações: Drag and drop de horários, confirmação em tempo real\n\n[L] Dados: Users (terapeutas), Patients, Appointments, Availability\nRegras: Apenas terapeuta cria disponibilidade, paciente apenas agenda slots livres\nIntegrações: Email (SendGrid ou similar) para notificações\n\n[D] Cores: Azul profissional (#3B82F6) e branco, tons calmantes\nEstilo: Clean e profissional como Calendly\n```\n\n**CASO 2: Dashboard Interno para Empresa**\n```\nCLIENTE: \"Dashboard para nossa equipe de vendas ver métricas em tempo real.\nPrecisa mostrar: vendas do dia, funil de conversão, performance por vendedor.\nIntegração com nossa planilha do Google Sheets.\"\n\nPROMPT PROFISSIONAL:\n\"Dashboard interno de vendas com:\n1. Header com KPIs do dia: Vendas, Conversão, Ticket Médio\n2. Gráfico de linha com vendas últimos 30 dias\n3. Tabela de vendedores com metas vs realizado\n4. Funil de vendas com etapas: Lead → Contato → Proposta → Fechado\n5. Integração com Google Sheets via API para importar dados diariamente\n\nLayout: Grid responsivo com cards\nEstilo: Corporativo moderno, similar ao Salesforce\nCores: Azul marinho (#1E3A8A) para marca, verde (#10B981) para positivos, vermelho (#EF4444) para alertas\nDados mock inicialmente, depois integração real\"\n\n**POR QUE FUNCIONA:**\n- Especifica KPIs exatos\n- Menciona integração necessária\n- Define layout e componentes\n- Considera evolução (mock → real)\n```\n\n**CASO 3: Landing Page de Alta Conversão**\n```\nNECESSIDADE: Landing page para lançamento de curso online.\nFormato: Venda direta. Objetivo: 5%+ conversão.\n\nPROMPT OTIMIZADO:\n\"Landing page de venda para curso 'Domine o ChatGPT em 7 Dias'\nSeções obrigatórias:\n1. Hero: Headline 'De Rookie a Expert em ChatGPT em 1 Semana' + vídeo de 90 segundos + CTA 'Quero me inscrever'\n2. Problema: 3 pontos de dor do público (tempo perdido, resultados ruins, frustração)\n3. Solução: O que o curso ensina (framework CTFD, prompts templates, casos reais)\n4. Benefícios: Transformação em 7 dias (mais produtivo, mais criativo, mais valor de mercado)\n5. Depoimentos: 3 alunos reais com resultados concretos\n6. Garantia: 30 dias ou dinheiro de volta\n7. FAQ: 5 perguntas frequentes\n8. CTA final com scarcity (vagas limitadas)\n\nDesign: Conversional, muitos CTAs, cores de confiança (azul #2563EB)\nMobile-optimized, load rápido\"\n\n**OTIMIZAÇÕES PARA CONVERSÃO:**\n- Headline com benefício claro\n- Vídeo acima da dobra (above the fold)\n- Múltiplos CTAs\n- Prova social (depoimentos)\n- Redução de risco (garantia)\n```\n\n**CASO 4: App Interno de Processos**\n```\nPRODUTO: Sistema de aprovação de despesas para empresa.\nUSO: 50 colaboradores. Necessidade: reduzir tempo de aprovação de 5 para 1 dia.\n\nPROMPT ESPECÍFICO:\n\"Sistema interno de aprovação de despesas com workflow:\n1. Colaborador submete despesa (valor, categoria, comprovante)\n2. Gerente imediato aprova/rejeita\n3. Financeiro processa pagamento\n4. Status visível para todos envolvidos\n\nFeatures:\n- Upload de comprovante (PDF/Imagem)\n- Aprovação em 1 clique com comentário opcional\n- Notificações por email em cada etapa\n- Dashboard financeiro com despesas por categoria\n- Relatórios mensais automáticos\n\nSegurança: Apenas financeiro vê todos dados, gerente vê apenas sua equipe\nDesign: Corporativo simples, foco em funcionalidade\"\n\n**VALOR PARA O CLIENTE:**\nUm sistema assim custaria R$ 20.000-50.000 com desenvolvimento tradicional. Com Lovable: R$ 0-500/mês.\n```\n\n### ANÁLISE DE ROI POR CASO:\n\n| Caso | Custo Tradicional | Custo Lovable | Economia | Tempo Economizado |\n|------|-------------------|---------------|----------|-------------------|\n| SaaS Psicólogos | R$ 50.000 - 100.000 | R$ 200 - 500/mês | 95-99% | 3-6 meses → 2 semanas |\n| Dashboard Vendas | R$ 30.000 - 60.000 | R$ 0 - 200/mês | 97-100% | 2-3 meses → 1 semana |\n| Landing Page | R$ 5.000 - 15.000 | R$ 0 - 50 | 99-100% | 2-4 semanas → 1 dia |\n| App Processos | R$ 25.000 - 75.000 | R$ 0 - 300/mês | 98-100% | 2-4 meses → 3 semanas |\n\n**Total economia potencial/mês:** R$ 10.000 - 25.000\n**Tempo economizado/mês:** 8-14 meses\n\n**Exercício Prático:** Escolha UM desses casos e escreva o prompt completo como se fosse para um cliente real. Use o framework B.U.I.L.D. para estruturar."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Exercício: Criação de SaaS MVP",
-        "question": "Você recebeu este briefing de um cliente:\n\n'Preciso de um MVP para meu SaaS de gestão de conteúdo social.\nFuncionalidades: agendar posts, analisar performance, gerenciar múltiplas contas.\nPúblico: pequenas empresas. Prazo: 3 semanas. Orçamento: R$ 8.000.'\n\nMonte o prompt usando B.U.I.L.D.:",
-        "initialWords": [
-          "[B] SaaS para agendamento de posts em redes sociais",
-          "[U] Usuário conecta contas → cria conteúdo → agenda → analisa performance",
-          "[I] Dashboard com calendário visual, editor de posts, gráficos de engajamento",
-          "[L] Dados: Users, Social Accounts, Scheduled Posts, Analytics",
-          "[D] Design moderno social media, cores azul (#1DA1F2) e preto"
-        ],
-        "correctOrder": [
-          "[B] SaaS para agendamento de posts em redes sociais",
-          "[U] Usuário conecta contas → cria conteúdo → agenda → analisa performance",
-          "[I] Dashboard com calendário visual, editor de posts, gráficos de engajamento",
-          "[L] Dados: Users, Social Accounts, Scheduled Posts, Analytics",
-          "[D] Design moderno social media, cores azul (#1DA1F2) e preto"
-        ],
-        "explanation": "Excelente! Você capturou todos os elementos: business context claro (SaaS social), user flow lógico (conecta → cria → agenda → analisa), interface específica (calendário, editor, gráficos), estrutura de dados essencial, e design apropriado ao setor (cores de Twitter). Isso é exatamente o que um product manager profissional faria no briefing!"
-      },
-      {
-        "type": "text",
-        "title": "⚡ Workflow Profissional: Do Briefing à Entrega",
-        "content": "### O PROCESSO DE 6 ETAPAS DOS PROFISSIONAIS\n\nA diferença entre amador e profissional está no PROCESSO, não apenas no resultado.\n\n**ETAPA 1: DISCOVERY & SCOPE (30-60 minutos)**\n```\nCHECKLIST DE DESCOBERTA:\n☐ Objetivo principal do app (vender, automatizar, informar)\n☐ Usuários principais e seus papéis\n☐ Funcionalidades MUST HAVE vs NICE TO HAVE\n☐ Integrações necessárias (APIs, serviços)\n☐ Design references (apps similares que o cliente gosta)\n☐ Restrições técnicas (performance, segurança)\n☐ Métricas de sucesso (como medir se funcionou)\n☐ Prazo e orçamento realista\n\nPERGUNTAS-CHAVE:\n1. \"Qual problema principal esse app resolve?\"\n2. \"Como você sabe que esse problema existe?\"\n3. \"O que acontece se NÃO resolvermos isso?\"\n4. \"Como medimos sucesso em 30/60/90 dias?\"\n```\n\n**ETAPA 2: PRODUCT SPEC (45 minutos)**\nDocumente TUDO antes de começar:\n- User personas (quem usa, o que precisa)\n- User stories (como cada persona usa)\n- Information architecture (mapa do site/app)\n- Wireframes básicos (esqueleto no papel)\n- Data model (tabelas e relacionamentos)\n\n**ETAPA 3: PROMPT ENGINEERING (15 minutos)**\nUse o framework B.U.I.L.D. com as informações coletadas.\n\n**ETAPA 4: ITERAÇÃO CONTROLADA (1-3 horas)**\n```\nMÉTODO DE ITERAÇÃO PROFISSIONAL:\n\nITERAÇÃO 1: MVP Básico\n- Gere apenas as funcionalidades essenciais\n- Foque em fazer funcionar, não em perfeição\n- Teste fluxo principal end-to-end\n\nITERAÇÃO 2: Refinamento UX\n- Ajuste layout baseado em testes\n- Melhore mensagens de erro\n- Otimize para mobile\n- Adicione loading states\n\nITERAÇÃO 3: Polimento UI\n- Ajuste cores e espaçamento\n- Adicione micro-interações\n- Melhore performance\n- Adicione acessibilidade\n\nITERAÇÃO 4: Features Adicionais\n- Só agora adicione NICE TO HAVES\n- Uma feature por vez\n- Teste cada adição isoladamente\n```\n\n**ETAPA 5: TESTES & DEPLOY (30 minutos)**\n```\nCHECKLIST PRÉ-DEPLOY:\n☐ Todos fluxos principais funcionam\n☐ Responsivo em mobile/tablet/desktop\n☐ Formulários validam corretamente\n☐ Erros têm mensagens amigáveis\n☐ Performance aceitável (carrega em <3s)\n☐ SEO básico configurado\n☐ Analytics instalado\n☐ Backup configurado\n```\n\n**ETAPA 6: HANDOFF & DOCUMENTAÇÃO (30 minutos)**\n```\nPACOTE DE ENTREGA PROFISSIONAL:\n1. Link do app online\n2. Credenciais de admin\n3. Documentação do código\n4. Guia do usuário básico\n5. Plano de manutenção\n6. Sugestões de próximos passos\n7. Fatura/proposta\n```\n\n### TEMPO TOTAL vs QUALIDADE:\n\n**Amador:** 30 minutos → app bugado e incompleto\n**Profissional:** 3-6 horas → app funcional e profissional\n**Agência tradicional:** 200-400 horas → app similar\n\n**Por que gastar 3-6 horas se a IA faz em 30 minutos?**\nPorque as 3-6 horas são investidas em:\n- Entendimento do problema (1h)\n- Planejamento estratégico (45min)\n- Refinamento iterativo (2-4h)\n- Garantia de qualidade (30min)\n\nO resultado? Um produto que parece ter custado R$ 50.000, não R$ 500.\n\n### FERRAMENTAS QUE COMPLEMENTAM LOVABLE:\n\n**Para Discovery:**\n- Whimsical/Miro (wireframes colaborativos)\n- FigJam (brainstorming)\n- UserTesting.com (testes com usuários)\n\n**Para Design:**\n- Figma (design system)\n- Coolors.co (paletas de cores)\n- FontPair (combinações de fontes)\n\n**Para Gerenciamento:**\n- Linear (gestão de produtos)\n- Notion (documentação)\n- Slack (comunicação com cliente)\n\n**Para Analytics:**\n- Google Analytics\n- Hotjar (heatmaps)\n- PostHog (product analytics)\n\n**Exercício:** Pegue um projeto de app que você abandonou por parecer muito complexo. Agora, aplique o workflow de 6 etapas. Quanto tempo você estima que levaria? Quanto custaria tradicionalmente? Qual seria seu preço com Lovable?"
-      },
-      {
-        "type": "text",
-        "title": "💰 Monetização Imediata: Como Ganhar Dinheiro HOJE",
-        "content": "### O MERCADO ESTÁ ESPERANDO POR VOCÊ\n\n**DADOS DO MERCADO BRASILEIRO:**\n- **Pequenas empresas que precisam de apps/sistemas:** 2.1 milhões\n- **Gasto médio com desenvolvimento tradicional:** R$ 20.000 - R$ 100.000\n- **Frustração com desenvolvedores tradicionais:** 72% reclamam de prazos e orçamentos\n- **Dispostas a pagar por apps low-code:** 38% das empresas\n\n### 5 SERVIÇOS QUE VOCÊ PODE OFERECER HOJE:\n\n**SERVIÇO 1: MVP de SaaS em 2 Semanas (R$ 7.997)**\n```\nENTREGAS:\n✅ App funcional com core features\n✅ Landing page para captação\n✅ Sistema de pagamentos integrado\n✅ Dashboard admin básico\n✅ Deploy e configuração\n✅ 30 dias de suporte\n\nTEMPO DE PRODUÇÃO: 20-30 horas\nCUSTO COM LOVABLE: R$ 200-500 (primeiro mês)\nLUCRO: R$ 7.497 - 7.797\nCLIENTES: Startups, empreendedores digitais\n```\n\n**SERVIÇO 2: Sistema Interno Corporativo (R$ 4.997)**\n```\nENTREGAS:\n✅ App personalizado para processo específico\n✅ Treinamento para equipe\n✅ Documentação completa\n✅ 3 meses de manutenção\n\nTEMPO: 15-25 horas\nCUSTO: R$ 100-300/mês\nLUCRO: R$ 4.697 - 4.897\nCLIENTES: Empresas com 10-100 funcionários\n```\n\n**SERVIÇO 3: Landing Page de Alta Conversão (R$ 1.997)**\n```\nENTREGAS:\n✅ Landing page otimizada para conversão\n✅ Integração com email marketing\n✅ A/B testing setup\n✅ SEO básico\n✅ Google Analytics configurado\n\nTEMPO: 5-10 horas\nCUSTO: R$ 0-50\nLUCRO: R$ 1.947 - 1.997\nCLIENTES: Qualquer negócio online\n```\n\n**SERVIÇO 4: Dashboard de BI/Análise (R$ 2.997)**\n```\nENTREGAS:\n✅ Dashboard interativo com gráficos\n✅ Conexão com fontes de dados\n✅ Filtros e exportação\n✅ Atualização automática\n\nTEMPO: 10-15 horas\nCUSTO: R$ 0-100\nLUCRO: R$ 2.897 - 2.997\nCLIENTES: Empresas que usam planilhas complexas\n```\n\n**SERVIÇO 5: Consultoria + Implementação (R$ 497/hora)**\n```\nENTREGAS:\n✅ Workshop de descoberta\n✅ Plano de implementação\n✅ Mentoria durante desenvolvimento\n✅ Review de código\n\nTEMPO: Flexível\nCUSTO: R$ 0 (seu conhecimento)\nLUCRO: R$ 497/hora\nCLIENTES: Empresas que querem aprender low-code\n```\n\n### COMO COMEÇAR (HOJE MESMO):\n\n**PASSO 1: Portfólio Grátis (4-6 horas)**\nCrie 3-5 apps para casos fictícios:\n1. SaaS de agendamento para dentistas\n2. Dashboard de métricas para e-commerce\n3. Sistema de tickets de suporte\n4. App de inventory management\n5. Plataforma de cursos online\n\n**PASSO 2: Apresentação (1 hora)**\nCrie um Google Sites/Notion com:\n- Quem você é (construtor low-code)\n- O que faz (transforma ideias em apps rápidos)\n- Portfólio (apps funcionais, não screenshots)\n- Preços (pacotes claros)\n- Depoimentos (de projetos fictícios)\n\n**PASSO 3: Primeiros Clientes (Estratégia de 7 dias)**\n```\nDIA 1-2: Ofereça GRÁTIS para 2-3 amigos empreendedores\n(em troca de depoimento real e caso de estudo)\n\nDIA 3-4: Poste no LinkedIn resultados\n'Como criei um sistema de R$ 50.000 em 3 dias com IA'\n\nDIA 5-6: Ofereça com 60% desconto para primeiros 3 clientes\n'Lancamento: R$ 3.197 (60% off) para primeiros 3'\n\nDIA 7: Feche 1-2 clientes a preço cheio\nJá com portfólio e depoimentos reais\n```\n\n### PROJEÇÃO FINANCEIRA REALISTA:\n\n**Mês 1:**\n- 1 MVP SaaS: R$ 7.997 (com desconto: R$ 3.197)\n- 1 Landing page: R$ 1.997 (com desconto: R$ 797)\n- 1 Consultoria 4h: R$ 1.988\n- **Total: R$ 5.982 - 11.982**\n- Tempo: 40-50 horas\n- **R$/hora: R$ 120-300**\n\n**Mês 3 (após refinamento):**\n- 2 MVPs: R$ 15.994\n- 2 Sistemas internos: R$ 9.994\n- 3 Landing pages: R$ 5.991\n- Consultoria 20h: R$ 9.940\n- **Total: R$ 41.919**\n- Tempo: 60-70 horas\n- **R$/hora: R$ 599-699**\n\n**Comparação com mercado:**\n- Desenvolvedor júnior: R$ 4.000-6.000/mês (CLT)\n- Desenvolvedor pleno: R$ 8.000-12.000/mês (CLT)\n- Agência pequena: R$ 15.000-30.000/projeto\n- Você mês 3: R$ 41.919 (freela, horário flexível)\n\n**Exercício de Planejamento:**\nEscreva agora:\n1. Quais 2 serviços você vai oferecer primeiro?\n2. Para quem (nichos específicos)?\n3. Qual seu preço?\n4. Como vai conseguir os 3 primeiros clientes?\n\nNão precisa ser perfeito. Só precisa ser feito. O mercado precisa desesperadamente de soluções rápidas e acessíveis. Você tem a solução nas mãos."
-      },
-      {
-        "type": "text",
-        "title": "⚠️ Armadilhas Comuns e Como Evitar (Checklist de Sobrevivência)",
-        "content": "### O QUE NÃO FAZER: LIÇÕES DE QUEM JÁ QUEBROU A CARA\n\n**ARMADILHA 1: SCOPE CREEP (EXPANSÃO DO ESCOPO)**\n```\nSINTOMA: Cliente pede \"só mais uma coisinha\" toda hora\nPROBLEMA: Projeto nunca termina, lucro desaparece\nSOLUÇÃO: Contrato claro com escopo fixo, mudanças = adicional\nSCRIPT: \"Isso sai do escopo original. Posso fazer por R$ X adicional.\"\n```\n\n**ARMADILHA 2: OVERENGINEERING (SOLUÇÃO MUITO COMPLEXA)**\n```\nSINTOMA: Tenta resolver todos os problemas do mundo\nPROBLEMA: App fica lento, caro, nunca termina\nSOLUÇÃO: MVP mínimo viável primeiro\nREGRA: Se não é ESSENCIAL para lançamento, não faça agora\n```\n\n**ARMADILHA 3: IGNORAR PERFORMANCE MOBILE**\n```\nSINTOMA: Testa apenas no desktop\nPROBLEMA: 60%+ dos usuários usam mobile\nSOLUÇÃO: Mobile-first sempre\nCHECK: Teste em iPhone SE (tela menor)\n```\n\n**ARMADILHA 4: ESQUECER BACKUP E SEGURANÇA**\n```\nSINTOMA: Não configura backups\nPROBLEMA: Cliente perde dados, culpa você\nSOLUÇÃO: Backup automático desde dia 1\nCHECKLIST: Backup diário + SSL + validação de inputs\n```\n\n**ARMADILHA 5: PROMETER INTEGRAÇÕES COMPLEXAS**\n```\nSINTOMA: \"Claro que integra com seu ERP de 1998\"\nPROBLEMA: API inexistente, impossível integrar\nSOLUÇÃO: Verifique APIs ANTES de prometer\nPERGUNTA: \"Tem documentação da API? Posso ver?\"\n```\n\n**ARMADILHA 6: NÃO TESTAR COM USUÁRIOS REAIS**\n```\nSINTOMA: Você é o único que testou\nPROBLEMA: Usabilidade horrível para outros\nSOLUÇÃO: Teste com 3 pessoas que nunca viram\nTAREFA: Peça para completar 3 tarefas básicas, observe\n```\n\n**ARMADILHA 7: IGNORAR ONBOARDING**\n```\nSINTOMA: App funciona mas ninguém sabe usar\nPROBLEMA: Cliente paga mas não usa\nSOLUÇÃO: Tutorial interativo ou vídeo de 3 minutos\n```\n\n**ARMADILHA 8: SUBESTIMAR MANUTENÇÃO**\n```\nSINTOMA: \"Pronto, acabou!\"\nPROBLEMA: Bugs aparecem, cliente fica bravo\nSOLUÇÃO: Ofereça pacote de manutenção mensal\nPREÇO: 20-30% do valor do projeto por mês\n```\n\n**ARMADILHA 9: TRABALHAR SEM CONTRATO**\n```\nSINTOMA: Apenas acordo verbal\nPROBLEMA: Cliente não paga, não tem recurso\nSOLUÇÃO: Contrato SEMPRE, mesmo com amigos\nTEMPLATE: Use o da ABRADI ou contrato simples\n```\n\n**ARMADILHA 10: NÃO DOCUMENTAR NADA**\n```\nSINTOMA: \"Como fiz isso mesmo?\"\nPROBLEMA: Não consegue replicar ou dar manutenção\nSOLUÇÃO: Documente prompts, decisões, configurações\nFERRAMENTA: Notion ou Google Docs com histórico\n```\n\n### CHECKLIST DE SEGURANÇA (ANTES DE ENTREGAR):\n\n✅ **Validação de Funcionalidades**\n- Todos os MUST HAVES funcionam?\n- Fluxos principais testados end-to-end?\n- Formulários validam e salvam?\n\n✅ **Validação Técnica**\n- Responsivo em mobile/tablet/desktop?\n- Performance aceitável (carrega em <3s)?\n- SSL configurado?\n- Backups automáticos?\n\n✅ **Validação de Usabilidade**\n- Testado com 3 usuários reais?\n- Mensagens de erro são claras?\n- Onboarding intuitivo?\n- Acessibilidade básica (contraste, labels)?\n\n✅ **Validação Comercial**\n- Dentro do orçamento?\n- Dentro do prazo?\n- Cliente assinou aceite?\n- Pronto para faturamento?\n\n**Armadilhas evitadas são clientes mantidos. Clientes mantidos são renda recorrente.**"
-      },
-      {
-        "type": "text",
-        "title": "📊 Métricas de Sucesso e Melhoria Contínua",
-        "content": "### O QUE MEDIR PARA CRESCER COMO PROFISSIONAL\n\n**MÉTRICAS DE PROCESSO (Como você trabalha):**\n\n1. **Tempo médio por projeto**\n   - Ideal: 20-40 horas para MVP simples\n   - Meta: reduzir 10% a cada 3 projetos\n\n2. **Taxa de aceitação do primeiro deploy**\n   - Iniciante: 40-50%\n   - Intermediário: 70-80%\n   - Avançado: 90-95%\n\n3. **Clientes recorrentes/manutenção**\n   - Meta: 50% dos clientes contratam manutenção\n   - Sinal de qualidade e confiança\n\n4. **Preço médio por hora**\n   - Mês 1: R$ 150-300/hora\n   - Mês 3: R$ 400-700/hora\n   - Mês 6: R$ 800-1.200/hora\n\n**MÉTRICAS DE QUALIDADE (O que você entrega):**\n\n1. **Satisfação do cliente (NPS)**\n   - Peça avaliação de 1-10 após entrega\n   - Meta: NPS > 60 (excelente)\n   - Calculado: % promotores - % detratores\n\n2. **Referências geradas**\n   - Cada cliente satisfeito deve gerar 1-2 referências\n   - Sistema: ofereça desconto para indicações\n\n3. **Bugs pós-deploy (primeiro mês)**\n   - Iniciante: 5-10 bugs críticos\n   - Avançado: 0-2 bugs críticos\n   - Meta: menos de 1 bug por 100 horas de uso\n\n**MÉTRICAS DE NEGÓCIO (Seu crescimento):**\n\n1. **Faturamento mensal**\n   - Meta realista mês 1: R$ 6.000-12.000\n   - Meta mês 6: R$ 25.000-50.000\n   - Meta ano 1: R$ 60.000-120.000\n\n2. **Margem de lucro**\n   - Custo típico: R$ 0-500/projeto (Lovable)\n   - Margem ideal: 85-95%\n   - Comparação: agências têm 30-50% margem\n\n3. **Ticket médio**\n   - Apps simples: R$ 2.000-5.000\n   - MVPs completos: R$ 8.000-15.000\n   - Sistemas corporativos: R$ 15.000-30.000\n   - Manutenção mensal: R$ 500-2.000/mês\n\n### SISTEMA DE MELHORIA CONTÍNUA:\n\n**Após cada projeto, pergunte-se:**\n1. O que funcionou bem? (continuar fazendo)\n2. O que poderia ser melhor? (melhorar)\n3. O que aprendi? (documentar)\n4. O que o cliente realmente valorizou? (enfatizar)\n\n**Biblioteca de Aprendizado (crie isso HOJE):**\n```\nGoogle Drive/Construtor Lovable/\n├── Prompts/                    # Seus melhores prompts\n│   ├── Landing Pages/\n│   ├── Dashboards/\n│   ├── SaaS MVPs/\n│   └── Sistemas Internos/\n├── Templates/                 # Templates reutilizáveis\n│   ├── Contratos/\n│   ├── Propostas/\n│   ├── Briefings/\n│   └── Checklists/\n├── Portfolio/                 # Seus projetos organizados\n│   ├── Screenshots/\n│   ├── Videos demo/\n│   └── Casos de estudo/\n├── Preços/                    # Tabelas de preço\n└── Aprendizados/              # Lições aprendidas por projeto\n```\n\n**Ciclo de Feedback:**\n```\n1. Executa projeto\n2. Coleta feedback (cliente + usuários)\n3. Ajusta processos e templates\n4. Atualiza biblioteca\n5. Repete com mais eficiência\n```\n\n### NÍVEIS DE PROFICIÊNCIA:\n\n**Nível 1: Iniciante (0-5 projetos)**\n- Foco: aprender Lovable e B.U.I.L.D.\n- Preço: R$ 100-200/hora\n- Meta: entregar projetos que funcionam\n\n**Nível 2: Competente (5-15 projetos)**\n- Foco: eficiência e qualidade consistente\n- Preço: R$ 300-500/hora\n- Meta: processos replicáveis, menos bugs\n\n**Nível 3: Proficiente (15-30 projetos)**\n- Foco: especialização em nichos\n- Preço: R$ 600-900/hora\n- Meta: autoridade em 1-2 nichos específicos\n\n**Nível 4: Especialista (30+ projetos)**\n- Foco: escalar e ensinar\n- Preço: R$ 1.000+/hora ou % do projeto\n- Meta: criar agência ou produto próprio\n\n**Qual seu nível atual? Qual será em 30 dias? E em 90 dias?**\n\n**Exercício Final:** Estabeleça SUAS métricas para os próximos 30 dias. Seja específico:\n- Quantos projetos completar?\n- Qual faturamento total?\n- Qual preço por hora?\n- Quantos clientes satisfeitos?\n- Quantos referências geradas?\n\nO que é medido é gerenciado. O que é gerenciado é melhorado."
-      },
-      {
-        "type": "text",
-        "title": "🏆 Conclusão do Dia 18: Você Agora É um Construtor de Apps",
-        "content": "### RESUMO DO QUE VOCÊ DOMINOU HOJE:\n\n**🎯 CONHECIMENTO TÉCNICO PROFUNDO**\n1. **Arquitetura do Lovable** - Entende COMO a IA transforma texto em apps\n2. **Framework B.U.I.L.D.** - Metodologia científica para prompts perfeitos\n3. **Casos de Uso Reais** - De landing pages a SaaS completos\n4. **Workflow Profissional** - Processo de 6 etapas do briefing à entrega\n\n**💼 HABILIDADES PROFISSIONAIS**\n1. **Tradução de briefing** - De necessidade do cliente para especificação técnica\n2. **Gestão de escopo** - Evitar scope creep e overengineering\n3. **Iteração controlada** - MVP → Refinamento → Polimento\n4. **Entrega profissional** - Deploy, documentação, handoff\n\n**💰 COMPETÊNCIAS COMERCIAIS**\n1. **Estrutura de preços** - 5 serviços prontos para oferecer\n2. **Prospecção** - Estratégia de 7 dias para primeiros clientes\n3. **ROI calculado** - Economia de 95-99% vs desenvolvimento tradicional\n4. **Projeção financeira** - R$ 6.000-50.000/mês realistas\n\n### SEU KIT DE FERRAMENTAS AGORA INCLUI:\n\n**🏗️ Construção:**\n- Lovable: Criação de apps\n- Framework B.U.I.L.D.: Metodologia\n- Templates: Reutilização inteligente\n\n**📋 Organização:**\n- Checklist de discovery\n- Template de contrato\n- Sistema de documentação\n\n**💼 Profissional:**\n- Pacotes de serviços\n- Estrutura de preços\n- Scripts de vendas\n- Métricas de sucesso\n\n### PRÓXIMOS PASSOS (AMANHÃ):\n\n**Dia 19: Design e UI/UX com Lovable**\nVocê vai dominar:\n- Design systems profissionais\n- Componentes reutilizáveis\n- UX patterns que convertem\n- Acessibilidade e responsividade\n- Integração com ferramentas de design\n\n### 📈 SEU PROGRESSO ATÉ AGORA:\n\n**Ferramentas Dominadas:** ChatGPT ✓ Claude ✓ DeepSeek ✓ Gemini ✓ NanoBanana ✓ Lovable ✓\n**Habilidades:** Texto ✓ Análise ✓ Código ✓ Produtividade ✓ Visual ✓ Apps ✓\n**Valor Gerado:** Sistemas completos ✓ Automação ✓ Criação visual ✓ Aplicações funcionais ✓\n\n### 🎁 BÔNUS: Seu Primeiro Projeto (Desafio Opcional)\n\n**Crie até amanhã:**\n1. Landing page para um produto fictício\n2. Dashboard com 3 gráficos e filtros\n3. App CRUD simples (tarefas, contatos, inventário)\n\n**Regras:**\n- Use o framework B.U.I.L.D.\n- Documente seu processo\n- Cronometre seu tempo\n\n**Prêmio:** Quem compartilhar os 3 projetos no grupo até amanhã às 18h recebe análise personalizada dos melhores prompts!\n\n> **Você acabou de adquirir uma habilidade que vale R$ 100.000/ano no mercado.**\n> Amanhã vamos torná-la ainda mais valiosa.\n\n**Dica final:** Crie uma pasta no seu computador chamada \"Lovable Projects\". Dentro, crie \"Day 18 - Primeiros Apps\". Salve TUDO que você criou hoje. Em 30 dias, você vai olhar para trás e não vai acreditar no progresso.\n\nAté amanhã, construtor de apps! 🚀✨"
+        "type": "component",
+        "componentName": "MatchWords",
+        "props": {
+          "title": "🔗 QUESTÃO 3 - Ligar Conceitos",
+          "description": "Conecte a prática recomendada ao resultado que ela produz ao usar o Manus:",
+          "pairs": [
+            {
+              "left": "Deixar a aba do Computador Virtual visível",
+              "right": "Economiza centenas de créditos ao detectar erros cedo"
+            },
+            {
+              "left": "Usar prompts iterativos com feedback",
+              "right": "Melhora qualidade final e reduz retrabalho"
+            },
+            {
+              "left": "Seguir a fórmula [CONTEXTO + TAREFA...]",
+              "right": "Padroniza qualidade e reduz tempo de estruturação"
+            }
+          ]
+        }
       }
-    ],
-    "summary": "Dia 18 completo: Domínio do Lovable. Aprendemos arquitetura da plataforma, framework B.U.I.L.D. para prompts eficazes, casos de uso reais, workflow profissional de 6 etapas, monetização imediata e métricas de sucesso. Você agora pode transformar ideias em aplicações funcionais em horas, não meses."
+    ]
+  },
+  "day18": {
+    "steps": [
+      {
+        "type": "text",
+        "title": "✍️ A ARTE DO PROMPT NO MANUS — DO BÁSICO AO AVANÇADO",
+        "content": "O Manus responde à precisão. Um prompt vago gera execução perdida e créditos desperdiçados. Use a fórmula que ele foi criado para receber.\n\n\n\n**Nível 1** — Prompt fraco: \"Crie um site.\"\n\n**Nível 2** — Prompt médio: \"Crie um site profissional para uma agência de marketing.\"\n\n**Nível 3** — Prompt forte: \"Crie um site para agência de marketing digital com páginas: home, serviços, portfólio e contato. Visual moderno em azul e branco, responsivo em mobile.\"\n\n**Nível 4** — Prompt profissional usando a fórmula completa: \"[CONTEXTO] Sou dono de uma agência de marketing digital focada em PMEs. [TAREFA] Crie um website completo com 5 páginas: home, serviços, portfólio com 8 projetos, blog com 3 artigos e formulário de contato funcional. [PADRÃO] Design moderno e minimalista, cores azul marinho e branco, tipografia clean. [RESTRIÇÕES] Responsivo em mobile, SEO básico implementado, carregamento rápido. [EXEMPLO] Referência visual: agências como Resultados Digitais e Rock Content.\"\n\nA diferença entre o nível 1 e o nível 4 não é só qualidade, é economia real de créditos e tempo de retrabalho."
+      },
+      {
+        "type": "text",
+        "title": "🏢 CASOS DE USO POR ÁREA (Tech, Dados e Marketing)",
+        "content": "💻 **Desenvolvimento e Tecnologia:** Gerar landing pages completas com HTML, CSS e JavaScript funcional. Criar dashboards interativos com gráficos e filtros. Prototipar aplicações web com UI profissional em horas. Desenvolver APIs mock para testes de produto. Automatizar scripts de coleta e transformação de dados.\n\n📊 **Análise de Dados e Business Intelligence:** Processar grandes volumes de dados e gerar relatórios visuais. Cruzar informações de múltiplas fontes em um único dashboard. Identificar padrões em datasets de clientes automaticamente. Gerar segmentações com critérios complexos sem código manual. Transformar planilhas brutas em apresentações executivas prontas.\n\n📣 **Marketing e Crescimento:** Pesquisar 10, 15 ou 20 concorrentes e montar matriz comparativa completa. Gerar roteiros de conteúdo com pesquisa de keywords integrada. Criar landing pages de campanha otimizadas para conversão. Compilar dados de múltiplas redes sociais em um relatório único. Automatizar pesquisa de tendências de mercado com síntese estruturada."
+      },
+      {
+        "type": "text",
+        "title": "🏢 CASOS DE USO POR ÁREA (Educação e Gestão)",
+        "content": "🎓 **Educação e Treinamento:** Transformar documentos e apostilas em sites interativos de aprendizado. Gerar quizzes e exercícios a partir de conteúdo existente. Criar portais de curso com estrutura de módulos e navegação. Montar materiais didáticos com dados pesquisados e organizados. Produzir roteiros de aula com referências e exemplos atualizados.\n\n🏢 **Gestão e Consultoria:** Automatizar relatórios semanais que antes levavam meio dia. Compilar pesquisa de mercado de múltiplas fontes em horas. Criar apresentações estratégicas com dados pesquisados e estruturados. Montar análises competitivas completas com visualizações. Documentar processos internos transformando textos em wikis navegáveis."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 1)",
+        "content": "**Erro 1 — Prompt vago em tarefa complexa:** Pedir \"crie uma plataforma completa\" sem especificar páginas, funcionalidades, estilo e restrições é o caminho mais rápido para gastar créditos e ter resultado ruim. Use sempre a fórmula completa.\n\n**Erro 2 — Não acompanhar o Computador Virtual:** Deixar o Manus executar sem olhar é arriscado. Se ele tomar uma decisão errada no início, vai construir tudo em cima disso. Acompanhe a execução e interrompa cedo se algo estiver saindo do caminho.\n\n\n\n**Erro 3 — Tentar fazer tudo em uma única tarefa gigante:** Projetos grandes devem ser divididos em etapas. Uma plataforma de e-learning não é uma tarefa, são 4 ou 5 etapas sequenciais. Isso economiza créditos e mantém a qualidade consistente."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR (Parte 2)",
+        "content": "**Erro 4 — Confiar em dados críticos sem validar:** O Manus pode alucinar números, citar fontes erradas ou interpretar dados de forma incorreta mesmo pesquisando em tempo real. Dados financeiros, médicos ou jurídicos sempre precisam de validação humana especializada.\n\n**Erro 5 — Usar o Manus para tarefas simples:** Se a tarefa leva 30 minutos manualmente ou com outra IA, o Manus não é a escolha certa. Ele brilha em tarefas de 10 horas ou mais. Para coisas simples, está desperdiçando créditos caros.\n\n**Erro 6 — Ignorar a comunidade e atualizações:** O Manus lança novos recursos mensalmente. Técnicas que funcionavam há 3 meses podem ter melhorado. Participar das comunidades no Discord e acompanhar o perfil oficial economiza créditos e amplia resultados."
+      },
+      {
+        "type": "text",
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 1)",
+        "content": "**Técnica da Fórmula Completa:** Sempre estruture os prompts com os cinco elementos: contexto, tarefa, padrão, restrições e exemplo. Cada elemento elimina uma decisão que o Manus teria que tomar sozinho, e decisões autônomas podem sair erradas.\n\n**Técnica da Divisão em Etapas:** Projetos grandes devem virar projetos menores em sequência. Defina claramente onde cada etapa começa e termina antes de iniciar. Isso mantém o controle e permite corrigir antes de construir sobre um erro.\n\n\n\n**Técnica do Checkpoint:** A cada entrega parcial, revise antes de pedir a próxima etapa. \"O que foi entregue até agora está correto? Sim, continue. Não, corrija isso antes de avançar.\" Isso evita retrabalho em cascata."
+      },
+      {
+        "type": "text",
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 2)",
+        "content": "**Técnica da Referência Visual:** Mencione sites, produtos ou marcas que servem de inspiração para o estilo esperado. O Manus consegue pesquisar e adaptar referências reais, o que eleva muito a qualidade visual do resultado.\n\n**Técnica do Feedback Iterativo:** Não espere perfeição na primeira entrega. Receba, revise, e peça ajustes específicos em partes concretas. \"A home ficou ótima. Ajuste apenas a seção de serviços para ter 4 cards com ícone, título e descrição curta.\" Isso refina sem refazer tudo."
+      },
+      {
+        "type": "text",
+        "title": "📱 MANUS NO DIA A DIA — FLUXO PRÁTICO",
+        "content": "**Antes de iniciar qualquer tarefa:** Escreva o prompt completo com a fórmula antes de enviar. Dois minutos planejando o prompt economizam 30 minutos de retrabalho e centenas de créditos.\n\n**Durante a execução:** Mantenha o Computador Virtual visível e acompanhe em tempo real. Se algo sair do caminho, interrompa cedo. Cada passo errado que o Manus dá custa créditos e gera retrabalho.\n\n**Ao receber a entrega:** Revise a entrega com atenção antes de aprovar e avançar. Verifique dados, links, funcionalidades e visual. Só peça a próxima etapa quando a atual estiver validada.\n\n**Para projetos longos:** Documente as etapas concluídas e as pendentes. Trate o Manus como um profissional em execução de projeto, com entregas parciais e aprovações claras a cada fase."
+      },
+      {
+        "type": "quiz",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Um consultor precisa criar uma análise competitiva com 15 concorrentes, incluindo preços, funcionalidades e integrações de cada um. Qual abordagem no Manus vai gerar o melhor resultado com menor desperdício de créditos?",
+        "options": [
+          {
+            "text": "Pesquise meus concorrentes e faça uma análise.",
+            "isCorrect": false,
+            "explanation": "Prompt de Nível 1. Muito genérico, vai gastar créditos à toa tentando adivinhar seus critérios."
+          },
+          {
+            "text": "Enviar uma tarefa única gigante pedindo tudo de uma vez sem estrutura.",
+            "isCorrect": false,
+            "explanation": "Tarefas gigantes sem estrutura levam a erros massivos e consumo rápido de créditos."
+          },
+          {
+            "text": "Usar a fórmula completa com contexto, tarefa, padrão, restrições e exemplo, dividindo em etapas: coleta de dados, estruturação e geração do relatório visual.",
+            "isCorrect": true,
+            "explanation": "Correto! Esse é o padrão de excelência: fórmula completa + divisão inteligente de etapas."
+          },
+          {
+            "text": "Usar o Perplexity para isso, pois o Manus não serve para pesquisa competitiva.",
+            "isCorrect": false,
+            "explanation": "Manus faz pesquisa competitiva brilhantemente, organizando planilhas e relatórios autônomos."
+          }
+        ]
+      },
+      {
+        "type": "component",
+        "componentName": "FillBlanks",
+        "props": {
+          "title": "✏️ QUESTÃO 2 - Complete a Frase",
+          "sentence": "Para evitar desperdício de créditos no Manus, mantenha o ___ visível durante a execução e interrompa cedo se algo sair do caminho. Projetos grandes devem ser divididos usando a técnica da ___, entregando e validando partes menores antes de avançar. E para refinar o resultado sem refazer tudo, use a técnica do ___, pedindo ajustes específicos em partes concretas da entrega.",
+          "answers": [
+            "Computador Virtual",
+            "Divisão em Etapas",
+            "Feedback Iterativo"
+          ],
+          "options": [
+            "Computador Virtual",
+            "Divisão em Etapas",
+            "Feedback Iterativo",
+            "Prompt Fraco",
+            "Dashboard",
+            "Alucinação",
+            "Criação Direta"
+          ],
+          "explanation": "Exatamente! Monitoramento, estruturação por fases e ajustes cirúrgicos são o segredo para dominar a ferramenta sem esgotar seus créditos."
+        }
+      },
+      {
+        "type": "component",
+        "componentName": "MatchWords",
+        "props": {
+          "title": "🔗 QUESTÃO 3 - Ligue os Termos",
+          "description": "Conecte o conceito avançado de prompt ao seu significado ou ação correta:",
+          "pairs": [
+            {
+              "left": "Técnica do Checkpoint",
+              "right": "Revisar cada entrega parcial antes de autorizar a próxima etapa"
+            },
+            {
+              "left": "Fórmula Completa",
+              "right": "Estruturar o prompt com contexto, tarefa, padrão, restrições e exemplo"
+            },
+            {
+              "left": "Técnica da Referência Visual",
+              "right": "Mencionar sites e marcas reais como inspiração de estilo"
+            },
+            {
+              "left": "Feedback Iterativo",
+              "right": "Pedir ajustes em partes específicas sem refazer o projeto inteiro"
+            },
+            {
+              "left": "Computador Virtual",
+              "right": "Ambiente visível onde o Manus executa as ações em tempo real"
+            }
+          ]
+        }
+      }
+    ]
   },
   "day19": {
     "steps": [
