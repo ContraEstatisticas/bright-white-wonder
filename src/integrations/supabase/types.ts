@@ -59,6 +59,33 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_hub_usage: {
+        Row: {
+          date: string
+          id: string
+          images_today: number
+          last_message_at: string | null
+          messages_today: number
+          user_id: string
+        }
+        Insert: {
+          date?: string
+          id?: string
+          images_today?: number
+          last_message_at?: string | null
+          messages_today?: number
+          user_id: string
+        }
+        Update: {
+          date?: string
+          id?: string
+          images_today?: number
+          last_message_at?: string | null
+          messages_today?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       ai_tools: {
         Row: {
           category: Database["public"]["Enums"]["ai_tool_category"]
@@ -166,6 +193,77 @@ export type Database = {
           user_id?: string | null
         }
         Relationships: []
+      }
+      certificates: {
+        Row: {
+          completion_date: string
+          course_name: string
+          created_at: string | null
+          file_path: string
+          file_url: string
+          id: string
+          metadata: Json | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          completion_date: string
+          course_name: string
+          created_at?: string | null
+          file_path: string
+          file_url: string
+          id?: string
+          metadata?: Json | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          completion_date?: string
+          course_name?: string
+          created_at?: string | null
+          file_path?: string
+          file_url?: string
+          id?: string
+          metadata?: Json | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      challenge_day_translations: {
+        Row: {
+          challenge_day_id: string
+          created_at: string | null
+          description: string | null
+          id: string
+          language: string
+          title: string
+        }
+        Insert: {
+          challenge_day_id: string
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          language: string
+          title: string
+        }
+        Update: {
+          challenge_day_id?: string
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          language?: string
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "challenge_day_translations_challenge_day_id_fkey"
+            columns: ["challenge_day_id"]
+            isOneToOne: false
+            referencedRelation: "challenge_days"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       challenge_days: {
         Row: {
@@ -575,12 +673,12 @@ export type Database = {
           created_at_paddle: string | null
           custom_data: Json | null
           customer_id: string
-          email: string | null
+          email: string
           id: string
           import_meta: Json | null
           last_event_id: string | null
           last_notification_id: string | null
-          last_payload: Json | null
+          last_payload: Json
           locale: string | null
           marketing_consent: boolean | null
           name: string | null
@@ -593,12 +691,12 @@ export type Database = {
           created_at_paddle?: string | null
           custom_data?: Json | null
           customer_id: string
-          email?: string | null
+          email: string
           id?: string
           import_meta?: Json | null
           last_event_id?: string | null
           last_notification_id?: string | null
-          last_payload?: Json | null
+          last_payload: Json
           locale?: string | null
           marketing_consent?: boolean | null
           name?: string | null
@@ -611,12 +709,12 @@ export type Database = {
           created_at_paddle?: string | null
           custom_data?: Json | null
           customer_id?: string
-          email?: string | null
+          email?: string
           id?: string
           import_meta?: Json | null
           last_event_id?: string | null
           last_notification_id?: string | null
-          last_payload?: Json | null
+          last_payload?: Json
           locale?: string | null
           marketing_consent?: boolean | null
           name?: string | null
@@ -634,7 +732,7 @@ export type Database = {
           id: string
           notification_id: string | null
           occurred_at: string | null
-          payload: Json | null
+          payload: Json
         }
         Insert: {
           created_at?: string
@@ -643,7 +741,7 @@ export type Database = {
           id?: string
           notification_id?: string | null
           occurred_at?: string | null
-          payload?: Json | null
+          payload: Json
         }
         Update: {
           created_at?: string
@@ -652,7 +750,7 @@ export type Database = {
           id?: string
           notification_id?: string | null
           occurred_at?: string | null
-          payload?: Json | null
+          payload?: Json
         }
         Relationships: []
       }
@@ -663,8 +761,10 @@ export type Database = {
           email: string
           id: string
           language: string
+          last_error: string | null
           product_id: string | null
           product_type: string | null
+          retry_count: number
           send_after: string
           sent: boolean
           sent_at: string | null
@@ -675,8 +775,10 @@ export type Database = {
           email: string
           id?: string
           language?: string
+          last_error?: string | null
           product_id?: string | null
           product_type?: string | null
+          retry_count?: number
           send_after?: string
           sent?: boolean
           sent_at?: string | null
@@ -687,8 +789,10 @@ export type Database = {
           email?: string
           id?: string
           language?: string
+          last_error?: string | null
           product_id?: string | null
           product_type?: string | null
+          retry_count?: number
           send_after?: string
           sent?: boolean
           sent_at?: string | null
@@ -1396,6 +1500,16 @@ export type Database = {
       }
     }
     Views: {
+      certificate_stats: {
+        Row: {
+          first_certificate: string | null
+          latest_certificate: string | null
+          total_certificates: number | null
+          unique_courses: number | null
+          user_id: string | null
+        }
+        Relationships: []
+      }
       user_session_details: {
         Row: {
           email: string | null
@@ -1409,12 +1523,46 @@ export type Database = {
     }
     Functions: {
       admin_lookup_email: { Args: { p_email: string }; Returns: Json }
+      audit_premium_access: {
+        Args: never
+        Returns: {
+          billing_events_count: number
+          is_premium: boolean
+          plan_type: string
+          status: string
+          user_email: string
+          user_id_val: string
+        }[]
+      }
       award_certificate: { Args: { p_tool_slug: string }; Returns: boolean }
+      check_and_expire_access: {
+        Args: never
+        Returns: {
+          details: Json
+          expired_events_count: number
+          expired_premium_count: number
+          expired_product_count: number
+        }[]
+      }
       check_premium_access: { Args: { user_email?: string }; Returns: boolean }
       check_product_access: {
         Args: { p_product_type: string }
         Returns: boolean
       }
+      check_purchase_exists: { Args: { p_email: string }; Returns: boolean }
+      generate_challenge_certificate: {
+        Args: { p_challenge_id: string; p_user_full_name: string }
+        Returns: string
+      }
+      generate_tool_certificate: {
+        Args: {
+          p_challenge_id: string
+          p_tool_slug: string
+          p_user_full_name: string
+        }
+        Returns: string
+      }
+      get_avg_first_session_minutes: { Args: never; Returns: number }
       get_user_certificates: {
         Args: { p_user_id?: string }
         Returns: {
@@ -1449,6 +1597,7 @@ export type Database = {
         Args: { p_email: string; p_user_id: string }
         Returns: undefined
       }
+      reconcile_pending_events: { Args: never; Returns: Json }
     }
     Enums: {
       ai_tool_category:
