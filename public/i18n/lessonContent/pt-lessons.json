@@ -4,7 +4,8 @@
       {
         "type": "text",
         "title": "🤖 Como o ChatGPT funciona? ",
-        "content": "O ChatGPT é um programa de inteligência artificial treinado para entender e gerar texto.\n\nEle foi alimentado com bilhões de exemplos de livros, sites, artigos e conversas. Com isso, aprendeu padrões da linguagem humana.\n\nQuando você escreve uma pergunta, ele analisa o contexto e prevê, palavra por palavra, qual é a melhor resposta possível com base nesses padrões.\n\nEle não \"sabe\" as coisas como um humano. Ele reconhece padrões e responde com base em probabilidade.\n\nQuanto melhor o seu comando, melhor será o resultado.\n\nÉ uma das inteligências artificiais mais usadas do mundo. Ultrapassou 100 milhões de usuários em apenas 2 meses após o lançamento.\n\nHoje é utilizado por estudantes, empresas, programadores, criadores de conteúdo e grandes corporações.\n\nEstá integrado a ferramentas como navegadores, aplicativos, sistemas empresariais e plataformas de produtividade.\n\nEmpresas utilizam IA para reduzir tempo de tarefas em até 40% em atividades administrativas e de produção textual."
+        "content": "O ChatGPT é um programa de inteligência artificial treinado para entender e gerar texto.\n\nEle foi alimentado com bilhões de exemplos de livros, sites, artigos e conversas. Com isso, aprendeu padrões da linguagem humana.\n\nQuando você escreve uma pergunta, ele analisa o contexto e prevê, palavra por palavra, qual é a melhor resposta possível com base nesses padrões.\n\nEle não \"sabe\" as coisas como um humano. Ele reconhece padrões e responde com base em probabilidade.\n\nQuanto melhor o seu comando, melhor será o resultado.\n\nÉ uma das inteligências artificiais mais usadas do mundo. Ultrapassou 100 milhões de usuários em apenas 2 meses após o lançamento.\n\nHoje é utilizado por estudantes, empresas, programadores, criadores de conteúdo e grandes corporações.\n\nEstá integrado a ferramentas como navegadores, aplicativos, sistemas empresariais e plataformas de produtividade.\n\nEmpresas utilizam IA para reduzir tempo de tarefas em até 40% em atividades administrativas e de produção textual.",
+        "image": "/images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -129,7 +130,14 @@
       {
         "type": "text",
         "title": "🎯 Engenharia de Prompt",
-        "content": "É aprender a dar comandos claros para a IA. Quanto melhor a instrução, melhor a resposta.\n\nUm prompt direciona a resposta do modelo ao fornecer contexto e instruções específicas. Um prompt é o comando que você dá para a inteligência artificial.\n\nVocê pode pedir para ele agir como um especialista sobre algum assunto antes de pedir o que quer. Tudo o que o ChatGPT responde começa a partir do prompt.\n\nExemplo:\n“Escreva uma história sobre um gato.”\nIsso já é um prompt. A IA usa essa instrução como base para gerar a resposta — neste caso, uma história sobre um gato.\n\nQuanto mais simples o prompt, mais simples tende a ser a resposta. Quanto mais claro e direcionado, mais útil e personalizada ela fica. Você pode também mandar imagens para complementar o prompt."
+        "content": "É aprender a dar comandos claros para a IA. Quanto melhor a instrução, melhor a resposta.\n\nUm prompt direciona a resposta do modelo ao fornecer contexto e instruções específicas. Um prompt é o comando que você dá para a inteligência artificial.\n\nVocê pode pedir para ele agir como um especialista sobre algum assunto antes de pedir o que quer. Tudo o que o ChatGPT responde começa a partir do prompt.\n\nExemplo:\n“Escreva uma história sobre um gato.”\nIsso já é um prompt. A IA usa essa instrução como base para gerar a resposta — neste caso, uma história sobre um gato.",
+        "image": "/images/Chat gpt 4.png"
+      },
+      {
+        "type": "text",
+        "title": "",
+        "content": "Quanto mais simples o prompt, mais simples tende a ser a resposta. Quanto mais claro e direcionado, mais útil e personalizada ela fica. Você pode também mandar imagens para complementar o prompt.",
+        "image": "/images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -248,7 +256,8 @@
       {
         "type": "text",
         "title": "💡 Exemplos de prompts de imagem",
-        "content": "Crie uma imagem de um jovem usando notebook em um ambiente moderno, com luz natural, estilo realista, clima profissional e cores neutras. (Quanto mais claro, melhor o resultado).\n\n**Exemplo Avançado:**\nUma banana antropomórfica em estilo cartoon, com braços e pernas, relaxando em uma cadeira de praia. A banana está sorrindo, usando óculos escuros pretos, com expressão descontraída e divertida.\n\n– **Cenário:** praia tropical ensolarada, areia clara, mar azul turquesa, céu limpo com poucas nuvens e uma ilha ao fundo.\n– **Estilo visual:** ilustração digital de alta qualidade, cores vibrantes, iluminação suave, clima alegre e descontraído.\n– **Composição:** a banana é o foco principal da imagem, em primeiro plano, sem celular ou outros objetos tecnológicos.\n– **Estética:** limpa, divertida e moderna, ideal para conteúdo criativo e educativo.\n– **Estilo:** cartoon / 3D illustration / Pixar-like\n– **Qualidade:** high detail, ultra quality\n– **Formato:** vertical (9:16) se for usar em stories ou Reels"
+        "content": "Crie uma imagem de um jovem usando notebook em um ambiente moderno, com luz natural, estilo realista, clima profissional e cores neutras. (Quanto mais claro, melhor o resultado).\n\n**Exemplo Avançado:**\nUma banana antropomórfica em estilo cartoon, com braços e pernas, relaxando em uma cadeira de praia. A banana está sorrindo, usando óculos escuros pretos, com expressão descontraída e divertida.\n\n– **Cenário:** praia tropical ensolarada, areia clara, mar azul turquesa, céu limpo com poucas nuvens e uma ilha ao fundo.\n– **Estilo visual:** ilustração digital de alta qualidade, cores vibrantes, iluminação suave, clima alegre e descontraído.\n– **Composição:** a banana é o foco principal da imagem, em primeiro plano, sem celular ou outros objetos tecnológicos.\n– **Estética:** limpa, divertida e moderna, ideal para conteúdo criativo e educativo.\n– **Estilo:** cartoon / 3D illustration / Pixar-like\n– **Qualidade:** high detail, ultra quality\n– **Formato:** vertical (9:16) se for usar em stories ou Reels",
+        "image": "/images/banana gpt.png"
       },
       {
         "type": "component",
@@ -279,7 +288,8 @@
       {
         "type": "text",
         "title": "🎙️ Chat de Voz do ChatGPT",
-        "content": "O chat de voz permite falar com o ChatGPT em vez de digitar. Você faz a pergunta falando normalmente e recebe a resposta por áudio.\n\nÉ útil para:\n– dúvidas rápidas\n– organizar ideias\n– pensar em voz alta\n– usar quando não dá para digitar\n\nVocê não precisa falar de forma técnica. Pode conversar de maneira natural e ajustar a resposta durante o diálogo. Assim como no texto, a resposta pode errar. Use o chat de voz para clareza e agilidade, não como fonte final de verdade."
+        "content": "O chat de voz permite falar com o ChatGPT em vez de digitar. Você faz a pergunta falando normalmente e recebe a resposta por áudio.\n\nÉ útil para:\n– dúvidas rápidas\n– organizar ideias\n– pensar em voz alta\n– usar quando não dá para digitar\n\nVocê não precisa falar de forma técnica. Pode conversar de maneira natural e ajustar a resposta durante o diálogo. Assim como no texto, a resposta pode errar. Use o chat de voz para clareza e agilidade, não como fonte final de verdade.",
+        "image": "/images/voz gpt.png"
       },
       {
         "type": "text",
@@ -468,6 +478,7 @@
         "type": "quiz",
         "title": "🖼️ Exercício 6: Prompt Exato para Imagem",
         "question": "Avaliando a riqueza de detalhes e a 'Regra de Ouro', qual dos comandos abaixo é o mais exato e completo para criar uma imagem?",
+        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png",
         "options": [
           {
             "text": "Uma coruja realista usando óculos aviador e camisa havaiana vermelha, dirigindo um carro conversível clássico em uma estrada à beira-mar ao pôr do sol, palmeiras ao fundo, iluminação dourada cinematográfica, estilo fotográfico ultra detalhado.",

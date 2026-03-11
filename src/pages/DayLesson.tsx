@@ -622,6 +622,16 @@ const DayLesson = () => {
                     {step.question && (
                       <p className="text-lg font-semibold text-foreground mb-4 leading-relaxed">{step.question}</p>
                     )}
+                    {/* Quiz image (shown below question, above options) */}
+                    {step.image && (
+                      <div className="mb-4 rounded-xl overflow-hidden">
+                        <img
+                          src={step.image}
+                          alt={step.title || ""}
+                          className="w-full h-auto object-cover rounded-xl"
+                        />
+                      </div>
+                    )}
                     {step.options?.map((option, idx) => (
                       <button
                         key={idx}
