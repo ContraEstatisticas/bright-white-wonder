@@ -4,7 +4,8 @@
       {
         "type": "text",
         "title": "🤖 ¿Cómo funciona ChatGPT?",
-        "content": "ChatGPT es un programa de inteligencia artificial entrenado para entender y generar texto.\n\nFue alimentado con miles de millones de ejemplos de libros, sitios web, artículos y conversaciones. Con esto, aprendió patrones del lenguaje humano.\n\nCuando escribes una pregunta, analiza el contexto y predice, palabra por palabra, cuál es la mejor respuesta posible basada en esos patrones.\n\n[Image of a neural network predicting the next word in a sequence]\n\nÉl no \"sabe\" las cosas como un humano. Reconoce patrones y responde basándose en la probabilidad.\n\nCuanto mejor sea tu comando, mejor será el resultado.\n\nEs una de las inteligencias artificiales más usadas del mundo. Superó los 100 millones de usuarios en solo 2 meses después de su lanzamiento.\n\nHoy es utilizado por estudiantes, empresas, programadores, creadores de contenido y grandes corporaciones.\n\nEstá integrado a herramientas como navegadores, aplicaciones, sistemas empresariales y plataformas de productividad.\n\nLas empresas utilizan la IA para reducir el tiempo de tareas hasta en un 40% en actividades administrativas y de producción textual."
+        "content": "ChatGPT es un programa de inteligencia artificial entrenado para entender y generar texto.\n\nFue alimentado con miles de millones de ejemplos de libros, sitios web, artículos y conversaciones. Con esto, aprendió patrones del lenguaje humano.\n\nCuando escribes una pregunta, analiza el contexto y predice, palabra por palabra, cuál es la mejor respuesta posible basada en esos patrones.\n\n[Image of a neural network predicting the next word in a sequence]\n\nÉl no \"sabe\" las cosas como un humano. Reconoce patrones y responde basándose en la probabilidad.\n\nCuanto mejor sea tu comando, mejor será el resultado.\n\nEs una de las inteligencias artificiales más usadas del mundo. Superó los 100 millones de usuarios en solo 2 meses después de su lanzamiento.\n\nHoy es utilizado por estudiantes, empresas, programadores, creadores de contenido y grandes corporaciones.\n\nEstá integrado a herramientas como navegadores, aplicaciones, sistemas empresariales y plataformas de productividad.\n\nLas empresas utilizan la IA para reducir el tiempo de tareas hasta en un 40% en actividades administrativas y de producción textual.",
+        "image": "/images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -109,7 +110,8 @@
       {
         "type": "text",
         "title": "⚙️ Personalización: haciendo que ChatGPT responda a tu manera",
-        "content": "ChatGPT no tiene una sola forma de responder. Se adapta al contexto que le proporcionas.\n\nVe a:\nConfiguración → Personalización\n\nNo existe un texto ideal. El mejor texto es el que se adapta a tu objetivo y a tu forma de aprender o trabajar.\n\nPuedes ajustar:\n– el tono (simple, directo, técnico)\n– el tipo de explicación (corta o detallada)\n– el uso principal (estudio, trabajo, creación de contenido)\n\nComienza de forma sencilla. Con el tiempo, ajusta según sientas la necesidad."
+        "content": "ChatGPT no tiene una sola forma de responder. Se adapta al contexto que le proporcionas.\n\nVe a:\nConfiguración → Personalización\n\nNo existe un texto ideal. El mejor texto es el que se adapta a tu objetivo y a tu forma de aprender o trabajar.\n\nPuedes ajustar:\n– el tono (simple, directo, técnico)\n– el tipo de explicación (corta o detallada)\n– el uso principal (estudio, trabajo, creación de contenido)\n\nComienza de forma sencilla. Con el tiempo, ajusta según sientas la necesidad.",
+        "image": "/images/Chat gpt 2 (espanhol ).png"
       },
       {
         "type": "text",
@@ -129,7 +131,14 @@
       {
         "type": "text",
         "title": "🎯 Ingeniería de Prompt",
-        "content": "Es aprender a dar comandos claros a la IA. Cuanto mejor sea la instrucción, mejor será la respuesta.\n\nUn prompt dirige la respuesta del modelo al proporcionar contexto e instrucciones específicas. Un prompt es el comando que le das a la inteligencia artificial.\n\nPuedes pedirle que actúe como un especialista sobre algún tema antes de pedirle lo que quieres. Todo lo que ChatGPT responde comienza a partir del prompt.\n\nEjemplo:\n“Escribe una historia sobre un gato.”\nEso ya es un prompt. La IA usa esa instrucción como base para generar la respuesta — en este caso, una historia sobre un gato.\n\nCuanto más simple sea el prompt, más simple tiende a ser la respuesta. Cuanto más claro y dirigido, más útil y personalizada se vuelve. También puedes enviar imágenes para complementar el prompt."
+        "content": "Es aprender a dar comandos claros a la IA. Cuanto mejor sea la instrucción, mejor será la respuesta.\n\nUn prompt dirige la respuesta del modelo al proporcionar contexto e instrucciones específicas. Un prompt es el comando que le das a la inteligencia artificial.\n\nPuedes pedirle que actúe como un especialista sobre algún tema antes de pedirle lo que quieres. Todo lo que ChatGPT responde comienza a partir del prompt.\n\nEjemplo:\n“Escribe una historia sobre un gato.”\nEso ya es un prompt. La IA usa esa instrucción como base para generar la respuesta — en este caso, una historia sobre un gato.\n\nCuanto más simple sea el prompt, más simple tiende a ser la respuesta. Cuanto más claro y dirigido, más útil y personalizada se vuelve. También puedes enviar imágenes para complementar el prompt.",
+        "image": "/images/Chat gpt 4.png"
+      },
+      {
+        "type": "text",
+        "title": "",
+        "content": "",
+        "image": "/images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -248,7 +257,8 @@
       {
         "type": "text",
         "title": "💡 Ejemplos de prompts de imagen",
-        "content": "Crea una imagen de un joven usando una notebook en un ambiente moderno, con luz natural, estilo realista, clima profesional y colores neutros. (Cuanto más claro, mejor el resultado).\n\n**Ejemplo Avanzado:**\nUn plátano antropomórfico en estilo cartoon, con brazos y piernas, relajándose en una silla de playa. El plátano está sonriendo, usando gafas de sol negras, con expresión relajada y divertida.\n\n– **Escenario:** playa tropical soleada, arena clara, mar azul turquesa, cielo despejado con pocas nubes y una isla al fondo.\n– **Estilo visual:** ilustración digital de alta calidad, colores vibrantes, iluminación suave, clima alegre y relajado.\n– **Composición:** el plátano es el foco principal de la imagen, en primer plano, sin teléfono móvil u otros objetos tecnológicos.\n– **Estética:** limpia, divertida y moderna, ideal para contenido creativo y educativo.\n– **Estilo:** cartoon / 3D illustration / Pixar-like\n– **Calidad:** high detail, ultra quality\n– **Formato:** vertical (9:16) si se usará en stories o Reels"
+        "content": "Crea una imagen de un joven usando una notebook en un ambiente moderno, con luz natural, estilo realista, clima profesional y colores neutros. (Cuanto más claro, mejor el resultado).\n\n**Ejemplo Avanzado:**\nUn plátano antropomórfico en estilo cartoon, con brazos y piernas, relajándose en una silla de playa. El plátano está sonriendo, usando gafas de sol negras, con expresión relajada y divertida.\n\n– **Escenario:** playa tropical soleada, arena clara, mar azul turquesa, cielo despejado con pocas nubes y una isla al fondo.\n– **Estilo visual:** ilustración digital de alta calidad, colores vibrantes, iluminación suave, clima alegre y relajado.\n– **Composición:** el plátano es el foco principal de la imagen, en primer plano, sin teléfono móvil u otros objetos tecnológicos.\n– **Estética:** limpia, divertida y moderna, ideal para contenido creativo y educativo.\n– **Estilo:** cartoon / 3D illustration / Pixar-like\n– **Calidad:** high detail, ultra quality\n– **Formato:** vertical (9:16) si se usará en stories o Reels",
+        "image": "/images/banana gpt.png"
       },
       {
         "type": "component",
@@ -279,12 +289,14 @@
       {
         "type": "text",
         "title": "🎙️ Chat de Voz de ChatGPT",
-        "content": "El chat de voz permite hablar con ChatGPT en lugar de escribir. Haces la pregunta hablando normalmente y recibes la respuesta por audio.\n\nEs útil para:\n– dudas rápidas\n– organizar ideas\n– pensar en voz alta\n– usar cuando no se puede escribir\n\nNo necesitas hablar de forma técnica. Puedes conversar de manera natural y ajustar la respuesta durante el diálogo. Al igual que en el texto, la respuesta puede equivocarse. Usa el chat de voz para mayor claridad y agilidad, no como fuente final de verdad."
+        "content": "El chat de voz permite hablar con ChatGPT en lugar de escribir. Haces la pregunta hablando normalmente y recibes la respuesta por audio.\n\nEs útil para:\n– dudas rápidas\n– organizar ideas\n– pensar en voz alta\n– usar cuando no se puede escribir\n\nNo necesitas hablar de forma técnica. Puedes conversar de manera natural y ajustar la respuesta durante el diálogo. Al igual que en el texto, la respuesta puede equivocarse. Usa el chat de voz para mayor claridad y agilidad, no como fuente final de verdad.",
+        "image": "/images/voz gpt.png"
       },
       {
         "type": "text",
         "title": "🔎 ChatGPT como herramienta de investigación",
-        "content": "ChatGPT no sirve solo para generar textos. Puede usarse como una herramienta de investigación estratégica.\n\nCuando está bien dirigido, ayuda a organizar problemas complejos, plantear hipótesis, comparar escenarios e identificar riesgos ocultos. En lugar de entregar solo una respuesta, estructura el razonamiento.\n\nEl secreto está en cómo preguntas."
+        "content": "ChatGPT no sirve solo para generar textos. Puede usarse como una herramienta de investigación estratégica.\n\nCuando está bien dirigido, ayuda a organizar problemas complejos, plantear hipótesis, comparar escenarios e identificar riesgos ocultos. En lugar de entregar solo una respuesta, estructura el razonamiento.\n\nEl secreto está en cómo preguntas.",
+        "image": "/images/Investigação espanhol.png"
       },
       {
         "type": "text",
@@ -489,7 +501,8 @@
             "isCorrect": false,
             "explanation": "Es un prompt divertido, pero la opción C está técnicamente más estructurada."
           }
-        ]
+        ],
+        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png"
       }
     ]
   },

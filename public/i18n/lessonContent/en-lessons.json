@@ -1,4 +1,4 @@
-﻿{
+{
   "day1": {
     "steps": [
       {
@@ -139,7 +139,6 @@
         "title": "",
         "content": "The simpler the prompt, the simpler the response tends to be. The clearer and more targeted, the more useful and personalized it becomes. You can also send images to complement the prompt.",
         "image": "/images/Chat gpt 5.png"
-      },"
       },
       {
         "type": "quiz",

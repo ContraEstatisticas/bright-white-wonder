@@ -4,7 +4,8 @@
       {
         "type": "text",
         "title": "🤖 Comment fonctionne ChatGPT ? ",
-        "content": "ChatGPT est un programme d'intelligence artificielle entraîné pour comprendre et générer du texte.\n\nIl a été alimenté avec des milliards d'exemples de livres, de sites web, d'articles et de conversations. Ainsi, il a appris les modèles du langage humain.\n\nLorsque vous posez une question, il analyse le contexte et prédit, mot par mot, quelle est la meilleure réponse possible en fonction de ces modèles.\n\nIl ne \"sait\" pas les choses comme un humain. Il reconnaît des modèles et répond en fonction des probabilités.\n\nPlus votre commande est bonne, meilleur sera le résultat.\n\nC'est l'une des intelligences artificielles les plus utilisées au monde. Elle a dépassé les 100 millions d'utilisateurs en seulement 2 mois après son lancement.\n\nAujourd'hui, il est utilisé par des étudiants, des entreprises, des programmeurs, des créateurs de contenu et de grandes entreprises.\n\nIl est intégré à des outils tels que les navigateurs, les applications, les systèmes d'entreprise et les plateformes de productivité.\n\nLes entreprises utilisent l'IA pour réduire le temps de travail jusqu'à 40 % dans les tâches administratives et la production de texte."
+        "content": "ChatGPT est un programme d'intelligence artificielle entraîné pour comprendre et générer du texte.\n\nIl a été alimenté avec des milliards d'exemples de livres, de sites web, d'articles et de conversations. Ainsi, il a appris les modèles du langage humain.\n\nLorsque vous posez une question, il analyse le contexte et prédit, mot par mot, quelle est la meilleure réponse possible en fonction de ces modèles.\n\nIl ne \"sait\" pas les choses comme un humain. Il reconnaît des modèles et répond en fonction des probabilités.\n\nPlus votre commande est bonne, meilleur sera le résultat.\n\nC'est l'une des intelligences artificielles les plus utilisées au monde. Elle a dépassé les 100 millions d'utilisateurs en seulement 2 mois après son lancement.\n\nAujourd'hui, il est utilisé par des étudiants, des entreprises, des programmeurs, des créateurs de contenu et de grandes entreprises.\n\nIl est intégré à des outils tels que les navigateurs, les applications, les systèmes d'entreprise et les plateformes de productivité.\n\nLes entreprises utilisent l'IA pour réduire le temps de travail jusqu'à 40 % dans les tâches administratives et la production de texte.",
+        "image": "/images/ChatGpt 1.png"
       },
       {
         "type": "text",
@@ -129,7 +130,14 @@
       {
         "type": "text",
         "title": "🎯 Ingénierie de Prompt",
-        "content": "C'est apprendre à donner des commandes claires à l'IA. Plus l'instruction est bonne, meilleure est la réponse.\n\nUn prompt dirige la réponse du modèle en fournissant un contexte et des instructions spécifiques. Un prompt est la commande que vous donnez à l'intelligence artificielle.\n\nVous pouvez lui demander d'agir comme un expert sur un sujet avant de demander ce que vous voulez. Tout ce que ChatGPT répond part du prompt.\n\nExemple :\n“Écris une histoire sur un chat.”\nC'est déjà un prompt. L'IA utilise cette instruction comme base pour générer la réponse — dans ce cas, une histoire sur un chat.\n\nPlus le prompt est simple, plus la réponse a tendance à l'être. Plus il est clair et ciblé, plus la réponse est utile et personnalisée. Vous pouvez également envoyer des images pour compléter le prompt."
+        "content": "C'est apprendre à donner des commandes claires à l'IA. Plus l'instruction est bonne, meilleure est la réponse.\n\nUn prompt dirige la réponse du modèle en fournissant un contexte et des instructions spécifiques. Un prompt est la commande que vous donnez à l'intelligence artificielle.\n\nVous pouvez lui demander d'agir comme un expert sur un sujet avant de demander ce que vous voulez. Tout ce que ChatGPT répond part du prompt.\n\nExemple :\n“Écris une histoire sur un chat.",
+        "image": "/images/Chat gpt 4.png"
+      },
+      {
+        "type": "text",
+        "title": "",
+        "content": "”\nC'est déjà un prompt. L'IA utilise cette instruction comme base pour générer la réponse — dans ce cas, une histoire sur un chat.\n\nPlus le prompt est simple, plus la réponse a tendance à l'être. Plus il est clair et ciblé, plus la réponse est utile et personnalisée. Vous pouvez également envoyer des images pour compléter le prompt.",
+        "image": "/images/Chat gpt 5.png"
       },
       {
         "type": "quiz",
@@ -248,7 +256,8 @@
       {
         "type": "text",
         "title": "💡 Exemples de prompts d'image",
-        "content": "Créez une image d'un jeune utilisant un ordinateur portable dans un environnement moderne, avec une lumière naturelle, un style réaliste, une ambiance professionnelle et des couleurs neutres. (Plus c'est clair, meilleur sera le résultat).\n\n**Exemple Avancé :**\nUne banane anthropomorphique de style cartoon, avec des bras et des jambes, se relaxant sur une chaise de plage. La banane sourit, porte des lunettes de soleil noires, avec une expression détendue et amusante.\n\n– **Décor :** plage tropicale ensoleillée, sable clair, mer turquoise, ciel dégagé avec peu de nuages et une île en arrière-plan.\n– **Style visuel :** illustration numérique de haute qualité, couleurs vives, éclairage doux, ambiance joyeuse et détendue.\n– **Composition :** la banane est le point central de l'image, au premier plan, sans téléphone portable ni autres objets technologiques.\n– **Esthétique :** propre, amusante et moderne, idéale pour du contenu créatif et éducatif.\n– **Style :** cartoon / illustration 3D / style Pixar\n– **Qualité :** détails élevés, ultra qualité\n– **Format :** vertical (9:16) si c'est pour l'utiliser en stories ou Reels"
+        "content": "Créez une image d'un jeune utilisant un ordinateur portable dans un environnement moderne, avec une lumière naturelle, un style réaliste, une ambiance professionnelle et des couleurs neutres. (Plus c'est clair, meilleur sera le résultat).\n\n**Exemple Avancé :**\nUne banane anthropomorphique de style cartoon, avec des bras et des jambes, se relaxant sur une chaise de plage. La banane sourit, porte des lunettes de soleil noires, avec une expression détendue et amusante.\n\n– **Décor :** plage tropicale ensoleillée, sable clair, mer turquoise, ciel dégagé avec peu de nuages et une île en arrière-plan.\n– **Style visuel :** illustration numérique de haute qualité, couleurs vives, éclairage doux, ambiance joyeuse et détendue.\n– **Composition :** la banane est le point central de l'image, au premier plan, sans téléphone portable ni autres objets technologiques.\n– **Esthétique :** propre, amusante et moderne, idéale pour du contenu créatif et éducatif.\n– **Style :** cartoon / illustration 3D / style Pixar\n– **Qualité :** détails élevés, ultra qualité\n– **Format :** vertical (9:16) si c'est pour l'utiliser en stories ou Reels",
+        "image": "/images/banana gpt.png"
       },
       {
         "type": "component",
@@ -279,7 +288,8 @@
       {
         "type": "text",
         "title": "🎙️ Chat Vocal de ChatGPT",
-        "content": "Le chat vocal permet de parler à ChatGPT au lieu de taper. Vous posez la question en parlant normalement et recevez la réponse par audio.\n\nC'est utile pour :\n– les questions rapides\n– organiser ses idées\n– penser à voix haute\n– l'utiliser quand on ne peut pas taper\n\nVous n'avez pas besoin de parler de manière technique. Vous pouvez discuter de manière naturelle et ajuster la réponse pendant le dialogue. Tout comme pour le texte, la réponse peut être erronée. Utilisez le chat vocal pour la clarté et l'agilité, non comme source finale de vérité."
+        "content": "Le chat vocal permet de parler à ChatGPT au lieu de taper. Vous posez la question en parlant normalement et recevez la réponse par audio.\n\nC'est utile pour :\n– les questions rapides\n– organiser ses idées\n– penser à voix haute\n– l'utiliser quand on ne peut pas taper\n\nVous n'avez pas besoin de parler de manière technique. Vous pouvez discuter de manière naturelle et ajuster la réponse pendant le dialogue. Tout comme pour le texte, la réponse peut être erronée. Utilisez le chat vocal pour la clarté et l'agilité, non comme source finale de vérité.",
+        "image": "/images/voz gpt.png"
       },
       {
         "type": "text",
@@ -489,7 +499,8 @@
             "isCorrect": false,
             "explanation": "C'est un prompt amusant, mais l'option C est techniquement plus structurée."
           }
-        ]
+        ],
+        "image": "/images/Coruja pergunta 6 chat gpt dia 4.png"
       }
     ]
   },
