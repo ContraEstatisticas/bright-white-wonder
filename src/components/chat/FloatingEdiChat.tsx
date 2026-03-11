@@ -144,7 +144,7 @@ export const FloatingEdiChat = () => {
         // O segredo está aqui: style mata qualquer animação teimosa
         style={{ transform: "none", transition: "none", animation: "none" }}
         className={cn(
-          "fixed bottom-6 right-6 z-50",
+          "fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50",
           "w-14 h-14 rounded-full",
           "bg-white",
           "shadow-lg shadow-primary/30",
@@ -170,7 +170,7 @@ export const FloatingEdiChat = () => {
           className={cn(
             "fixed z-50 animate-fade-in",
             "bottom-6 right-6 w-[380px] h-[520px] rounded-2xl",
-            "max-md:inset-0 max-md:w-full max-md:h-full max-md:rounded-none",
+            "max-md:inset-x-0 max-md:top-0 max-md:bottom-16 max-md:w-full max-md:h-auto max-md:rounded-none",
           )}
         >
           <div className="flex flex-col h-full bg-background border border-border rounded-2xl max-md:rounded-none shadow-2xl overflow-hidden">
