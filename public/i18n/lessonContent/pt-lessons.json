@@ -1008,165 +1008,158 @@
         }
       }
     ]
-  },  
+  },
   "day9": {
     "steps": [
       {
         "type": "text",
-        "title": "📊 DeepSeek: O Analista de Dados que não Dorme",
-        "content": "O DeepSeek é a ferramenta perfeita para quem precisa lidar com números. Ele não apenas faz contas; ele entende o que elas significam.\n\n\n\nEnquanto um analista humano pode levar horas limpando uma planilha bagunçada ou criando gráficos complexos, o DeepSeek faz isso em **minutos**. Ele é o seu braço direito para:\n- Limpar e organizar dados.\n- Criar fórmulas e códigos de análise (SQL e Python).\n- Explicar o que os resultados significam para o seu negócio."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 DeepSeek para Dados",
-          "description": "Ligue a tarefa à facilidade que o DeepSeek traz.",
-          "pairs": [
-            {
-              "left": "Limpar dados",
-              "right": "Organiza tudo em segundos"
-            },
-            {
-              "left": "Queries SQL",
-              "right": "Cria comandos para bancos de dados"
-            },
-            {
-              "left": "Gráficos",
-              "right": "Cria o código para visualizações"
-            },
-            {
-              "left": "Estatística",
-              "right": "Escolhe o teste matemático correto"
-            }
-          ]
-        }
+        "title": "🕐 A História do Gemini",
+        "content": "Gemini é a inteligência artificial multimodal do Google, lançada em 2023 como resposta ao avanço de modelos como GPT-4. Foi construído para processar texto, código, imagens, vídeo, áudio e PDF nativamente, sem conversão entre formatos. Em 2026, Google integrou Gemini em todo seu ecossistema: Gmail, Docs, Drive, Slides, além de ferramentas especializadas como Deep Research, NotebookLM, Imagen e Veo. Gemini passou de um simples chatbot para uma plataforma completa de IA integrada no fluxo de trabalho.\n\nDica prática: Gemini está embutido no seu Google Workspace — você pode estar usando sem perceber. Ativar explicitamente gera insights sobre informações que você já tem."
       },
       {
         "type": "text",
-        "title": "🧮 Por que ele entende de Estatística?",
-        "content": "Diferente de outras IAs que apenas 'imitam' o jeito de falar, o DeepSeek foi treinado com milhões de artigos científicos e provas de matemática.\n\nIsso significa que ele entende de verdade conceitos como o $p$-value (significância estatística) ou correlações. Se você está em dúvida se deve usar um teste A ou B, ele não só escolhe o melhor, como explica o porquê de forma lógica."
+        "title": "✅ Onde Gemini é Muito Bom",
+        "content": "Gemini excela em tarefas multimodais — processar PDFs gigantescos, analisar vídeos longos ou combinar texto com imagens é nativo. Contexto de até 2 milhões de tokens permite ler múltiplos livros ou repositórios inteiros em uma conversa. Deep Think supera competitors em raciocínio científico e matemático. Integração nativa com Google Workspace oferece análise contextual impossível em ferramentas standalone — Gemini entende seus emails, documentos e padrões. Geração de imagens via Imagen e vídeos via Veo estão integrados. Deep Research coleta centenas de fontes web para análise profunda de mercado.\n\nDica prática: use Gemini dentro do Google Workspace — abra o painel lateral no Docs ou Drive e peça análise dos seus documentos. Isso é um superpoder que nenhum outro assistente tem nativo."
       },
       {
         "type": "text",
-        "title": "📊 DeepSeek como seu Mestre de SQL",
-        "content": "SQL é a linguagem dos bancos de dados. O DeepSeek escreve comandos SQL como um profissional veterano.\n\n\n\nEle pode criar desde uma lista simples de vendas até análises complexas de 'Cohort' (como grupos de clientes se comportam ao longo dos meses). Se a sua consulta ao banco de dados está lenta, peça para ele 'otimizar a query' e veja a mágica acontecer."
+        "title": "❌ Quando Não Usar Gemini",
+        "content": "Gemini não é ideal para máxima privacidade — dados processados em servidores Google levantam questões para regulamentações rígidas (LGPD, HIPAA). Para dados ultra-sensíveis, Claude ou DeepSeek self-hosted são melhores. Sem Deep Think, o reasoning técnico é menos especializado que Claude ou DeepSeek. Gemini é proprietário — não oferece transparência como DeepSeek open-weight. Não é o melhor para copywrites altamente nuançados — Claude é mais cuidadoso. Geração de imagem/vídeo pode ficar cara sem controle. Ecosystem de integrações de terceiros é menor que OpenAI.\n\nDica prática: se privacidade é crítica, sua equipe não usa Google Workspace, ou precisa de total controle, escolha Claude ou DeepSeek."
       },
       {
         "type": "text",
-        "title": "🐍 Python e Pandas: O Workflow Completo",
-        "content": "Se você usa Python para analisar dados, o DeepSeek é o seu melhor amigo. Ele automatiza as quatro fases do trabalho:\n\n1. **Limpeza:** Ele acha os erros e preenche o que falta.\n2. **Estatística:** Ele calcula as médias, desvios e tendências.\n3. **Visualização:** Ele cria o código para gerar gráficos lindos.\n4. **Previsão:** Ele cria modelos básicos para tentar prever o futuro dos seus dados."
+        "title": "🤖 Os Modelos do Gemini",
+        "content": "Gemini 3 Pro é o flagship para suscritores AI Ultra, com 1 milhão de tokens, ideal para problemas complexos. Gemini 3 Flash é o padrão gratuito rápido para conversas cotidianas. Gemini 3 Deep Think especializa em reasoning científico e matemático. Gemini 2.5 Pro e Flash são versões anteriores ainda disponíveis em API. Gemini Nano roda localmente em smartphones. Imagen 3 gera imagens hiperrealistas. Veo gera vídeos. Code Assist assiste desenvolvimento.\n\nDica prática: para uso gratuito, comece com Gemini 3 Flash. Para raciocínio pesado, upgrade para AI Pro ou Ultra. Para Deep Think, você precisa de AI Ultra."
       },
       {
         "type": "text",
-        "title": "🎯 O Método D.A.T.A. para Análise",
-        "content": "Para ter uma análise perfeita, use sempre esta ordem no seu pedido:\n\n* **D - Definição:** O que você quer descobrir? (Ex: 'Por que os clientes cancelam?').\n* **A - Arquitetura:** Onde estão os dados? (Ex: 'Tenho uma tabela chamada vendas').\n* **T - Técnicas:** Qual conta fazer? (Ex: 'Use análise de retenção').\n* **A - Apresentação:** Como quer o resultado? (Ex: 'Um resumo e uma tabela')."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Sua Primeira Análise",
-        "question": "Monte o pedido seguindo o método D.A.T.A. para descobrir o lucro mensal:",
-        "initialWords": [
-          "Como analista financeiro,",
-          "use os dados da tabela 'pedidos',",
-          "calcule o lucro total por mês,",
-          "e apresente em uma tabela clara."
-        ],
-        "correctOrder": [
-          "Como analista financeiro,",
-          "use os dados da tabela 'pedidos',",
-          "calcule o lucro total por mês,",
-          "e apresente em uma tabela clara."
-        ],
-        "explanation": "Excelente! Você deu o Papel (D), os Dados (A), a Tarefa (T) e o Formato (A)."
+        "title": "💬 Como Gemini Gosta que Seus Usuários Mandem Prompts",
+        "content": "Gemini funciona melhor quando você aproveita seu contexto multimodal — faça upload de arquivos ao invés de descrevê-los. Seja específico sobre formato: \"Crie JSON com...\" ou \"Resuma em 3 pontos\". Para Deep Think, não precisa dizer \"pense profundamente\" — ative o botão. Dentro do Google Workspace, contexto é pré-carregado. Para iterações criativas, feedback conversacional funciona bem: \"deixa mais vibrante\" resulta em ajustes rápidos. Few-shot prompting (exemplos) melhora qualidade.\n\nDica prática: simplesmente carregue seus arquivos (PDF, imagens, vídeo). Não descreva — deixe a IA ver diretamente."
       },
       {
         "type": "text",
-        "title": "📈 Previsão: O DeepSeek 'Vê' o Futuro",
-        "content": "Você não precisa ser um gênio da matemática para fazer previsões. O DeepSeek pode criar modelos para você:\n- **Classificação:** 'Esse cliente vai comprar ou não?'.\n- **Regressão:** 'Quanto vamos vender no mês que vem?'.\n- **Agrupamento:** 'Quais clientes são parecidos entre si?'.\n\n\n\nEle entrega o código pronto, explica como ele funciona e o que você deve fazer com o resultado."
+        "title": "⚖️ Gemini vs IAs",
+        "content": "Claude prioriza segurança e nuance. Gemini prioriza integração e multimodalidade. DeepSeek oferece máxima eficiência de custo. ChatGPT é mais universal. Gemini é melhor em análise de documentos gigantescos e contexto Google Workspace. Claude é melhor para análise ética. DeepSeek excela em matemática pura. ChatGPT é melhor para começar universalmente. Gemini oferece geração de imagens e vídeo nativo. A escolha é: integração Google (Gemini), segurança (Claude), eficiência (DeepSeek), ou versatilidade (ChatGPT)?\n\nDica prática: use Gemini em Google Workspace, Claude para análise profunda, DeepSeek para matemática, ChatGPT para universalidade."
       },
       {
         "type": "text",
-        "title": "📊 Gráficos que Comunicam a Verdade",
-        "content": "O DeepSeek segue uma regra de ouro: **clareza vence a beleza**. \n\n\n\nEle sabe escolher o gráfico certo: barras para comparar coisas, linhas para mostrar o tempo e mapas de calor para mostrar onde estão os problemas. Ele cria o código (usando bibliotecas como Matplotlib ou Plotly) e garante que as cores e legendas sejam fáceis de ler para qualquer pessoa."
+        "title": "🔗 API do Gemini: Acesso e Integração",
+        "content": "A API é oferecida via Google AI Studio (gratuito com limites), Gemini API direct (pagamento por token), e Vertex AI (enterprise). Suporta até 2 milhões de tokens em alguns modelos. Oferece function calling, web search integrado, e multimodalidade nativa. SDKs em Python, JavaScript, Go, Java. Safe Data Processing permite processar dados sensíveis em ambiente isolado.\n\nDica prática: comece com Google AI Studio para experimentar. Para produção, use Vertex AI com Safe Data Processing."
       },
       {
         "type": "text",
-        "title": "🔍 Estatística Avançada ao seu Alcance",
-        "content": "Mesmo que você tenha fugido das aulas de estatística, o DeepSeek te protege. Ele faz análises de 'Sobrevivência' (quanto tempo um cliente fica com você) e 'Testes A/B' para saber qual versão de um site vende mais. \n\nO melhor é que ele traduz o 'matematiquês': ele não diz apenas '$p = 0.03$'; ele diz 'Temos 97% de certeza que a mudança que você fez aumentou as vendas'."
+        "title": "💪 Forças da API do Gemini",
+        "content": "Multimodalidade nativa — processa texto, código, imagens, vídeo, áudio e PDFs em uma chamada. Contexto gigantesco (2M tokens) para análises que competitors não conseguem em uma conversa. Integração nativa com Google Workspace — acesso a dados do usuário impossível em outros LLMs. Deep Think supera competidores em benchmarks técnicos. Imagen e Veo integrados — não precisa integrar terceiros. Latência baixa. Pricing previsível. Agentes autônomos maduros para automação. Suporte a 140+ idiomas."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ Fraquezas da API do Gemini",
+        "content": "Privacidade — dados em servidores Google. Proprietário e fechado — sem transparência como DeepSeek. Deep Think adiciona latência. Múltiplas gerações consomem créditos rapidamente. Google Workspace é força, mas também lock-in. Ecosystem de plugins menor que OpenAI. Rate limits restritivos em free tier. Qualidade de reasoning geral inferior a Claude especializado. Documentação em português limitada. Alucinações ocorrem em tarefas não-estruturadas.\n\nDica prática: combine Gemini com DeepSeek ou Claude para reasoning puro especializado."
+      },
+      {
+        "type": "text",
+        "title": "📱 Gemini Live: Conversação em Tempo Real",
+        "content": "Conversação de áudio bidireccional com latência baixa — você pode interromper, mudar tópico ou mostrar algo com a câmera enquanto conversa. Como conversar com uma pessoa real. Ideal para brainstorming, pesquisa colaborativa ou aprendizado exploratório.\n\nDica prática: use para brainstorming criativo quando suas mãos estão ocupadas. A latência é impressionantemente baixa."
+      },
+      {
+        "type": "text",
+        "title": "🖼️ Imagen: Geração de Imagens",
+        "content": "Cria imagens hiperrealistas com excelente representação de texto integrado — único entre geradores. Oferece edição conversacional e consistência de personagens. Superior em text-in-image comparado a DALL-E.\n\nDica prática: use quando precisar que a IA \"entenda\" o que escrever em uma imagem."
+      },
+      {
+        "type": "text",
+        "title": "🎬 Veo: Criação de Vídeo",
+        "content": "Cria vídeos a partir de prompts textuais. Ainda em evolução, mas oferece criação de vídeo que competitors não têm. Ideal para prototipagem rápida.\n\nDica prática: útil para prototipagem, mas para produção profissional use ferramentas especializadas."
+      },
+      {
+        "type": "text",
+        "title": "💻 Code Assist: Desenvolvimento Integrado",
+        "content": "Integrado em VS Code e JetBrains, oferece sugestões de código, detecção de erros e otimização. Funciona como copiloto invisível que entende seu código em contexto.\n\nDica prática: ative Code Assist em seu IDE — economiza tempo e previne bugs enquanto você digita."
+      },
+      {
+        "type": "text",
+        "title": "📚 NotebookLM: Pesquisa Documental",
+        "content": "Upload de documentos, papers, livros ou vídeos para pesquisa profunda com Gemini. Gera Audio Overviews (resumos em áudio), chat específico e referências citadas. Ideal para pesquisa acadêmica ou dominar um tópico rápido.\n\nDica prática: quando precisa dominar um tópico novo — upload do documento, gere Audio Overview, deixe tocando enquanto trabalha."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste de Análise",
-        "question": "Você quer saber se as pessoas compram mais no calor ou no frio. Qual técnica a IA deve usar?",
+        "title": "🧾 QUESTÃO 1",
+        "question": "Qual é a principal vantagem de usar Gemini dentro do Google Workspace (Gmail, Docs, Drive) comparado a outros assistentes de IA?",
         "options": [
           {
-            "text": "Correção de Erros",
+            "text": "Gemini é mais barato que todos os competitors.",
             "isCorrect": false,
-            "explanation": "Isso serve para consertar código, não para comparar dados."
+            "explanation": "O preço não é a principal vantagem no contexto do Workspace."
           },
           {
-            "text": "Correlação e Teste de Hipótese",
+            "text": "Gemini oferece análise contextual de seus próprios documentos, emails e padrões de trabalho — capacidade que nenhum outro LLM possui nativamente.",
             "isCorrect": true,
-            "explanation": "Exatamente! Isso mostra se existe uma relação real entre temperatura e vendas."
+            "explanation": "Correto! Essa integração nativa permite insights diretos dos seus próprios dados de trabalho."
           },
           {
-            "text": "Sorteio Aleatório",
+            "text": "Gemini gera imagens melhor que qualquer outra ferramenta.",
             "isCorrect": false,
-            "explanation": "Sorteios não servem para análise de dados profissional."
+            "explanation": "Embora tenha o Imagen, a geração de imagens não é a principal vantagem do uso dentro do Workspace."
+          },
+          {
+            "text": "Gemini não precisa de internet para funcionar.",
+            "isCorrect": false,
+            "explanation": "Os principais modelos do Gemini exigem conexão (exceto o Nano em dispositivos móveis)."
           }
         ]
-      },
-      {
-        "type": "text",
-        "title": "📁 ETL: Movendo Dados sem Sofrer",
-        "content": "ETL significa Extrair, Transformar e Carregar. É o trabalho de pegar dados de um lugar (como o Facebook Ads) e levar para outro (sua planilha ou banco de dados).\n\n\n\nO DeepSeek cria scripts automáticos que fazem todo esse trabalho chato para você, garantindo que os dados cheguem limpos e prontos para serem analisados."
-      },
-      {
-        "type": "text",
-        "title": "📊 Dashboards: Relatórios Automáticos",
-        "content": "Você pode usar o DeepSeek para criar painéis de controle que se atualizam sozinhos. \n\nImagine um sistema que te avisa por e-mail se as vendas caírem mais de 20% ou que gera um PDF toda segunda-feira com o resumo da semana. O DeepSeek escreve o código para esses alertas e relatórios, transformando dados brutos em inteligência ativa."
-      },
-      {
-        "type": "text",
-        "title": "⚡ Menos Tempo, Mais Inteligência",
-        "content": "Análises que levavam uma hora e travavam o computador agora levam 5 minutos. \n\nO DeepSeek sabe otimizar o código para que ele gaste menos memória e seja muito mais rápido. Ele é como um 'personal trainer' para o seu computador, garantindo que ele processe milhões de linhas de dados sem cansar."
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ O Analista Profissional",
-          "sentence": "O DeepSeek transforma dados brutos em ___, usando o método ___ para garantir que a análise seja completa.",
+          "title": "🧾 QUESTÃO 2 - Completar a Frase",
+          "sentence": "Gemini é uma inteligência artificial ___ que processa texto, código, imagens, vídeo, áudio e PDF nativamente em uma única chamada. Oferece contexto de até ___ tokens, permitindo ler múltiplos livros ou repositórios inteiros. Para raciocínio científico e matemático avançado, ative ___, que supera competidores em benchmarks técnicos. ___ permite fazer upload de documentos e pesquisa profunda com resumos em áudio. ___ gera imagens hiperrealistas com excelente representação de texto integrado — superior em text-in-image.",
           "answers": [
-            "insights",
-            "D.A.T.A."
+            "multimodal",
+            "2 milhões",
+            "Deep Think",
+            "NotebookLM",
+            "Imagen"
           ],
           "options": [
-            "insights",
-            "D.A.T.A.",
-            "desenhos",
-            "MAPA",
-            "fórmulas",
-            "LÓGICA"
+            "multimodal",
+            "2 milhões",
+            "Deep Think",
+            "NotebookLM",
+            "Imagen",
+            "1 milhão",
+            "ChatGPT",
+            "Veo"
           ],
-          "explanation": "Perfeito! O foco é sempre gerar valor e clareza para a tomada de decisão."
+          "explanation": "Excelente! Você conhece todas as principais ferramentas do ecossistema Gemini."
         }
       },
       {
-        "type": "text",
-        "title": "🚫 Armadilhas para Evitar",
-        "content": "Cuidado com os erros comuns:\n- **Confundir Correlação com Causa:** Só porque duas coisas acontecem juntas, não quer dizer que uma causa a outra (ex: tomar sorvete e ataques de tubarão).\n- **Dados Viciados:** Se você olhar apenas para os clientes que ficaram, nunca vai entender por que os outros foram embora.\n\nO DeepSeek te ajuda a evitar esses erros apontando as limitações de cada análise."
-      },
-      {
-        "type": "text",
-        "title": "📁 Organize sua 'Fábrica de Insights'",
-        "content": "Analistas profissionais não fazem bagunça. Organize seu projeto:\n- **Dados Brutos:** Nunca mexa no original!\n- **Processamento:** Onde o código limpa tudo.\n- **Resultados:** Onde ficam os gráficos e conclusões.\n\nPeça para o DeepSeek criar essa estrutura de pastas para você. Organização é 50% do sucesso de uma análise."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 9",
-        "content": "**O QUE VOCÊ APRENDEU HOJE:**\n\n1. O DeepSeek é um mestre em estatística, SQL e Python.\n2. O método D.A.T.A. garante que seu pedido de análise seja perfeito.\n3. A IA pode prever tendências e criar gráficos que facilitam a decisão.\n4. Automação (ETL) e organização são essenciais para ganhar tempo.\n\n**MENTALIDADE:**\nVocê não está apenas 'olhando planilhas'. Você está **construindo sistemas de inteligência**.\n\n**AMANHÃ:** Projeto Prático! Vamos criar um sistema completo de análise para uma empresa real!"
+        "type": "quiz",
+        "title": "✅ QUESTÃO 3 - Verdadeiro ou Falso",
+        "question": "Sobre o ecossistema do Gemini e suas ferramentas, qual das afirmações abaixo é FALSA?",
+        "options": [
+          {
+            "text": "Gemini Live permite conversação de áudio bidireccional com latência baixa, funcionando como conversar com uma pessoa real.",
+            "isCorrect": false,
+            "explanation": "Esta afirmação é Verdadeira."
+          },
+          {
+            "text": "Code Assist integrado em VS Code oferece sugestões de código, detecção de erros e otimização de forma transparente.",
+            "isCorrect": false,
+            "explanation": "Esta afirmação é Verdadeira."
+          },
+          {
+            "text": "Gemini é ideal para máxima privacidade porque seus dados não são enviados para servidores Google.",
+            "isCorrect": true,
+            "explanation": "Falso! Os dados do Gemini são processados nos servidores do Google, o que pode esbarrar em restrições de privacidade rígidas."
+          },
+          {
+            "text": "Gemini oferece geração de imagens e vídeos nativos, sem precisar integrar ferramentas de terceiros.",
+            "isCorrect": false,
+            "explanation": "Esta afirmação é Verdadeira (Imagen e Veo)."
+          }
+        ]
       }
     ]
   },
@@ -1174,142 +1167,133 @@
     "steps": [
       {
         "type": "text",
-        "title": "🚀 Projeto Final: O Cérebro Digital da 'DataSolutions'",
-        "content": "Hoje é o dia de aplicar TUDO. Você foi contratado pela **DataSolutions Inc** para criar um sistema que lê milhares de vendas, logs de erros e métricas de marketing automaticamente.\n\n\n\n**Seu desafio:** Criar um sistema que processe esses dados, ache problemas sozinho e crie relatórios para os diretores. \n\n**O Prazo:** 1 dia com DeepSeek (manualmente levaria 2 semanas!). Usaremos o método **B.U.I.L.D.** (Briefing, Entendimento, Implementação, Lançamento e Documentação)."
+        "title": "📤 Dominando o Upload de Arquivos e Contexto",
+        "content": "Carregue PDFs, imagens, vídeos e documentos diretamente ao invés de descrever. Gemini processa até 2 milhões de tokens — análise completa de livros inteiros em uma conversa. Para múltiplos arquivos relacionados, carregue juntos — Gemini estabelece conexões entre eles. Vídeos são analisados automaticamente. PDFs scaneados têm texto extraído automaticamente.\n\nDica prática: carregue arquivos antes de descrever. Você economiza tempo e obtém análise mais precisa porque Gemini vê dados reais."
       },
       {
         "type": "text",
-        "title": "📋 Etapa 1: O Desenho do Sistema (Arquitetura)",
-        "content": "Antes de codar, precisamos desenhar. O sistema precisa ler arquivos CSV de vendas, arquivos JSON de erros e um banco de dados de marketing.\n\nPediremos ao DeepSeek para atuar como um **Arquiteto de Dados Sênior** e desenhar o fluxo: por onde o dado entra, onde ele é limpo e onde ele vira um gráfico. Ter um desenho claro evita que o sistema 'quebre' quando os dados aumentarem."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Ordem do Sistema",
-        "question": "Coloque os componentes do seu sistema na ordem correta de funcionamento:",
-        "initialWords": [
-          "Coleta de dados (CSV/API)",
-          "Limpeza e Organização (ETL)",
-          "Banco de Dados Analítico",
-          "Gráficos e Alertas"
-        ],
-        "correctOrder": [
-          "Coleta de dados (CSV/API)",
-          "Limpeza e Organização (ETL)",
-          "Banco de Dados Analítico",
-          "Gráficos e Alertas"
-        ],
-        "explanation": "Exatamente! O dado precisa ser coletado e limpo antes de ser armazenado e transformado em inteligência visual."
+        "title": "🎯 Técnicas de Prompt Avançado",
+        "content": "Seja específico sobre resultado esperado: \"Resuma em 3 seções (contexto, recomendações, próximos passos)\" é melhor que \"resuma\". Peça formato explícito: \"JSON\", \"tabela\", \"bullet points\". Use exemplos (few-shot prompting). Para análises, carregue múltiplos documentos: \"Compare estes 3 contratos e destaque diferenças\". Feedback direto funciona: \"Mais conciso\", \"Adicione exemplos\", \"Explique como se eu tivesse 12 anos\" gera ajustes imediatos. Deep Think ativa automaticamente quando você clica o botão — não precisa pedir.\n\nDica prática: estruture seu prompt em 30 segundos — \"Quero X em formato Y com Z detalhes\" resulta em respostas muito melhores."
       },
       {
         "type": "text",
-        "title": "⚙️ Etapa 2: A Fábrica de Dados (Pipeline ETL)",
-        "content": "Agora o DeepSeek vai criar a 'mão de obra'. O pipeline ETL (Extrair, Transformar e Carregar) é o que faz o trabalho sujo.\n\n\n\nUsaremos um comando técnico para o DeepSeek escrever o código em Python que limpa os dados, remove vendas duplicadas e calcula o lucro automaticamente. O segredo aqui é pedir um código 'Idempotente' (que pode rodar várias vezes sem dar erro)."
+        "title": "📚 NotebookLM: Superpower para Estudantes",
+        "content": "Faça upload de aulas PDF, livros, artigos ou vídeos. Audio Overview transforma material em resumo de 5-10 minutos em áudio — perfeito para aprender viajando ou exercitando. Faça perguntas específicas sobre o documento. Gera quiz interativas para autoteste. Oferece citações exatas — rastreia página/trecho das informações. Crie Notebooks por disciplina. Ideal para preparar provas e trabalhos acadêmicos com referências automáticas.\n\nDica prática: no início do semestre, crie Notebook por disciplina com PDFs de aula e livros. Use Audio Overview para revisar enquanto viaja."
       },
       {
         "type": "text",
-        "title": "📊 Etapa 3: Radar de Problemas (Alertas)",
-        "content": "Um bom sistema avisa quando algo vai mal. Vamos programar alertas inteligentes:\n- 'Vendas caíram 20% hoje!'\n- 'Muitas pessoas saindo do site sem comprar!'\n- 'Estoque acabando!'\n\n\n\nO DeepSeek usará lógica matemática para separar o que é uma queda normal de um problema real que precisa de atenção imediata."
+        "title": "🔗 Integração com Google Workspace",
+        "content": "No Google Docs, abra painel Gemini para análise contextual — peça expandir parágrafos mantendo tom. No Sheets, Gemini identifica tendências. No Gmail, resuma threads ou redija respostas profissionais. No Drive, processe múltiplos documentos. No Slides, Gemini gera slides baseado em documento do Docs. Para grupo, todos acessam Gemini no mesmo documento — ideal para brainstorming.\n\nDica prática: mantenha painel Gemini aberto enquanto edita Docs. Sempre que precisar refinar, contextualize a conversa."
+      },
+      {
+        "type": "text",
+        "title": "🖼️ Imagem para Visuais em Trabalhos",
+        "content": "Gera imagens hiperrealistas com texto integrado — excelente para diagramas, ilustrações conceituais ou visuais para apresentações. Descreva detalhadamente: \"Crie infográfica das 5 fases da mitose com labels, fundo azul, estilo educacional\" resulta em qualidade superior. Edição conversacional: \"Deixa mais vibrante\", \"Muda para anime\", \"Adiciona detalhes\". Insira direto em Docs/Slides.\n\nDica prática: use Imagen para criar trabalhos mais profissionais e personalizados sem designer."
+      },
+      {
+        "type": "text",
+        "title": "🎤 Gemini Live: Estudar em Voz",
+        "content": "Conversação de áudio bidireccional — fale com Gemini como colega de estudo. Explore conceitos oralmente, faça perguntas espontâneas, mostre algo com câmera enquanto conversa. Use para: explicar conceito em voz alta e validar, brainstorm (conversação flui melhor), praticar apresentação, ou explorar tema novo. Latência baixa — parece conversa real. Interrompa, mude tópico, peça repetição em tempo real.\n\nDica prática: para tópicos complexos, use Gemini Live — conversa oral ajuda memorização melhor que leitura."
+      },
+      {
+        "type": "text",
+        "title": "💻 Code Assist para Programação",
+        "content": "Integrado em VS Code, oferece sugestões em tempo real enquanto digita. Detecta erros, oferece otimizações, explica trechos. Peça: \"Explique linha por linha\" em trecho selecionado. Gera templates de testes. Pede \"Torne mais eficiente\" com explicações. Acelera aprendizado de programação sem substituir lógica do problema.\n\nDica prática: ative Code Assist desde início do semestre para aprender padrões corretos enquanto codifica."
+      },
+      {
+        "type": "text",
+        "title": "🔍 Deep Research para Pesquisa",
+        "content": "Automatiza pesquisa completa — você faz pergunta e Gemini coleta centenas de fontes, sintetiza, gera relatório com referências citadas. Conecta temas relacionados automaticamente. Inclui citações — use diretamente em trabalhos. Transforma pesquisa de \"Google + Wikipedia\" para análise integrada com fontes confiáveis.\n\nDica prática: use Deep Research como ponto de partida para pesquisa — economiza horas e oferece visão integrada do tópico."
+      },
+      {
+        "type": "text",
+        "title": "✅ Fluxo de Trabalho Completo",
+        "content": "(1) Recolher Material — NotebookLM centraliza PDFs e aulas.\n(2) Pesquisar — Deep Research explora novo tópico.\n(3) Brainstorm — Gemini Live para ideias exploratórias.\n(4) Estruturar — Google Docs + painel Gemini para outline e expansão.\n(5) Visuais — Imagen para ilustrações customizadas.\n(6) Refinar — Gemini melhora redação e lógica.\n(7) Apresentação — Google Slides com Gemini gerando slides.\n(8) Código — Code Assist no VS Code. Tudo em Google Workspace — nada fragmentado.\n\nDica prática: organize trabalho em pastas Drive por seção. Acesse Gemini do Docs enquanto trabalha."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ Cuidados Importantes",
+        "content": "Gemini ainda alucina em tarefas não-estruturadas — revise para informações críticas. É auxiliar, não substitui pensamento crítico. Sempre verifique citações oferecidas. Dados sensíveis estão em servidores Google. Audio Overview não substitui leitura completa. Code Assist oferece sugestões — nem sempre é melhor solução. Deep Research pode incluir fontes questionáveis — valide. Mantenha julgamento crítico sempre.\n\nDica prática: use Gemini para acelerar trabalho, mas sempre valide informações críticas com fonte primária."
+      },
+      {
+        "type": "quiz",
+        "title": "🧾 QUESTÃO 1",
+        "question": "Qual é a melhor prática ao usar Gemini para analisar um trabalho acadêmico?",
+        "options": [
+          {
+            "text": "Descrever detalhadamente todo o conteúdo do documento para Gemini entender melhor.",
+            "isCorrect": false,
+            "explanation": "Descrever consome tempo e é menos preciso que enviar o arquivo diretamente."
+          },
+          {
+            "text": "Carregar o arquivo diretamente (PDF, DOCX) ao invés de descrever, para Gemini analisar dados reais com precisão.",
+            "isCorrect": true,
+            "explanation": "Correto! O Gemini extrai as informações direto da fonte com muito mais riqueza de contexto."
+          },
+          {
+            "text": "Usar apenas a versão em áudio para economizar processamento.",
+            "isCorrect": false,
+            "explanation": "O formato deve ser escolhido pela necessidade, não para economizar processamento."
+          },
+          {
+            "text": "Dividir o documento em pequenos trechos para análise separada.",
+            "isCorrect": false,
+            "explanation": "O Gemini tem uma janela de 2 milhões de tokens, você não precisa dividir documentos."
+          }
+        ]
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ O Coração do Sistema",
-          "sentence": "O processo de limpar dados chama-se ___, e o sistema de ___ avisa quando algo sai do normal.",
+          "title": "🧾 QUESTÃO 2 - Completar a Frase",
+          "sentence": "Para estudantes, ___ é revolucionário — faça upload de aulas, livros e artigos. O recurso ___ transforma material em resumo de 5-10 minutos em áudio, perfeito para aprender viajando. Para visuais customizados em trabalhos, use ___ que gera imagens hiperrealistas com texto integrado. Para raciocínio profundo, ative ___ que supera competidores em problemas complexos. Para explorar conceitos conversando, use ___ — latência baixa, como conversar com colega real.",
           "answers": [
-            "ETL",
-            "alertas"
+            "NotebookLM",
+            "Audio Overview",
+            "Imagen",
+            "Deep Think",
+            "Gemini Live"
           ],
           "options": [
-            "ETL",
-            "alertas",
-            "desenho",
-            "e-mail",
-            "compra",
-            "venda"
+            "NotebookLM",
+            "Audio Overview",
+            "Imagen",
+            "Deep Think",
+            "Gemini Live",
+            "Code Assist",
+            "Deep Research",
+            "Planilhas"
           ],
-          "explanation": "Isso mesmo! O ETL organiza e os alertas protegem o seu negócio."
+          "explanation": "Exatamente! Esses são os recursos essenciais do ecossistema Google para acelerar o aprendizado."
         }
       },
       {
-        "type": "text",
-        "title": "📈 Etapa 4: Painel de Controle (Dashboard)",
-        "content": "Diretores não querem ver código, querem ver resultados. Vamos criar um Dashboard Executivo.\n\n\n\nO DeepSeek vai gerar o código para um painel visual que mostra: quanto dinheiro entrou, quantos clientes novos chegaram e qual a saúde do sistema. É a 'cara' do seu projeto final."
-      },
-      {
-        "type": "text",
-        "title": "🔍 Etapa 5: O Vidente (Machine Learning)",
-        "content": "Para fechar, vamos adicionar 'poderes de previsão'. Pediremos para o DeepSeek criar um modelo que tenta adivinhar quanto vamos vender nos próximos 30 dias.\n\n\n\nEle usará os dados do passado para projetar o futuro. Isso ajuda a empresa a se preparar para meses com muito movimento ou épocas de vacas magras."
-      },
-      {
         "type": "quiz",
-        "title": "🧠 Teste de Robustez",
-        "question": "Por que é importante que o sistema tenha uma etapa de 'Machine Learning' para previsões?",
+        "title": "✅ QUESTÃO 3 - Verdadeiro ou Falso",
+        "question": "Sobre o uso das ferramentas e recursos educacionais do Gemini, qual das afirmações abaixo é VERDADEIRA?",
         "options": [
           {
-            "text": "Para o sistema ficar mais bonito visualmente",
+            "text": "Você deve descrever em detalhes o conteúdo de um PDF antes de pedir análise a Gemini.",
             "isCorrect": false,
-            "explanation": "O visual depende do Dashboard, não do Machine Learning."
+            "explanation": "Falso. O ideal é fazer o upload direto do arquivo."
           },
           {
-            "text": "Para ajudar a empresa a tomar decisões hoje baseadas no que pode acontecer amanhã",
+            "text": "Deep Research substitui completamente a leitura e análise pessoal de fontes.",
+            "isCorrect": false,
+            "explanation": "Falso. Ele é um ponto de partida para acelerar o processo, mas não substitui a validação humana."
+          },
+          {
+            "text": "NotebookLM oferece citações exatas rastreando página e trecho das informações.",
             "isCorrect": true,
-            "explanation": "Exato! Previsões ajudam no planejamento estratégico e financeiro."
+            "explanation": "Verdadeiro! Esse é um dos maiores superpoderes do NotebookLM para trabalhos acadêmicos."
           },
           {
-            "text": "Para substituir todos os funcionários humanos",
+            "text": "Gemini Live só permite enviar comandos por texto, não suportando áudio bidirecional.",
             "isCorrect": false,
-            "explanation": "A IA auxilia humanos, não os substitui em decisões complexas."
+            "explanation": "Falso. O Gemini Live é exatamente sobre conversação em áudio bidirecional."
           }
         ]
-      },
-      {
-        "type": "text",
-        "title": "🧪 Etapa 6: Teste de Stress",
-        "content": "Antes de entregar, precisamos testar. Vamos pedir para o DeepSeek criar 'testes automáticos'. Eles verificam se o sistema aguenta processar 100 mil linhas de uma vez sem travar. É como fazer um 'test drive' radical antes de colocar o carro na estrada."
-      },
-      {
-        "type": "text",
-        "title": "📚 Etapa 7: Manual do Proprietário",
-        "content": "Um sistema sem manual não serve para nada. O DeepSeek vai escrever toda a documentação: como instalar, o que cada gráfico significa e como resolver problemas comuns. Isso garante que qualquer pessoa da empresa consiga usar sua criação no futuro."
-      },
-      {
-        "type": "text",
-        "title": "🚢 Etapa 8: Colocando no Ar (Deploy)",
-        "content": "Hora de 'dar o play'. Vamos usar o DeepSeek para criar as instruções de lançamento (CI/CD). \n\n\n\nIsso permite que o sistema seja atualizado automaticamente sempre que você fizer uma melhoria, sem precisar tirar o site do ar ou parar o trabalho dos analistas."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Prompt de Lançamento",
-        "question": "Monte o pedido final para documentar seu sistema:",
-        "initialWords": [
-          "Crie um documento README",
-          "explicando a arquitetura,",
-          "o guia de instalação",
-          "e como ler os alertas."
-        ],
-        "correctOrder": [
-          "Crie um documento README",
-          "explicando a arquitetura,",
-          "o guia de instalação",
-          "e como ler os alertas."
-        ],
-        "explanation": "Perfeito! Uma boa documentação é o que separa um 'projeto de fim de semana' de um 'produto profissional'."
-      },
-      {
-        "type": "text",
-        "title": "🏆 O Valor do seu Trabalho (ROI)",
-        "content": "Vamos ver o lucro que você gerou:\n- **Antes:** 2 analistas levavam 1 mês para fazer isso ($ 30.000).\n- **Agora:** Você fez em 1 dia com IA ($ 1.000).\n\nVocê economizou **R$ 29.000** para a empresa e criou algo muito mais preciso. Esse é o poder de quem domina o DeepSeek."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Módulo DeepSeek",
-        "content": "**PARABÉNS!** Você concluiu o módulo do Engenheiro de Elite.\n\nVocê aprendeu a:\n1. Criar códigos e fórmulas complexas.\n2. Analisar dados com precisão estatística.\n3. Construir sistemas automáticos que geram lucro e economizam tempo.\n\nVocê agora faz parte do **Top 1%** de usuários que sabem usar a IA para criar soluções técnicas reais."
-      },
-      {
-        "type": "text",
-        "title": "🚀 Próximo Módulo: Gemini",
-        "content": "Amanhã vamos conhecer o **Gemini**, a IA do Google. \n\nO Gemini é o 'mestre da integração'. Ele tem acesso à internet em tempo real, lê seus e-mails do Gmail, organiza seus arquivos no Drive e cria apresentações no Google Slides sozinho. \n\nPrepare-se para conectar sua IA ao mundo real!"
       }
     ]
   },
@@ -1317,158 +1301,101 @@
     "steps": [
       {
         "type": "text",
-        "title": "🌐 Bem-vindo ao Gemini: A IA Conectada ao Agora",
-        "content": "Prepare-se para conhecer a IA que tem 'passaporte' para o mundo real. Enquanto o ChatGPT e o Claude às vezes ficam presos em informações de meses atrás, o **Gemini** está ligado diretamente à Pesquisa Google.\n\n\n\nIsso significa que ele sabe o que aconteceu hoje de manhã, qual a cotação do dólar agora ou qual a lei que acabou de ser aprovada. Ele não é apenas um chat; é um assistente que vê, ouve e pesquisa em tempo real."
-      },
-      {
-        "type": "component",
-        "componentName": "FillBlanks",
-        "props": {
-          "title": "✏️ Os Superpoderes do Gemini",
-          "sentence": "O Gemini se destaca por ter acesso a dados ___, integração total com o ___ e ser ___ (entender fotos e vídeos).",
-          "answers": [
-            "atualizados",
-            "Google Workspace",
-            "multimodal"
-          ],
-          "options": [
-            "atualizados",
-            "Google Workspace",
-            "multimodal",
-            "antigos",
-            "Microsoft",
-            "lento"
-          ],
-          "explanation": "Isso mesmo! Ele é a IA da produtividade em tempo real dentro do ecossistema Google."
-        }
+        "title": "📚 HISTÓRIA DO COPILOT",
+        "content": "O Copilot nasceu como uma visão da Microsoft em 2023: integrar IA diretamente nos produtos que bilhões de pessoas já usam todos os dias.\n\nBilhões de pessoas usam Windows, Word, Excel e Outlook diariamente. Quando a Microsoft colocou Copilot \"dentro\" desses aplicativos, não foi um novo app para aprender – foi uma evolução do que já existia.\n\nEmpresas de todos os tamanhos começaram a usar: desde PMEs que usam Microsoft 365 básico até grandes corporações integrando Copilot em seus fluxos de trabalho.\n\nDiferente de outros chatbots, Copilot não precisa de você abrir uma aba nova. Está ali, integrado, esperando ser usado.\n\nProfissionais de marketing, RH, vendas, desenvolvedores e analistas de dados usam Copilot para economizar horas em tarefas repetitivas.\n\n💡 DICA PRÁTICA: Se você já usa Microsoft 365, você já tem Copilot. Não precisa assinar nada novo para começar. Procure pelo ícone de estrela azul em seus aplicativos."
       },
       {
         "type": "text",
-        "title": "🧠 Por que o Google é diferente?",
-        "content": "O foco do Google com o Gemini não é apenas 'conversar bonito', mas ser **útil na prática**.\n\nEle foi treinado com tudo o que o Google tem de melhor: vídeos do YouTube, livros do Google Books e bilhões de buscas reais. É como se ele fosse um bibliotecário que também assistiu a todos os vídeos do mundo e sabe exatamente onde encontrar a informação mais confiável para você."
+        "title": "⚙️ COMO O COPILOT FUNCIONA",
+        "content": "O Copilot é uma inteligência artificial treinada para entender e gerar texto, mas com um diferencial: ele acessa o contexto específico do seu computador.\n\nQuando você abre um documento no Word e pede \"Resuma esse texto\", o Copilot não está apenas gerando uma resposta genérica. Ele está analisando:\n- As palavras-chave do seu documento aberto\n- O padrão de linguagem usado\n- O contexto de trabalho (se é um email corporativo, um relatório, um contrato)\n\nEle funciona usando padrões matemáticos para reconhecer qual palavra deve vir depois da outra. Não é \"consciência\" ou \"compreensão verdadeira\" – é cálculo probabilístico extremamente sofisticado.\n\nQuanto melhor você descreve o que precisa, melhor o resultado. \"Resuma\" é vago. \"Resuma em 3 tópicos os principais riscos mencionados\" é preciso.\n\n💡 DICA PRÁTICA: Sempre dê contexto ao Copilot. Em vez de \"Analise isso\", diga \"Analise este relatório de vendas Q3 e identifique quais regiões cresceram acima de 15%\". Especificidade = melhores respostas."
       },
       {
         "type": "text",
-        "title": "📊 Gemini vs Outros: Quem vence em quê?",
-        "content": "Cada IA tem um 'talento' especial:\n\n* **Use o Gemini para:** Pesquisar notícias de hoje, analisar planilhas do Google Sheets e organizar seus e-mails.\n* **Use o ChatGPT para:** Criar histórias, roteiros e ter ideias 'fora da caixa'.\n* **Use o Claude para:** Ler arquivos imensos (PDFs de 200 páginas) e revisar textos profissionais.\n* **Use o DeepSeek para:** Resolver problemas de matemática e criar códigos de programação.\n\n\n\n**Dica:** Profissionais de elite deixam o Gemini aberto para ser o 'Google do futuro'."
+        "title": "✨ ONDE O COPILOT É MUITO BOM",
+        "content": "O Copilot é excelente em tarefas que envolvem seu ecossistema Microsoft:\n\n- Em Excel: Analisar dados, criar gráficos, identificar tendências, limpar dados bagunçados. Exemplo: \"Copilot, quais produtos tiveram queda de vendas no último mês?\" – ele analisa sua planilha aberta e responde.\n- Em Word: Resumir documentos longos, gerar ideias para o que falta, revisar tom, expandir seções curtas. Exemplo: \"Expanda a seção de metodologia mantendo formalidade acadêmica\".\n- Em PowerPoint: Gerar slides a partir de um briefing, redesenhar layouts, adicionar conteúdo baseado em tema. Exemplo: \"Crie 5 slides sobre quarterly results com esses dados\".\n- Em Outlook: Resumir threads longas de email, gerar respostas baseadas em contexto, priorizar mensagens importantes.\n- Em Windows: Ajudar com configurações, buscar arquivos, executar tarefas do sistema.\n- Em código: Se você usa Visual Studio, Copilot sugere código baseado no contexto do projeto.\n\n💡 DICA PRÁTICA: Copilot brilha em tarefas \"dentro do seu arquivo\". Se você tem uma planilha Excel aberta, Copilot entende o contexto dos dados e pode fazer análises muito mais precisas do que se você apenas colasse os dados em um chat genérico."
+      },
+      {
+        "type": "text",
+        "title": "❌ ONDE O COPILOT É MUITO RUIM",
+        "content": "Existem limites claros para o Copilot:\n\n- Pesquisa em tempo real: Copilot não tem acesso a informações atuais por padrão. Se você pergunta \"Qual é o preço do Bitcoin agora?\", ele não sabe.\n- Criatividade original: Se você precisa de algo completamente novo e não segue padrões conhecidos, Copilot pode ficar travado em respostas genéricas.\n- Análise crítica profunda: Para decisões de negócio críticas, Copilot pode parecer confiante mas estar completamente errado.\n- Informações sensíveis: Se seu arquivo tem dados confidenciais, lembre-se que Copilot processa isso. Nem sempre é seguro usar em documentos ultra-sensíveis.\n- Fora do ecossistema Microsoft: Se seu trabalho principal é em Google Workspace, Figma ou outras plataformas, Copilot não ajuda muito.\n- Validação de fatos: Copilot pode inventar dados convincentemente. Se você pede \"Liste 5 estudos que comprovam X\", Copilot pode inventar títulos e autores que parecem reais.\n\n💡 DICA PRÁTICA: Nunca use a resposta de Copilot como \"palavra final\" em algo crítico. Sempre valide. Para dados sensíveis, configure sua conta Microsoft com cuidado sobre quais arquivos o Copilot pode acessar."
+      },
+      {
+        "type": "text",
+        "title": "⚠️ ATENÇÃO - CARACTERÍSTICAS IMPORTANTES",
+        "content": "**Copilot Funciona Por Padrões, Não Por Compreensão**\nQuando Copilot \"lê\" seu documento, ele não está realmente entendendo como um ser humano. Ele está reconhecendo padrões estatísticos e prevendo as próximas palavras com altíssima precisão.\n\nSe você pede \"Resuma as 3 principais críticas deste relatório\", Copilot identifica:\n- Seções que usam linguagem crítica\n- Palavras-chave negativas\n- Padrões estruturais de crítica\n\nMas ele não \"compreende\" realmente a frustração ou importância emocional. É matemática, não consciência.\n\n**Alucinação: Copilot Pode Inventar**\nAssim como outros modelos de IA, Copilot alucina – inventa dados para parecer útil.\nCenário real: \"Copilot, quais clientes aumentaram gastos em 2024?\" Se Copilot não conseguir encontrar a informação claramente, pode gerar números que parecem reais mas foram inventados.\nPor que acontece? O objetivo de Copilot é ser convincente e útil, não necessariamente 100% verdadeiro.\n\n**Contexto é Força e Fraqueza**\nForça: Copilot tem acesso a seu arquivo aberto. Isso permite análises muito mais relevantes.\nFraqueza: Se o arquivo tem dados incompletos ou incorretos, Copilot vai amplificar o erro. Garbage in, garbage out.\n\n💡 DICA PRÁTICA: Antes de usar Copilot em dados críticos, verifique se seus dados de origem estão limpos. Se a planilha tem 500 linhas com erros, Copilot vai gerar análises baseadas em dados ruins."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste de Decisão",
-        "question": "Você precisa descobrir as 3 tendências de mercado que surgiram NESTA SEMANA. Qual IA você abre?",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Por que Copilot cresceu tão rápido em adoção em relação a outros chatbots de IA?",
         "options": [
           {
-            "text": "Gemini - porque ele acessa a internet em tempo real",
+            "text": "Porque está integrado nativamente em aplicações que bilhões de pessoas já usam (Windows, Word, Excel, Outlook).",
             "isCorrect": true,
-            "explanation": "Perfeito! Para atualidades e notícias frescas, o Gemini é imbatível."
+            "explanation": "Correto! A grande vantagem do Copilot é estar \"instalado\" dentro das ferramentas existentes, sem necessidade de mudança de hábito. Não é preciso abrir outra aba ou app."
           },
           {
-            "text": "Claude - porque ele é muito ético",
+            "text": "Porque é grátis e não tem limite de uso.",
             "isCorrect": false,
-            "explanation": "O Claude é ótimo, mas sua base de dados costuma ter um atraso de meses."
+            "explanation": "Incorreto. O Copilot para empresas (Microsoft 365) e a versão Pro são serviços pagos."
           },
           {
-            "text": "ChatGPT - porque ele é o mais famoso",
+            "text": "Porque é mais inteligente que todos os outros modelos de IA.",
             "isCorrect": false,
-            "explanation": "A fama não garante que ele saiba o que aconteceu hoje. O ChatGPT free costuma ser desatualizado."
+            "explanation": "A adoção em massa ocorreu pela integração natural no fluxo de trabalho, não por uma superioridade de inteligência absoluta."
+          },
+          {
+            "text": "Porque a Microsoft obrigou seus usuários a usar.",
+            "isCorrect": false,
+            "explanation": "Incorreto. A adoção foi orgânica pelas vantagens de produtividade nas ferramentas do dia a dia."
           }
         ]
-      },
-      {
-        "type": "text",
-        "title": "🎯 As Versões do Gemini",
-        "content": "O Gemini tem opções para cada tipo de correria:\n\n1.  ⚡ **Gemini Pro:** O 'pau para toda obra'. É gratuito, rápido e resolve 90% dos problemas.\n2.  🎯 **Gemini Advanced:** A versão paga. É mais inteligente, comete menos erros e vem com 2TB de espaço no Google Drive.\n3.  🚀 **Gemini Flash:** Feito para quem precisa de respostas instantâneas em tarefas simples."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Prompt de Pesquisa Profissional com Gemini",
-        "question": "Monte o pedido final para o Gemini pesquisar um mercado usando o método S.E.A.R.C.H.:",
-        "initialWords": [
-          "Pesquise o mercado de café no Brasil em 2024,",
-          "traga uma tabela comparando os preços atuais,",
-          "ignore cafés solúveis",
-          "e cite as fontes no final."
-        ],
-        "correctOrder": [
-          "Pesquise o mercado de café no Brasil em 2024,",
-          "traga uma tabela comparando os preços atuais,",
-          "ignore cafés solúveis",
-          "e cite as fontes no final."
-        ],
-        "explanation": "Esse prompt aplica o método S.E.A.R.C.H.: define a Situação (mercado de café), a Entrega (tabela comparativa), a Ação (pesquisar preços atuais), as Regras (Brasil em 2024, ignorar cafés solúveis) e o papel do Humano (citar fontes para conferência)."
-      },
-      {
-        "type": "text",
-        "title": "🔍 Pesquisa Inteligente: O 'Google' com Cérebro",
-        "content": "O Gemini não te dá apenas uma lista de links. Ele **lê os sites para você** e entrega um resumo pronto.\n\n\n\nPara ter uma pesquisa nível profissional, use o método **S.E.A.R.C.H.**:\n* **S - Situação:** 'Estou analisando o mercado de café'.\n* **E - Entrega:** 'Quero uma tabela comparativa'.\n* **A - Ação:** 'Pesquise os preços atuais'.\n* **R - Regras:** 'Foque apenas no Brasil em 2024'.\n* **C - Cuidado:** 'Ignore cafés solúveis'.\n* **H - Humano:** 'Cite as fontes para eu conferir'."
-      },
-      {
-        "type": "text",
-        "title": "📊 Integração Google: O Superpoder Oculto",
-        "content": "Esta é a parte que economiza horas da sua semana:\n\n* **No Gmail:** 'Resuma os e-mails do meu chefe da última semana e liste as tarefas'.\n* **No Google Docs:** 'Transforme estas notas de reunião em um relatório formal'.\n* **No Google Sheets:** 'Crie uma fórmula para achar erros nestes dados'.\n\nEle funciona dentro das abas que você já usa, sem precisar ficar copiando e colando texto de um lado para o outro."
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 IA no Trabalho",
-          "description": "Como o Gemini ajuda no seu ecossistema Google?",
+          "title": "🔗 QUESTÃO 2 - Ligar Conceitos",
+          "description": "Conecte o cenário ao uso correto (ou incorreto) do Copilot:",
           "pairs": [
             {
-              "left": "Gmail",
-              "right": "Resumir e-mails e rascunhar respostas"
+              "left": "Analisar planilha Excel aberta com dados",
+              "right": "Uso APROPRIADO – Contexto torna análise confiável"
             },
             {
-              "left": "Google Docs",
-              "right": "Melhorar a escrita e estruturar textos"
+              "left": "Perguntar o valor do Bitcoin em 2026",
+              "right": "Uso INAPROPRIADO – Fora do conhecimento real-time"
             },
             {
-              "left": "Google Sheets",
-              "right": "Analisar planilhas e criar fórmulas"
-            },
-            {
-              "left": "YouTube",
-              "right": "Resumir vídeos e achar momentos-chave"
+              "left": "Gerar resposta baseada em thread no Outlook",
+              "right": "Uso APROPRIADO – Tem contexto direto da conversa"
             }
           ]
         }
       },
       {
-        "type": "text",
-        "title": "🖼️ Multimodal: A IA que vê e ouve",
-        "content": "O Gemini é 'visionário'. Você pode:\n* Tirar foto de um erro no computador e perguntar: 'Como conserto isso?'.\n* Subir um PDF de uma tabela escaneada e pedir: 'Transforme isso em uma planilha Excel'.\n* Mandar o link de uma reunião gravada e pedir: 'Quem disse o quê e qual o prazo final?'.\n\n\n\nEle entende formatos diferentes ao mesmo tempo, o que é um salto gigantesco para quem trabalha com muitos tipos de arquivos."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste Multimodal",
-        "question": "Qual dessas tarefas o Gemini faz com muito mais facilidade que a maioria das outras IAs?",
-        "options": [
-          {
-            "text": "Ler uma tabela dentro de uma foto e organizar os números",
-            "isCorrect": true,
-            "explanation": "Correto! Sua habilidade de 'ver' e 'entender' imagens e documentos escaneados é um dos seus maiores diferenciais."
-          },
-          {
-            "text": "Apenas responder perguntas por texto",
-            "isCorrect": false,
-            "explanation": "Isso quase todas fazem. O Gemini vai muito além do texto."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "⚡ ROI: Vale a pena pagar?",
-        "content": "O Gemini Pro (gratuito) já é superior a muitos serviços pagos. \n\nA versão paga compensa se você já usa o **Google One** (armazenamento de fotos e arquivos) ou se precisa de uma IA que erre menos em cálculos e análises profundas. \n\nSe ele te economizar apenas 2 horas de pesquisa por semana, ele já se pagou com sobra. É eficiência pura para quem não quer perder tempo clicando em 20 links no Google para achar uma resposta."
-      },
-      {
-        "type": "text",
-        "title": "🚫 Armadilhas do Gemini",
-        "content": "Cuidado para não cair no 'piloto automático':\n* **Popularidade não é Verdade:** Às vezes ele traz o resultado mais famoso do Google, mas não o mais correto. Confira as fontes que ele cita.\n* **Papo de Vendedor:** Por ser muito educado, ele pode enrolar na resposta. Peça para ser 'direto e conciso'.\n* **Verificação:** Sempre clique no botão de 'verificar resposta' (o ícone do Google abaixo da resposta) para ver se há fontes que confirmam ou contradizem o que ele disse."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 11",
-        "content": "**O QUE VOCÊ LEVA PARA CASA HOJE:**\n\n1.  O Gemini é a IA conectada à internet em tempo real.\n2.  Ele se integra nativamente ao Google Workspace (Gmail, Drive, Sheets).\n3.  Ele é 'multimodal' (lê fotos, vídeos e áudios).\n4.  O método S.E.A.R.C.H. é a chave para pesquisas perfeitas.\n\n**MENTALIDADE:**\nO Gemini não é um chat de conversa; é um **extensor do seu navegador** e do seu escritório virtual.\n\n**AMANHÃ:** Vamos focar em Produtividade Máxima — como automatizar seu dia inteiro usando a IA dentro do Google!"
+        "type": "component",
+        "componentName": "FillBlanks",
+        "props": {
+          "title": "✏️ QUESTÃO 3 - Completar a Frase",
+          "sentence": "Copilot funciona por ___, não por compreensão genuína. Quando ele 'lê' um documento, ele está reconhecendo ___ estatísticos e prevendo a próxima palavra com altíssima precisão. Isso significa que ele pode inventar dados ___ para parecer útil, mas não necessariamente verdadeiro.",
+          "answers": [
+            "Padrões matemáticos",
+            "padrões",
+            "convincentes"
+          ],
+          "options": [
+            "Padrões matemáticos",
+            "padrões",
+            "convincentes",
+            "Inteligência",
+            "conceitos",
+            "falsos",
+            "Vontade",
+            "reais"
+          ],
+          "explanation": "Excelente! O texto deixa claro que o Copilot usa matemática e estatística, e pode inventar dados (alucinar) priorizando a utilidade sobre a veracidade."
+        }
       }
     ]
   },
@@ -1476,155 +1403,123 @@
     "steps": [
       {
         "type": "text",
-        "title": "🚀 Gemini para Produtividade: Seu Assistente de Elite",
-        "content": "Você já sabe pesquisar, agora vai aprender a **executar**. O Gemini brilha na produtividade porque ele não está isolado; ele vive dentro do seu e-mail, dos seus documentos e da sua agenda.\n\n\n\nImagine uma ferramenta que entende seus prazos, resume suas conversas e prepara seus relatórios antes mesmo de você pedir. Hoje, vamos montar o seu 'Escritório Inteligente' para que você foque no que realmente importa."
+        "title": "✍️ A ARTE DO PROMPT — DO BÁSICO AO AVANÇADO",
+        "content": "A maioria das pessoas usa apenas 20% do potencial do Copilot porque escreve prompts fracos. Veja a evolução:\n\n**Nível 1** — Prompt fraco: \"Resuma esse documento.\"\n\n**Nível 2** — Prompt médio: \"Resuma esse relatório em 5 tópicos.\"\n\n**Nível 3** — Prompt forte: \"Resuma esse relatório de vendas em 5 tópicos, destacando as regiões com queda acima de 10%, usando linguagem executiva para apresentar à diretoria.\"\n\n**Nível 4** — Prompt profissional: \"Você é um analista de negócios sênior. Analise este relatório de vendas Q3, identifique as 3 maiores quedas regionais, sugira hipóteses para cada queda e formate a resposta em bullet points para uma apresentação executiva de 10 minutos.\"\n\nA diferença entre o nível 1 e o nível 4 é enorme. O Copilot é o mesmo. O que muda é quem sabe pedir."
       },
       {
         "type": "text",
-        "title": "📧 Domando o E-mail: Da Confusão ao Controle",
-        "content": "A pessoa média gasta quase 30% da semana apenas lendo e respondendo e-mails. Com o Gemini, transformamos tarefas manuais em um sistema automático.\n\n\n\n**O que ele faz por você:**\n1. **Classifica:** Ele avisa o que é urgente e o que pode esperar.\n2. **Rascunha:** Ele sugere respostas baseadas no seu jeito de falar.\n3. **Extrai:** Se um e-mail marca uma reunião, ele já identifica a data e o assunto para a sua agenda."
+        "title": "🏢 CASOS DE USO POR ÁREA (RH e Vendas)",
+        "content": "👥 **Recursos Humanos:** Criar descrições de vagas personalizadas por nível e área. Resumir currículos e destacar pontos-chave. Redigir comunicados internos com tom adequado. Gerar roteiros de entrevista baseados no perfil da vaga. Criar planos de onboarding estruturados.\n\n📊 **Vendas:** Analisar planilha de pipeline e identificar deals em risco. Gerar emails de follow-up personalizados por cliente. Resumir histórico de interações de um cliente antes de uma reunião. Criar scripts de abordagem para diferentes perfis de comprador. Analisar metas vs. realizado e sugerir ações corretivas."
       },
       {
         "type": "text",
-        "title": "🎯 O Método G.A.T.E. para E-mails",
-        "content": "Para nunca mais se perder na caixa de entrada, use este guia no seu pedido:\n\n* **G - Gestão:** 'Classifique estes e-mails por urgência'.\n* **A - Automação:** 'Crie um modelo de resposta para dúvidas de preço'.\n* **T - Triagem:** 'Extraia deste e-mail a tarefa principal e o prazo'.\n* **E - Escrita:** 'Reescreva este e-mail para ser curto e direto'."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Automatize sua Inbox",
-        "question": "Coloque o pedido na ordem correta para criar o seu sistema de e-mail:",
-        "initialWords": [
-          "Analise minha caixa de entrada,",
-          "classifique por prioridade,",
-          "extraia as tarefas e prazos,",
-          "e sugira modelos de resposta."
-        ],
-        "correctOrder": [
-          "Analise minha caixa de entrada,",
-          "classifique por prioridade,",
-          "extraia as tarefas e prazos,",
-          "e sugira modelos de resposta."
-        ],
-        "explanation": "Excelente! Você seguiu a lógica: Analisar -> Priorizar -> Extrair Ações -> Facilitar a Resposta."
+        "title": "🏢 CASOS DE USO POR ÁREA (Marketing, Gestão e Tech)",
+        "content": "📣 **Marketing:** Gerar variações de copy para campanhas de email. Resumir feedbacks de clientes e identificar padrões. Criar briefings de conteúdo a partir de dados de performance. Adaptar o tom de um texto para diferentes públicos. Gerar pautas de conteúdo mensais baseadas em tendências do setor.\n\n📋 **Gestão e Liderança:** Resumir atas de reunião e listar próximos passos com responsáveis. Criar apresentações executivas a partir de dados brutos. Redigir feedbacks estruturados para equipe. Priorizar lista de tarefas por impacto e urgência. Gerar relatórios de status de projetos em linguagem clara.\n\n💻 **Tecnologia e Dados:** Explicar trechos de código em linguagem simples. Sugerir melhorias em scripts existentes. Gerar documentação técnica a partir de código. Analisar logs e identificar padrões de erro. Criar casos de teste baseados em requisitos."
       },
       {
         "type": "text",
-        "title": "📅 Agenda Inteligente: Mais Tempo de Foco",
-        "content": "O Gemini não apenas marca horários; ele protege o seu tempo.\n\n\n\nUse este pedido: 'Analise minha semana e encontre blocos de 2 horas para foco no projeto X. Mova reuniões rápidas para o fim da tarde e garanta 15 minutos de intervalo entre cada compromisso'. O Gemini vira o seu 'segurança' contra agendas lotadas e improdutivas."
+        "title": "⚠️ ERROS MAIS COMUNS E COMO EVITAR",
+        "content": "**Erro 1 — Confiar cegamente nos números:** O Copilot pode gerar estatísticas que parecem reais mas foram inventadas. Sempre valide dados numéricos em fontes confiáveis antes de apresentar para alguém.\n\n**Erro 2 — Prompt vago demais:** Pedir \"melhore esse texto\" sem dizer o objetivo, o tom e o público gera resultados genéricos. Seja específico sobre o que melhorar e para quem.\n\n**Erro 3 — Não revisar o output:** Copilot é um ponto de partida, não um produto final. Todo conteúdo gerado precisa de revisão humana antes de ser usado profissionalmente."
       },
       {
         "type": "text",
-        "title": "📝 Lendo Tudo de uma Vez (Processamento em Lote)",
-        "content": "Imagine que você recebeu 15 propostas de fornecedores diferentes. Em vez de ler uma por uma, jogue todas para o Gemini e diga:\n\n'Compare estes 15 arquivos. Crie uma tabela mostrando o preço de cada um, o prazo de entrega e destaque qual tem o melhor custo-benefício. Aponte também qualquer cláusula de risco que apareça neles'.\n\nO que levaria dois dias de leitura vira um resumo de 5 minutos."
+        "title": "⚠️ MAIS ERROS COMUNS",
+        "content": "**Erro 4 — Usar em dados sujos:** Se a planilha tem inconsistências, células vazias ou dados duplicados, o Copilot vai gerar análises erradas com muita confiança. Limpe os dados antes de analisar.\n\n**Erro 5 — Ignorar o contexto do arquivo aberto:** Muita gente abre o Copilot e digita a pergunta sem ter o arquivo relevante aberto. O poder do Copilot está em analisar o que está na sua tela. Sempre trabalhe com o arquivo aberto.\n\n**Erro 6 — Desistir no primeiro resultado ruim:** Se o primeiro resultado não foi bom, refine o prompt. Adicione mais contexto, especifique o formato desejado ou peça para tentar novamente com uma abordagem diferente."
       },
       {
         "type": "text",
-        "title": "📋 Manuais e Checklists que se Criam Sozinhos",
-        "content": "Se você faz uma tarefa sempre do mesmo jeito, peça para o Gemini criar um **SOP** (Procedimento Operacional Padrão).\n\n'Crie um passo a passo detalhado de como postar um novo produto no nosso site, incluindo como tratar a foto e como escrever a descrição'.\n\nAgora, sempre que alguém novo entrar na equipe, o manual já está pronto, atualizado e fácil de seguir."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 Ferramenta e Função",
-          "description": "Ligue cada recurso do Gemini ao ganho de produtividade.",
-          "pairs": [
-            {
-              "left": "Agenda Inteligente",
-              "right": "Protege tempo de foco"
-            },
-            {
-              "left": "Análise em Lote",
-              "right": "Lê 20 arquivos em segundos"
-            },
-            {
-              "left": "Criação de SOP",
-              "right": "Monta manuais de treinamento"
-            },
-            {
-              "left": "Triagem de E-mail",
-              "right": "Acha o que é urgente na inbox"
-            }
-          ]
-        }
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 1)",
+        "content": "**Técnica do Papel:** Atribua uma função ao Copilot antes de fazer a pergunta. \"Você é um especialista em RH com 20 anos de experiência. Analise esse currículo e diga se o candidato é adequado para a vaga de gerente comercial.\" Isso muda completamente a qualidade da resposta.\n\n**Técnica da Restrição:** Limite o que o Copilot pode fazer para forçar precisão. \"Responda em no máximo 3 frases. Não use jargões técnicos. Use linguagem que um gerente não técnico entenda.\"\n\n**Técnica do Exemplo:** Mostre o formato que você quer antes de pedir. \"Quero uma resposta nesse formato: Problema: / Causa: / Solução: / Próximo passo: Agora analise essa situação de vendas e responda nesse formato.\""
       },
       {
         "type": "text",
-        "title": "🧠 O Conselheiro de Decisões (Método DECIDE)",
-        "content": "Está em dúvida sobre qual caminho seguir? O Gemini ajuda você a decidir usando lógica profissional.\n\n\n\nPeça: 'Aja como meu conselheiro. Preciso escolher entre o Fornecedor A e o B. Use o método DECIDE: defina os critérios (preço, qualidade, rapidez), dê notas para cada um e me diga qual é a escolha mais lógica'. A IA remove a emoção e te entrega uma análise baseada em fatos."
+        "title": "🔁 TÉCNICAS AVANÇADAS DE PROMPT (Parte 2)",
+        "content": "**Técnica da Iteração:** Use o Copilot em rounds. Primeiro peça uma versão rascunho, depois peça para melhorar partes específicas, depois peça para ajustar o tom. Construa o resultado em camadas.\n\n**Técnica do Revisor:** Após gerar um conteúdo, peça ao próprio Copilot para criticar o que gerou. \"Agora analise essa resposta que você deu e me diga quais pontos podem estar errados ou incompletos.\" Isso aumenta a confiabilidade do output."
       },
       {
         "type": "text",
-        "title": "📈 Relatórios que 'Falam' com a Diretoria",
-        "content": "Transforme planilhas chatas em relatórios que as pessoas realmente leem.\n\n'Pegue estes números de vendas e crie um resumo executivo de 5 parágrafos. Mostre o que está funcionando, o que precisa de atenção imediata e dê 3 sugestões de melhoria para o próximo mês'. \n\nO Gemini entende que chefes e diretores têm pouco tempo, então ele foca no que é estratégico."
+        "title": "📱 COPILOT NO DIA A DIA — FLUXO PRÁTICO",
+        "content": "**Manhã:** Abra o Outlook e peça ao Copilot para resumir os emails não lidos prioritários. Peça para sugerir respostas rápidas para os que precisam de retorno.\n\n**Durante reuniões:** Use o Copilot no Teams para transcrever e resumir a reunião em tempo real, listando decisões tomadas e próximos passos com responsáveis.\n\n**Ao trabalhar em documentos:** Antes de escrever do zero, peça ao Copilot uma estrutura sugerida. Depois preencha com seu conhecimento e peça refinamentos específicos.\n\n**Ao fechar o dia:** Peça ao Copilot para revisar o que foi produzido e listar pendências para o dia seguinte com base nos documentos abertos."
       },
       {
-        "type": "text",
-        "title": "🤝 Reuniões que Valem a Pena",
-        "content": "Chega de reuniões que poderiam ter sido um e-mail. Antes de entrar em uma, peça para o Gemini:\n1. **Preparar a Agenda:** Quais perguntas não podem faltar?\n2. **Resumir a Ata:** Cole a gravação ou transcrição e peça: 'Quais foram as 3 decisões tomadas e quem é o responsável por cada tarefa?'."
+        "type": "quiz",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Um analista precisa apresentar para a diretoria as regiões com queda de vendas no trimestre. Qual prompt vai gerar o melhor resultado no Copilot?",
+        "options": [
+          {
+            "text": "Analise as vendas.",
+            "isCorrect": false,
+            "explanation": "Prompt de Nível 1. Muito vago, vai gerar uma resposta genérica."
+          },
+          {
+            "text": "Me diga quais regiões caíram.",
+            "isCorrect": false,
+            "explanation": "Prompt de Nível 2. Melhor, mas ainda falta contexto e formato para a diretoria."
+          },
+          {
+            "text": "Você é um analista sênior. Com a planilha de vendas Q3 aberta, identifique as 3 regiões com maior queda percentual e formate os resultados em bullet points para uma apresentação executiva.",
+            "isCorrect": true,
+            "explanation": "Correto! Esse é um prompt Nível 4 (Profissional). Define papel, contexto, tarefa, regras e formato."
+          },
+          {
+            "text": "Copilot, faça um relatório completo de tudo que está nessa planilha.",
+            "isCorrect": false,
+            "explanation": "Isso vai gerar um texto enorme e sem foco no problema real que é a queda de vendas."
+          }
+        ]
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Produtividade Ativa",
-          "sentence": "O Gemini ajuda a tomar decisões usando o método ___ e transforma dados em relatórios ___.",
+          "title": "✏️ QUESTÃO 2 - Completar a Frase",
+          "sentence": "Quando atribuímos uma ___ ao Copilot antes de fazer a pergunta, a qualidade da resposta melhora significativamente. Já a técnica de usar o próprio Copilot para criticar sua resposta é chamada de técnica do ___. Para forçar precisão e clareza na resposta, podemos usar a técnica da ___, limitando formato, tamanho ou linguagem.",
           "answers": [
-            "DECIDE",
-            "executivos"
+            "Técnica do Papel",
+            "Revisor",
+            "Restrição"
           ],
           "options": [
-            "DECIDE",
-            "executivos",
-            "fáceis",
-            "MAPA",
-            "longos",
-            "músicas"
+            "Técnica do Papel",
+            "Revisor",
+            "Restrição",
+            "Mentira",
+            "Escritor",
+            "Ampliação",
+            "Técnica da Iteração"
           ],
-          "explanation": "Perfeito! Usar métodos estruturados é o que separa um usuário comum de um mestre da produtividade."
+          "explanation": "Isso mesmo! O Papel define quem ele é, a Restrição dá os limites e o Revisor garante a qualidade final."
         }
       },
       {
-        "type": "text",
-        "title": "🔁 Crie seu Próprio Sistema (Workflows)",
-        "content": "Você pode desenhar seu próprio fluxo de trabalho. \n\n\n\nExemplo: 'Sempre que eu receber um formulário de novo cliente (Gatilho), analise o perfil dele (Processamento), crie uma pasta no Drive (Ação) e me envie um resumo no Slack (Notificação)'. \n\nIsso é produtividade em nível avançado: você gasta tempo configurando uma vez para economizar tempo o resto da vida."
-      },
-      {
-        "type": "text",
-        "title": "🚫 O que NÃO fazer com a IA",
-        "content": "Cuidado para não virar um 'robô':\n* **Não automatize o afeto:** Nunca use a IA para mandar mensagens puramente pessoais ou delicadas. O toque humano é insubstituível em relacionamentos.\n* **Não confie cegamente:** Se a IA agendar algo, confira se o fuso horário está certo.\n* **Menos é Mais:** Não crie 50 automações se você só precisa de 2. Foque no que realmente te tira o sono."
-      },
-      {
-        "type": "text",
-        "title": "📱 Produtividade no Celular",
-        "content": "Use o Gemini por voz enquanto está no trânsito ou caminhando: 'Ok Google, com Gemini, resuma os e-mails urgentes que chegaram nos últimos 15 minutos'. \n\nÉ a captura de ideias em tempo real: você fala uma ideia e ele já transforma em uma tarefa na sua lista. A produtividade agora te acompanha em qualquer lugar."
-      },
-      {
-        "type": "quiz",
-        "title": "🧠 Teste sua Produtividade",
-        "question": "Qual é a melhor forma de começar a usar o Gemini para ser mais produtivo?",
-        "options": [
-          {
-            "text": "Tentar automatizar todas as tarefas do meu dia de uma vez",
-            "isCorrect": false,
-            "explanation": "Isso vai gerar confusão. Comece pequeno para garantir que o sistema funcione."
-          },
-          {
-            "text": "Escolher UMA tarefa repetitiva que me irrita e criar um workflow para ela",
-            "isCorrect": true,
-            "explanation": "Exato! Resolver um problema de cada vez é o segredo para construir um sistema robusto."
-          },
-          {
-            "text": "Deixar a IA responder todos os meus e-mails sem eu ler nada",
-            "isCorrect": false,
-            "explanation": "Risco alto! Você sempre deve ser o filtro final para evitar erros de comunicação."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 12",
-        "content": "**O QUE VOCÊ DOMINOU HOJE:**\n\n1. Criar sistemas automáticos para e-mails e agenda.\n2. Analisar montanhas de documentos em poucos minutos.\n3. Usar frameworks como o DECIDE para escolhas profissionais.\n4. Criar manuais (SOPs) e relatórios executivos em segundos.\n\n**MENTALIDADE:**\nA IA não substitui o seu cérebro, ela **amplifica a sua execução**. Você é o arquiteto; o Gemini é o seu melhor construtor.\n\n**AMANHÃ:** Vamos soltar a criatividade! Descubra como usar o Gemini para inovar e ter ideias que ninguém mais teve."
+        "type": "component",
+        "componentName": "MatchWords",
+        "props": {
+          "title": "🔗 QUESTÃO 3 - Ligue os Termos",
+          "description": "Conecte a técnica ou conceito ao seu significado correto:",
+          "pairs": [
+            {
+              "left": "Dados sujos",
+              "right": "Planilhas com erros, células vazias ou informações inconsistentes"
+            },
+            {
+              "left": "Alucinação",
+              "right": "Quando a IA inventa dados convincentes que não são verdadeiros"
+            },
+            {
+              "left": "Técnica do Papel",
+              "right": "Atribuir uma função ou especialidade ao Copilot antes de perguntar"
+            },
+            {
+              "left": "Técnica da Iteração",
+              "right": "Construir o resultado final em várias rodadas de refinamento"
+            },
+            {
+              "left": "Técnica do Revisor",
+              "right": "Pedir ao Copilot que critique e aponte falhas na própria resposta"
+            }
+          ]
+        }
       }
     ]
   },
@@ -1632,191 +1527,106 @@
     "steps": [
       {
         "type": "text",
-        "title": "🎨 A IA com Olhos e Ouvidos: Multimodalidade",
-        "content": "Hoje você vai descobrir o superpoder exclusivo do Gemini: ele entende o mundo visual e auditivo.\n\nEnquanto outras IAs vivem em um mundo de palavras, o Gemini **enxerga**. Ele analisa fotos, vídeos, PDFs e áudios com uma precisão assustadora. \n\n\n\nIsso muda tudo porque você não precisa mais digitar tudo o que vê; basta tirar uma foto ou mandar um arquivo para a IA analisar para você."
+        "title": "⚡ HISTÓRIA DO GROK",
+        "content": "O GROK nasceu em 2023 como uma criação da xAI, a empresa de IA fundada por Elon Musk. Sua proposta era diferente: uma IA com acesso em tempo real à internet e às conversas do X (antigo Twitter).\n\nEnquanto outras IAs tinham conhecimento \"congelado\" em datas específicas, GROK foi desenvolvido para estar sempre atualizado. Seu nome é uma referência ao livro \"O Guia do Mochileiro das Galáxias\" – e sua personalidade reflete isso: irreverente, com senso de humor, e disposta a falar sobre tópicos que outras IAs evitam.\n\nA estratégia da xAI foi clara: não competir sendo igual aos outros, mas sendo diferente. GROK prioriza acesso a dados reais em tempo real e uma abordagem menos \"filtrada\" do que concorrentes. Isso o tornou popular entre usuários que buscam respostas rápidas sobre notícias, tendências e eventos atuais.\n\n💡 DICA PRÁTICA: GROK está disponível no X (antigo Twitter) para usuários premium. Se você já paga pelo X Premium, GROK pode ser seu assistente de pesquisa em tempo real sem precisar sair da rede social."
       },
       {
         "type": "text",
-        "title": "👁️ Como o Gemini 'Vê' o Mundo",
-        "content": "A arquitetura do Gemini foi treinada com bilhões de imagens conectadas a textos. \n\n**O que ele consegue fazer:**\n1. **Reconhecer Objetos:** Identifica produtos, pessoas e lugares.\n2. **Ler Textos em Fotos (OCR):** Extrai dados de uma lousa, de um recibo ou de um contrato escaneado.\n3. **Analisar o Design:** Ele entende se um site está bonito ou se o botão de compra está escondido.\n4. **Entender o Contexto:** Ele percebe a 'vibe' de uma foto e o que ela tenta comunicar."
+        "title": "🧠 COMO O GROK FUNCIONA",
+        "content": "GROK é uma inteligência artificial treinada para entender e gerar texto, mas com um grande diferencial: acesso constante à internet e aos dados do X.\n\nQuando você faz uma pergunta, GROK não consulta apenas seu conhecimento pré-treinado (que tem data limite). Ele acessa:\n- Trending topics do X em tempo real\n- Notícias atuais da web\n- Conversas públicas e dados de redes sociais\n- Informações atualizadas de forma contínua\n\nIsso significa que se você pergunta \"O que está acontecendo no mercado de criptomoedas agora?\", GROK pode consultar dados de hoje, não de meses atrás.\n\nFunciona usando padrões de linguagem combinados com busca em tempo real. Não é \"consciência\" ou \"opinião real\" – é análise de padrões em dados atualizados continuamente.\n\nGROK também foi treinado com a filosofia de ser \"maximamente verdadeiro e minimamente censurável\", o que significa que ele tenta ser honesto sobre limites e evita recusas genéricas quando possível.\n\n💡 DICA PRÁTICA: Use GROK quando precisar de informações atualizadas sobre eventos, tendências ou notícias. Para tarefas atemporais (história, conceitos, matemática), outras IAs podem ser igualmente boas, mas GROK vence em dados recentes."
       },
       {
         "type": "text",
-        "title": "📊 Economizando com a IA Visual",
-        "content": "O Gemini substitui ferramentas que custam caro:\n* **Adeus, OCR Pago:** Ele lê PDFs escaneados de graça.\n* **Adeus, Consultor de Design:** Ele avalia o layout do seu site na hora.\n* **Adeus, Transcritores:** Ele ouve reuniões e anota o que foi decidido.\n\nPara 95% das suas necessidades diárias, você não precisa de softwares especializados; você só precisa saber pedir ao Gemini."
-      },
-      {
-        "type": "component",
-        "componentName": "MatchWords",
-        "props": {
-          "title": "🔗 O Poder da Visão",
-          "description": "Ligue o arquivo visual à tarefa que o Gemini realiza.",
-          "pairs": [
-            {
-              "left": "Foto de Recibo",
-              "right": "Extrair valores para planilha"
-            },
-            {
-              "left": "Vídeo de Reunião",
-              "right": "Criar ata e lista de tarefas"
-            },
-            {
-              "left": "Print de Site",
-              "right": "Sugerir melhorias no visual"
-            },
-            {
-              "left": "PDF Escaneado",
-              "right": "Transformar imagem em texto"
-            }
-          ]
-        }
+        "title": "🔥 É UMA DAS INTELIGÊNCIAS ARTIFICIAIS DO MOMENTO",
+        "content": "GROK cresceu rapidamente porque está integrado ao X, uma plataforma com centenas de milhões de usuários mensais.\n\nNão é preciso baixar um app novo ou abrir uma aba de navegador separada. Para quem já usa X Premium, GROK está ali, acessível com um clique.\n\nJornalistas usam GROK para verificar notícias em tempo real. Investidores usam para monitorar mercados. Criadores de conteúdo usam para pesquisar tendências. Pesquisadores usam para acessar dados atualizados.\n\nA vantagem competitiva é clara: acesso a dados em tempo real que outras IAs não têm. Se o ChatGPT conhece dados de abril de 2024, GROK conhece de hoje.\n\nEmpresas e profissionais também começam a integrar GROK em seus fluxos porque a velocidade e atualização são incomparáveis.\n\n💡 DICA PRÁTICA: Se você acompanha mercados financeiros, política ou tendências sociais, GROK é praticamente obrigatório. A vantagem de estar sempre atualizado é enorme para essas áreas."
       },
       {
         "type": "text",
-        "title": "🎯 O Framework M.U.L.T.I. para Imagens",
-        "content": "Para ter uma análise profissional de qualquer imagem, use este guia:\n\n* **M - Mídia:** 'Analise este print do meu site'.\n* **U - Uso:** 'Quero saber por que as pessoas não estão clicando no botão'.\n* **L - Leitura:** 'Olhe as cores, os textos e onde o botão está'.\n* **T - Técnico:** 'Foque na hierarquia visual'.\n* **I - Integração:** 'Me dê 3 sugestões de melhoria em uma lista'."
-      },
-      {
-        "type": "practical",
-        "title": "🎯 Atividade: Sua Primeira Análise Visual",
-        "question": "Monte o pedido correto para analisar a foto de um produto de um concorrente:",
-        "initialWords": [
-          "Analise esta foto do produto X,",
-          "identifique os pontos fortes da embalagem,",
-          "compare com o nosso design",
-          "e sugira 2 melhorias urgentes."
-        ],
-        "correctOrder": [
-          "Analise esta foto do produto X,",
-          "identifique os pontos fortes da embalagem,",
-          "compare com o nosso design",
-          "e sugira 2 melhorias urgentes."
-        ],
-        "explanation": "Perfeito! Você deu a Mídia, a Tarefa (Análise) e o Objetivo (Melhorias)."
+        "title": "💪 ONDE O GROK É MUITO BOM",
+        "content": "GROK é excelente em tarefas que exigem informações atualizadas ou contexto em tempo real:\n\n- Pesquisa de notícias e eventos: \"O que está acontecendo com a cotação do dólar agora?\" GROK acessa dados atualizados e responde.\n- Análise de tendências: \"Quais são os assuntos mais comentados no X hoje?\" GROK vê as trends em tempo real.\n- Monitoramento de mercados: Preços de ações, criptomoedas, commodities – GROK tem acesso aos dados atuais.\n- Verificação de fatos recentes: \"Esse candidato realmente disse isso ontem?\" GROK pode consultar discursos e notícias de hoje.\n- Pesquisa social: \"Qual é o sentimento das pessoas sobre esse tema?\" GROK analisa conversas do X e web.\n- Conteúdo sobre atualidades: Se você precisa escrever sobre um evento que aconteceu hoje, GROK fornece dados atualizados.\n- Decisões que dependem de dados atuais: Você está pensando em comprar uma ação? GROK mostra performance recente e notícias atuais.\n- Análise de X e redes sociais: Como GROK está integrado ao X, ele entende contexto de conversas e trends da plataforma melhor que qualquer outro.\n\n💡 DICA PRÁTICA: Quando você tem uma pergunta que começa com \"agora\", \"hoje\", \"recentemente\", use GROK. Seu diferencial é exatamente estar atualizado em tempo real."
       },
       {
         "type": "text",
-        "title": "📸 Analisando seu E-commerce e Redes Sociais",
-        "content": "Você pode subir as fotos do seu Instagram ou do seu site e pedir um 'Raio-X'.\n\n\n\nPeça para a IA: 'Aja como um especialista em vendas. Olhe as 12 últimas fotos do meu feed. Minha paleta de cores passa confiança? O que eu deveria postar para vender mais para o público X?'. O Gemini vai analisar as cores, o estilo e a mensagem das fotos para te dar um plano de ação."
+        "title": "⛔ ONDE O GROK É MUITO RUIM",
+        "content": "Existem limites claros para o GROK, apesar de suas vantagens:\n\n- Análise profunda de conceitos atemporais: Se você quer entender história da filosofia ou conceitos de física quântica, GROK não é melhor que outros modelos.\n- Tarefas que exigem contexto pessoal: GROK não acessa seus arquivos, documentos privados ou dados pessoais. Para análise de seu próprio negócio, outras IAs acopladas a seus sistemas são melhores.\n- Criatividade sem parâmetros: Se você precisa de ficção completamente original, GROK pode ser menos criativo que alternativas.\n- Privacidade extrema: GROK funciona dentro do X, que coleta dados. Se você quer máxima privacidade, não é a melhor opção.\n- Confiabilidade em números específicos: Apesar do acesso a dados reais, GROK ainda pode cometer erros em cálculos ou interpretar dados incorretamente.\n- Contexto de arquivos: Diferente de Copilot ou Claude, GROK não analisa seus documentos privados. Não pode ler um contrato que você subiu.\n- Polarização: Como GROK foi treinado com dados do X, que é uma rede social polarizada, às vezes suas respostas refletem vieses presentes na plataforma.\n- Censura reversa: Na tentativa de ser \"minimamente censurável\", GROK às vezes pode oferecer conteúdo que cruza linhas de bom senso ou sensibilidade.\n\n💡 DICA PRÁTICA: Não use GROK para tarefas que exigem máxima privacidade ou análise de seus dados internos. Use-o para o que ele é bom: inteligência em tempo real baseada em web e X."
       },
       {
         "type": "text",
-        "title": "📄 Digitalizando Pilhas de Papel",
-        "content": "Recebeu 50 notas fiscais ou contratos impressos? Tire fotos e mande para o Gemini.\n\nEm vez de levar semanas digitando tudo, diga: 'Extraia o número da nota, o valor e a data de vencimento de todos esses arquivos e coloque em uma tabela'. O que era um trabalho braçal vira uma tarefa de 5 minutos. Isso é o que chamamos de **OCR Inteligente**."
-      },
-      {
-        "type": "text",
-        "title": "🎬 Analisando Vídeos dos Concorrentes",
-        "content": "Mande o link de um vídeo do YouTube de um concorrente e peça inteligência estratégica:\n1. **O que eles dizem:** Ele transcreve e resume as promessas.\n2. **Como eles vendem:** Ele identifica os 'ganchos' (hooks) que prendem a atenção.\n3. **Como superar:** Ele sugere como o seu vídeo pode ser melhor."
+        "title": "⚠️ ATENÇÃO - CARACTERÍSTICAS IMPORTANTES",
+        "content": "**GROK Acessa Dados em Tempo Real, Mas Ainda Pode Errar**\nA grande vantagem de GROK é ter dados atualizados. Mas \"atualizado\" não significa \"perfeito\". GROK ainda pode:\n- Interpretar notícias incorretamente;\n- Confundir correlação com causalidade;\n- Citar fontes que parecem confiáveis mas estão erradas;\n- Fazer cálculos errados com números reais;\nTempo real é vantagem, não garantia de precisão.\n\n**GROK tem Personalidade, Não Neutralidade**\nDiferente de outras IAs que tentam ser \"neutras\", GROK foi desenvolvido com uma personalidade: irreverente, com humor, disposta a questionar consensos.\nIsso é bom porque torna a experiência mais humana. Mas é ruim porque significa que GROK tem tendências e vieses reflectidos em suas respostas. Ele não é \"objetivamente neutro\".\nSe você pergunta sobre um tópico politicamente sensível, GROK pode ter uma posição mais definida do que outras IAs.\n\n**Integração ao X É Força e Fraqueza**\nForça: GROK entende contexto do X melhor que qualquer IA. Se você quer análise de trends, sentimento das pessoas ou o que está acontecendo na rede, GROK é superior.\nFraqueza: GROK está limitado à plataforma X. Se o assunto não tem presença significativa no X, GROK pode ficar em desvantagem.\n\n**GROK Pode Alucinar Também**\nApesar do acesso a dados reais, GROK ainda alucina. Pode:\n- Inventar citações que parecem reais\n- Criar datas que não correspondem a eventos\n- Gerar números que parecem dados reais mas foram fabricados\nO acesso a web ajuda, mas não elimina o problema completamente.\n\n💡 DICA PRÁTICA: Sempre verifique informações críticas do GROK em pelo menos 2 fontes. Só porque GROK tem acesso a dados em tempo real não significa que cada resposta é 100% precisa. Use como starting point, não como verdade absoluta."
       },
       {
         "type": "quiz",
-        "title": "🧠 Teste Multimodal",
-        "question": "O que o Gemini faz melhor do que as ferramentas antigas de leitura de texto (OCR)?",
+        "title": "🧾 QUESTÃO 1 - Múltipla Escolha",
+        "question": "Qual é a principal vantagem competitiva do GROK em relação a ChatGPT, Claude e Copilot?",
         "options": [
           {
-            "text": "Ele apenas copia as letras sem entender nada",
-            "isCorrect": false,
-            "explanation": "Isso é o que as ferramentas antigas faziam."
-          },
-          {
-            "text": "Ele entende o contexto das palavras e organiza os dados em tabelas úteis",
+            "text": "Ele tem acesso a dados em tempo real da web e do X, enquanto outros têm conhecimento 'congelado' em datas específicas",
             "isCorrect": true,
-            "explanation": "Exatamente! Ele não apenas lê, ele interpreta e organiza."
+            "explanation": "Correto! A grande vantagem do GROK é o seu acesso contínuo a dados atualizados (notícias, tendências e X)."
           },
           {
-            "text": "Ele precisa que você digite tudo antes",
+            "text": "Ele não comete erros e é 100% preciso",
             "isCorrect": false,
-            "explanation": "O objetivo é justamente você não precisar digitar nada!"
+            "explanation": "Apesar dos dados em tempo real, o GROK ainda comete erros e alucina, como qualquer outra IA."
+          },
+          {
+            "text": "Ele é mais barato e acessível para todos",
+            "isCorrect": false,
+            "explanation": "O GROK exige assinatura (X Premium)."
+          },
+          {
+            "text": "Ele funciona sem internet, armazenando tudo localmente",
+            "isCorrect": false,
+            "explanation": "Pelo contrário, o seu maior diferencial é exatamente a conexão em tempo real com a internet."
           }
         ]
-      },
-      {
-        "type": "text",
-        "title": "🔍 Pesquisa Visual Avançada",
-        "content": "Quer mudar a cara da sua marca? Use a pesquisa visual.\n\nSuba o logo da sua empresa e diga: 'Baseado neste logo, pesquise no Google quais são as tendências visuais para o meu setor em 2026. Me mostre referências de cores e estilos que combinam com essa ideia'. O Gemini usa a imagem como ponto de partida para navegar na internet e trazer inspirações reais."
-      },
-      {
-        "type": "text",
-        "title": "📊 Lendo Gráficos e Infográficos",
-        "content": "Encontrou um relatório cheio de gráficos confusos? Mande o print para o Gemini.\n\n\n\nEle consegue extrair os números de dentro das imagens e explicar as tendências. 'Deste gráfico de barras, qual região teve o maior prejuízo?'. Ele vira o seu analista de dados visual, que traduz desenhos complexos em decisões simples."
-      },
-      {
-        "type": "text",
-        "title": "🏢 O Raio-X da Marca (Audit Visual)",
-        "content": "Empresas profissionais usam o Gemini para garantir que tudo esteja combinando. Você pode subir o seu site, seu cartão de visitas e seu Instagram. \n\nA IA vai avaliar se as cores estão iguais, se o tom de voz visual é o mesmo e se você parece uma empresa grande ou amadora. É uma consultoria de marca gratuita e instantânea."
       },
       {
         "type": "component",
         "componentName": "FillBlanks",
         "props": {
-          "title": "✏️ Praticando a Visão",
-          "sentence": "Para analisar uma imagem com o Gemini, eu uso o framework ___ e peço para ele extrair ___ úteis.",
+          "title": "✏️ QUESTÃO 2 - Completar a Frase",
+          "sentence": "GROK foi desenvolvido para ser 'maximamente ___ e minimamente ___', o que significa que ele tenta ser honesto sobre limites e evita recusas genéricas. Isso o torna mais humano que outras IAs, mas também significa que suas respostas refletem ___ da rede social X, onde está integrado.",
           "answers": [
-            "M.U.L.T.I.",
-            "insights"
+            "verdadeiro",
+            "censurável",
+            "vieses"
           ],
           "options": [
-            "M.U.L.T.I.",
-            "insights",
-            "músicas",
-            "LÓGICA",
-            "fotos",
-            "desenhos"
+            "verdadeiro",
+            "censurável",
+            "vieses",
+            "rápido",
+            "lento",
+            "neutro",
+            "seguro",
+            "dados"
           ],
-          "explanation": "Perfeito! O objetivo é sempre extrair informação que ajude você a agir."
+          "explanation": "Isso mesmo! A personalidade sem filtros do GROK o torna único, mas também sujeito à polarização da sua rede de origem."
         }
-      },
-      {
-        "type": "text",
-        "title": "⚡ Automatizando sua Rotina com Fotos",
-        "content": "Crie fluxos que trabalham sozinhos:\n* **Triagem de Currículos:** A IA olha a foto do currículo e o design do portfólio para dar uma nota de profissionalismo.\n* **Monitoramento de Preços:** Mande prints de sites de mercado e a IA avisa qual está mais barato.\n* **Qualidade:** Tire foto do seu estoque e a IA avisa se algo parece fora do lugar ou vencido."
-      },
-      {
-        "type": "text",
-        "title": "🚫 O que a IA ainda NÃO faz (Ética)",
-        "content": "Cuidado com os limites:\n1. **Privacidade:** Nunca suba fotos de pessoas sem permissão.\n2. **Emoções Reais:** O Gemini pode descrever um sorriso, mas ele não sabe se a pessoa está feliz de verdade. Não use para 'testes psicológicos'.\n3. **Cores:** Dependendo da luz da foto, a IA pode se confundir com cores exatas. Sempre valide detalhes críticos com seus próprios olhos."
-      },
-      {
-        "type": "text",
-        "title": "📈 Como saber se a análise foi boa?",
-        "content": "Uma análise multimodal é excelente quando:\n* Ela extrai os números corretamente de uma imagem.\n* Ela aponta um erro de design que você não tinha visto.\n* Ela economiza o seu tempo de ter que descrever o que está na foto.\n\nSe a resposta for vaga, peça: 'Seja mais específico sobre os elementos visuais do lado direito da imagem'."
       },
       {
         "type": "component",
         "componentName": "MatchWords",
         "props": {
-          "title": "🔗 Cenários e Mídias",
-          "description": "Qual arquivo você enviaria para resolver estes problemas?",
+          "title": "🔗 QUESTÃO 3 - Ligar Conceitos",
+          "description": "Conecte o tipo de pergunta ao melhor modelo de IA para respondê-la:",
           "pairs": [
             {
-              "left": "Dúvida no Dashboard",
-              "right": "Screenshot do gráfico"
+              "left": "Qual foi o maior acontecimento em cripto hoje?",
+              "right": "GROK"
             },
             {
-              "left": "Contrato em papel",
-              "right": "PDF escaneado"
+              "left": "Resuma este documento Excel de vendas",
+              "right": "Copilot"
             },
             {
-              "left": "Ideia de marca",
-              "right": "Foto de rascunho no papel"
-            },
-            {
-              "left": "Estudo de concorrência",
-              "right": "Link de vídeo do YouTube"
+              "left": "Explique a relatividade geral de Einstein",
+              "right": "Claude ou ChatGPT"
             }
           ]
         }
-      },
-      {
-        "type": "text",
-        "title": "🚀 Projeto Prático: O Audit Visual",
-        "content": "Para fechar o dia, imagine que você vai auditar uma startup.\n\nVocê vai subir o Pitch Deck (apresentação), o print do site e os posts do LinkedIn deles. O Gemini vai criar um relatório dizendo se a startup passa confiança para investidores ou se a comunicação visual está uma bagunça. \n\nEsse trabalho custaria R$ 5.000 com um consultor. Você vai fazer em 30 minutos com o Gemini."
-      },
-      {
-        "type": "text",
-        "title": "🎓 Resumo do Dia 13",
-        "content": "**HOJE VOCÊ DOMINOU:**\n\n1. O poder do Gemini de ver, ouvir e ler arquivos visuais.\n2. O framework M.U.L.T.I. para análises profissionais.\n3. Como automatizar a leitura de pilhas de documentos e vídeos.\n4. A importância de validar a análise da IA com o olhar humano.\n\n**MENTALIDADE:**\nVocê agora pode analisar qualquer conteúdo visual como um especialista. O mundo não é mais feito só de textos; você agora entende a linguagem das imagens.\n\n**AMANHÃ:** Vamos focar em Educação! Descubra como usar o Gemini para aprender qualquer coisa 10x mais rápido."
       }
     ]
   },
