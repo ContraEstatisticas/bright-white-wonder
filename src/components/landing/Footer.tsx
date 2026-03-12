@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoEducy from "@/assets/logo-educy.png";
-
-const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-];
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -42,34 +34,33 @@ export const Footer = () => {
 
   const renderLink = (link: { name: string; href: string; isRoute?: boolean }) =>
     link.isRoute ? (
-      <Link to={link.href} className="text-sm text-secondary-foreground/70 hover:text-primary landing-transition">
+      <Link to={link.href} className="text-sm text-white/40 hover:text-[hsl(25,90%,55%)] ld-ease ld-link">
         {link.name}
       </Link>
     ) : (
-      <a href={link.href} className="text-sm text-secondary-foreground/70 hover:text-primary landing-transition">
+      <a href={link.href} className="text-sm text-white/40 hover:text-[hsl(25,90%,55%)] ld-ease ld-link">
         {link.name}
       </a>
     );
 
   return (
-    <footer id="contato" className="bg-secondary text-secondary-foreground pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Logo & Description */}
+    <footer id="contato" className="ld-navy pt-20 pb-10 border-t border-white/5">
+      <div className="max-w-[87.5rem] mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
+          {/* Logo */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <img src={logoEducy} alt="Educy" className="h-8" />
+            <Link to="/" className="inline-block mb-5">
+              <img src={logoEducy} alt="Educy" className="h-8 brightness-0 invert" />
             </Link>
-            <p className="text-secondary-foreground/70 text-sm mb-4">{t("landing.footer.description")}</p>
-            <p className="text-secondary-foreground/70 text-sm">
-              <span className="font-medium">{t("landing.footer.contact")}:</span>{" "}
-              <a href="mailto:contact@educly.app" className="hover:text-primary landing-transition">
+            <p className="text-white/40 text-sm mb-4 leading-relaxed">{t("landing.footer.description")}</p>
+            <p className="text-white/40 text-sm">
+              <span className="font-medium text-white/60">{t("landing.footer.contact")}:</span>{" "}
+              <a href="mailto:contact@educly.app" className="hover:text-[hsl(25,90%,55%)] ld-ease">
                 contact@educly.app
               </a>
             </p>
           </div>
 
-          {/* Links */}
           {[
             { title: t("landing.footer.programs"), links: footerLinks.programas },
             { title: t("landing.footer.resources"), links: footerLinks.recursos },
@@ -77,8 +68,8 @@ export const Footer = () => {
             { title: t("landing.footer.legal"), links: footerLinks.legal },
           ].map((section) => (
             <div key={section.title}>
-              <h4 className="font-display font-semibold mb-4">{section.title}</h4>
-              <ul className="space-y-2">
+              <h4 className="font-bold text-white/80 mb-4 text-sm uppercase tracking-wider">{section.title}</h4>
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>{renderLink(link)}</li>
                 ))}
@@ -87,28 +78,24 @@ export const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-border/20 pt-8 space-y-6">
+        {/* Bottom */}
+        <div className="border-t border-white/10 pt-10 space-y-6">
           <div className="text-center space-y-4">
-            <p className="text-sm text-secondary-foreground/80 font-medium">{t("company.ownershipStatement")}</p>
-
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-xs text-secondary-foreground/60">
-              <div className="max-w-xs">
-                <p className="font-bold text-secondary-foreground/80 mb-1">Contra Estatistica Digital Marketers LLC</p>
-                <p>1209 Mountain Road Pl NE, Ste R, Albuquerque, NM 87110, United States<br />EIN: 39-4917931</p>
+            <p className="text-sm text-white/50 font-medium">{t("company.ownershipStatement")}</p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-xs text-white/30">
+              <div className="max-w-xs text-center md:text-left">
+                <p className="font-bold text-white/50 mb-1">Contra Estatistica Digital Marketers LLC</p>
+                <p>1209 Mountain Road Pl NE, Ste R, Albuquerque, NM 87110, US<br />EIN: 39-4917931</p>
               </div>
-
-              <div className="hidden md:block w-px h-10 bg-border/20"></div>
-              <div className="block md:hidden w-16 h-px bg-border/20"></div>
-
-              <div className="max-w-xs">
-                <p className="font-bold text-secondary-foreground/80 mb-1">SELLCORE LTD.</p>
-                <p>{t("company.registration")}: C 62598 • Saint Kitts and Nevis<br />Suites 5 Horsford's Business Centre, Long Point Road, Charlestown, Nevis</p>
+              <div className="hidden md:block w-px h-10 bg-white/10" />
+              <div className="block md:hidden w-16 h-px bg-white/10" />
+              <div className="max-w-xs text-center md:text-left">
+                <p className="font-bold text-white/50 mb-1">SELLCORE LTD.</p>
+                <p>{t("company.registration")}: C 62598 • Saint Kitts and Nevis<br />Suites 5 Horsford's Business Centre, Charlestown, Nevis</p>
               </div>
             </div>
           </div>
-
-          <p className="text-sm text-secondary-foreground/60 text-center">
+          <p className="text-xs text-white/25 text-center">
             © {new Date().getFullYear()} Educly. {t("landing.footer.copyright")}
           </p>
         </div>

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import logoEducy from "@/assets/logo-educy.png";
 
 export const LandingNavbar = () => {
@@ -26,82 +25,60 @@ export const LandingNavbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[1002] landing-transition ${
-        isScrolled
-          ? "landing-glass border-b border-border shadow-sm"
-          : "bg-transparent border-b border-transparent"
+      className={`fixed top-0 left-0 right-0 z-[1002] ld-ease ${
+        isScrolled ? "ld-glass border-b border-white/10 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-10">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logoEducy} alt="Educy" className="h-12 md:h-14" />
+      <div className="max-w-[87.5rem] mx-auto px-6 md:px-10">
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="flex items-center gap-2 relative z-10">
+            <img src={logoEducy} alt="Educy" className="h-12 md:h-14 brightness-0 invert" />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
               link.isRoute ? (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-muted-foreground hover:text-primary landing-transition font-medium text-sm"
-                >
+                <Link key={link.href} to={link.href} className="text-white/70 hover:text-white ld-ease font-medium text-sm ld-link">
                   {link.name}
                 </Link>
               ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary landing-transition font-medium text-sm"
-                >
+                <a key={link.href} href={link.href} className="text-white/70 hover:text-white ld-ease font-medium text-sm ld-link">
                   {link.name}
                 </a>
               ),
             )}
             <Link to="/auth">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 rounded-lg landing-btn-hover">
+              <button className="ld-btn-pill bg-[hsl(25,90%,55%)] text-white hover:shadow-lg">
                 {t("landing.nav.login", "Login")}
-              </Button>
+              </button>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* Mobile */}
+          <button className="md:hidden p-2 text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border landing-animate-in max-h-[calc(100vh-5rem)] overflow-y-auto overflow-x-hidden">
+          <div className="md:hidden py-6 border-t border-white/10 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) =>
                 link.isRoute ? (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="text-muted-foreground hover:text-primary landing-transition font-medium py-2 truncate"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <Link key={link.href} to={link.href} className="text-white/70 hover:text-white ld-ease font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                     {link.name}
                   </Link>
                 ) : (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary landing-transition font-medium py-2 truncate"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <a key={link.href} href={link.href} className="text-white/70 hover:text-white ld-ease font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                     {link.name}
                   </a>
                 ),
               )}
               <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+                <button className="ld-btn-pill bg-[hsl(25,90%,55%)] text-white w-full">
                   {t("landing.nav.login", "Login")}
-                </Button>
+                </button>
               </Link>
             </div>
           </div>

@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Sparkles, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Sparkles, Zap, Check } from "lucide-react";
 import { CreditCardLogos } from "@/components/landing/CreditCardLogos";
 import { RecurringBillingDisclosure } from "@/components/checkout/RecurringBillingDisclosure";
 import { motion } from "framer-motion";
+
+const ease = [0.165, 0.84, 0.44, 1];
 
 export const PricingSection = () => {
   const { t } = useTranslation();
@@ -17,127 +18,119 @@ export const PricingSection = () => {
     window.open("https://pay.hotmart.com/Y103941140D?off=mdspiens&checkoutMode=10", "_blank");
   };
 
-  const plans = [
-    {
-      name: t("landing.pricing.productName"),
-      price: "29,90",
-      daily: "0,90",
-      popular: true,
-    },
-  ];
-
   return (
-    <section id="plano" className="landing-section bg-muted/20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto space-y-10">
+    <section id="plano" className="ld-section ld-navy relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[hsl(25,90%,55%,0.08)] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-[87.5rem] mx-auto px-6 md:px-10 relative z-10">
+        <div className="max-w-3xl mx-auto">
           {/* Header */}
-          <div className="text-center space-y-4">
+          <div className="text-center mb-12">
+            <span className="ld-eyebrow text-[hsl(25,90%,55%)]">💎 {t("landing.pricing.offerBadge", "Oferta")}</span>
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.165, 0.84, 0.44, 1] }}
-              className="text-3xl md:text-5xl landing-h2 text-foreground"
+              transition={{ duration: 0.8, ease }}
+              className="font-display ld-h2 text-3xl md:text-4xl lg:text-[3.5rem] text-white mt-4 mb-5"
             >
               {t("landing.pricing.title")}
             </motion.h2>
-            <p className="text-muted-foreground text-lg">{t("landing.pricing.subtitle")}</p>
+            <p className="text-white/50 text-lg">{t("landing.pricing.subtitle")}</p>
           </div>
 
           {/* Pricing Card */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="grid gap-4"
+            transition={{ duration: 0.7, delay: 0.1, ease }}
+            className="relative bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 mb-8 ld-shadow-xl"
           >
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={cn(
-                  "relative flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl border-2 landing-transition",
-                  plan.popular
-                    ? "border-primary bg-card landing-shadow-glow scale-[1.02] z-10"
-                    : "border-border bg-card",
-                )}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-black px-4 py-1 rounded-full flex items-center gap-1 shadow-md uppercase tracking-wider">
-                    <Zap size={10} fill="currentColor" /> {t("landing.pricing.offerBadge")}
-                  </div>
-                )}
+            {/* Badge */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(25,90%,55%)] text-white text-xs font-black px-5 py-1.5 rounded-full flex items-center gap-1.5 uppercase tracking-wider">
+              <Zap size={12} fill="currentColor" /> {t("landing.pricing.offerBadge")}
+            </div>
 
-                <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                    <Zap size={24} fill="currentColor" />
-                  </div>
-                  <div className="text-center md:text-left">
-                    <h4 className="font-black text-foreground text-xl tracking-tight">{plan.name}</h4>
-                    <p className="text-base">
-                      <span className="font-bold text-primary uppercase">
-                        {t("landing.pricing.pricePrefix")} USD {plan.price}
-                      </span>
-                    </p>
-                  </div>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex items-center gap-5">
+                <div className="w-16 h-16 rounded-2xl bg-[hsl(25,90%,55%,0.15)] flex items-center justify-center">
+                  <Zap size={28} className="text-[hsl(25,90%,55%)]" fill="currentColor" />
                 </div>
-
-                <div className="mt-6 md:mt-0 bg-primary/5 px-8 py-4 rounded-2xl border border-primary/10 text-center min-w-[140px]">
-                  <p className="text-2xl font-black text-primary leading-none">USD {plan.daily}</p>
-                  <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mt-1">
-                    {t("landing.pricing.perDay")}
+                <div>
+                  <h4 className="font-black text-white text-2xl tracking-tight mb-1">{t("landing.pricing.productName")}</h4>
+                  <p className="text-lg">
+                    <span className="font-bold text-[hsl(25,90%,55%)] uppercase">
+                      {t("landing.pricing.pricePrefix")} USD 29,90
+                    </span>
                   </p>
                 </div>
               </div>
-            ))}
+
+              <div className="bg-[hsl(25,90%,55%,0.1)] border border-[hsl(25,90%,55%,0.2)] px-10 py-5 rounded-2xl text-center">
+                <p className="text-3xl font-black text-[hsl(25,90%,55%)] leading-none">USD 0,90</p>
+                <p className="text-[10px] font-bold text-[hsl(25,90%,55%,0.6)] uppercase tracking-widest mt-1">
+                  {t("landing.pricing.perDay")}
+                </p>
+              </div>
+            </div>
+
+            {/* Features list */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 pt-8 border-t border-white/10">
+              {[0, 1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="flex items-center gap-2 text-white/70">
+                  <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <span className="text-sm">{t(`landing.cta.benefits.${i}`)}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Checkbox + Checkout Button */}
-          <div className="space-y-4">
+          {/* Terms + CTA */}
+          <div className="space-y-5">
             <div className="flex items-start gap-3 px-2">
               <Checkbox
                 id="terms-accept"
                 checked={termsAccepted}
                 onCheckedChange={(checked) => setTermsAccepted(checked === true)}
-                className="mt-0.5"
+                className="mt-0.5 border-white/30 data-[state=checked]:bg-[hsl(25,90%,55%)] data-[state=checked]:border-[hsl(25,90%,55%)]"
               />
-              <label htmlFor="terms-accept" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+              <label htmlFor="terms-accept" className="text-sm text-white/50 leading-relaxed cursor-pointer">
                 {t("checkout.termsCheckbox")}{" "}
-                <Link to="/termos" className="text-primary underline hover:text-primary/80 font-semibold landing-transition" target="_blank">
+                <Link to="/termos" className="text-[hsl(25,90%,55%)] underline hover:text-[hsl(25,90%,65%)] ld-ease" target="_blank">
                   {t("checkout.termsCheckboxTerms")}
                 </Link>{" "}
                 {t("checkout.termsCheckboxAnd")}{" "}
-                <Link to="/cancelamento" className="text-primary underline hover:text-primary/80 font-semibold landing-transition" target="_blank">
+                <Link to="/cancelamento" className="text-[hsl(25,90%,55%)] underline hover:text-[hsl(25,90%,65%)] ld-ease" target="_blank">
                   {t("checkout.termsCheckboxRefund")}
                 </Link>
               </label>
             </div>
 
-            <Button
+            <button
               onClick={handleCheckout}
               disabled={!termsAccepted}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-black py-9 rounded-2xl text-sm sm:text-lg md:text-2xl landing-shadow-glow landing-transition active:scale-[0.98] uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full ld-btn-pill bg-[hsl(25,90%,55%)] text-white font-black py-5 text-lg md:text-xl ld-shadow-glow uppercase tracking-wider disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:transform-none disabled:hover:shadow-none"
             >
               {t("landing.pricing.ctaButton")}
-            </Button>
+            </button>
 
             <CreditCardLogos size="md" className="py-2" />
             <RecurringBillingDisclosure price="29.90" frequency="monthly" />
           </div>
 
-          {/* Quiz Discount */}
-          <div className="relative py-6">
-            <div className="relative flex justify-center">
-              <button
-                onClick={() => window.open("https://start.educly.app/quiz-esp-hot01", "_blank")}
-                className="bg-primary/5 border-2 border-primary/40 px-8 py-3 rounded-full flex items-center gap-3 animate-bounce landing-shadow-soft landing-btn-hover"
-              >
-                <Sparkles size={20} className="text-primary animate-pulse" />
-                <span className="text-primary font-black text-sm md:text-base uppercase tracking-tight">
-                  {t("landing.pricing.quizDiscountNotice")}
-                </span>
-              </button>
-            </div>
+          {/* Quiz */}
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => window.open("https://start.educly.app/quiz-esp-hot01", "_blank")}
+              className="ld-btn-pill border-2 border-[hsl(25,90%,55%,0.3)] text-[hsl(25,90%,55%)] bg-transparent flex items-center gap-3 hover:border-[hsl(25,90%,55%,0.6)] px-8"
+            >
+              <Sparkles size={18} className="animate-pulse" />
+              <span className="font-black text-sm uppercase tracking-tight">
+                {t("landing.pricing.quizDiscountNotice")}
+              </span>
+            </button>
           </div>
         </div>
       </div>

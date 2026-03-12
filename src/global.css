@@ -4,25 +4,18 @@
 
 @layer base {
   :root {
-    /* --- MODO CLARO (LIGHT MODE) --- */
-
-    /* Fundo */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    /* Cards */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
-    /* Popovers */
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Cor Primária (Laranja) */
     --primary: 25 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secundários */
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
@@ -35,25 +28,16 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Bordas */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-
     --ring: 25 90% 55%;
     --radius: 0.75rem;
 
-    /* Success */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
-
-    /* Landing page tokens */
-    --landing-navy: 223 40% 10%;
-    --landing-cream: 270 100% 98%;
-    --landing-glow: 25 90% 55%;
   }
 
   .dark {
-    /* --- MODO ESCURO (DARK MODE) --- */
     --background: 223 25% 14%;
     --foreground: 210 40% 98%;
 
@@ -82,14 +66,8 @@
     --input: 223 25% 20%;
     --ring: 25 90% 55%;
 
-    /* Success */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
-
-    /* Landing page tokens */
-    --landing-navy: 223 25% 10%;
-    --landing-cream: 223 25% 14%;
-    --landing-glow: 25 90% 55%;
   }
 }
 
@@ -105,164 +83,161 @@
   }
 }
 
-/* ==============================
+/* =========================================================
    LANDING PAGE DESIGN SYSTEM
-   ============================== */
+   Inspired by healthytogether.co — adapted to Educly orange
+   ========================================================= */
 
-/* Glassmorphism navbar */
-.landing-glass {
-  background-color: hsl(var(--background) / 0.8);
+/* ── NAVY (dark sections) ─────────────────────── */
+.ld-navy {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* ── CREAM (light sections) ───────────────────── */
+.ld-cream {
+  background-color: #fff7ed;
+  color: #111827;
+}
+
+/* ── Glassmorphism navbar ─────────────────────── */
+.ld-glass {
+  background-color: rgba(17, 24, 39, 0.82);
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
 }
-.dark .landing-glass {
-  background-color: hsl(223 25% 14% / 0.8);
-}
 
-/* Hero glow effect */
-.landing-hero-glow {
+/* ── Hero glow (half-sphere) ──────────────────── */
+.ld-hero-glow {
   position: absolute;
-  width: 100%;
-  height: 50vw;
-  max-height: 600px;
-  border-radius: 150% 150% 0 0;
-  background-color: hsl(var(--primary));
-  box-shadow: 40px 0 36rem 10rem hsl(var(--primary) / 0.3);
-  filter: blur(0.6rem);
-  opacity: 0.15;
-  bottom: 0;
+  bottom: -20%;
   left: 50%;
   transform: translateX(-50%);
+  width: 120%;
+  height: 60vw;
+  max-height: 700px;
+  border-radius: 50% 50% 0 0;
+  background: hsl(25 90% 55%);
+  box-shadow: 0 0 36rem 10rem hsl(25 90% 55% / 0.35);
+  filter: blur(3rem);
   pointer-events: none;
-}
-.dark .landing-hero-glow {
-  opacity: 0.1;
+  z-index: 0;
 }
 
-/* Gradient text */
-.landing-gradient-text {
-  background-image: linear-gradient(270deg, hsl(var(--primary)) 40%, hsl(25 100% 65%));
+/* ── Gradient text ────────────────────────────── */
+.ld-gradient-text {
+  background-image: linear-gradient(270deg, hsl(25 90% 55%) 30%, hsl(35 100% 65%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  padding-right: 0.02em;
 }
 
-/* Brand easing — all landing transitions */
-.landing-transition {
+/* ── Brand easing ─────────────────────────────── */
+.ld-ease {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Button hover fill inset */
-.landing-btn-hover {
-  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-              border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.landing-btn-hover:hover {
-  box-shadow: inset 0 0 0 500px hsl(var(--primary) / 0.1);
-  transform: translateY(-1px);
-}
-
-/* Landing section padding */
-.landing-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-@media screen and (max-width: 991px) {
-  .landing-section { padding-top: 5rem; padding-bottom: 5rem; }
-}
-@media screen and (max-width: 767px) {
-  .landing-section { padding-top: 3rem; padding-bottom: 3rem; }
-}
-
-/* Landing card */
-.landing-card {
-  border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--card));
-  box-shadow: 0 1px 3px hsl(0 0% 0% / 0.1), 0 1px 2px hsl(0 0% 0% / 0.06);
+/* ── Pill button ──────────────────────────────── */
+.ld-btn-pill {
+  border-radius: 1000px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3em;
+  letter-spacing: 0;
+  padding: 0.85em 2em;
   transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
               transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.landing-card:hover {
-  box-shadow: 0 10px 25px hsl(0 0% 0% / 0.1), 0 4px 10px hsl(0 0% 0% / 0.05);
+.ld-btn-pill:hover {
+  box-shadow: inset 0 0 0 500px hsl(25 80% 45%);
   transform: translateY(-2px);
 }
 
-/* Landing heading typography */
-.landing-h1 {
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 1;
+/* ── Section padding (responsive) ─────────────── */
+.ld-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
-.landing-h2 {
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
+@media (max-width: 991px) {
+  .ld-section { padding-top: 5rem; padding-bottom: 5rem; }
 }
-.landing-h3 {
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 1.15;
+@media (max-width: 767px) {
+  .ld-section { padding-top: 3rem; padding-bottom: 3rem; }
 }
 
-/* Eyebrow label */
-.landing-eyebrow {
+/* ── Card hover lift ──────────────────────────── */
+.ld-card {
+  border-radius: 1rem;
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ld-card:hover {
+  box-shadow: 0 15px 30px hsl(0 0% 0% / 0.12);
+  transform: translateY(-4px);
+}
+
+/* ── Shadows ──────────────────────────────────── */
+.ld-shadow-subtle { box-shadow: 0 0 0 1px hsl(0 0% 0% / 0.06), 0 1px 3px hsl(0 0% 0% / 0.1); }
+.ld-shadow-glow   { box-shadow: 0 15px 40px hsl(25 90% 55% / 0.2); }
+.ld-shadow-xl     { box-shadow: 0 6px 16px hsl(0 0% 0% / 0.08), 0 3px 6px -4px hsl(0 0% 0% / 0.12), 0 9px 28px 8px hsl(0 0% 0% / 0.05); }
+
+/* ── Float animation ──────────────────────────── */
+@keyframes ld-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.ld-float { animation: ld-float 5s ease-in-out infinite; }
+.ld-float-d1 { animation: ld-float 5s ease-in-out 1s infinite; }
+.ld-float-d2 { animation: ld-float 5s ease-in-out 2s infinite; }
+
+/* ── Eyebrow label ────────────────────────────── */
+.ld-eyebrow {
   font-weight: 700;
   font-size: 0.875rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: hsl(var(--primary));
 }
 
-/* Floating animation */
-@keyframes landing-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.landing-float {
-  animation: landing-float 5s ease-in-out infinite;
-}
-.landing-float-delayed {
-  animation: landing-float 5s ease-in-out 1.5s infinite;
-}
+/* ── Heading styles ───────────────────────────── */
+.ld-h1 { font-weight: 700; letter-spacing: -0.05em; line-height: 1; }
+.ld-h2 { font-weight: 700; letter-spacing: -0.05em; line-height: 1.1; }
+.ld-h3 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
 
-/* Fade in up on scroll */
-@keyframes landing-fade-in-up {
-  0% { opacity: 0; transform: translateY(2rem); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.landing-animate-in {
-  animation: landing-fade-in-up 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  opacity: 0;
-}
-
-/* Stagger delays */
-.landing-stagger-1 { animation-delay: 0.1s; }
-.landing-stagger-2 { animation-delay: 0.2s; }
-.landing-stagger-3 { animation-delay: 0.3s; }
-.landing-stagger-4 { animation-delay: 0.4s; }
-
-/* Shadow variants */
-.landing-shadow-soft {
-  box-shadow: 0 2px 15px -3px hsl(0 0% 0% / 0.07), 0 10px 20px -2px hsl(0 0% 0% / 0.04);
-}
-.landing-shadow-glow {
-  box-shadow: 0 15px 25px hsl(var(--primary) / 0.15);
-}
-
-/* Ticker / infinite carousel */
-@keyframes landing-ticker {
+/* ── Ticker (infinite scroll) ─────────────────── */
+@keyframes ld-ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-.landing-ticker {
-  animation: landing-ticker 30s linear infinite;
+.ld-ticker { animation: ld-ticker 25s linear infinite; }
+.ld-ticker:hover { animation-play-state: paused; }
+
+/* ── Link hover underline ─────────────────────── */
+.ld-link {
+  position: relative;
+}
+.ld-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: hsl(25 90% 55%);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ld-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-/* Dark mode utility overrides for landing */
+/* ── Dark mode overrides for hardcoded landing colors ── */
+.dark .ld-navy { background-color: #0a0f1a; }
+.dark .ld-cream { background-color: hsl(223 25% 14%); color: #f9fafb; }
+
+/* Dark mode utility overrides */
 .dark .bg-blue-50 { background-color: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.15); color: #60a5fa; }
 .dark .bg-purple-50 { background-color: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.15); color: #c084fc; }
 .dark .bg-red-50 { background-color: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.15); color: #f87171; }
