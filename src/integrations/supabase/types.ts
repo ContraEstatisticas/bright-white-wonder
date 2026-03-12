@@ -1467,48 +1467,63 @@ export type Database = {
       }
       webhook_failure_logs: {
         Row: {
-          created_at: string | null
+          created_at: string
           error_message: string
           error_stack: string | null
           event_id: string | null
           event_type: string | null
           http_status_returned: number | null
           id: string
+          last_retry_at: string | null
+          last_retry_error: string | null
+          max_retries: number
           next_retry_at: string | null
-          raw_payload: Json | null
-          retry_count: number | null
-          status: string | null
-          updated_at: string | null
+          raw_payload: Json
+          request_headers: Json | null
+          resolved_at: string | null
+          retry_count: number
+          status: string
+          updated_at: string
           webhook_source: string
         }
         Insert: {
-          created_at?: string | null
+          created_at?: string
           error_message: string
           error_stack?: string | null
           event_id?: string | null
           event_type?: string | null
           http_status_returned?: number | null
           id?: string
+          last_retry_at?: string | null
+          last_retry_error?: string | null
+          max_retries?: number
           next_retry_at?: string | null
-          raw_payload?: Json | null
-          retry_count?: number | null
-          status?: string | null
-          updated_at?: string | null
+          raw_payload: Json
+          request_headers?: Json | null
+          resolved_at?: string | null
+          retry_count?: number
+          status?: string
+          updated_at?: string
           webhook_source: string
         }
         Update: {
-          created_at?: string | null
+          created_at?: string
           error_message?: string
           error_stack?: string | null
           event_id?: string | null
           event_type?: string | null
           http_status_returned?: number | null
           id?: string
+          last_retry_at?: string | null
+          last_retry_error?: string | null
+          max_retries?: number
           next_retry_at?: string | null
-          raw_payload?: Json | null
-          retry_count?: number | null
-          status?: string | null
-          updated_at?: string | null
+          raw_payload?: Json
+          request_headers?: Json | null
+          resolved_at?: string | null
+          retry_count?: number
+          status?: string
+          updated_at?: string
           webhook_source?: string
         }
         Relationships: []
@@ -1583,6 +1598,10 @@ export type Database = {
         }[]
       }
       award_certificate: { Args: { p_tool_slug: string }; Returns: boolean }
+      calculate_next_retry_at: {
+        Args: { current_retry_count: number }
+        Returns: string
+      }
       check_and_expire_access: {
         Args: never
         Returns: {
