@@ -11,6 +11,7 @@ import { usePremiumAccess } from "@/hooks/usePremiumAccess";
 import { useProductAccess } from "@/hooks/useProductAccess";
 import { useTranslation } from "react-i18next";
 import { FloatingEdiChat } from "@/components/chat/FloatingEdiChat";
+import { TrailContentModal } from "@/components/dashboard/TrailContentModal";
 import { Lock, LockOpen, Play, Target, Medal, Zap, Sparkles, ChevronRight, Brain, Code, Bookmark, RotateCcw, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -47,6 +48,7 @@ const Dashboard = () => {
   const { isPremium, isLoading: isPremiumLoading } = usePremiumAccess();
   const productAccess = useProductAccess();
   const [userId, setUserId] = useState<string | undefined>();
+  const [trailModalOpen, setTrailModalOpen] = useState(false);
 
   useDailyLoginXP();
 
@@ -341,8 +343,8 @@ const Dashboard = () => {
                       className="rounded-xl px-6 h-12 border-2"
                       onClick={(e) => {
                         e.stopPropagation();
+                        setTrailModalOpen(true);
                       }}>
-
                       {t("dashboard.view_content")}
                     </Button>
                   </div>
@@ -490,6 +492,8 @@ const Dashboard = () => {
         <FloatingEdiChat />
         <MobileNav />
       </div>
+
+      <TrailContentModal open={trailModalOpen} onOpenChange={setTrailModalOpen} />
     </main>);
 
 };
