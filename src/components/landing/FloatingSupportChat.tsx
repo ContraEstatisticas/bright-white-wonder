@@ -134,23 +134,27 @@ export const FloatingSupportChat = () => {
 
   return (
     <>
-      {/* Floating Button - VERSÃO TOTALMENTE ESTÁTICA */}
+      {/* Floating Button */}
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
           "fixed bottom-6 right-6 z-50",
           "w-20 h-20 rounded-full",
-          "bg-white",
-          "shadow-lg shadow-primary/30",
           "flex items-center justify-center",
-          // Removi hover effects e transitions para garantir que não se mova
           "overflow-hidden",
           isOpen && "hidden",
         )}
+        style={{
+          background: 'rgba(255,255,255,0.08)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          border: '1px solid rgba(255,255,255,0.15)',
+          boxShadow: '0 8px 32px rgba(69,65,254,0.25), 0 2px 8px rgba(0,0,0,0.2)',
+          transition: 'box-shadow 0.3s cubic-bezier(.165,.84,.44,1)',
+        }}
         aria-label="Open support chat"
       >
         <img src={mascoteEducy} alt="Educy" className="w-full h-full object-cover" />
-        {/* Removi animate-pulse daqui também */}
         <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-green-400 rounded-full border-2 border-white" />
       </button>
 
@@ -158,15 +162,29 @@ export const FloatingSupportChat = () => {
       {isOpen && (
         <div
           className={cn(
-            // Removi animação de entrada da janela também para garantir
             "fixed z-50",
             "bottom-6 right-6 w-[380px] h-[520px] rounded-2xl",
             "max-md:inset-0 max-md:w-full max-md:h-full max-md:rounded-none",
           )}
         >
-          <div className="flex flex-col h-full bg-background border border-border rounded-2xl max-md:rounded-none shadow-2xl overflow-hidden">
+          <div
+            className="flex flex-col h-full rounded-2xl max-md:rounded-none overflow-hidden"
+            style={{
+              background: 'rgba(16,23,34,0.85)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              border: '1px solid rgba(255,255,255,0.12)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.4), 0 4px 16px rgba(69,65,254,0.15)',
+            }}
+          >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-primary to-accent text-white">
+            <div
+              className="flex items-center justify-between px-4 py-3 text-white"
+              style={{
+                background: 'linear-gradient(135deg, rgba(69,65,254,0.9), rgba(254,14,131,0.8))',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+              }}
+            >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white overflow-hidden flex items-center justify-center">
                   <img src={mascoteEducy} alt="Educy" className="w-full h-full object-cover" />
@@ -174,7 +192,6 @@ export const FloatingSupportChat = () => {
                 <div>
                   <h3 className="font-semibold text-sm">EDI</h3>
                   <div className="flex items-center gap-1.5">
-                    {/* Removi animate-pulse do indicador de status interno */}
                     <span className="w-2 h-2 bg-green-400 rounded-full" />
                     <span className="text-xs text-white/80">{t("supportChat.online")}</span>
                   </div>
@@ -182,7 +199,8 @@ export const FloatingSupportChat = () => {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                className="p-2 hover:bg-white/20 rounded-full"
+                style={{ transition: 'background-color 0.3s cubic-bezier(.165,.84,.44,1)' }}
                 aria-label="Close chat"
               >
                 <X className="w-5 h-5" />
@@ -190,7 +208,10 @@ export const FloatingSupportChat = () => {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-muted/30">
+            <div
+              className="flex-1 overflow-y-auto p-4 space-y-4"
+              style={{ background: 'rgba(255,255,255,0.03)' }}
+            >
               {messages.map((msg, index) => (
                 <ChatMessage
                   key={index}
@@ -204,7 +225,10 @@ export const FloatingSupportChat = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-border bg-background">
+            <div
+              className="p-4"
+              style={{ borderTop: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.04)' }}
+            >
               <ChatInput onSend={handleSend} isLoading={isLoading} placeholder={t("supportChat.placeholder")} />
             </div>
           </div>

@@ -12,31 +12,46 @@ export const PricingSection = () => {
   const { t } = useTranslation();
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  // Redirecionamentos
   const handleGetQuizByLocale = () => window.open(t("landing.quiz.url"), "_blank");
 
-  // Link fixo do Stripe conforme solicitado
   const handleCheckout = () => {
     window.open("https://pay.hotmart.com/Y103941140D?off=mdspiens&checkoutMode=10", "_blank");
   };
 
-  // Movido para dentro do componente para reagir à mudança de idioma (t)
   const plans = [
     {
       name: t("landing.pricing.productName"),
-      price: "29,90", // Valor final
+      price: "29,90",
       daily: "0,90",
       popular: true,
     },
   ];
 
   return (
-    <section id="plano" className="py-16 md:py-24 bg-[#F8FAFC]">
-      <div className="container mx-auto px-4">
+    <section
+      id="plano"
+      className="py-16 md:py-24 relative overflow-hidden"
+      style={{
+        backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(69,65,254,0.12) 0%, transparent 60%), linear-gradient(180deg, #F8FAFC 0%, #f9f0ff 100%)',
+      }}
+    >
+      {/* Extra glow blob */}
+      <div
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse, rgba(69,65,254,0.10), transparent 70%)',
+          filter: 'blur(40px)',
+        }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto space-y-10">
           {/* Cabeçalho */}
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+            <h2
+              className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight"
+              style={{ letterSpacing: '-0.05em' }}
+            >
               {t("landing.pricing.title")}
             </h2>
             <p className="text-slate-500 text-lg">{t("landing.pricing.subtitle")}</p>
@@ -51,9 +66,22 @@ export const PricingSection = () => {
                   "relative flex flex-col md:flex-row items-center justify-between p-8 rounded-[32px] border-2 transition-all duration-300",
                   plan.popular ? "border-orange-500 bg-white shadow-xl scale-[1.02] z-10" : "border-slate-100 bg-white",
                 )}
+                style={
+                  plan.popular
+                    ? {
+                        backgroundImage:
+                          'radial-gradient(circle at 50% 0%, rgba(69,65,254,0.05) 0%, transparent 60%)',
+                        boxShadow:
+                          '0 20px 60px rgba(69,65,254,0.15), 0 6px 16px rgba(0,0,0,0.08)',
+                      }
+                    : undefined
+                }
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] font-black px-4 py-1 rounded-full flex items-center gap-1 shadow-md uppercase tracking-wider">
+                  <div
+                    className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] font-black px-4 py-1 flex items-center gap-1 shadow-md uppercase tracking-wider"
+                    style={{ borderRadius: '1000rem' }}
+                  >
                     <Zap size={10} fill="currentColor" /> {t("landing.pricing.offerBadge")}
                   </div>
                 )}
@@ -106,7 +134,11 @@ export const PricingSection = () => {
             <Button
               onClick={handleCheckout}
               disabled={!termsAccepted}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-9 rounded-[24px] text-sm sm:text-lg md:text-2xl shadow-2xl shadow-orange-200 transition-all active:scale-[0.98] uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-9 text-sm sm:text-lg md:text-2xl shadow-2xl shadow-orange-200 transition-all active:scale-[0.98] uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{
+                borderRadius: '1000rem',
+                transition: 'box-shadow 0.3s cubic-bezier(.165,.84,.44,1), background-color 0.3s cubic-bezier(.165,.84,.44,1)',
+              }}
             >
               {t("landing.pricing.ctaButton")}
             </Button>
@@ -114,16 +146,17 @@ export const PricingSection = () => {
             {/* Credit Card Logos + Security Badges */}
             <CreditCardLogos size="md" className="py-2" />
 
-            {/* Recurring Billing Disclosure - Nuvei/Visa/MC Compliance */}
+            {/* Recurring Billing Disclosure */}
             <RecurringBillingDisclosure price="29.90" frequency="monthly" />
           </div>
 
-          {/* Divisor de Oferta Especial - Linha removida aqui */}
+          {/* Divisor de Oferta Especial */}
           <div className="relative py-6">
             <div className="relative flex justify-center">
               <button
                 onClick={() => window.open("https://start.educly.app/quiz-esp-hot01", "_blank")}
                 className="bg-orange-50 border-2 border-orange-400 px-8 py-3 rounded-full flex items-center gap-3 animate-bounce shadow-lg"
+                style={{ transition: 'all 0.6s cubic-bezier(.165,.84,.44,1)' }}
               >
                 <Sparkles size={20} className="text-orange-500 animate-pulse" />
                 <span className="text-orange-800 font-black text-sm md:text-base uppercase tracking-tight">
@@ -132,7 +165,6 @@ export const PricingSection = () => {
               </button>
             </div>
           </div>
-          {/* Card do Quiz */}
         </div>
       </div>
     </section>
