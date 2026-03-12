@@ -63,15 +63,15 @@ export const ChatMessage = ({ role, content, isStreaming, imageUrl: propImageUrl
 
       {/* Message Bubble */}
       <div className={cn(
-        "max-w-[85%] sm:max-w-[80%] rounded-2xl px-3 py-2 sm:px-4 sm:py-3",
+        "max-w-[85%] sm:max-w-[80%] rounded-2xl px-3 py-2 sm:px-4 sm:py-3 min-w-0",
         isUser
           ? "bg-primary text-primary-foreground rounded-br-md"
           : "bg-muted text-foreground rounded-bl-md"
       )}>
         {isUser ? (
-          <p className="text-sm whitespace-pre-wrap leading-relaxed">{content}</p>
+          <p className="text-sm whitespace-pre-wrap leading-relaxed break-words">{content}</p>
         ) : (
-          <div className="text-sm leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 prose-headings:my-2 prose-strong:text-foreground prose-p:text-foreground">
+          <div className="text-sm leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 prose-headings:my-2 prose-strong:text-foreground prose-p:text-foreground break-words overflow-hidden">
             <ReactMarkdown>{text}</ReactMarkdown>
             {isStreaming && (
               <span className="inline-block w-1.5 h-4 ml-0.5 bg-current animate-pulse rounded" />
