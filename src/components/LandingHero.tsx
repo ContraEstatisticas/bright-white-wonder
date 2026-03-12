@@ -11,13 +11,13 @@ import { FloatingSupportChat } from "@/components/landing/FloatingSupportChat";
 
 export const LandingHero = () => {
     return (
-        <div className="min-h-screen bg-background text-foreground overflow-x-clip">
+        <div className="min-h-screen overflow-x-clip">
             <LandingNavbar />
             <main>
                 <HeroSection />
                 <FeaturesSection />
-                <PricingSection />
                 <StatsSection />
+                <PricingSection />
                 <TestimonialsSection />
                 <GlobalReachSection />
                 <CTASection />

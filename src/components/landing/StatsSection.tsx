@@ -2,27 +2,27 @@ import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+const ease = [0.165, 0.84, 0.44, 1] as const;
+
 const useCountUp = (end: number, duration: number = 2000, start: boolean = false) => {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     if (!start) return;
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) window.requestAnimationFrame(step);
+    let ts: number | null = null;
+    const step = (t: number) => {
+      if (!ts) ts = t;
+      const p = Math.min((t - ts) / duration, 1);
+      setCount(Math.floor(p * end));
+      if (p < 1) requestAnimationFrame(step);
     };
-    window.requestAnimationFrame(step);
+    requestAnimationFrame(step);
   }, [end, duration, start]);
-
   return count;
 };
 
 export const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const { t } = useTranslation();
 
   const stats = [
@@ -33,36 +33,19 @@ export const StatsSection = () => {
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 },
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setIsVisible(true); obs.disconnect(); } }, { threshold: 0.3 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-background relative overflow-hidden">
-      {/* Subtle glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.02] to-transparent pointer-events-none" />
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section ref={ref} className="py-20 md:py-28 ld-cream relative overflow-hidden">
+      <div className="absolute -top-20 -left-20 w-60 h-60 border border-[hsl(25,90%,55%,0.08)] rounded-full" />
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 border border-[hsl(25,90%,55%,0.06)] rounded-full" />
+      <div className="max-w-[87.5rem] mx-auto px-6 md:px-10 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
-            <StatCard
-              key={stat.labelKey}
-              value={stat.value}
-              label={t(stat.labelKey)}
-              suffix={stat.suffix}
-              isVisible={isVisible}
-              delay={index * 200}
-              index={index}
-            />
+            <StatCard key={stat.labelKey} stat={stat} index={index} isVisible={isVisible} t={t} />
           ))}
         </div>
       </div>
@@ -70,44 +53,29 @@ export const StatsSection = () => {
   );
 };
 
-const StatCard = ({
-  value,
-  label,
-  suffix,
-  isVisible,
-  delay,
-  index,
-}: {
-  value: number;
-  label: string;
-  suffix: string;
-  isVisible: boolean;
-  delay: number;
-  index: number;
-}) => {
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-  const count = useCountUp(value, 2000, shouldAnimate);
+const StatCard = ({ stat, index, isVisible, t }: { stat: { value: number; labelKey: string; suffix: string }; index: number; isVisible: boolean; t: (k: string) => string }) => {
+  const [anim, setAnim] = useState(false);
+  const count = useCountUp(stat.value, 2000, anim);
 
   useEffect(() => {
     if (isVisible) {
-      const timer = setTimeout(() => setShouldAnimate(true), delay);
+      const timer = setTimeout(() => setAnim(true), index * 200);
       return () => clearTimeout(timer);
     }
-  }, [isVisible, delay]);
+  }, [isVisible, index]);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.165, 0.84, 0.44, 1] }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease }}
       className="text-center"
     >
-      <div className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 landing-h2">
-        {count.toLocaleString()}
-        {suffix}
+      <div className="font-display ld-h1 text-4xl md:text-5xl lg:text-[3.5rem] text-[#111827] dark:text-white mb-2">
+        {count.toLocaleString()}{stat.suffix}
       </div>
-      <div className="text-muted-foreground text-sm md:text-base">{label}</div>
+      <div className="text-[#111827]/50 dark:text-white/50 text-sm md:text-base font-medium">{t(stat.labelKey)}</div>
     </motion.div>
   );
 };
