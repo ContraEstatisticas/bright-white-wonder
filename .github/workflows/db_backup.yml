@@ -24,7 +24,16 @@ jobs:
           PGDATABASE: postgres
           PGUSER: ${{ secrets.SUPABASE_DB_USER }}
           PGPASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+          PGSSLMODE: require
         run: |
+          # Sanitiza o usuário removendo qualquer whitespace invisível
+          PGUSER=$(echo "$PGUSER" | tr -d '[:space:]')
+          export PGUSER
+          echo "Username em uso (len=${#PGUSER}): '$PGUSER'"
+          
+          echo "Testando conectividade..."
+          psql -h "$PGHOST" -p "$PGPORT" -U "$PGUSER" -d "$PGDATABASE" --no-password -c "SELECT 1" && echo "Conexão OK"
+          
           echo "Iniciando processo de dump dos dados..."
           pg_dump -h "$PGHOST" -p "$PGPORT" -U "$PGUSER" -d "$PGDATABASE" --no-password -f database_backup.sql
           
