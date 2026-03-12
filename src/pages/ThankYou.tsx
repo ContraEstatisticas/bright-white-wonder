@@ -8,6 +8,7 @@ import confetti from "canvas-confetti";
 import { LanguageSelectionModal } from "@/components/LanguageSelectionModal";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { createPurchasedAccount } from "@/lib/purchasedSignup";
 import i18n from "i18next";
 import {
   Dialog,
@@ -232,6 +233,58 @@ const ThankYou = () => {
   }, []);
 
   const performSignup = async () => {
+    const currentLanguage = navigator.language || i18n.language || "en";
+
+    if (isPurchaseFlow) {
+      const signupResult = await createPurchasedAccount({
+        email,
+        password,
+        fullName: fullName.trim(),
+        preferredLanguage: currentLanguage,
+      });
+
+      if (!signupResult.ok) {
+        setIsLoading(false);
+        if (signupResult.code === "ALREADY_EXISTS") {
+          toast({
+            title: t("auth.signupError"),
+            description: t("signupFromEmail.alreadyHaveAccount", "Você já tem uma conta!"),
+            variant: "destructive",
+          });
+          navigate(`/auth?email=${encodeURIComponent(email)}&tab=login`, { replace: true });
+          return;
+        }
+
+        toast({
+          title: t("auth.signupError"),
+          description: signupResult.message,
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+      if (signInError) {
+        setIsLoading(false);
+        toast({
+          title: t("auth.signupSuccess"),
+          description: t("auth.loginTab"),
+        });
+        navigate(`/auth?email=${encodeURIComponent(email)}&tab=login`, { replace: true });
+        return;
+      }
+
+      setIsLoading(false);
+
+      toast({
+        title: t("auth.signupSuccess"),
+        description: t("common.loading"),
+      });
+
+      navigate("/dashboard", { replace: true });
+      return;
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -254,8 +307,6 @@ const ThankYou = () => {
     }
 
     if (data.user) {
-      const currentLanguage = navigator.language || i18n.language || "en";
-
       try {
         await supabase.from("profiles").update({ preferred_language: currentLanguage }).eq("id", data.user.id);
       } catch (langErr) {

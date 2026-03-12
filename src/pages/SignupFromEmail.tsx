@@ -7,6 +7,7 @@ import { Sparkles, Mail, Lock, User, Eye, EyeOff, ArrowLeft, CheckCircle2 } from
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { createPurchasedAccount } from "@/lib/purchasedSignup";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -65,21 +66,6 @@ const SignupFromEmail = () => {
         setHasPurchase(null);
       }
 
-      // Try to sign in with OTP (shouldCreateUser: false) to check if account exists
-      try {
-        const { error } = await supabase.auth.signInWithOtp({
-          email: emailParam,
-          options: { shouldCreateUser: false },
-        });
-        // If no error, user exists
-        if (!error) {
-          setHasAccount(true);
-        }
-        // If error contains "Signups not allowed" or similar, user doesn't exist
-      } catch {
-        // User doesn't exist
-      }
-
       setCheckingAccount(false);
     };
 
@@ -111,56 +97,29 @@ const SignupFromEmail = () => {
 
     setIsLoading(true);
 
-    const { data, error } = await supabase.auth.signUp({
+    const currentLanguage = langParam || navigator.language || i18n.language || "en";
+    const signupResult = await createPurchasedAccount({
       email,
       password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`,
-        data: { full_name: fullName.trim() },
-      },
+      fullName: fullName.trim(),
+      preferredLanguage: currentLanguage,
     });
 
-    if (error) {
+    if (!signupResult.ok) {
       setIsLoading(false);
-      if (error.message === "User already registered") {
+      if (signupResult.code === "ALREADY_EXISTS") {
         setHasAccount(true);
         return;
       }
-      toast({ title: t("auth.signupError"), description: error.message, variant: "destructive" });
+      toast({ title: t("auth.signupError"), description: signupResult.message, variant: "destructive" });
       return;
     }
 
-    if (data.user) {
-      const currentLanguage = langParam || navigator.language || i18n.language || "en";
-
-      try {
-        await supabase.from("profiles").update({ preferred_language: currentLanguage }).eq("id", data.user.id);
-      } catch { }
-
-      // Reconcile billing events
-      try {
-        await supabase.rpc("process_pending_billing_events", { p_user_id: data.user.id, p_email: email });
-      } catch { }
-
-      // Auto-confirm email since purchase already validated the email
-      try {
-        await supabase.functions.invoke("confirm-signup-email", {
-          body: { user_id: data.user.id },
-        });
-      } catch { }
-
-      // Always sign in explicitly after signup to guarantee an active session
-      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
-      if (signInError) {
-        setIsLoading(false);
-        toast({ title: t("auth.signupSuccess"), description: t("auth.loginTab") });
-        navigate(`/auth?email=${encodeURIComponent(email)}&tab=login`, { replace: true });
-        return;
-      }
-
+    const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+    if (signInError) {
       setIsLoading(false);
-      toast({ title: t("auth.signupSuccess"), description: t("common.loading") });
-      navigate("/dashboard", { replace: true });
+      toast({ title: t("auth.signupSuccess"), description: t("auth.loginTab") });
+      navigate(`/auth?email=${encodeURIComponent(email)}&tab=login`, { replace: true });
       return;
     }
 
