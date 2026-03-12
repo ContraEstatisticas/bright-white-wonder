@@ -7,82 +7,92 @@ import { Sparkles, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CreditCardLogos } from "@/components/landing/CreditCardLogos";
 import { RecurringBillingDisclosure } from "@/components/checkout/RecurringBillingDisclosure";
+import { motion } from "framer-motion";
 
 export const PricingSection = () => {
   const { t } = useTranslation();
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  // Redirecionamentos
-  const handleGetQuizByLocale = () => window.open(t("landing.quiz.url"), "_blank");
-
-  // Link fixo do Stripe conforme solicitado
   const handleCheckout = () => {
     window.open("https://pay.hotmart.com/Y103941140D?off=mdspiens&checkoutMode=10", "_blank");
   };
 
-  // Movido para dentro do componente para reagir à mudança de idioma (t)
   const plans = [
     {
       name: t("landing.pricing.productName"),
-      price: "29,90", // Valor final
+      price: "29,90",
       daily: "0,90",
       popular: true,
     },
   ];
 
   return (
-    <section id="plano" className="py-16 md:py-24 bg-[#F8FAFC]">
+    <section id="plano" className="landing-section bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-10">
-          {/* Cabeçalho */}
+          {/* Header */}
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.165, 0.84, 0.44, 1] }}
+              className="text-3xl md:text-5xl landing-h2 text-foreground"
+            >
               {t("landing.pricing.title")}
-            </h2>
-            <p className="text-slate-500 text-lg">{t("landing.pricing.subtitle")}</p>
+            </motion.h2>
+            <p className="text-muted-foreground text-lg">{t("landing.pricing.subtitle")}</p>
           </div>
 
-          {/* Card de Valor Único */}
-          <div className="grid gap-4">
+          {/* Pricing Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
+            className="grid gap-4"
+          >
             {plans.map((plan) => (
               <div
                 key={plan.name}
                 className={cn(
-                  "relative flex flex-col md:flex-row items-center justify-between p-8 rounded-[32px] border-2 transition-all duration-300",
-                  plan.popular ? "border-orange-500 bg-white shadow-xl scale-[1.02] z-10" : "border-slate-100 bg-white",
+                  "relative flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl border-2 landing-transition",
+                  plan.popular
+                    ? "border-primary bg-card landing-shadow-glow scale-[1.02] z-10"
+                    : "border-border bg-card",
                 )}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] font-black px-4 py-1 rounded-full flex items-center gap-1 shadow-md uppercase tracking-wider">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-black px-4 py-1 rounded-full flex items-center gap-1 shadow-md uppercase tracking-wider">
                     <Zap size={10} fill="currentColor" /> {t("landing.pricing.offerBadge")}
                   </div>
                 )}
 
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-600">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                     <Zap size={24} fill="currentColor" />
                   </div>
                   <div className="text-center md:text-left">
-                    <h4 className="font-black text-slate-800 text-xl tracking-tight">{plan.name}</h4>
+                    <h4 className="font-black text-foreground text-xl tracking-tight">{plan.name}</h4>
                     <p className="text-base">
-                      <span className="font-bold text-orange-600 uppercase">
+                      <span className="font-bold text-primary uppercase">
                         {t("landing.pricing.pricePrefix")} USD {plan.price}
                       </span>
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 md:mt-0 bg-orange-50 px-8 py-4 rounded-2xl border border-orange-100 text-center min-w-[140px]">
-                  <p className="text-2xl font-black text-orange-700 leading-none">USD {plan.daily}</p>
-                  <p className="text-[10px] font-bold text-orange-400 uppercase tracking-widest mt-1">
+                <div className="mt-6 md:mt-0 bg-primary/5 px-8 py-4 rounded-2xl border border-primary/10 text-center min-w-[140px]">
+                  <p className="text-2xl font-black text-primary leading-none">USD {plan.daily}</p>
+                  <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mt-1">
                     {t("landing.pricing.perDay")}
                   </p>
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          {/* Checkbox de Aceite + Botão de Checkout */}
+          {/* Checkbox + Checkout Button */}
           <div className="space-y-4">
             <div className="flex items-start gap-3 px-2">
               <Checkbox
@@ -91,13 +101,13 @@ export const PricingSection = () => {
                 onCheckedChange={(checked) => setTermsAccepted(checked === true)}
                 className="mt-0.5"
               />
-              <label htmlFor="terms-accept" className="text-sm text-slate-600 leading-relaxed cursor-pointer">
+              <label htmlFor="terms-accept" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                 {t("checkout.termsCheckbox")}{" "}
-                <Link to="/termos" className="text-orange-600 underline hover:text-orange-700 font-semibold" target="_blank">
+                <Link to="/termos" className="text-primary underline hover:text-primary/80 font-semibold landing-transition" target="_blank">
                   {t("checkout.termsCheckboxTerms")}
                 </Link>{" "}
                 {t("checkout.termsCheckboxAnd")}{" "}
-                <Link to="/cancelamento" className="text-orange-600 underline hover:text-orange-700 font-semibold" target="_blank">
+                <Link to="/cancelamento" className="text-primary underline hover:text-primary/80 font-semibold landing-transition" target="_blank">
                   {t("checkout.termsCheckboxRefund")}
                 </Link>
               </label>
@@ -106,33 +116,29 @@ export const PricingSection = () => {
             <Button
               onClick={handleCheckout}
               disabled={!termsAccepted}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-9 rounded-[24px] text-sm sm:text-lg md:text-2xl shadow-2xl shadow-orange-200 transition-all active:scale-[0.98] uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-black py-9 rounded-2xl text-sm sm:text-lg md:text-2xl landing-shadow-glow landing-transition active:scale-[0.98] uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {t("landing.pricing.ctaButton")}
             </Button>
 
-            {/* Credit Card Logos + Security Badges */}
             <CreditCardLogos size="md" className="py-2" />
-
-            {/* Recurring Billing Disclosure - Nuvei/Visa/MC Compliance */}
             <RecurringBillingDisclosure price="29.90" frequency="monthly" />
           </div>
 
-          {/* Divisor de Oferta Especial - Linha removida aqui */}
+          {/* Quiz Discount */}
           <div className="relative py-6">
             <div className="relative flex justify-center">
               <button
                 onClick={() => window.open("https://start.educly.app/quiz-esp-hot01", "_blank")}
-                className="bg-orange-50 border-2 border-orange-400 px-8 py-3 rounded-full flex items-center gap-3 animate-bounce shadow-lg"
+                className="bg-primary/5 border-2 border-primary/40 px-8 py-3 rounded-full flex items-center gap-3 animate-bounce landing-shadow-soft landing-btn-hover"
               >
-                <Sparkles size={20} className="text-orange-500 animate-pulse" />
-                <span className="text-orange-800 font-black text-sm md:text-base uppercase tracking-tight">
+                <Sparkles size={20} className="text-primary animate-pulse" />
+                <span className="text-primary font-black text-sm md:text-base uppercase tracking-tight">
                   {t("landing.pricing.quizDiscountNotice")}
                 </span>
               </button>
             </div>
           </div>
-          {/* Card do Quiz */}
         </div>
       </div>
     </section>

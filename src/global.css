@@ -4,27 +4,25 @@
 
 @layer base {
   :root {
-    /* --- MODO CLARO (LIGHT MODE) - TOTALMENTE BRANCO --- */
+    /* --- MODO CLARO (LIGHT MODE) --- */
 
-    /* Fundo Branco Puro (#FFFFFF) */
+    /* Fundo */
     --background: 0 0% 100%;
-
-    /* Texto Escuro (Mantido para legibilidade) */
     --foreground: 222.2 84% 4.9%;
 
-    /* Cards Branco Puro */
+    /* Cards */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
-    /* Popovers Branco Puro */
+    /* Popovers */
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Cor Primária (Laranja) Mantida */
+    /* Cor Primária (Laranja) */
     --primary: 25 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Elementos Secundários: Cinza Neutro (Sem tom azul) */
+    /* Secundários */
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
@@ -37,8 +35,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Bordas: Cinza Neutro Claro */
-    /* Ajustado para 90% para ser sutil, mas visível no fundo branco */
+    /* Bordas */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
 
@@ -48,18 +45,18 @@
     /* Success */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
+
+    /* Landing page tokens */
+    --landing-navy: 223 40% 10%;
+    --landing-cream: 270 100% 98%;
+    --landing-glow: 25 90% 55%;
   }
 
   .dark {
-    /* --- MODO ESCURO (DARK MODE) - MANTIDO ORIGINAL --- */
-
-    /* COR EXATA DO FUNDO DA DASHBOARD (#1A1F2C) */
+    /* --- MODO ESCURO (DARK MODE) --- */
     --background: 223 25% 14%;
-
-    /* Texto Claro */
     --foreground: 210 40% 98%;
 
-    /* COR DOS CARDS DA DASHBOARD (#222632) */
     --card: 225 19% 16%;
     --card-foreground: 210 40% 98%;
 
@@ -81,7 +78,6 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Bordas Escuras */
     --border: 223 25% 20%;
     --input: 223 25% 20%;
     --ring: 25 90% 55%;
@@ -89,12 +85,19 @@
     /* Success */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
+
+    /* Landing page tokens */
+    --landing-navy: 223 25% 10%;
+    --landing-cream: 223 25% 14%;
+    --landing-glow: 25 90% 55%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
     @apply bg-background text-foreground antialiased transition-colors duration-300;
@@ -102,7 +105,164 @@
   }
 }
 
-/* Utilitários para cores de fundo dos ícones no modo escuro */
+/* ==============================
+   LANDING PAGE DESIGN SYSTEM
+   ============================== */
+
+/* Glassmorphism navbar */
+.landing-glass {
+  background-color: hsl(var(--background) / 0.8);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+.dark .landing-glass {
+  background-color: hsl(223 25% 14% / 0.8);
+}
+
+/* Hero glow effect */
+.landing-hero-glow {
+  position: absolute;
+  width: 100%;
+  height: 50vw;
+  max-height: 600px;
+  border-radius: 150% 150% 0 0;
+  background-color: hsl(var(--primary));
+  box-shadow: 40px 0 36rem 10rem hsl(var(--primary) / 0.3);
+  filter: blur(0.6rem);
+  opacity: 0.15;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.dark .landing-hero-glow {
+  opacity: 0.1;
+}
+
+/* Gradient text */
+.landing-gradient-text {
+  background-image: linear-gradient(270deg, hsl(var(--primary)) 40%, hsl(25 100% 65%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.02em;
+}
+
+/* Brand easing — all landing transitions */
+.landing-transition {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Button hover fill inset */
+.landing-btn-hover {
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.landing-btn-hover:hover {
+  box-shadow: inset 0 0 0 500px hsl(var(--primary) / 0.1);
+  transform: translateY(-1px);
+}
+
+/* Landing section padding */
+.landing-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media screen and (max-width: 991px) {
+  .landing-section { padding-top: 5rem; padding-bottom: 5rem; }
+}
+@media screen and (max-width: 767px) {
+  .landing-section { padding-top: 3rem; padding-bottom: 3rem; }
+}
+
+/* Landing card */
+.landing-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 1px 3px hsl(0 0% 0% / 0.1), 0 1px 2px hsl(0 0% 0% / 0.06);
+  transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.landing-card:hover {
+  box-shadow: 0 10px 25px hsl(0 0% 0% / 0.1), 0 4px 10px hsl(0 0% 0% / 0.05);
+  transform: translateY(-2px);
+}
+
+/* Landing heading typography */
+.landing-h1 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.landing-h2 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+.landing-h3 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+}
+
+/* Eyebrow label */
+.landing-eyebrow {
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+
+/* Floating animation */
+@keyframes landing-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.landing-float {
+  animation: landing-float 5s ease-in-out infinite;
+}
+.landing-float-delayed {
+  animation: landing-float 5s ease-in-out 1.5s infinite;
+}
+
+/* Fade in up on scroll */
+@keyframes landing-fade-in-up {
+  0% { opacity: 0; transform: translateY(2rem); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.landing-animate-in {
+  animation: landing-fade-in-up 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+}
+
+/* Stagger delays */
+.landing-stagger-1 { animation-delay: 0.1s; }
+.landing-stagger-2 { animation-delay: 0.2s; }
+.landing-stagger-3 { animation-delay: 0.3s; }
+.landing-stagger-4 { animation-delay: 0.4s; }
+
+/* Shadow variants */
+.landing-shadow-soft {
+  box-shadow: 0 2px 15px -3px hsl(0 0% 0% / 0.07), 0 10px 20px -2px hsl(0 0% 0% / 0.04);
+}
+.landing-shadow-glow {
+  box-shadow: 0 15px 25px hsl(var(--primary) / 0.15);
+}
+
+/* Ticker / infinite carousel */
+@keyframes landing-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.landing-ticker {
+  animation: landing-ticker 30s linear infinite;
+}
+
+/* Dark mode utility overrides for landing */
 .dark .bg-blue-50 { background-color: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.15); color: #60a5fa; }
 .dark .bg-purple-50 { background-color: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.15); color: #c084fc; }
 .dark .bg-red-50 { background-color: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.15); color: #f87171; }

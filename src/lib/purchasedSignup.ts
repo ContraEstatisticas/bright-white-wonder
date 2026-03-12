@@ -9,9 +9,9 @@ type PurchasedSignupParams = {
   preferredLanguage?: string | null;
 };
 
-type AccountCreationResult =
-  | { ok: true; userId: string | null }
-  | { ok: false; code: string | null; message: string };
+export type AccountCreationResult =
+  | { ok: true; userId: string | null; code?: undefined; message?: undefined }
+  | { ok: false; code: string | null; message: string; userId?: undefined };
 
 const normalizeLanguage = (language?: string | null) => {
   const normalized = String(language ?? "").toLowerCase().split("-")[0];
