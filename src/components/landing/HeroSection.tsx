@@ -10,24 +10,31 @@ export const HeroSection = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden ld-navy">
-      {/* Subtle top-down light cone — light falling from sky */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[70vh] pointer-events-none z-0"
+      {/* Sky light — subtle beam from top center */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none z-0"
         style={{
-          background: 'conic-gradient(from 180deg at 50% 0%, transparent 30%, hsl(25 90% 55% / 0.06) 40%, hsl(25 90% 55% / 0.12) 50%, hsl(25 90% 55% / 0.06) 60%, transparent 70%)',
-          filter: 'blur(40px)',
+          width: '600px',
+          height: '100%',
+          background: 'linear-gradient(180deg, hsl(25 90% 55% / 0.07) 0%, hsl(25 90% 55% / 0.03) 30%, transparent 60%)',
+          filter: 'blur(80px)',
         }}
       />
 
-      {/* Soft ambient glow at bottom — NOT blown out */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-[200px] pointer-events-none z-0 rounded-full"
+      {/* Very subtle warm radial ambient */}
+      <div
+        className="absolute top-[10%] left-1/2 -translate-x-1/2 pointer-events-none z-0"
         style={{
-          background: 'radial-gradient(ellipse at center, hsl(25 90% 55% / 0.08) 0%, transparent 70%)',
+          width: '800px',
+          height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(ellipse at center, hsl(25 90% 55% / 0.04) 0%, transparent 70%)',
         }}
       />
 
       {/* Floating elements */}
       <div className="absolute top-32 right-[15%] w-20 h-20 border border-white/10 rounded-2xl rotate-12 ld-float hidden lg:block" />
-      <div className="absolute top-48 left-[12%] w-14 h-14 bg-[hsl(25,90%,55%,0.1)] rounded-full ld-float-d1 hidden lg:block" />
+      <div className="absolute top-48 left-[12%] w-14 h-14 bg-[hsl(25,90%,55%,0.08)] rounded-full ld-float-d1 hidden lg:block" />
       <div className="absolute bottom-40 right-[22%] w-10 h-10 border border-white/5 rounded-lg rotate-45 ld-float-d2 hidden lg:block" />
 
       <div className="max-w-[87.5rem] mx-auto px-6 md:px-10 relative z-10 pt-32 pb-20 md:pt-40 md:pb-32">
