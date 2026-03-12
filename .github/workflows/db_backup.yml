@@ -28,6 +28,9 @@ jobs:
           fi
           
           echo "Iniciando processo de dump dos dados..."
+          # Debug: mostra o username da URL sem expor a senha
+          echo "Username extraído da URL:"
+          echo "$DB_URL" | python3 -c "import sys, urllib.parse; u = urllib.parse.urlparse(sys.stdin.read().strip()); print(u.username)"
           pg_dump "$DB_URL" -f database_backup.sql
           
       - name: Upload Backup as Artifact
