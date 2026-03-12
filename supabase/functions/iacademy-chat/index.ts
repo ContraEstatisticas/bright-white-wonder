@@ -6,6 +6,34 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// === GLOBAL RATE LIMITER (In-Memory IP/User Flood Protection) ===
+const rateLimitCache = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_WINDOW_MS = 60000;
+const MAX_REQUESTS_PER_WINDOW = 15;
+const API_TIMEOUT_MS = 60000; // 60s hard timeout to prevent connection hanging
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitCache.get(identifier);
+
+  // Clean old entries randomly
+  if (Math.random() < 0.05) {
+    for (const [key, value] of rateLimitCache.entries()) {
+      if (now - value.timestamp > RATE_LIMIT_WINDOW_MS) {
+        rateLimitCache.delete(key);
+      }
+    }
+  }
+
+  if (entry && now - entry.timestamp < RATE_LIMIT_WINDOW_MS) {
+    entry.count++;
+    return entry.count <= MAX_REQUESTS_PER_WINDOW;
+  } else {
+    rateLimitCache.set(identifier, { count: 1, timestamp: now });
+    return true;
+  }
+}
+
 // Emails with free access for testing
 const WHITELIST_EMAILS = ["ferramentasdigitais1000@gmail.com", "felip@gmailcom", "perfildivulgacao001@gmail.com"];
 
@@ -380,6 +408,20 @@ serve(async (req) => {
   }
 
   try {
+    // 1) Get Client IP for global protection mapping
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                     req.headers.get('x-real-ip') || 
+                     'unknown_ip';
+
+    // Anti-Abuse IP Rate Check
+    if (!checkRateLimit(clientIp)) {
+      console.warn(`[iacademy-chat] Rate limit exceeded for IP: ${clientIp}`);
+      return new Response(JSON.stringify({ error: "Too many requests from this IP. Please wait a minute." }), {
+        status: 429,
+        headers: { ...corsHeaders, "Content-Type": "application/json", "Retry-After": "60" },
+      });
+    }
+
     // Get auth token from header
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
@@ -409,6 +451,14 @@ serve(async (req) => {
         status: 401,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
+    }
+    
+    // 2) User-level global limit checking
+    if (!checkRateLimit(`usr_${user.id}`)) {
+       return new Response(JSON.stringify({ error: "Too many requests from this account. Please wait a minute." }), {
+         status: 429,
+         headers: { ...corsHeaders, "Content-Type": "application/json", "Retry-After": "60" },
+       });
     }
 
     console.log("Authenticated user:", user.email);
@@ -500,20 +550,29 @@ serve(async (req) => {
 
     const systemPrompt = getSystemPrompt(language, aiToolContext);
 
-    const response = await fetch(AI_BASE_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${GEMINI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "gemini-2.5-flash",
-        messages: [{ role: "system", content: systemPrompt }, ...messages],
-        stream: true,
-        max_tokens: 800,
-        temperature: 0.7,
-      }),
-    });
+    const streamAbortController = new AbortController();
+    const streamTimeoutId = setTimeout(() => streamAbortController.abort(), API_TIMEOUT_MS);
+
+    let response;
+    try {
+      response = await fetch(AI_BASE_URL, {
+        method: "POST",
+        signal: streamAbortController.signal,
+        headers: {
+          Authorization: `Bearer ${GEMINI_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "gemini-2.5-flash",
+          messages: [{ role: "system", content: systemPrompt }, ...messages],
+          stream: true,
+          max_tokens: 800,
+          temperature: 0.7,
+        }),
+      });
+    } finally {
+      clearTimeout(streamTimeoutId);
+    }
 
     if (!response.ok) {
       const errorText = await response.text();

@@ -6,8 +6,37 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// === GLOBAL RATE LIMITER (In-Memory IP/User Flood Protection) ===
+// Limits to 15 requests per minute per IP to avoid abuse
+const rateLimitCache = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_WINDOW_MS = 60000;
+const MAX_REQUESTS_PER_WINDOW = 15;
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitCache.get(identifier);
+
+  // Clean old entries randomly to avoid memory leak
+  if (Math.random() < 0.05) {
+    for (const [key, value] of rateLimitCache.entries()) {
+      if (now - value.timestamp > RATE_LIMIT_WINDOW_MS) {
+        rateLimitCache.delete(key);
+      }
+    }
+  }
+
+  if (entry && now - entry.timestamp < RATE_LIMIT_WINDOW_MS) {
+    entry.count++;
+    return entry.count <= MAX_REQUESTS_PER_WINDOW;
+  } else {
+    rateLimitCache.set(identifier, { count: 1, timestamp: now });
+    return true;
+  }
+}
+
 const DAILY_MESSAGE_LIMIT = 50;
 const DAILY_IMAGE_LIMIT = 10;
+const API_TIMEOUT_MS = 60000; // 60s hard timeout to prevent connection hanging
 
 // System prompts per AI persona (multilingual)
 const AI_PERSONAS: Record<string, { pt: string; en: string; isImage?: boolean }> = {
@@ -84,6 +113,20 @@ serve(async (req) => {
   }
 
   try {
+    // 1) Get Client IP for global protection mapping
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                     req.headers.get('x-real-ip') || 
+                     'unknown_ip';
+
+    // Anti-Abuse IP Rate Check early exit.
+    if (!checkRateLimit(clientIp)) {
+      console.warn(`[assistentes-chat] Rate limit exceeded for IP: ${clientIp}`);
+      return new Response(JSON.stringify({ error: "Too many requests from this IP. Please try again later." }), {
+        status: 429,
+        headers: { ...corsHeaders, "Content-Type": "application/json", "Retry-After": "60" },
+      });
+    }
+
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
       return new Response(JSON.stringify({ error: "No authorization header" }), {
@@ -103,6 +146,15 @@ serve(async (req) => {
         status: 401,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
+    }
+    
+    // 2) User-level global limit checking (extra layer to IP, protecting user tokens)
+    if (!checkRateLimit(`usr_${user.id}`)) {
+       console.warn(`[assistentes-chat] User Rate limit exceeded for ID: ${user.id}`);
+       return new Response(JSON.stringify({ error: "Too many requests from this account. Please wait a minute." }), {
+         status: 429,
+         headers: { ...corsHeaders, "Content-Type": "application/json", "Retry-After": "60" },
+       });
     }
 
     // Parse request
@@ -190,20 +242,29 @@ serve(async (req) => {
     if (isImageType) {
       const lastUserMessage = messages[messages.length - 1]?.content || "";
 
-      const textResponse = await fetch(AI_BASE_URL, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${GEMINI_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: TEXT_MODEL,
-          messages: [
-            { role: "system", content: systemPrompt },
-            ...messages,
-          ],
-        }),
-      });
+      const abortController = new AbortController();
+      const timeoutId = setTimeout(() => abortController.abort(), API_TIMEOUT_MS);
+
+      let textResponse;
+      try {
+        textResponse = await fetch(AI_BASE_URL, {
+          method: "POST",
+          signal: abortController.signal,
+          headers: {
+            Authorization: `Bearer ${GEMINI_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: TEXT_MODEL,
+            messages: [
+              { role: "system", content: systemPrompt },
+              ...messages,
+            ],
+          }),
+        });
+      } finally {
+        clearTimeout(timeoutId);
+      }
 
       if (!textResponse.ok) {
         console.error("Text response error:", await textResponse.text());
@@ -305,21 +366,30 @@ serve(async (req) => {
     }
 
     // --- Stream text response for all other AI types ---
-    const response = await fetch(AI_BASE_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${GEMINI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: TEXT_MODEL,
-        messages: [
-          { role: "system", content: systemPrompt },
-          ...messages,
-        ],
-        stream: true,
-      }),
-    });
+    const streamAbortController = new AbortController();
+    const streamTimeoutId = setTimeout(() => streamAbortController.abort(), API_TIMEOUT_MS);
+
+    let response;
+    try {
+      response = await fetch(AI_BASE_URL, {
+        method: "POST",
+        signal: streamAbortController.signal,
+        headers: {
+          Authorization: `Bearer ${GEMINI_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: TEXT_MODEL,
+          messages: [
+            { role: "system", content: systemPrompt },
+            ...messages,
+          ],
+          stream: true,
+        }),
+      });
+    } finally {
+      clearTimeout(streamTimeoutId);
+    }
 
     if (!response.ok) {
       if (response.status === 429) {

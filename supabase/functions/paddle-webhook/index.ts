@@ -6,6 +6,45 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, paddle-signature",
 };
 
+// ---------- ✅ WEBHOOK FAILURE LOGGING (non-blocking) ----------
+async function logWebhookFailure(
+  supabase: ReturnType<typeof createClient>,
+  params: {
+    webhookSource: string;
+    eventType?: string;
+    eventId?: string;
+    rawPayload: unknown;
+    errorMessage: string;
+    errorStack?: string;
+    httpStatus: number;
+  }
+) {
+  try {
+    // Backoff exponencial: primeiro retry em 30s
+    const nextRetryAt = new Date(Date.now() + 30 * 1000).toISOString();
+
+    await supabase.from("webhook_failure_logs").insert({
+      webhook_source: params.webhookSource,
+      event_type: params.eventType || null,
+      event_id: params.eventId || null,
+      raw_payload: params.rawPayload,
+      error_message: params.errorMessage,
+      error_stack: params.errorStack || null,
+      http_status_returned: params.httpStatus,
+      next_retry_at: nextRetryAt,
+      status: "pending",
+    });
+
+    console.log(
+      `[paddle-webhook] Failure logged for retry: event=${params.eventType}, next_retry=${nextRetryAt}`
+    );
+  } catch (logErr) {
+    // Nunca derrubar o webhook por causa do log de falha
+    console.error("[paddle-webhook] Failed to log webhook failure:", logErr);
+  }
+}
+// ---------- END WEBHOOK FAILURE LOGGING ----------
+
 // Paddle event type mapping to internal types
 const EVENT_MAP: Record<string, string> = {
   "transaction.completed": "PURCHASE_COMPLETE",
@@ -236,8 +275,9 @@ serve(async (req) => {
 
   const supabase = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 
+  let rawBody = "";
   try {
-    const rawBody = await req.text();
+    rawBody = await req.text();
     const requestHeaders = headersToObject(req.headers);
 
     console.log(
@@ -561,7 +601,25 @@ serve(async (req) => {
     });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    const errorStack = error instanceof Error ? error.stack : undefined;
     console.error("[paddle-webhook] Error:", error);
+
+    // Log failure for automatic retry (non-blocking)
+    try {
+      const failPayload = rawBody ? JSON.parse(rawBody) : { _raw_unavailable: true };
+      await logWebhookFailure(supabase, {
+        webhookSource: "paddle-webhook",
+        eventType: failPayload?.event_type,
+        eventId: failPayload?.event_id,
+        rawPayload: failPayload,
+        errorMessage,
+        errorStack,
+        httpStatus: 500,
+      });
+    } catch {
+      // Se não conseguir logar, tudo bem — o console.error acima já registra
+    }
+
     return new Response(JSON.stringify({ error: errorMessage }), { status: 500, headers: corsHeaders });
   }
 });

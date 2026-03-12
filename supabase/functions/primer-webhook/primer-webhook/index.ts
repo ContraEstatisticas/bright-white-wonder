@@ -6,6 +6,41 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, ff-webhook-signature, x-hotmart-hottok',
 };
 
+// ---------- ✅ WEBHOOK FAILURE LOGGING (non-blocking) ----------
+async function logWebhookFailure(
+  supabase: ReturnType<typeof createClient>,
+  params: {
+    webhookSource: string;
+    eventType?: string;
+    rawPayload: unknown;
+    errorMessage: string;
+    errorStack?: string;
+    httpStatus: number;
+  }
+) {
+  try {
+    const nextRetryAt = new Date(Date.now() + 30 * 1000).toISOString();
+
+    await supabase.from("webhook_failure_logs").insert({
+      webhook_source: params.webhookSource,
+      event_type: params.eventType || null,
+      raw_payload: params.rawPayload || { _unavailable: true },
+      error_message: params.errorMessage,
+      error_stack: params.errorStack || null,
+      http_status_returned: params.httpStatus,
+      next_retry_at: nextRetryAt,
+      status: "pending",
+    });
+
+    console.log(
+      `[primer-webhook] Failure logged for retry: event=${params.eventType}, next_retry=${nextRetryAt}`
+    );
+  } catch (logErr) {
+    console.error("[primer-webhook] Failed to log webhook failure:", logErr);
+  }
+}
+// ---------- END WEBHOOK FAILURE LOGGING ----------
+
 // === IN-MEMORY RATE LIMITER ===
 const ipRequests = new Map<string, { count: number; timestamp: number }>();
 const RATE_LIMIT_PER_SECOND = 10;
@@ -274,7 +309,25 @@ serve(async (req) => {
     return new Response(JSON.stringify({ success: true, queued: true }), { headers: corsHeaders });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    const errorStack = error instanceof Error ? error.stack : undefined;
     console.error("[primer-webhook] Error:", error);
+
+    // Log failure for automatic retry (non-blocking)
+    try {
+      let failPayload: unknown = { _raw_unavailable: true };
+      try { failPayload = JSON.parse(rawBody); } catch { /* ignore */ }
+      await logWebhookFailure(supabase, {
+        webhookSource: "primer-webhook",
+        eventType: (failPayload as any)?.data?.event_type || (failPayload as any)?.event_type,
+        rawPayload: failPayload,
+        errorMessage,
+        errorStack,
+        httpStatus: 500,
+      });
+    } catch {
+      // Se não conseguir logar, tudo bem
+    }
+
     return new Response(JSON.stringify({ error: errorMessage }), { status: 500, headers: corsHeaders });
   }
 });
