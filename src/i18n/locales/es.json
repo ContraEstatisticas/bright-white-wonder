@@ -2454,11 +2454,7 @@
     "medals": {
       "title": "Medallas",
       "subtitle": "Gana medallas por tus logros y presume tu progreso.",
-      "cta": "Ver Logros",
-      "freelancerSection": "Ruta Freelancer",
-      "freelancerDesc": "Medallas conquistadas en la ruta freelancer",
-      "trailSection": "Desafío 28 Días",
-      "trailDesc": "Medallas conquistadas en el desafío de 28 días"
+      "cta": "Ver Logros"
     }
   },
   "progress": {
@@ -3196,7 +3192,6 @@
   },
   "freelancer": {
     "title": "Ruta Freelancer",
-    "trailTitle": "Ruta Freelancer Pro",
     "subtitle": "Gana dinero con IA",
     "dashboardDesc": "Aprende estrategias comprobadas para convertirte en un freelancer exitoso usando herramientas de IA.",
     "headerDesc": "Domina las habilidades para ganar dinero como freelancer de IA",

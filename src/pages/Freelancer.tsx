@@ -43,7 +43,7 @@ const SidebarContent = ({
       <h2 className="text-2xl font-black text-foreground mb-2">
         {allCompleted ? t("trail.congratulations", "Conquistado!") : t("freelancer.inProgress", "Em Progresso")}
       </h2>
-      <p className="text-muted-foreground mb-6 font-medium">{t("freelancer.trailTitle", "Trilha Freelancer Pro")}</p>
+      <p className="text-muted-foreground mb-6 font-medium">Trilha Freelancer Pro</p>
 
       {/* Barra de Progresso interna */}
       <div className="w-full bg-secondary h-3 rounded-full overflow-hidden mb-3">
