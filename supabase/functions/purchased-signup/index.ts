@@ -38,7 +38,7 @@ async function findUserByEmail(supabaseAdmin: any, email: string) {
     }
 
     const users = data?.users ?? [];
-    const foundUser = users.find((user) => normalizeEmail(user.email) === email);
+    const foundUser = users.find((user: any) => normalizeEmail(user.email) === email);
 
     if (foundUser) {
       return foundUser;
