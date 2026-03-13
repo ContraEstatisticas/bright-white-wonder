@@ -99,6 +99,36 @@ function headersToObject(headers: Headers): Record<string, string> {
   return result;
 }
 
+async function fetchCustomerFromPaddleAPI(customerId: string): Promise<{email: string; name: string|null; locale: string|null} | null> {
+  const apiKey = Deno.env.get("PADDLE_API_KEY")?.trim();
+  if (!apiKey) {
+    console.warn("[paddle-webhook] PADDLE_API_KEY not set, cannot fetch customer from API");
+    return null;
+  }
+  try {
+    console.log(`[paddle-webhook] Fetching customer ${customerId} from Paddle API...`);
+    const resp = await fetch(`https://api.paddle.com/customers/${customerId}`, {
+      headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" }
+    });
+    if (!resp.ok) {
+      const body = await resp.text();
+      console.error(`[paddle-webhook] Paddle API returned ${resp.status}: ${body}`);
+      return null;
+    }
+    const json = await resp.json();
+    const email = json?.data?.email;
+    if (!email) {
+      console.warn("[paddle-webhook] Paddle API returned no email for customer:", customerId);
+      return null;
+    }
+    console.log(`[paddle-webhook] Paddle API resolved customer ${customerId} -> ${email}`);
+    return { email, name: json.data.name ?? null, locale: json.data.locale ?? null };
+  } catch (err: any) {
+    console.error("[paddle-webhook] Paddle API fetch error:", err);
+    return null;
+  }
+}
+
 function maskSecret(value: string, visibleChars = 6): string {
   if (!value) return "";
   if (value.length <= visibleChars) return "*".repeat(value.length);
