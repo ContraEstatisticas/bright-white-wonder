@@ -537,12 +537,62 @@ serve(async (req) => {
         });
       }
 
-      const email = normalizeEmail(customerRow?.email);
+      let email = normalizeEmail(customerRow?.email);
+      let resolvedName = (customerRow as any)?.name ?? null;
+      let resolvedLocale = (customerRow as any)?.locale ?? null;
+
       if (!email) {
-        console.warn(`[paddle-webhook] Customer ${customerId} not found yet. Requesting retry.`);
+        console.warn(`[paddle-webhook] Customer ${customerId} not in paddle_customer, trying Paddle API...`);
+        
+        const apiResult = await fetchCustomerFromPaddleAPI(customerId);
+        
+        if (apiResult) {
+          email = normalizeEmail(apiResult.email);
+          resolvedName = apiResult.name;
+          resolvedLocale = apiResult.locale;
+          
+          if (email) {
+            // Upsert into paddle_customer for future lookups
+            const { error: upsertErr } = await supabase
+              .from("paddle_customer")
+              .upsert({
+                customer_id: customerId,
+                email,
+                name: resolvedName,
+                locale: resolvedLocale,
+                last_payload: payload,
+                last_event_id: eventId ?? null,
+                last_notification_id: notificationId ?? null,
+              }, { onConflict: "customer_id" });
+            
+            if (upsertErr) {
+              console.error("[paddle-webhook] Failed to upsert customer from API:", upsertErr);
+            } else {
+              console.log(`[paddle-webhook] Customer ${customerId} synced from Paddle API: ${email}`);
+            }
+          }
+        }
+      }
+
+      if (!email) {
+        // Last resort: save as CUSTOMER_PENDING and return 200
+        console.warn(`[paddle-webhook] Could not resolve email for ${customerId}. Saving as CUSTOMER_PENDING.`);
+        
+        const { error: pendingErr } = await supabase.from("billing_event_logs").insert({
+          email: `pending_${customerId}`,
+          event_type: eventType,
+          payload: { ...payload, resolved_customer_id: customerId },
+          status: "CUSTOMER_PENDING",
+          processed: false,
+        });
+        
+        if (pendingErr) {
+          console.error("[paddle-webhook] Failed to save CUSTOMER_PENDING event:", pendingErr);
+        }
+        
         return new Response(
-          JSON.stringify({ error: "Customer not synced yet, retry later", customer_id: customerId }),
-          { status: 409, headers: corsHeaders },
+          JSON.stringify({ success: true, pending: true, customer_id: customerId }),
+          { headers: corsHeaders },
         );
       }
 
