@@ -440,6 +440,40 @@ serve(async (req) => {
 
       console.log("[paddle-webhook] paddle_customer upsert successful:", customerUpsertData ?? null);
 
+      // Process any CUSTOMER_PENDING billing events for this customer's email
+      try {
+        const pendingEmail = `pending_customer_${customerId}`;
+        const { data: pendingEvents, error: pendingError } = await supabase
+          .from("billing_event_logs")
+          .select("id, event_type, payload")
+          .eq("status", "CUSTOMER_PENDING")
+          .eq("email", pendingEmail)
+          .eq("processed", false);
+
+        if (pendingError) {
+          console.error("[paddle-webhook] Error checking CUSTOMER_PENDING events:", pendingError);
+        } else if (pendingEvents?.length > 0) {
+          console.log(`[paddle-webhook] Found ${pendingEvents.length} CUSTOMER_PENDING events for ${customerId}, updating with real email: ${customerEmail}`);
+
+          // Update pending events with the real email so they can be processed
+          for (const evt of pendingEvents) {
+            const { error: updateErr } = await supabase
+              .from("billing_event_logs")
+              .update({ email: customerEmail, status: "pending" })
+              .eq("id", evt.id);
+
+            if (updateErr) {
+              console.error(`[paddle-webhook] Error updating pending event ${evt.id}:`, updateErr);
+            }
+          }
+
+          // Trigger processing via grantRealtimeAccessByEmail
+          await grantRealtimeAccessByEmail(supabase, customerEmail);
+        }
+      } catch (pendingErr) {
+        console.error("[paddle-webhook] CUSTOMER_PENDING reconciliation error (non-blocking):", pendingErr);
+      }
+
       return new Response(JSON.stringify({ success: true, event: paddleEventType, customer_id: customerId }), {
         headers: corsHeaders,
       });
