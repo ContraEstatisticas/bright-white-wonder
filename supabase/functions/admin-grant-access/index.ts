@@ -11,6 +11,14 @@ const normalizeEmail = (value: unknown) => {
   return value.trim().toLowerCase().replace(/\.+$/, "");
 };
 
+const SUPPORTED_LANGS = ["pt", "en", "es", "fr", "de", "it", "ru"];
+
+const normalizeLanguage = (value: unknown, fallback = "es") => {
+  if (typeof value !== "string") return fallback;
+  const normalized = value.trim().toLowerCase().split("-")[0];
+  return SUPPORTED_LANGS.includes(normalized) ? normalized : fallback;
+};
+
 // deno-lint-ignore no-explicit-any
 async function findUserByEmail(supabaseAdmin: any, email: string) {
   let page = 1;
@@ -70,7 +78,7 @@ Deno.serve(async (req) => {
     }
 
     // Parse request
-    const { email, products, duration_days, send_welcome_email, language } =
+    const { email, products, duration_days, language } =
       await req.json();
 
     if (!email || !products || !Array.isArray(products) || products.length === 0) {
@@ -151,21 +159,51 @@ Deno.serve(async (req) => {
       console.error("Error updating premium:", premiumError);
     }
 
-    // Schedule welcome email if requested
-    if (send_welcome_email && grantedProducts.length > 0) {
-      const buyerName = user.user_metadata?.full_name || "Aluno";
-      const emailLang = language || "es";
+    // Always schedule welcome email when access is granted, using the user's language.
+    let welcomeEmailScheduled = false;
+    let welcomeEmailSkippedReason: string | null = null;
+    let resolvedEmailLanguage = "es";
 
-      for (const pt of grantedProducts) {
-        await supabase.from("pending_thank_you_emails").insert({
-          email: email.toLowerCase(),
-          buyer_name: buyerName,
-          product_type: pt,
-          product_id: `manual_grant_${pt}`,
-          language: emailLang,
-          send_after: new Date(now.getTime() + 1 * 60 * 1000).toISOString(),
-          sent: false,
-        });
+    if (grantedProducts.length > 0) {
+      const buyerName = user.user_metadata?.full_name || "Aluno";
+      const { data: profileData } = await supabase
+        .from("profiles")
+        .select("preferred_language")
+        .eq("id", userId)
+        .maybeSingle();
+
+      resolvedEmailLanguage = normalizeLanguage(
+        language ||
+          profileData?.preferred_language ||
+          user.user_metadata?.preferred_language ||
+          user.user_metadata?.language ||
+          "es"
+      );
+
+      // Dedup: do not re-queue a welcome email if it was already sent.
+      const { data: existingWelcomeLog } = await supabase
+        .from("email_logs")
+        .select("id")
+        .eq("recipient_email", normalizedEmail)
+        .eq("email_type", "welcome")
+        .maybeSingle();
+
+      if (existingWelcomeLog) {
+        welcomeEmailSkippedReason = "already_sent";
+      } else {
+        for (const pt of grantedProducts) {
+          await supabase.from("pending_thank_you_emails").insert({
+            email: normalizedEmail,
+            buyer_name: buyerName,
+            product_type: pt,
+            product_id: `manual_grant_${pt}`,
+            language: resolvedEmailLanguage,
+            send_after: new Date(now.getTime() + 1 * 60 * 1000).toISOString(),
+            sent: false,
+          });
+        }
+
+        welcomeEmailScheduled = true;
       }
     }
 
@@ -175,7 +213,9 @@ Deno.serve(async (req) => {
         user_id: userId,
         granted_products: grantedProducts,
         expires_at: expiresAt,
-        welcome_email_scheduled: send_welcome_email && grantedProducts.length > 0,
+        welcome_email_scheduled: welcomeEmailScheduled,
+        welcome_email_language: resolvedEmailLanguage,
+        welcome_email_skipped_reason: welcomeEmailSkippedReason,
       }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
