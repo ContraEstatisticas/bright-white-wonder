@@ -1,22 +1,42 @@
 
 
-## Problem
+## Problemas Identificados
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+A URL é `/cadastro?email=%email%&lang=es` — o `%email%` é uma variável de template (Hotmart) que **não foi substituída**. Isso causa 3 problemas em cascata:
 
-## Root Cause
+1. **"Compra não localizada"**: `check_purchase_exists` busca por `%email%` literal → não encontra → mostra tela de erro
+2. **Email bugado**: `emailParam` é `%email%` literal, exibido como texto na tela
+3. **Botão "Contactar soporte"**: usa `window.location.href = "mailto:..."` que não funciona bem em todos os contextos; e visualmente parece um `variant="outline"` sem estilo de botão clicável
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+## Solução
 
-## Fix
+### 1. Detectar email inválido/template não resolvido
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+No `SignupFromEmail.tsx`, adicionar validação do `emailParam` para detectar variáveis de template não resolvidas (como `%email%`, `{{email}}`, `{email}`):
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+```typescript
+const isValidEmail = (email: string) => {
+  if (!email) return false;
+  if (email.includes('%') || email.includes('{{') || email.includes('{')) return false;
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+```
 
-## Steps
+Se `emailParam` não for um email válido, tratar como se não houvesse email (mostrar tela de "link inválido") com mensagem mais clara e um botão funcional para login.
 
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
+### 2. Verificar se o usuário já tem conta (antes de checar compra)
+
+No `useEffect` de `checkStatus`, adicionar verificação via `check_purchase_exists` que também verifica se o usuário já existe no sistema. Se já existir conta, setar `hasAccount = true` diretamente, em vez de mostrar "compra não localizada".
+
+### 3. Corrigir botão "Contatar suporte"
+
+Trocar `window.location.href = "mailto:..."` por um `<a href="mailto:contact@educly.app">` estilizado como botão, ou usar `window.open("mailto:...")`. Também adicionar um link para WhatsApp como alternativa.
+
+### Arquivos a editar
+
+- **`src/pages/SignupFromEmail.tsx`**: 
+  - Adicionar função `isValidEmail` 
+  - Tratar `emailParam` inválido na tela de "link inválido" com mensagem amigável e botão de login
+  - No `checkStatus`, verificar existência de conta antes de mostrar "compra não localizada"
+  - Corrigir botão de suporte para ser um `<a>` funcional
 
