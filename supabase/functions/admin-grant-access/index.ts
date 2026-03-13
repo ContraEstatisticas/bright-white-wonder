@@ -6,6 +6,40 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+const normalizeEmail = (value: unknown) => {
+  if (typeof value !== "string") return "";
+  return value.trim().toLowerCase().replace(/\.+$/, "");
+};
+
+// deno-lint-ignore no-explicit-any
+async function findUserByEmail(supabaseAdmin: any, email: string) {
+  let page = 1;
+  const perPage = 1000;
+
+  while (page <= 10) {
+    const { data, error } = await supabaseAdmin.auth.admin.listUsers({ page, perPage });
+
+    if (error) {
+      throw error;
+    }
+
+    const users = data?.users ?? [];
+    const foundUser = users.find((user: any) => normalizeEmail(user.email) === email);
+
+    if (foundUser) {
+      return foundUser;
+    }
+
+    if (users.length < perPage) {
+      break;
+    }
+
+    page += 1;
+  }
+
+  return null;
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -52,13 +86,9 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Find user by email
-    const { data: usersData, error: userError } = await supabase.auth.admin.listUsers();
-    if (userError) throw userError;
-
-    const user = usersData.users.find(
-      (u: any) => u.email?.toLowerCase() === email.toLowerCase()
-    );
+    // Find user by email with pagination
+    const normalizedEmail = normalizeEmail(email);
+    const user = await findUserByEmail(supabase, normalizedEmail);
 
     if (!user) {
       return new Response(
