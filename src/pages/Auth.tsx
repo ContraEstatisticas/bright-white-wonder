@@ -706,7 +706,7 @@ const Auth = () => {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="flex-col gap-2 sm:flex-col">
-            {loginErrorType !== "noService" && (
+            {(
               <Button
                 type="button"
                 variant="outline"
