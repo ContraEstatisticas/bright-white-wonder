@@ -253,10 +253,10 @@ const ThankYou = () => {
       if (signupResult.code === "ALREADY_EXISTS") {
         toast({
           title: t("auth.signupError"),
-          description: t("signupFromEmail.alreadyHaveAccount", "Você já tem uma conta!"),
+          description: t("auth.alreadyExistsResetHint", "Você já tem uma conta! Se não lembra a senha, use a opção 'Esqueceu a senha?' abaixo."),
           variant: "destructive",
         });
-        navigate(`/auth?email=${encodeURIComponent(email)}&tab=login`, { replace: true });
+        navigate(`/auth?email=${encodeURIComponent(email)}&tab=login&showReset=true`, { replace: true });
         return;
       }
 
