@@ -169,6 +169,15 @@ async function grantRealtimeAccessByEmail(supabase: any, email: string) {
 
     if (foundUserId) {
       console.log(`[paddle-webhook] User found: ${foundUserId}, granting access`);
+
+      // Auto-confirm email since payment validates the email
+      try {
+        await supabase.auth.admin.updateUserById(foundUserId, { email_confirm: true });
+        console.log(`[paddle-webhook] Email auto-confirmed for ${foundUserId}`);
+      } catch (confirmErr) {
+        console.error("[paddle-webhook] Email confirm error:", confirmErr);
+      }
+
       const { error: rpcError } = await (supabase as any).rpc("process_pending_billing_events", {
         p_user_id: foundUserId,
         p_email: email,
