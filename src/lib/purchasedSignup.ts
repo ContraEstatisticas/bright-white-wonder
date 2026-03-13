@@ -10,7 +10,7 @@ type PurchasedSignupParams = {
 };
 
 type AccountCreationResult =
-  | { ok: true; userId: string | null }
+  | { ok: true; userId: string | null; code?: undefined; message?: undefined }
   | { ok: false; code: string | null; message: string };
 
 const normalizeLanguage = (language?: string | null) => {

@@ -25,7 +25,8 @@ const normalizeLanguage = (value: unknown) => {
   return normalized || "en";
 };
 
-async function findUserByEmail(supabaseAdmin: ReturnType<typeof createClient>, email: string) {
+// deno-lint-ignore no-explicit-any
+async function findUserByEmail(supabaseAdmin: any, email: string) {
   let page = 1;
   const perPage = 1000;
 
