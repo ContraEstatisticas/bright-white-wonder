@@ -2,21 +2,36 @@
 
 ## Problem
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+The `admin-grant-access` edge function uses `supabase.auth.admin.listUsers()` without pagination to find a user by email. This only returns the first page of users (default ~50). With a growing user base, most users won't be found, causing "User not found with this email" even though `admin_lookup_email` (which queries `auth.users` directly via SQL) correctly finds them.
 
-## Root Cause
+The screenshot confirms: "Conta encontrada" (from the RPC) but "User not found" (from the edge function).
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+## Solution
 
-## Fix
+Replace the `listUsers()` approach in the edge function with a direct SQL query using the service role client, or use the `admin.getUserByEmail()` method if available, or paginate properly like `purchased-signup` does.
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+The simplest and most reliable fix: use `supabase.rpc` or a direct query on `auth.users` via the admin client instead of iterating `listUsers()`.
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+## Changes
 
-## Steps
+**1. Fix `supabase/functions/admin-grant-access/index.ts`**
 
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
+Replace the user lookup block (lines 55-68) that uses `listUsers()` with a proper paginated search (matching the pattern already used in `purchased-signup/index.ts`) or, even better, use the Supabase admin API's direct lookup:
+
+```typescript
+// Replace listUsers with proper lookup
+const { data: userData, error: userError } = await supabase
+  .from('auth.users')  // won't work via PostgREST
+```
+
+Actually, the best approach: reuse the same `findUserByEmail` helper from `purchased-signup` that paginates up to 10 pages of 1000 users each. This is a proven pattern already in the codebase.
+
+Copy the `findUserByEmail` function from `purchased-signup/index.ts` into `admin-grant-access/index.ts` and use it instead of the single-page `listUsers()` call.
+
+**Specific changes:**
+- Add the `findUserByEmail` helper function (lines 43-65 of `purchased-signup`)
+- Replace lines 55-68 of `admin-grant-access` with a call to `findUserByEmail(supabase, email.trim().toLowerCase())`
+- Handle the null case (user not found)
+
+This is a single-file fix in the edge function. No database or frontend changes needed.
 
