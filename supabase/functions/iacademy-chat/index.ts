@@ -52,6 +52,16 @@ const languageNames: Record<string, string> = {
 const getSystemPrompt = (language: string, aiToolContext?: string): string => {
   const langName = languageNames[language] || "English";
 
+  const cancellationRoutingRules: Record<string, string> = {
+    pt: "## SUPORTE DE CANCELAMENTO\nSe o usuario solicitar cancelamento (assinatura, cobranca, pausa, reembolso ou chargeback), encaminhe sempre para o canal oficial: https://educly.app/contato . Seja direto e objetivo.",
+    en: "## CANCELLATION SUPPORT\nIf the user asks for cancellation (subscription, billing, pause, refund, or chargeback), always direct them to the official channel: https://educly.app/contato . Keep it short and clear.",
+    es: "## SOPORTE DE CANCELACION\nSi el usuario solicita cancelacion (suscripcion, cobro, pausa, reembolso o contracargo), dirigelo siempre al canal oficial: https://educly.app/contato . Se breve y claro.",
+    fr: "## SUPPORT D'ANNULATION\nSi l'utilisateur demande une annulation (abonnement, facturation, pause, remboursement ou contestation), redirigez-le toujours vers le canal officiel : https://educly.app/contato . Soyez bref et clair.",
+    de: "## KUNDIGUNGS-SUPPORT\nWenn der Nutzer eine Kundigung anfragt (Abo, Abrechnung, Pause, Erstattung oder Chargeback), verweisen Sie immer auf den offiziellen Kanal: https://educly.app/contato . Kurz und klar antworten.",
+    it: "## SUPPORTO CANCELLAZIONE\nSe l'utente richiede cancellazione (abbonamento, addebito, pausa, rimborso o chargeback), indirizzalo sempre al canale ufficiale: https://educly.app/contato . Rispondi in modo breve e chiaro.",
+    ru: "## ПОДДЕРЖКА ОТМЕНЫ\nЕсли пользователь просит отмену (подписки, списания, паузы, возврата или чарджбэка), всегда направляйте его на официальный канал: https://educly.app/contato . Отвечайте кратко и ясно.",
+  };
+
   const toolsTable = `
 | Tool | URL | Use case |
 |------|-----|----------|
@@ -397,6 +407,7 @@ Help students who got a quiz question wrong understand the concept.
   }
 
   // Instrução crítica de idioma
+  basePrompt += `\n\n${cancellationRoutingRules[language] || cancellationRoutingRules.en}`;
   basePrompt += `\n\n**CRITICAL: You MUST respond ONLY in ${langName}. All your responses must be in this language.**`;
 
   return basePrompt;

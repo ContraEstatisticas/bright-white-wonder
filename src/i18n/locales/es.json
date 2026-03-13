@@ -3276,9 +3276,9 @@
       "responseTime": "Respuesta en 24-48 horas"
     },
     "refund": {
-      "title": "Solicitar Reembolso",
-      "description": "Política de reembolso de 30 días. Envía tu solicitud por email con los datos de compra.",
-      "button": "Solicitar Reembolso",
+      "title": "Solicitar Cancelamento",
+      "description": "Política de cancelamento de 30 días. Envía tu solicitud por email con los datos de compra.",
+      "button": "Solicitar Cancelamento",
       "responseTime": "Procesamiento en hasta 48 horas"
     },
     "feedback": {

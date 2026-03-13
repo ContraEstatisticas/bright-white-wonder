@@ -106,13 +106,13 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Refund Card */}
+          {/* Cancellation Card */}
           <Card className="border-2 hover:border-primary/50 transition-colors">
             <CardHeader className="text-center">
               <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <RefreshCcw className="w-8 h-8 text-orange-500" />
               </div>
-              <CardTitle className="text-2xl">{t('contactPage.refund.title')}</CardTitle>
+              <CardTitle className="text-2xl">Solicitar Cancelamento</CardTitle>
               <CardDescription className="text-base">
                 {t('contactPage.refund.description')}
               </CardDescription>
@@ -123,12 +123,12 @@ const Contact = () => {
                 {t('contactPage.refund.responseTime')}
               </div>
               <Button 
-                onClick={() => window.open('https://mail.google.com/mail/?view=cm&to=contact@educly.app&su=Solicitação de Reembolso', '_blank')}
+                onClick={() => window.open('https://mail.google.com/mail/?view=cm&to=contact@educly.app&su=Solicitação de Cancelamento', '_blank')}
                 className="w-full" 
                 size="lg"
               >
                 <RefreshCcw className="w-4 h-4 mr-2" />
-                {t('contactPage.refund.button')}
+                Solicitar Cancelamento
               </Button>
               
               <p className="text-sm text-muted-foreground font-mono">

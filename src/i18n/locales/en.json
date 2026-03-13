@@ -2850,9 +2850,9 @@
       "responseTime": "Response within 24-48 hours"
     },
     "refund": {
-      "title": "Request Refund",
-      "description": "30-day refund policy. Send your request via email with your purchase details.",
-      "button": "Request Refund",
+      "title": "Request Cancellation",
+      "description": "30-day cancellation policy. Send your request via email with your purchase details.",
+      "button": "Request Cancellation",
       "responseTime": "Processing within 48 hours"
     },
     "feedback": {
