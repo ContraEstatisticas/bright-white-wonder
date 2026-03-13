@@ -1,22 +1,43 @@
 
 
-## Problem
+## Problem Analysis
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+The `jessicamiller@educly.app` account is fully set up: email confirmed, `is_premium = true`, 3 active products. The data is correct. The problem is **systematic** and affects multiple users. After investigating the login flow, I found two root causes:
 
-## Root Cause
+### Root Cause 1: Double premium check blocks valid users
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+The login flow in `Auth.tsx` (lines 163-191) performs a **redundant premium check** immediately after `signInWithPassword`. If this RPC call fails (network timeout, transient error), it **signs the user OUT** and shows "Sem servico ativo" even though the user has valid access. The `PremiumGuard` component already does the same check with retry logic on every protected page, making this duplicate check unnecessary and harmful.
 
-## Fix
+### Root Cause 2: Confusing error messages
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+When `signInWithPassword` fails (wrong password), the error dialog shows "No pudimos encontrar tu cuenta" / "Não localizamos a sua conta" — which makes users think their account doesn't exist. Supabase returns the same error for wrong password AND non-existent account, but the message should guide users toward password reset instead of implying the account is missing.
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+Additionally, the "Forgot Password" button is hidden for "noService" errors (line 738: `loginErrorType !== "noService"`), so users stuck in that flow have no escape route.
 
-## Steps
+## Plan
 
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
+### 1. Remove redundant premium check from login flow (`src/pages/Auth.tsx`)
+
+Delete lines 161-191 (the entire `check_premium_access` block after login). After successful `signInWithPassword` + billing reconciliation, navigate directly to `/dashboard`. Let `PremiumGuard` handle access control — that's its job.
+
+This eliminates false "noService" errors caused by transient RPC failures during login.
+
+### 2. Improve error messages and dialogs (`src/pages/Auth.tsx`)
+
+- Change "invalid" login error title/description from "No encontramos tu cuenta" to "Email o contraseña incorrectos" with guidance to reset password
+- Show the "Forgot Password" button for ALL error types (remove the `loginErrorType !== "noService"` condition on line 738)
+- Add a "Forgot Password" button in the "noService" dialog footer as well, since users might have the right password but their access isn't recognized
+
+### 3. Add console logging for debugging
+
+Add `console.log` statements at key points in the login flow so future issues are diagnosable without guessing:
+- Log the normalized email being used
+- Log signInWithPassword success/failure
+- Log billing reconciliation result
+
+### Summary of changes
+
+| File | Change |
+|------|--------|
+| `src/pages/Auth.tsx` | Remove premium check from login, improve error messages, show reset button always |
 
