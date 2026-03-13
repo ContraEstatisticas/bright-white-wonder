@@ -125,7 +125,12 @@ const SignupFromEmail = () => {
     if (!signupResult.ok) {
       setIsLoading(false);
       if (signupResult.code === "ALREADY_EXISTS") {
-        setHasAccount(true);
+        toast({
+          title: t("auth.signupError"),
+          description: t("auth.alreadyExistsResetHint", "Você já tem uma conta! Se não lembra a senha, use a opção 'Esqueceu a senha?' abaixo."),
+          variant: "destructive",
+        });
+        navigate(`/auth?email=${encodeURIComponent(email)}&tab=login&showReset=true`, { replace: true });
         return;
       }
       toast({ title: t("auth.signupError"), description: signupResult.message, variant: "destructive" });
