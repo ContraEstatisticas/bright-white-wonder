@@ -158,37 +158,8 @@ const Auth = () => {
         console.error("Billing reconciliation on login error:", rpcErr);
       }
 
-      // Fail closed: se houver erro na validacao de acesso premium, bloqueia o login.
-      // Retry logic: 3 tentativas com 1s de intervalo (mesma lógica do PremiumGuard)
-      try {
-        let isPremium = false;
-        for (let attempt = 0; attempt < 3; attempt++) {
-          const { data, error } = await supabase.rpc("check_premium_access", {
-            user_email: normalizedLoginEmail
-          });
-          if (!error && data === true) {
-            isPremium = true;
-            break;
-          }
-          if (error) {
-            console.error(`Premium check attempt ${attempt + 1} failed:`, error);
-          }
-          if (attempt < 2) await new Promise(r => setTimeout(r, 1000));
-        }
-
-        if (!isPremium) {
-          await supabase.auth.signOut();
-          setLoginErrorType("noService");
-          setIsLoginErrorDialogOpen(true);
-          return;
-        }
-      } catch (premiumErr) {
-        console.error("Exception checking premium access on login:", premiumErr);
-        await supabase.auth.signOut();
-        setLoginErrorType("noService");
-        setIsLoginErrorDialogOpen(true);
-        return;
-      }
+      // Premium access is now checked by PremiumGuard on protected pages
+      console.log("[Auth] Login successful for:", normalizedLoginEmail);
 
       const { data: { user } } = await supabase.auth.getUser();
       toast({
