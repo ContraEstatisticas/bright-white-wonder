@@ -69,6 +69,16 @@ const SignupFromEmail = () => {
       try {
         const { data: purchaseExists } = await supabase.rpc("check_purchase_exists" as any, { p_email: emailParam });
         setHasPurchase(Boolean(purchaseExists) ?? false);
+
+        // If purchase exists, check if user already has an account
+        if (purchaseExists) {
+          const { data: userExists } = await supabase.rpc("check_user_exists_by_email" as any, { p_email: emailParam });
+          if (userExists) {
+            setHasAccount(true);
+            setCheckingAccount(false);
+            return;
+          }
+        }
       } catch {
         setHasPurchase(null);
       }

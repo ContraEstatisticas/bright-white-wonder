@@ -1617,6 +1617,10 @@ export type Database = {
         Returns: boolean
       }
       check_purchase_exists: { Args: { p_email: string }; Returns: boolean }
+      check_user_exists_by_email: {
+        Args: { p_email: string }
+        Returns: boolean
+      }
       generate_challenge_certificate: {
         Args: { p_challenge_id: string; p_user_full_name: string }
         Returns: string
