@@ -706,20 +706,18 @@ const Auth = () => {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="flex-col gap-2 sm:flex-col">
-            {(
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full"
-                onClick={() => {
-                  setResetEmail(email.trim());
-                  setIsLoginErrorDialogOpen(false);
-                  setIsResetDialogOpen(true);
-                }}
-              >
-                {t("auth.forgotPassword", "Esqueceu a senha?")}
-              </Button>
-            )}
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              onClick={() => {
+                setResetEmail(email.trim());
+                setIsLoginErrorDialogOpen(false);
+                setIsResetDialogOpen(true);
+              }}
+            >
+              {t("auth.forgotPassword", "Esqueceu a senha?")}
+            </Button>
             <Button
               type="button"
               onClick={() => setIsLoginErrorDialogOpen(false)}
