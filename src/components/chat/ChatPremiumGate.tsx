@@ -3,11 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-interface ChatPremiumGateProps {
-  checkoutUrl?: string;
-}
-
-export const ChatPremiumGate = ({ checkoutUrl }: ChatPremiumGateProps) => {
+export const ChatPremiumGate = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   
