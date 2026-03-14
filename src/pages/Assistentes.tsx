@@ -227,7 +227,7 @@ const AssistentesContent = () => {
             <ArrowLeft className="w-4 h-4 mr-2" />
             {t("common.back")}
           </Button>
-          <ChatPremiumGate checkoutUrl={checkoutUrl} />
+          <ChatPremiumGate />
         </div>
       </div>
     );
