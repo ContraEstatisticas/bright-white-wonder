@@ -1,22 +1,52 @@
 
 
-## Problem
+## Plan: New Email Template with Multi-language, Custom Domain, and Correct CTA
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+### Problems Identified
 
-## Root Cause
+1. **Wrong domain**: All edge functions use `educly.lovable.app` instead of `educly.app`
+2. **Single language**: The uploaded HTML is hardcoded in Spanish/Portuguese mix — needs full i18n
+3. **CTA link**: Must use `educly.app/cadastro?email={email}&lang={lang}` with the email from the purchase event
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+### Scope of Changes
 
-## Fix
+**7 edge functions** contain `educly.lovable.app` references that need updating to `educly.app`:
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+- `send-welcome-email` — main welcome email (full template replacement)
+- `send-pending-thanks` — thank-you email post-purchase (full template replacement)
+- `send-pending-welcome-batch` — batch welcome emails (full template replacement)
+- `send-bulk-emails` — bulk email sender (full template replacement)
+- `resend-pending-emails` — retry failed emails (full template replacement)
+- `send-incident-notification` — incident alerts (domain fix only)
+- `send-password-reset` — password reset (domain fix only, if applicable)
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+### Template Design
 
-## Steps
+Replace the old simple HTML template with the new uploaded design featuring:
+- Hero card with gradient background and logo
+- Badge "Acesso Liberado" / "Access Granted" etc.
+- Success box showing the user's email
+- 2x2 features grid with emojis
+- CTA button linking to `https://educly.app/cadastro?email={email}&lang={lang}`
+- Multi-language support block (PT/ES/FR)
+- Dark footer
 
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
+### Translation Strategy
+
+Expand the existing `TRANSLATIONS` object to include all new template strings (badge text, success box text, features, CTA note, footer) for all 7 supported languages (pt, en, es, fr, de, it, ru).
+
+### CTA Button Verification
+
+The CTA `href` will be: `https://educly.app/cadastro?email=${encodeURIComponent(userEmail)}&lang=${language}`
+
+This already uses the `userEmail` parameter passed to the function, which comes from the purchase event email in `send-pending-thanks` and from the request body in `send-welcome-email`.
+
+### Implementation Steps
+
+1. **Update `send-welcome-email/index.ts`**: Replace `getEmailHtml()` with new template, update translations, change all `educly.lovable.app` to `educly.app`
+2. **Update `send-pending-thanks/index.ts`**: Replace `getUnifiedEmailHtml()` with same new template design, change domain
+3. **Update `send-pending-welcome-batch/index.ts`**: Same template replacement and domain fix
+4. **Update `send-bulk-emails/index.ts`**: Same template replacement and domain fix
+5. **Update `resend-pending-emails/index.ts`**: Same template replacement and domain fix
+6. **Update remaining functions** (`send-incident-notification`, `send-password-reset`): Domain-only fix from `educly.lovable.app` to `educly.app`
 
