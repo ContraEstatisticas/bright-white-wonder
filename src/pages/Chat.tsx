@@ -79,7 +79,7 @@ const Chat = () => {
         return prev;
       });
     }
-  }, [isPremium, aiToolContext, t, currentLanguage]);
+  }, [hasChatAccess, aiToolContext, t, currentLanguage]);
 
   const sendMessage = async (input: string) => {
     const userMessage: Message = {
