@@ -149,7 +149,7 @@
             <!-- Header with Logo -->
             <tr>
               <td style="padding: 32px 40px 24px; text-align: center; border-bottom: 1px solid #e5e7eb;">
-                <img src="https://educly.lovable.app/logo-educly.png" alt="Educly" style="height: 48px; width: auto;">
+                <img src="https://educly.app/logo-educly.png" alt="Educly" style="height: 48px; width: auto;">
               </td>
             </tr>
 
