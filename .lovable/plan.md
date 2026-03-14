@@ -2,21 +2,20 @@
 
 ## Problem
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+The preview is blank because of a **build error** in `src/pages/Auth.tsx`. The variable `user` is destructured twice in the same function scope:
 
-## Root Cause
+- **Line 149**: `const { data: { user } } = await supabase.auth.getUser();` (inside billing reconciliation)
+- **Line 164**: `const { data: { user } } = await supabase.auth.getUser();` (for the toast message)
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+This causes a duplicate variable declaration error that prevents the app from compiling.
 
 ## Fix
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+Remove the second `getUser()` call on line 164 and reuse the user data from the billing reconciliation block. Since line 149 is inside a try/catch, we need to hoist the variable so it's accessible outside:
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+1. Declare `let loggedInUser` before the try block
+2. Assign it inside the try block from the existing `getUser()` call
+3. Use `loggedInUser` in the toast on line 167
 
-## Steps
-
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
+This is a one-file, ~5 line fix in `src/pages/Auth.tsx`.
 
