@@ -24,7 +24,8 @@ const Chat = () => {
   const [searchParams] = useSearchParams();
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
-  const { isPremium, isLoading: isPremiumLoading, checkoutUrl } = usePremiumAccess();
+  const { freelancer, ai_hub, isLoading: isPremiumLoading } = useProductAccess();
+  const hasChatAccess = freelancer || ai_hub;
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
