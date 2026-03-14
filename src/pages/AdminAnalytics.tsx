@@ -103,7 +103,7 @@ const AdminAnalyticsContent = () => {
 
         {/* Tables with Tabs */}
         <Tabs defaultValue="billing" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 h-12 p-1 bg-muted/50 rounded-xl">
+          <TabsList className="grid w-full grid-cols-6 h-12 p-1 bg-muted/50 rounded-xl">
             <TabsTrigger 
               value="billing" 
               className="rounded-lg text-xs font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
