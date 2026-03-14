@@ -107,7 +107,7 @@ serve(async (req) => {
   </p>
   
   <div style="text-align: center; margin: 30px 0;">
-    <a href="https://educly.lovable.app/auth" 
+    <a href="https://educly.app/auth" 
        style="display: inline-block; background-color: #7c3aed; color: white; padding: 14px 32px; 
               text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: bold;">
       Acceder a Mi Cuenta →
@@ -131,7 +131,7 @@ serve(async (req) => {
 </body>
 </html>`;
 
-      const textContent = `¡Hola ${userName}!\n\nTe escribimos para informarte que experimentamos un problema técnico temporal que afectó la liberación de acceso de algunos usuarios durante este fin de semana.\n\n¡La buena noticia es que ya está todo solucionado!\n\nTu acceso premium está completamente liberado y puedes disfrutar de todo el contenido disponible en la plataforma.\n\nAccede a tu cuenta: https://educly.lovable.app/auth\n\nCon cariño,\nEl equipo de Educly`;
+      const textContent = `¡Hola ${userName}!\n\nTe escribimos para informarte que experimentamos un problema técnico temporal que afectó la liberación de acceso de algunos usuarios durante este fin de semana.\n\n¡La buena noticia es que ya está todo solucionado!\n\nTu acceso premium está completamente liberado y puedes disfrutar de todo el contenido disponible en la plataforma.\n\nAccede a tu cuenta: https://educly.app/auth\n\nCon cariño,\nEl equipo de Educly`;
 
       try {
         const res = await fetch("https://api.resend.com/emails", {

@@ -9,151 +9,104 @@ const corsHeaders = {
 const BATCH_SIZE = 15;
 const DELAY_BETWEEN_EMAILS_MS = 5000;
 
-type EmailType = 'welcome' | 'renewal';
-
-const TRANSLATIONS: Record<string, Record<string, Record<string, string>>> = {
+const TRANSLATIONS: Record<string, Record<string, string>> = {
   pt: {
-    welcome: {
-      subject: '🎉 Bem-vindo à Educly! Sua jornada na IA começa agora',
-      greeting: 'Bem-vindo à Educly',
-      body: 'Parabéns! Você deu o primeiro passo para dominar a Inteligência Artificial e transformar sua carreira.',
-      featuresTitle: 'O que você vai aprender:',
-      feature1: 'Como usar ChatGPT, Claude e outras IAs',
-      feature2: 'Criar imagens incríveis com IA',
-      feature3: 'Automatizar tarefas do dia a dia',
-      feature4: 'Ganhar dinheiro com suas novas habilidades',
-      readyText: 'Sua conta está pronta e você já pode começar a aprender agora mesmo!',
-      cta: 'Acessar Minha Conta',
-      helpText: 'Se precisar de ajuda, responda este email ou acesse nosso suporte.',
-      closing: 'Bons estudos!',
-      team: 'Equipe Educly',
-    },
-    common: { rights: 'Todos os direitos reservados.', privacy: 'Política de Privacidade', terms: 'Termos de Uso' },
+    subject: '🎉 Bem-vindo à Educly!',
+    badge: 'Acesso Liberado', heroTitle: 'Bem-vindo à Educly! 🎉',
+    heroSubtitle: 'Você deu o primeiro passo para dominar a Inteligência Artificial e transformar sua carreira para sempre.',
+    successTitle: 'Conta ativa e pronta!',
+    successBody: 'Sua conta foi criada com o e-mail <strong>{email}</strong>. Você já pode acessar e começar agora mesmo.',
+    sectionLabel: 'O QUE VOCÊ VAI APRENDER',
+    feature1: 'ChatGPT, Claude e outras IAs', feature2: 'Imagens incríveis com IA',
+    feature3: 'Automatizar tarefas do dia a dia', feature4: 'Ganhar dinheiro com IA',
+    cta: 'Acessar Minha Conta', ctaNote: 'Bons estudos!', team: 'Equipe Educly',
+    rights: 'Todos os direitos reservados.', privacy: 'Política de Privacidade', terms: 'Termos de Uso',
   },
   en: {
-    welcome: {
-      subject: '🎉 Welcome to Educly! Your AI journey starts now',
-      greeting: 'Welcome to Educly',
-      body: 'Congratulations! You have taken the first step to master Artificial Intelligence and transform your career.',
-      featuresTitle: 'What you will learn:',
-      feature1: 'How to use ChatGPT, Claude and other AIs',
-      feature2: 'Create amazing images with AI',
-      feature3: 'Automate daily tasks',
-      feature4: 'Earn money with your new skills',
-      readyText: 'Your account is ready and you can start learning right now!',
-      cta: 'Access My Account',
-      helpText: 'If you need help, reply to this email or contact our support.',
-      closing: 'Happy learning!',
-      team: 'Educly Team',
-    },
-    common: { rights: 'All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Use' },
+    subject: '🎉 Welcome to Educly!',
+    badge: 'Access Granted', heroTitle: 'Welcome to Educly! 🎉',
+    heroSubtitle: 'You have taken the first step to master Artificial Intelligence and transform your career forever.',
+    successTitle: 'Account active and ready!',
+    successBody: 'Your account was created with <strong>{email}</strong>. You can access and start right now.',
+    sectionLabel: 'WHAT YOU WILL LEARN',
+    feature1: 'ChatGPT, Claude and other AIs', feature2: 'Create amazing images with AI',
+    feature3: 'Automate daily tasks', feature4: 'Earn money with AI',
+    cta: 'Access My Account', ctaNote: 'Happy learning!', team: 'Educly Team',
+    rights: 'All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Use',
   },
   es: {
-    welcome: {
-      subject: '🎉 ¡Bienvenido a Educly! Tu viaje en IA comienza ahora',
-      greeting: 'Bienvenido a Educly',
-      body: '¡Felicitaciones! Has dado el primer paso para dominar la Inteligencia Artificial y transformar tu carrera.',
-      featuresTitle: 'Lo que aprenderás:',
-      feature1: 'Cómo usar ChatGPT, Claude y otras IAs',
-      feature2: 'Crear imágenes increíbles con IA',
-      feature3: 'Automatizar tareas diarias',
-      feature4: 'Ganar dinero con tus nuevas habilidades',
-      readyText: '¡Tu cuenta está lista y ya puedes empezar a aprender ahora mismo!',
-      cta: 'Acceder a Mi Cuenta',
-      helpText: 'Si necesitas ayuda, responde a este correo o contacta nuestro soporte.',
-      closing: '¡Buen aprendizaje!',
-      team: 'Equipo Educly',
-    },
-    common: { rights: 'Todos los derechos reservados.', privacy: 'Política de Privacidad', terms: 'Términos de Uso' },
+    subject: '🎉 ¡Bienvenido a Educly!',
+    badge: 'Acceso Liberado', heroTitle: '¡Bienvenido a Educly! 🎉',
+    heroSubtitle: 'Has dado el primer paso para dominar la Inteligencia Artificial y transformar tu carrera para siempre.',
+    successTitle: '¡Cuenta activa y lista!',
+    successBody: 'Tu cuenta fue creada con el correo <strong>{email}</strong>. Ya puedes acceder y comenzar ahora mismo.',
+    sectionLabel: 'LO QUE APRENDERÁS',
+    feature1: 'ChatGPT, Claude y otras IAs', feature2: 'Imágenes increíbles con IA',
+    feature3: 'Automatizar tareas diarias', feature4: 'Ganar dinero con IA',
+    cta: 'Acceder a Mi Cuenta', ctaNote: '¡Buen aprendizaje!', team: 'Equipo Educly',
+    rights: 'Todos los derechos reservados.', privacy: 'Política de Privacidad', terms: 'Términos de Uso',
   },
   fr: {
-    welcome: {
-      subject: '🎉 Bienvenue chez Educly !',
-      greeting: 'Bienvenue chez Educly',
-      body: 'Félicitations ! Vous avez fait le premier pas pour maîtriser l\'Intelligence Artificielle.',
-      featuresTitle: 'Ce que vous allez apprendre :',
-      feature1: 'Comment utiliser ChatGPT, Claude et d\'autres IAs',
-      feature2: 'Créer des images incroyables avec l\'IA',
-      feature3: 'Automatiser les tâches quotidiennes',
-      feature4: 'Gagner de l\'argent avec vos nouvelles compétences',
-      readyText: 'Votre compte est prêt !',
-      cta: 'Accéder à Mon Compte',
-      helpText: 'Si vous avez besoin d\'aide, répondez à cet email.',
-      closing: 'Bon apprentissage !',
-      team: 'Équipe Educly',
-    },
-    common: { rights: 'Tous droits réservés.', privacy: 'Politique de Confidentialité', terms: 'Conditions d\'Utilisation' },
+    subject: '🎉 Bienvenue chez Educly !',
+    badge: 'Accès Libéré', heroTitle: 'Bienvenue chez Educly ! 🎉',
+    heroSubtitle: "Vous avez fait le premier pas pour maîtriser l'IA et transformer votre carrière.",
+    successTitle: 'Compte actif et prêt !',
+    successBody: 'Votre compte a été créé avec <strong>{email}</strong>.',
+    sectionLabel: 'CE QUE VOUS ALLEZ APPRENDRE',
+    feature1: "ChatGPT, Claude et d'autres IAs", feature2: "Créer des images incroyables avec l'IA",
+    feature3: 'Automatiser les tâches quotidiennes', feature4: "Gagner de l'argent avec l'IA",
+    cta: 'Accéder à Mon Compte', ctaNote: 'Bon apprentissage !', team: 'Équipe Educly',
+    rights: 'Tous droits réservés.', privacy: 'Politique de Confidentialité', terms: "Conditions d'Utilisation",
   },
   de: {
-    welcome: {
-      subject: '🎉 Willkommen bei Educly!',
-      greeting: 'Willkommen bei Educly',
-      body: 'Herzlichen Glückwunsch! Sie haben den ersten Schritt gemacht, um KI zu meistern.',
-      featuresTitle: 'Was Sie lernen werden:',
-      feature1: 'Wie man ChatGPT, Claude und andere KIs verwendet',
-      feature2: 'Erstaunliche Bilder mit KI erstellen',
-      feature3: 'Tägliche Aufgaben automatisieren',
-      feature4: 'Geld mit Ihren neuen Fähigkeiten verdienen',
-      readyText: 'Ihr Konto ist bereit!',
-      cta: 'Auf Mein Konto Zugreifen',
-      helpText: 'Wenn Sie Hilfe benötigen, antworten Sie auf diese E-Mail.',
-      closing: 'Viel Erfolg beim Lernen!',
-      team: 'Educly Team',
-    },
-    common: { rights: 'Alle Rechte vorbehalten.', privacy: 'Datenschutzrichtlinie', terms: 'Nutzungsbedingungen' },
+    subject: '🎉 Willkommen bei Educly!',
+    badge: 'Zugang Freigeschaltet', heroTitle: 'Willkommen bei Educly! 🎉',
+    heroSubtitle: 'Sie haben den ersten Schritt gemacht, um KI zu meistern.',
+    successTitle: 'Konto aktiv und bereit!',
+    successBody: 'Ihr Konto wurde mit <strong>{email}</strong> erstellt.',
+    sectionLabel: 'WAS SIE LERNEN WERDEN',
+    feature1: 'ChatGPT, Claude und andere KIs', feature2: 'Erstaunliche Bilder mit KI',
+    feature3: 'Tägliche Aufgaben automatisieren', feature4: 'Geld mit KI verdienen',
+    cta: 'Auf Mein Konto Zugreifen', ctaNote: 'Viel Erfolg!', team: 'Educly Team',
+    rights: 'Alle Rechte vorbehalten.', privacy: 'Datenschutzrichtlinie', terms: 'Nutzungsbedingungen',
   },
   it: {
-    welcome: {
-      subject: '🎉 Benvenuto su Educly!',
-      greeting: 'Benvenuto su Educly',
-      body: 'Congratulazioni! Hai fatto il primo passo per padroneggiare l\'IA.',
-      featuresTitle: 'Cosa imparerai:',
-      feature1: 'Come usare ChatGPT, Claude e altre IA',
-      feature2: 'Creare immagini incredibili con l\'IA',
-      feature3: 'Automatizzare le attività quotidiane',
-      feature4: 'Guadagnare con le tue nuove competenze',
-      readyText: 'Il tuo account è pronto!',
-      cta: 'Accedi al Mio Account',
-      helpText: 'Se hai bisogno di aiuto, rispondi a questa email.',
-      closing: 'Buon apprendimento!',
-      team: 'Team Educly',
-    },
-    common: { rights: 'Tutti i diritti riservati.', privacy: 'Politica sulla Privacy', terms: 'Termini di Utilizzo' },
+    subject: '🎉 Benvenuto su Educly!',
+    badge: 'Accesso Sbloccato', heroTitle: 'Benvenuto su Educly! 🎉',
+    heroSubtitle: "Hai fatto il primo passo per padroneggiare l'IA.",
+    successTitle: 'Account attivo e pronto!',
+    successBody: 'Il tuo account è stato creato con <strong>{email}</strong>.',
+    sectionLabel: 'COSA IMPARERAI',
+    feature1: 'ChatGPT, Claude e altre IA', feature2: "Immagini incredibili con l'IA",
+    feature3: 'Automatizzare le attività quotidiane', feature4: "Guadagnare con l'IA",
+    cta: 'Accedi al Mio Account', ctaNote: 'Buon apprendimento!', team: 'Team Educly',
+    rights: 'Tutti i diritti riservati.', privacy: 'Politica sulla Privacy', terms: 'Termini di Utilizzo',
   },
   ru: {
-    welcome: {
-      subject: '🎉 Добро пожаловать в Educly!',
-      greeting: 'Добро пожаловать в Educly',
-      body: 'Поздравляем! Вы сделали первый шаг к освоению ИИ.',
-      featuresTitle: 'Что вы узнаете:',
-      feature1: 'Как использовать ChatGPT, Claude и другие ИИ',
-      feature2: 'Создавать потрясающие изображения с помощью ИИ',
-      feature3: 'Автоматизировать повседневные задачи',
-      feature4: 'Зарабатывать деньги с вашими новыми навыками',
-      readyText: 'Ваш аккаунт готов!',
-      cta: 'Войти в Мой Аккаунт',
-      helpText: 'Если вам нужна помощь, ответьте на это письмо.',
-      closing: 'Успешного обучения!',
-      team: 'Команда Educly',
-    },
-    common: { rights: 'Все права защищены.', privacy: 'Политика Конфиденциальности', terms: 'Условия Использования' },
+    subject: '🎉 Добро пожаловать в Educly!',
+    badge: 'Доступ Открыт', heroTitle: 'Добро пожаловать в Educly! 🎉',
+    heroSubtitle: 'Вы сделали первый шаг к освоению ИИ.',
+    successTitle: 'Аккаунт активен и готов!',
+    successBody: 'Ваш аккаунт создан с <strong>{email}</strong>.',
+    sectionLabel: 'ЧТО ВЫ УЗНАЕТЕ',
+    feature1: 'ChatGPT, Claude и другие ИИ', feature2: 'Потрясающие изображения с ИИ',
+    feature3: 'Автоматизировать задачи', feature4: 'Зарабатывать с ИИ',
+    cta: 'Войти в Мой Аккаунт', ctaNote: 'Успешного обучения!', team: 'Команда Educly',
+    rights: 'Все права защищены.', privacy: 'Политика Конфиденциальности', terms: 'Условия Использования',
   },
 };
 
-function getTranslation(lang: string, type: EmailType, key: string): string {
+function tr(lang: string, key: string): string {
   const n = lang.toLowerCase().split('-')[0];
-  return TRANSLATIONS[n]?.[type]?.[key] || TRANSLATIONS['en']?.[type]?.[key] || '';
+  return TRANSLATIONS[n]?.[key] || TRANSLATIONS['en']?.[key] || '';
 }
 
-function getCommonTranslation(lang: string, key: string): string {
-  const n = lang.toLowerCase().split('-')[0];
-  return TRANSLATIONS[n]?.common?.[key] || TRANSLATIONS['en']?.common?.[key] || '';
-}
+function getEmailHtml(userName: string, userEmail: string, language: string, trackingPixelUrl: string): string {
+  const lang = language.toLowerCase().split('-')[0];
+  const ctaUrl = `https://educly.app/cadastro?email=${encodeURIComponent(userEmail)}&lang=${lang}`;
+  const successBodyText = tr(lang, 'successBody').replace('{email}', userEmail);
 
-function getEmailHtml(userName: string, language: string, trackingPixelUrl: string): string {
-  const t = (key: string) => getTranslation(language, 'welcome', key);
-  const tc = (key: string) => getCommonTranslation(language, key);
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:#f6f9fc;margin:0;padding:40px 20px}.container{background-color:#fff;max-width:600px;margin:0 auto;padding:40px 30px;border-radius:8px}.logo{text-align:center;margin-bottom:32px}h1{color:#1a1a2e;font-size:28px;font-weight:700;text-align:center;margin:0 0 24px}p{color:#4a5568;font-size:16px;line-height:26px;margin:16px 0}.highlight-box{background-color:#f0f4ff;border-radius:8px;padding:20px;margin:24px 0;border-left:4px solid #6366f1}.success-box{background-color:#ecfdf5;border-radius:8px;padding:16px 20px;margin:24px 0;border-left:4px solid #10b981;text-align:center}.button-container{text-align:center;margin:32px 0}.button{background-color:#6366f1;border-radius:8px;color:#fff;font-size:16px;font-weight:600;text-decoration:none;padding:14px 32px;display:inline-block}.footer{border-top:1px solid #e2e8f0;margin-top:32px;padding-top:24px;text-align:center}.footer p{color:#a0aec0;font-size:12px}.footer a{color:#6366f1;text-decoration:underline}</style></head><body><div class="container"><div class="logo"><img src="https://educly.lovable.app/logo-educly.png" width="150" height="50" alt="Educly"/></div><h1>🎉 ${t('greeting')}, ${userName}!</h1><p>${t('body')}</p><div class="highlight-box"><p style="margin:0 0 12px"><strong>🚀 ${t('featuresTitle')}</strong></p><p style="margin:8px 0">✅ ${t('feature1')}</p><p style="margin:8px 0">✅ ${t('feature2')}</p><p style="margin:8px 0">✅ ${t('feature3')}</p><p style="margin:8px 0">✅ ${t('feature4')}</p></div><div class="success-box"><p style="margin:0;color:#059669;font-weight:600">✓ ${t('readyText')}</p></div><div class="button-container"><a href="https://educly.lovable.app/auth" class="button">${t('cta')}</a></div><p style="text-align:center;color:#718096;font-size:14px">${t('helpText')}</p><p style="text-align:center;color:#718096;font-size:14px;margin-top:24px">${t('closing')}<br><strong>${t('team')}</strong></p><div class="footer"><p>© 2025 Educly. ${tc('rights')}<br><a href="https://educly.lovable.app/politica-privacidade">${tc('privacy')}</a> | <a href="https://educly.lovable.app/termos-uso">${tc('terms')}</a></p></div></div><img src="${trackingPixelUrl}" width="1" height="1" style="display:none" alt=""/></body></html>`;
+  return `<!DOCTYPE html><html lang="${lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head><body style="margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#0f0c29 0%,#1a1060 50%,#24243e 100%);"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:48px 20px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;margin:0 auto;"><tr><td style="background:linear-gradient(145deg,#1e3a8a 0%,#1d4ed8 40%,#2563eb 100%);border-radius:20px 20px 0 0;padding:44px 40px 36px;text-align:center;"><img src="https://educly.app/logo-educly.png" width="140" height="46" alt="Educly" style="filter:brightness(0) invert(1);opacity:0.95;margin-bottom:28px;"/><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 18px;"><tr><td style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:#bfdbfe;letter-spacing:0.5px;text-transform:uppercase;">✦ ${tr(lang,'badge')}</td></tr></table><h1 style="font-size:32px;font-weight:800;color:#fff;line-height:1.2;margin:0 0 14px;">${tr(lang,'heroTitle').replace('Educly!','Educly,')} ${userName}!</h1><p style="font-size:15px;color:#bfdbfe;line-height:1.7;max-width:420px;margin:0 auto;">${tr(lang,'heroSubtitle')}</p></td></tr><tr><td style="background:#ffffff;padding:40px 40px 32px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);border-radius:12px;border:1px solid #a7f3d0;margin-bottom:28px;"><tr><td style="padding:18px 22px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="width:28px;height:28px;background:#10b981;border-radius:50%;text-align:center;vertical-align:top;color:#fff;font-size:14px;font-weight:700;line-height:28px;padding-right:12px;">✓</td><td style="font-size:14px;color:#065f46;line-height:1.6;"><strong style="display:block;margin-bottom:2px;font-size:15px;">${tr(lang,'successTitle')}</strong>${successBodyText}</td></tr></table></td></tr></table><p style="font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#6366f1;margin:0 0 14px;">${tr(lang,'sectionLabel')}</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:32px;"><tr><td width="50%" style="padding:0 6px 12px 0;vertical-align:top;"><table role="presentation" width="100%" style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;"><tr><td style="padding:14px 16px;font-size:13px;color:#374151;font-weight:500;"><span style="font-size:20px;margin-right:8px;">🤖</span>${tr(lang,'feature1')}</td></tr></table></td><td width="50%" style="padding:0 0 12px 6px;vertical-align:top;"><table role="presentation" width="100%" style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;"><tr><td style="padding:14px 16px;font-size:13px;color:#374151;font-weight:500;"><span style="font-size:20px;margin-right:8px;">🎨</span>${tr(lang,'feature2')}</td></tr></table></td></tr><tr><td width="50%" style="padding:0 6px 0 0;vertical-align:top;"><table role="presentation" width="100%" style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;"><tr><td style="padding:14px 16px;font-size:13px;color:#374151;font-weight:500;"><span style="font-size:20px;margin-right:8px;">⚡</span>${tr(lang,'feature3')}</td></tr></table></td><td width="50%" style="padding:0 0 0 6px;vertical-align:top;"><table role="presentation" width="100%" style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;"><tr><td style="padding:14px 16px;font-size:13px;color:#374151;font-weight:500;"><span style="font-size:20px;margin-right:8px;">💰</span>${tr(lang,'feature4')}</td></tr></table></td></tr></table><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0 24px;"><tr><td style="text-align:center;"><a href="${ctaUrl}" style="display:inline-block;background:linear-gradient(135deg,#1d4ed8 0%,#4f46e5 100%);color:#fff;text-decoration:none;font-size:16px;font-weight:700;padding:16px 44px;border-radius:12px;">${tr(lang,'cta')}</a></td></tr><tr><td style="text-align:center;padding-top:10px;font-size:12px;color:#9ca3af;">${tr(lang,'ctaNote')} &nbsp;·&nbsp; <strong>${tr(lang,'team')}</strong></td></tr></table><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f9fafb;border-radius:12px;border:1px solid #f0f0f0;margin-top:24px;"><tr><td style="padding:20px 24px;"><p style="font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#9ca3af;text-align:center;margin:0 0 14px;">Suporte / Soporte / Support</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#6b7280;">🇧🇷 Ficou com dúvidas? <a href="mailto:contact@educly.app" style="color:#4f46e5;text-decoration:none;font-weight:600;">contact@educly.app</a></td></tr><tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#6b7280;">🇪🇸 ¿Tienes dudas? <a href="mailto:contact@educly.app" style="color:#4f46e5;text-decoration:none;font-weight:600;">contact@educly.app</a></td></tr><tr><td style="padding:10px 0;font-size:13px;color:#6b7280;">🇫🇷 Vous avez des questions? <a href="mailto:contact@educly.app" style="color:#4f46e5;text-decoration:none;font-weight:600;">contact@educly.app</a></td></tr></table></td></tr></table></td></tr><tr><td style="background:#0f172a;border-radius:0 0 20px 20px;padding:24px 40px;text-align:center;"><p style="font-size:13px;font-weight:700;color:#fff;margin:0 0 6px;">Educly</p><p style="font-size:12px;color:#475569;line-height:1.8;margin:0;">© 2025 Educly. ${tr(lang,'rights')}<br/><a href="https://educly.app/politica-privacidade" style="color:#6366f1;text-decoration:none;">${tr(lang,'privacy')}</a> &nbsp;·&nbsp; <a href="https://educly.app/termos-uso" style="color:#6366f1;text-decoration:none;">${tr(lang,'terms')}</a></p></td></tr></table></td></tr></table>${trackingPixelUrl ? `<img src="${trackingPixelUrl}" width="1" height="1" style="display:none" alt=""/>` : ''}</body></html>`;
 }
 
 function delay(ms: number): Promise<void> {
@@ -164,7 +117,6 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    // Validate admin JWT
     const authHeader = req.headers.get('Authorization');
     if (!authHeader?.startsWith('Bearer ')) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
@@ -174,7 +126,6 @@ serve(async (req) => {
     const anonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const token = authHeader.replace('Bearer ', '');
 
-    // Verify user with anon client
     const anonClient = createClient(supabaseUrl, anonKey, {
       global: { headers: { Authorization: authHeader } },
     });
@@ -183,7 +134,6 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Invalid token" }), { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
-    // Check admin role
     const { data: isAdmin } = await anonClient.rpc('is_admin');
     if (!isAdmin) {
       return new Response(JSON.stringify({ error: "Admin access required" }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
@@ -193,7 +143,7 @@ serve(async (req) => {
 
     console.log("[send-pending-welcome-batch] Starting batch...");
 
-    // ===== FLOW 1: Registered users who haven't received welcome email =====
+    // Flow 1: Registered users who haven't received welcome email
     const { data: billingEvents, error: billingError } = await supabase
       .from('billing_event_logs')
       .select('email, user_id, payload')
@@ -203,7 +153,7 @@ serve(async (req) => {
 
     if (billingError) throw new Error(`Failed to fetch billing events: ${billingError.message}`);
 
-    // ===== FLOW 2: Unregistered buyers (USER_NOT_FOUND) =====
+    // Flow 2: Unregistered buyers (USER_NOT_FOUND)
     const purchaseEventTypes = [
       'SETTLED', 'STARTING_TRIAL', 'SUBSCRIPTION_SETTLED',
       'SUBSCRIPTION_TRIAL_STARTED', 'GRANTED', 'CONVERTION',
@@ -220,7 +170,6 @@ serve(async (req) => {
 
     if (unregError) throw new Error(`Failed to fetch unregistered events: ${unregError.message}`);
 
-    // Also try lowercase event types
     const { data: unregisteredEventsLower } = await supabase
       .from('billing_event_logs')
       .select('id, email, payload, event_type')
@@ -229,14 +178,10 @@ serve(async (req) => {
       .in('event_type', purchaseEventTypes.map(e => e.toLowerCase()));
 
     const allUnregistered = [...(unregisteredEvents || []), ...(unregisteredEventsLower || [])];
-
-    // Deduplicate by id
-    const unregMap = new Map(allUnregistered.map(e => [e.id, e]));
+    const unregMap = new Map(allUnregistered.map((e: any) => [e.id, e]));
     const uniqueUnregistered = Array.from(unregMap.values());
 
-    console.log(`[batch] Flow 1: ${billingEvents?.length || 0} registered events, Flow 2: ${uniqueUnregistered.length} unregistered events`);
-
-    // Get all welcome emails already sent (for deduplication)
+    // Get already sent emails for dedup
     const { data: sentEmails, error: sentError } = await supabase
       .from('email_logs')
       .select('recipient_email')
@@ -244,33 +189,25 @@ serve(async (req) => {
 
     if (sentError) throw new Error(`Failed to fetch email logs: ${sentError.message}`);
 
-    const sentEmailSet = new Set((sentEmails || []).map(e => e.recipient_email.toLowerCase()));
+    const sentEmailSet = new Set((sentEmails || []).map((e: any) => e.recipient_email.toLowerCase()));
 
-    // Build unified pending list
-    // Type: 'registered' = has user_id, 'recovery' = USER_NOT_FOUND
     type PendingEmail = { email: string; userId: string | null; payload: any; type: 'registered' | 'recovery'; billingEventId?: string };
     const pendingMap = new Map<string, PendingEmail>();
 
-    // Flow 1: registered users
     for (const event of billingEvents || []) {
-      const email = event.email?.toLowerCase().trim().replace(/\.+$/, '');
+      const email = (event as any).email?.toLowerCase().trim().replace(/\.+$/, '');
       if (!email || sentEmailSet.has(email) || pendingMap.has(email)) continue;
-      pendingMap.set(email, { email, userId: event.user_id, payload: event.payload, type: 'registered' });
+      pendingMap.set(email, { email, userId: (event as any).user_id, payload: (event as any).payload, type: 'registered' });
     }
 
-    // Flow 2: unregistered buyers
     for (const event of uniqueUnregistered) {
-      const email = event.email?.toLowerCase().trim().replace(/\.+$/, '');
+      const email = (event as any).email?.toLowerCase().trim().replace(/\.+$/, '');
       if (!email || sentEmailSet.has(email) || pendingMap.has(email)) continue;
-      pendingMap.set(email, { email, userId: null, payload: event.payload, type: 'recovery', billingEventId: event.id });
+      pendingMap.set(email, { email, userId: null, payload: (event as any).payload, type: 'recovery', billingEventId: (event as any).id });
     }
 
     const pendingList = Array.from(pendingMap.values()).slice(0, BATCH_SIZE);
     const totalRemaining = pendingMap.size;
-
-    const registeredCount = pendingList.filter(p => p.type === 'registered').length;
-    const recoveryCount = pendingList.filter(p => p.type === 'recovery').length;
-    console.log(`[batch] Total pending: ${totalRemaining}, sending: ${pendingList.length} (${registeredCount} registered, ${recoveryCount} recovery)`);
 
     if (pendingList.length === 0) {
       return new Response(JSON.stringify({ sent: 0, remaining: 0, message: "No pending emails" }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
@@ -282,30 +219,27 @@ serve(async (req) => {
       ? await supabase.from('profiles').select('id, full_name, preferred_language').in('id', registeredUserIds)
       : { data: [] };
 
-    const profileMap = new Map(profiles?.map(p => [p.id, p]) || []);
+    const profileMap = new Map((profiles as any[])?.map((p: any) => [p.id, p]) || []);
 
-    // Get product language from product_definitions
     const productIds = pendingList
       .map(p => p.payload?.product_id || p.payload?.data?.product?.id || p.payload?.oneoff?.product_id)
       .filter(Boolean);
-    
+
     const { data: productDefs } = productIds.length > 0
       ? await supabase.from('product_definitions').select('product_id, language').in('product_id', productIds)
       : { data: [] };
 
-    const productLangMap = new Map(productDefs?.map(p => [p.product_id, p.language]) || []);
+    const productLangMap = new Map((productDefs as any[])?.map((p: any) => [p.product_id, p.language]) || []);
 
     const results: Array<{ email: string; success: boolean; type: string; error?: string }> = [];
     let successCount = 0;
 
     for (const pending of pendingList) {
       try {
-        // Extract buyer name: profile > payload > email prefix
         let userName: string;
         if (pending.userId && profileMap.has(pending.userId)) {
-          userName = profileMap.get(pending.userId)!.full_name || pending.email.split('@')[0];
+          userName = (profileMap.get(pending.userId) as any)!.full_name || pending.email.split('@')[0];
         } else {
-          // Extract from payload for unregistered buyers
           userName = pending.payload?.buyer_name
             || pending.payload?.data?.buyer?.name
             || pending.payload?.buyer?.name
@@ -313,15 +247,13 @@ serve(async (req) => {
             || pending.email.split('@')[0];
         }
 
-        // Language priority: product_definitions > profile > payload > fallback
         const productId = pending.payload?.product_id || pending.payload?.data?.product?.id || pending.payload?.oneoff?.product_id;
         const productLang = productId ? productLangMap.get(productId) : null;
-        const profileLang = pending.userId ? profileMap.get(pending.userId)?.preferred_language : null;
+        const profileLang = pending.userId ? (profileMap.get(pending.userId) as any)?.preferred_language : null;
         const language = (productLang || profileLang || 'es').toLowerCase().split('-')[0];
 
-        const subject = getTranslation(language, 'welcome', 'subject');
+        const subject = tr(language, 'subject');
 
-        // Insert email_log (user_id is null for recovery emails)
         const { data: logEntry, error: logError } = await supabase
           .from('email_logs')
           .insert({
@@ -337,10 +269,9 @@ serve(async (req) => {
 
         if (logError) throw new Error(`Failed to create email log: ${logError.message}`);
 
-        const trackingUrl = `${supabaseUrl}/functions/v1/track-email-open?id=${logEntry.id}`;
-        const html = getEmailHtml(userName, language, trackingUrl);
+        const trackingUrl = `${supabaseUrl}/functions/v1/track-email-open?id=${(logEntry as any).id}`;
+        const html = getEmailHtml(userName, pending.email, language, trackingUrl);
 
-        // Send via Resend
         const apiKey = Deno.env.get("RESEND_API_KEY");
         if (!apiKey) throw new Error("RESEND_API_KEY not configured");
         const res = await fetch("https://api.resend.com/emails", {
@@ -353,33 +284,24 @@ serve(async (req) => {
           throw new Error(`Resend error: ${res.status} - ${err}`);
         }
 
-        // Update log to sent
-        await supabase
-          .from('email_logs')
-          .update({ status: 'sent', sent_at: new Date().toISOString() })
-          .eq('id', logEntry.id);
+        await supabase.from('email_logs').update({ status: 'sent', sent_at: new Date().toISOString() }).eq('id', (logEntry as any).id);
 
         results.push({ email: pending.email, success: true, type: pending.type });
         successCount++;
         console.log(`[batch] ✓ ${pending.email} (${language}) [${pending.type}]`);
-
       } catch (error) {
         const msg = error instanceof Error ? error.message : "Unknown";
         results.push({ email: pending.email, success: false, type: pending.type, error: msg });
         console.error(`[batch] ✗ ${pending.email}:`, msg);
       }
 
-      // Rate limit delay
       await delay(DELAY_BETWEEN_EMAILS_MS);
     }
 
     const remaining = totalRemaining - successCount;
 
     return new Response(JSON.stringify({
-      sent: successCount,
-      failed: pendingList.length - successCount,
-      remaining,
-      results,
+      sent: successCount, failed: pendingList.length - successCount, remaining, results,
     }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
 
   } catch (error) {
