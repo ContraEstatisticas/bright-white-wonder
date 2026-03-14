@@ -18,6 +18,7 @@ import { PremiumUsersTable } from "@/components/admin/PremiumUsersTable";
 import { ManualMetricsForm } from "@/components/admin/ManualMetricsForm";
 import { ManualAccessGrant } from "@/components/admin/ManualAccessGrant";
 import { EmailLookup } from "@/components/admin/EmailLookup";
+import { BulkGrantAccess } from "@/components/admin/BulkGrantAccess";
 
 const AdminAnalyticsContent = () => {
   const queryClient = useQueryClient();
