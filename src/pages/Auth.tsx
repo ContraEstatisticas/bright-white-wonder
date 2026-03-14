@@ -145,8 +145,10 @@ const Auth = () => {
       }
 
       // Reconcilia billing events pendentes no login
+      let loggedInUser: any = null;
       try {
         const { data: { user } } = await supabase.auth.getUser();
+        loggedInUser = user;
         if (user) {
           await supabase.rpc("process_pending_billing_events", {
             p_user_id: user.id,
@@ -161,10 +163,9 @@ const Auth = () => {
       // Premium access is now checked by PremiumGuard on protected pages
       console.log("[Auth] Login successful for:", normalizedLoginEmail);
 
-      const { data: { user } } = await supabase.auth.getUser();
       toast({
         title: t("auth.loginSuccess"),
-        description: t("auth.description") + (user?.user_metadata?.full_name || email),
+        description: t("auth.description") + (loggedInUser?.user_metadata?.full_name || email),
       });
       navigate("/dashboard");
     } finally {
