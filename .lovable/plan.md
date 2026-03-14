@@ -1,22 +1,27 @@
+## Separação Base vs Premium — Implementado ✅
 
+### O que foi corrigido
 
-## Problem
+1. **`process_pending_billing_events()`**: Compras `base` agora inserem `is_premium = false`. Apenas `freelancer`, `ai_hub` e `combo` setam `is_premium = true`.
 
-The `src/integrations/supabase/types.ts` file was auto-generated with empty `Tables` (` [_ in never]: never`), meaning TypeScript doesn't know about any of the existing database tables. This causes 50+ build errors wherever the codebase references tables like `profiles`, `user_streaks`, `billing_event_logs`, etc.
+2. **Dados existentes**: Usuários base-only que estavam com `is_premium = true` foram corrigidos para `false`.
 
-## Root Cause
+3. **Chat.tsx**: Agora usa `useProductAccess` ao invés de `usePremiumAccess`. O chat EDI só é acessível para quem tem `freelancer` ou `ai_hub`.
 
-When the Supabase project was connected, the types file was created without pulling the actual schema. The database has 30+ tables, but the types file only has the `get_user_certificates` function and the `ai_tool_category` enum.
+4. **ChatPremiumGate**: Removida prop `checkoutUrl`, agora redireciona para `/upgrade`.
 
-## Fix
+### Arquitetura de acesso atual
 
-Run a no-op database migration (e.g., a comment-only SQL statement) to trigger the automatic type regeneration pipeline. This will pull the full schema from the connected Supabase project and regenerate `types.ts` with all tables, views, functions, and enums properly typed.
+| Guard | Função | Onde é usado |
+|---|---|---|
+| `PremiumGuard` | Qualquer produto ativo (base, freelancer, ai_hub) OU whitelist | Rotas autenticadas |
+| `ProductGuard` | Produto específico (`freelancer`, `ai_hub`) | `/freelancer`, `/assistentes` |
+| `useProductAccess` | Hook para verificar produto específico | `Chat.tsx`, componentes internos |
 
-This single action will resolve all 50+ TypeScript errors at once without touching any application code.
+### Tiers
 
-## Steps
-
-1. Execute a trivial migration like `SELECT 1;` using the migration tool
-2. The system will automatically regenerate `types.ts` from the live database schema
-3. All table references (`profiles`, `user_streaks`, `billing_event_logs`, etc.) will resolve correctly
-
+- **BASE**: Acesso ao dashboard, desafios. Sem chat EDI, sem freelancer, sem AI Hub.
+- **PREMIUM (Freelancer)**: Base + `/freelancer` + chat EDI
+- **AI PACK**: Base + `/assistentes` + chat EDI  
+- **COMBO**: Tudo (freelancer + ai_hub ativos)
+- **WHITELIST**: Acesso total via `premium_whitelist`
