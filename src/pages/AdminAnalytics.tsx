@@ -157,6 +157,9 @@ const AdminAnalyticsContent = () => {
             <TabsContent value="grant-access" className="m-0">
               <ManualAccessGrant />
             </TabsContent>
+            <TabsContent value="bulk-grant" className="m-0">
+              <BulkGrantAccess />
+            </TabsContent>
           </div>
         </Tabs>
 
