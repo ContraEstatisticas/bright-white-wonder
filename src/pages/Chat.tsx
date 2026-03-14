@@ -54,7 +54,7 @@ const Chat = () => {
 
   // Initial greeting - Updated to react to language changes
   useEffect(() => {
-    if (isPremium) {
+    if (hasChatAccess) {
       const greeting = aiToolContext
         ? t("chat.greeting.withTool", { tool: aiToolContext })
         : t("chat.greeting.default");
