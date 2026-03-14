@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ChatMessage } from "@/components/chat/ChatMessage";
 import { ChatInput } from "@/components/chat/ChatInput";
 import { ChatPremiumGate } from "@/components/chat/ChatPremiumGate";
-import { usePremiumAccess } from "@/hooks/usePremiumAccess";
+import { useProductAccess } from "@/hooks/useProductAccess";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import ediMascote from "@/assets/edi-mascote.png";
@@ -24,7 +24,8 @@ const Chat = () => {
   const [searchParams] = useSearchParams();
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
-  const { isPremium, isLoading: isPremiumLoading, checkoutUrl } = usePremiumAccess();
+  const { freelancer, ai_hub, isLoading: isPremiumLoading } = useProductAccess();
+  const hasChatAccess = freelancer || ai_hub;
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +54,7 @@ const Chat = () => {
 
   // Initial greeting - Updated to react to language changes
   useEffect(() => {
-    if (isPremium) {
+    if (hasChatAccess) {
       const greeting = aiToolContext
         ? t("chat.greeting.withTool", { tool: aiToolContext })
         : t("chat.greeting.default");
@@ -78,7 +79,7 @@ const Chat = () => {
         return prev;
       });
     }
-  }, [isPremium, aiToolContext, t, currentLanguage]);
+  }, [hasChatAccess, aiToolContext, t, currentLanguage]);
 
   const sendMessage = async (input: string) => {
     const userMessage: Message = {
@@ -221,7 +222,7 @@ const Chat = () => {
     );
   }
 
-  if (!isPremium) {
+  if (!hasChatAccess) {
     return (
       <div className="min-h-screen bg-background">
         <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
@@ -240,7 +241,7 @@ const Chat = () => {
             </div>
           </div>
         </header>
-        <ChatPremiumGate checkoutUrl={checkoutUrl} />
+        <ChatPremiumGate />
       </div>
     );
   }

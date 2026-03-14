@@ -3,11 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-interface ChatPremiumGateProps {
-  checkoutUrl?: string;
-}
-
-export const ChatPremiumGate = ({ checkoutUrl }: ChatPremiumGateProps) => {
+export const ChatPremiumGate = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   
@@ -70,7 +66,7 @@ export const ChatPremiumGate = ({ checkoutUrl }: ChatPremiumGateProps) => {
       {/* CTA Buttons */}
       <div className="space-y-3 w-full max-w-sm">
         <Button
-          onClick={() => checkoutUrl && window.open(checkoutUrl, '_blank')}
+          onClick={() => navigate('/upgrade')}
           className="w-full h-12 bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700"
         >
           <Sparkles className="w-4 h-4 mr-2" />
