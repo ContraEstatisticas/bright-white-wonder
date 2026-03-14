@@ -134,6 +134,12 @@ const AdminAnalyticsContent = () => {
             >
               🔓 Liberar Acesso
             </TabsTrigger>
+            <TabsTrigger 
+              value="bulk-grant" 
+              className="rounded-lg text-xs font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
+            >
+              📦 Bulk Import
+            </TabsTrigger>
           </TabsList>
           <div className="mt-4">
             <TabsContent value="billing" className="m-0">
